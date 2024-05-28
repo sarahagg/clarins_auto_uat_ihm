@@ -1,0 +1,48 @@
+{"level":30,"time":"2024-05-28T09:26:00.600Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Listening on 65309"}
+(node:19945) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2024-05-28T09:26:01.689Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-05-28T09:26:01.689Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-05-28T09:26:01.692Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-05-28T09:26:01.693Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-05-28T09:26:01.696Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2024-05-28T09:26:02.365Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Adding browser to stack: chromium, version: 123.0.6312.4"}
+{"level":30,"time":"2024-05-28T09:26:02.365Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"End of node method newBrowser"}
+{"level":30,"time":"2024-05-28T09:26:02.365Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2024-05-28T09:26:02.371Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Start of node method newContext"}
+{"level":30,"time":"2024-05-28T09:26:02.371Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-05-28T09:26:02.371Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Trace file: "}
+{"level":30,"time":"2024-05-28T09:26:02.392Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Changed active context"}
+{"level":30,"time":"2024-05-28T09:26:02.392Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"End of node method newContext"}
+{"level":30,"time":"2024-05-28T09:26:02.395Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-05-28T09:26:02.395Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-05-28T09:26:02.950Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Video path: undefined"}
+{"level":30,"time":"2024-05-28T09:26:02.950Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Changed active page"}
+{"level":30,"time":"2024-05-28T09:26:07.484Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"End of node method newPage"}
+{"level":30,"time":"2024-05-28T09:26:12.497Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-05-28T09:26:12.500Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-05-28T09:26:12.502Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-05-28T09:26:12.503Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-05-28T09:26:12.505Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Changed active context"}
+{"level":30,"time":"2024-05-28T09:26:12.505Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Changing current active page: page=73865d82-9534-4493-a3da-c78cd8d739b6"}
+{"level":30,"time":"2024-05-28T09:26:12.505Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Changed active page"}
+{"level":30,"time":"2024-05-28T09:26:12.510Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-05-28T09:26:12.511Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-05-28T09:26:12.512Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-05-28T09:26:12.513Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-05-28T09:26:12.514Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-05-28T09:26:12.514Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-05-28T09:26:12.516Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Changing current active page: page=73865d82-9534-4493-a3da-c78cd8d739b6"}
+{"level":30,"time":"2024-05-28T09:26:12.516Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Changed active page"}
+{"level":30,"time":"2024-05-28T09:26:12.520Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-05-28T09:26:12.549Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-05-28T09:26:12.550Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Changed active context"}
+{"level":30,"time":"2024-05-28T09:26:12.550Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Changing current active page: page=73865d82-9534-4493-a3da-c78cd8d739b6"}
+{"level":30,"time":"2024-05-28T09:26:12.550Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Changed active page"}
+{"level":30,"time":"2024-05-28T09:26:12.553Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Start of node method closeContext"}
+{"level":30,"time":"2024-05-28T09:26:12.562Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Removed page=7db68e99-7f2b-4f32-b5fe-2a573b92fa03 from context=e9b727f9-d8fd-4b11-bf5a-e02bcf4cf4eb page stack"}
+{"level":30,"time":"2024-05-28T09:26:12.574Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"End of node method closeContext"}
+{"level":30,"time":"2024-05-28T09:26:12.578Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-05-28T09:26:12.578Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-05-28T09:26:12.600Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2024-05-28T09:26:12.654Z","pid":19945,"hostname":"MFR-C02K61UHQ6LR","msg":"End of node method closeAllBrowsers"}

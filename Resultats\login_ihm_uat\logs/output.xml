@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.6 on darwin)" generated="20240528 10:47:06.508" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="/Users/s.aggour/Library/CloudStorage/OneDrive-ONEPOINT/Clarins/clarins-auto-uat-ihm/Tests">
+<suite id="s1-s1" name="Test1" source="/Users/s.aggour/Library/CloudStorage/OneDrive-ONEPOINT/Clarins/clarins-auto-uat-ihm/Tests/test1.robot">
+<test id="s1-s1-t1" name="Mon_cas_de_test" line="10">
+<kw name="Access to Login page">
+<kw name="Log To Console" library="BuiltIn">
+<arg>New Browser</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240528 10:47:07.934" endtime="20240528 10:47:07.934"/>
+</kw>
+<kw name="New Browser" library="Browser">
+<arg>${BROWSER}</arg>
+<arg>headless=${false}</arg>
+<arg>reuse_existing=${False}</arg>
+<arg>slowMo=0:00:02</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20240528 10:47:07.935" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 2000.0, "timeout": 30000.0, "tracesDir": "/Users/s.aggour/Library/CloudStorage/OneDrive-ONEPOINT/Clarins/clarins-auto-uat-ihm/Resultats\\login_ihm_uat\\logs/browser/traces/76e9a384-d508-4191-ac4b-045dd8abf30d"}</msg>
+<msg timestamp="20240528 10:47:08.228" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":2000,"timeout":30000,"tracesDir":"/Users/s.aggour/Library/CloudStorage/OneDrive-ONEPOINT/Clarins/clarins-auto-uat-ihm/Resultats\\login_ihm_uat\\logs/browser/traces/76e9a384-d508-4191-ac4b-045dd8abf30d"}</msg>
+<status status="PASS" starttime="20240528 10:47:07.934" endtime="20240528 10:47:08.229"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Creating new browser with HTTP credentials</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240528 10:47:08.229" endtime="20240528 10:47:08.229"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{httpCredentials}</var>
+<arg>username=$USERNAME</arg>
+<arg>password=$PASSWORD</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240528 10:47:08.229" level="INFO">&amp;{httpCredentials} = { username=$USERNAME | password=$PASSWORD }</msg>
+<status status="PASS" starttime="20240528 10:47:08.229" endtime="20240528 10:47:08.229"/>
+</kw>
+<kw name="New Context" library="Browser">
+<arg>httpCredentials=${httpCredentials}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20240528 10:47:08.230" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "httpCredentials": "XXX",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg timestamp="20240528 10:47:08.247" level="INFO">Successfully created context. </msg>
+<msg timestamp="20240528 10:47:08.248" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'httpCredentials': 'XXX', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<status status="PASS" starttime="20240528 10:47:08.230" endtime="20240528 10:47:08.248"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Opening new page</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240528 10:47:08.249" endtime="20240528 10:47:08.249"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20240528 10:47:12.803" level="INFO">Successfully initialized new page object and opened url: https://staging-clarins-ecommera.demandware.net/on/demandware.store/Sites-clarinsfr-Site</msg>
+<status status="PASS" starttime="20240528 10:47:08.249" endtime="20240528 10:47:12.804"/>
+</kw>
+<status status="PASS" starttime="20240528 10:47:07.933" endtime="20240528 10:47:12.804"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240528 10:47:17.806" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240528 10:47:12.804" endtime="20240528 10:47:17.806"/>
+</kw>
+<tag>login_ihm</tag>
+<status status="PASS" starttime="20240528 10:47:07.930" endtime="20240528 10:47:17.806"/>
+</test>
+<doc>But du Test
+Vérifier que la connexion se passe bien
+ python3 -m robot  -d "Resultats/login_ihm_uat/logs" -v ENV:UAT  -i "login_ihm" Tests</doc>
+<status status="PASS" starttime="20240528 10:47:06.517" endtime="20240528 10:47:17.914"/>
+</suite>
+<status status="PASS" starttime="20240528 10:47:06.508" endtime="20240528 10:47:17.924"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">login_ihm</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test1">Tests.Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
