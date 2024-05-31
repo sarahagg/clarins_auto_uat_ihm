@@ -4,23 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/clarins-auto-uat-ihm.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/common/common.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/common/common_variables.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/common/keyword.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/common/locator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resultats/login_ihm_uat/logs/log.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resultats/login_ihm_uat/logs/output.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resultats/login_ihm_uat/logs/playwright-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resultats/login_ihm_uat/logs/report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/test1.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utile/requirements.txt" afterDir="false" />
+    <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="first push">
+      <change afterPath="$PROJECT_DIR$/Jeux de données/SFCC/New_account/jdd_New_account.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/common.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/common_variables.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/locator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/Connection/Connection.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/Connection/GenericInformation.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/New_account/GenericInformation.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/New_account/New_account.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/Newsletter/newsletter.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/SFCC/Connection/Connection.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/SFCC/New_account/New_account.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/SFCC/Newsletter/Newsletter.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jeux de données/New_account/jdd_New_account.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/common/common.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/common/common_variables.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/common/locator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resultats/login_ihm_uat/logs/log.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resultats/login_ihm_uat/logs/output.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resultats/login_ihm_uat/logs/playwright-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resultats/login_ihm_uat/logs/report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Connection/Connection.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/New_account/New_account.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Newsletter/Newsletter.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/test1.robot" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +44,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sarahagg&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:sarahagg/clarins_auto_uat_ihm.git&quot;,
+    &quot;accountId&quot;: &quot;b39d45c1-35e9-455c-94c8-f33923d37c31&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -48,9 +74,12 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Robot Framework.Connection.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.NewAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.Newsletter.executor&quot;: &quot;Run&quot;,
     &quot;Robot Framework.Test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;refacto&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/s.aggour/Library/CloudStorage/OneDrive-ONEPOINT/Clarins/clarins-auto-uat-ihm/utile&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -66,11 +95,65 @@
       <recent name="$PROJECT_DIR$/utile" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Ressources/common" />
-      <recent name="$PROJECT_DIR$/Resultats" />
+      <recent name="$PROJECT_DIR$/Ressources/SFCC/Connection" />
+      <recent name="$PROJECT_DIR$/Ressources/SFCC/New_account" />
+      <recent name="$PROJECT_DIR$/Ressources/SFCC/Common/CookiesAndAuthentification" />
+      <recent name="$PROJECT_DIR$/Tests/SFCC" />
+      <recent name="$PROJECT_DIR$/Resultats/SFCC" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Robot Framework.Connection">
+    <configuration name="Connection" type="RobotFramework" factoryName="RobotFramework">
+      <option name="target" value="$ProjectFileDir$/Tests/SFCC/Connection/Connection.robot" />
+      <option name="args">
+        <list>
+          <option value="-d" />
+          <option value="Resultats/SFCC/Connection/logs" />
+          <option value="-v" />
+          <option value="ENV:UAT" />
+        </list>
+      </option>
+      <option name="env">
+        <map />
+      </option>
+      <option name="workingDir" value="$ProjectFileDir$" />
+      <option name="makeSuite" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="NewAccount" type="RobotFramework" factoryName="RobotFramework">
+      <option name="target" value="$ProjectFileDir$/Tests/SFCC/New_account/New_account.robot" />
+      <option name="args">
+        <list>
+          <option value="-d" />
+          <option value="Resultats/SFCC/New_account/logs" />
+          <option value="-v" />
+          <option value="ENV:UAT" />
+        </list>
+      </option>
+      <option name="env">
+        <map />
+      </option>
+      <option name="workingDir" value="$ProjectFileDir$" />
+      <option name="makeSuite" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Newsletter" type="RobotFramework" factoryName="RobotFramework">
+      <option name="target" value="$ProjectFileDir$/Tests/SFCC/Newsletter/Newsletter.robot" />
+      <option name="args">
+        <list>
+          <option value="-d" />
+          <option value="Resultats/SFCC/Newsletter/logs" />
+          <option value="-v" />
+          <option value="ENV:UAT" />
+        </list>
+      </option>
+      <option name="env">
+        <map />
+      </option>
+      <option name="workingDir" value="$ProjectFileDir$" />
+      <option name="makeSuite" value="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="Test" type="RobotFramework" factoryName="RobotFramework">
       <option name="target" value="$ProjectFileDir$/Tests/test1.robot" />
       <option name="args">
@@ -84,13 +167,17 @@
           <option value="Tests" />
         </list>
       </option>
-      <option name="env">
-        <map />
-      </option>
+      <option name="env" />
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Robot Framework.Connection" />
+      <item itemvalue="Robot Framework.NewAccount" />
+      <item itemvalue="Robot Framework.Newsletter" />
+      <item itemvalue="Robot Framework.Test" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -114,10 +201,40 @@
       <workItem from="1716388385060" duration="33735000" />
       <workItem from="1716812431578" duration="3792000" />
       <workItem from="1716817550738" duration="8921000" />
+      <workItem from="1716886727884" duration="50809000" />
+      <workItem from="1717084871385" duration="181000" />
+      <workItem from="1717085069152" duration="11127000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first push" />
+    <option name="LAST_COMMIT_MESSAGE" value="first push" />
   </component>
 </project>
