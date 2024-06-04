@@ -11,7 +11,7 @@ Generate FirstName
     END
 
     IF  $FirstName == 'auto'
-        ${random_FirstName}=  Run Keyword    FakerLibrary.First Name
+        ${random_FirstName}=  Run Keyword    Faker_${TEST_NAME}.First Name
         RETURN    ${random_FirstName}
     END
 
@@ -25,7 +25,7 @@ Generate lastName
     END
 
     IF  $LastName == 'auto'
-        ${random_LastName}=     Run Keyword    FakerLibrary.Last Name
+        ${random_LastName}=     Run Keyword    Faker_${TEST_NAME}.Last Name
         RETURN    ${random_LastName}
     END
 
@@ -35,7 +35,7 @@ Generate Email
     [Arguments]    ${Email}
 
     IF  $Email == 'auto'
-        ${Email}=     Run Keyword    FakerLibrary.Email
+        ${Email}=     Run Keyword    Faker_${TEST_NAME}.Email
         RETURN    ${Email}
     END
 
@@ -46,7 +46,7 @@ Generate Password
     [Arguments]    ${mypassword}
 
     IF  $mypassword== 'auto'
-        ${random-mypassword}=     Run Keyword    FakerLibrary.Name
+        ${random-mypassword}=     Run Keyword    Faker_${TEST_NAME}.Name
         RETURN    ${random-mypassword}
     END
 
@@ -55,9 +55,26 @@ Generate BirthDate
     [Arguments]    ${BirthDate}
 
     IF  $BirthDate == 'default' or $BirthDate == 'auto'
-        ${random_BirthDate}=     Run Keyword    FakerLibrary.Date Of Birth
+        ${min_date}=    Evaluate    datetime.date(1930, 1, 1)    datetime
+        ${max_date}=    Evaluate    datetime.date(2006, 1, 1)    datetime
+        ${random_BirthDate}=     Run Keyword    Faker_${TEST_NAME}.Date Between    ${min_date}    ${max_date}
+
+        #${min_date}=    Evaluate    datetime.date(1930, 1, 1)    datetime
+        #${max_date}=    Evaluate    datetime.date.today()    datetime
+        ##${random_date}=    Evaluate    str(${min_date} + datetime.timedelta(days=random.randint(0, (${max_date} - ${min_date}).days)))    datetime    random    min_date=${min_date}    max_date=${max_date}
+
         RETURN    ${random_BirthDate}
     END
 
     RETURN     ${BirthDate}
 
+choose salutation
+    [Arguments]    ${salutation}
+
+    IF  $salutation == 'auto'
+        #${random_gender}=     Append To List      ${cuContact_lov_gender}        ${EMPTY}
+        ${random_salutation}=     Evaluate            random.choice($salutations)
+        RETURN    ${random_salutation}
+    END
+
+    RETURN     ${salutation}

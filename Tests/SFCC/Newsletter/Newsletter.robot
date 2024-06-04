@@ -13,9 +13,10 @@ Test Par Defaut Si Aucune Donnee
 
 *** Keywords ***
 Create a newsletter
-    [Arguments]   ${playTest}    ${Email}
+    [Arguments]   ${playTest}    ${Email}    ${country}
      IF    $playTest == "YES"
-        Authentificate and accept cookies
-        Inscription a la newsletter    ${Email}
-        Close Browser
+        Authentificate and accept cookies          ${country}
+        Inscription a la newsletter                ${Email}  ${country}
+        sleep   5s
+        close browser
      END

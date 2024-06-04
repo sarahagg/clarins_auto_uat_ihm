@@ -11,9 +11,11 @@ Test Par Defaut Si Aucune Donnee
 
 *** Keywords ***
 Create a new account
-    [Arguments]   ${playTest}   ${FirstName}     ${LastName}     ${Email}      ${mypassword}   ${BirthDate}
+    [Arguments]   ${playTest}   ${FirstName}     ${LastName}     ${Email}      ${mypassword}   ${BirthDate}  ${country}   ${emailOption}    ${isLoyaltyMember}   ${salutation}
 
     IF    $playTest == "YES"
-        Authentificate and accept cookies
-        Creation de compte   ${FirstName}     ${LastName}     ${Email}        ${mypassword}   ${BirthDate}
+        Authentificate and accept cookies   ${country}
+        Creation de compte   ${FirstName}     ${LastName}     ${Email}        ${mypassword}   ${BirthDate}   ${country}    ${emailOption}    ${isLoyaltyMember}    ${salutation}
+        sleep   5s
+        close browser
     END

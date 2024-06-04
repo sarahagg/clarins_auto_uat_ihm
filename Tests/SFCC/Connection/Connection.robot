@@ -13,9 +13,10 @@ Test Par Defaut Si Aucune Donnee
 
 *** Keywords ***
 Connect to an existing account
-    [Arguments]   ${playTest}    ${Email}     ${mypassword}
+    [Arguments]   ${playTest}    ${Email}     ${mypassword}  ${country}
     IF    $playTest == "YES"
-        Authentificate and accept cookies
-        connect a user     ${Email}        ${mypassword}
-        Close Browser
+        Authentificate and accept cookies    ${country}
+        connect a user     ${Email}        ${mypassword}     ${country}
+        sleep   5s
+        close browser
     END

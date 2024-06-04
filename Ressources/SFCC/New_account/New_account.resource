@@ -4,15 +4,30 @@ Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common.res
 
 *** Keywords ***
 Creation de compte
-    [Arguments]    ${FirstName}     ${LastName}     ${Email}        ${mypassword}   ${BirthDate}
+    [Arguments]    ${FirstName}     ${LastName}     ${Email}    ${mypassword}   ${BirthDate}   ${country}   ${emailOption}  ${isLoyaltyMember}  ${salutation}
 
-    Log To Console              clicking the connexion button
+    Import FakerLibrary         ${country}
+
+    IF    $country == 'ITA'
+         ${connexion_button}=     Set Variable  ${italie_connexion_button}
+    END
+
     Click                       ${connexion_button}
     Log To Console              connexion page
     ${Email}=                   Generate Email               ${Email}
     Fill text                   ${insert_email}              ${Email}
     Click                       ${remember}
     Click                       ${continuer}
+
+    #salutation
+     ${salutation}              choose salutation        ${salutation}
+     IF         $salutation == 'M'
+        click                      ${M}
+     ELSE IF    $salutation == 'Mme'
+        click                      ${Mme}
+     ELSE
+        click                      ${Mlle}
+     END
 
     #First name
     ${FirstName}=               Generate FirstName          ${FirstName}
@@ -34,15 +49,39 @@ Creation de compte
     Fill Text                   ${birthday}                 ${BirthDate}
     Wait For Elements State     ${date_invalide}            hidden    timeout=1s
 
-    #boutton
-    Log To Console              recevoir des informations
-    Click                       ${boutton1}
-    Log To Console              Club Clarins
-    Click                       ${boutton2}
+    #region BNL
+     IF    $country == 'BNL'
+         Click                  ${region}
+         Click                  ${Belgique}
+     END
 
-    #submit
+    #bouttons
+        #Recevoir des informations par mail
+
+    IF    $emailOption == 'YES'
+        Click                   ${emailOptionYes}
+    ELSE
+        Click                   ${emailOptionNo}
+    END
+        # Become a loyalty member
+    IF    $isLoyaltyMember == 'YES'
+        Click                   ${isLoyaltyMemberYes}
+    ELSE
+        Click                   ${isLoyaltyMemberNo}
+    END
+         #additional buttons
+    IF    $country == 'USA'
+         Click                  ${agreeToTerms}
+    END
+    IF    $country == 'ITA'
+         Click                  ${privacyPolicy}
+    END
+
+        #submit
     Click                       ${submit}
-    Wait For Elements State     ${nextPage}     visible
-    ${PAGE_URL}=  Get Url
-    Wait For    ${TARGET_PAGE_URL}== ${PAGE_URL}
-    close browser
+
+    #Verify that the account was created successfuly
+    Wait For Elements State    ${dashboard}                   visible
+    ${text}=                   Get Text                       ${dashboard}
+    Should Be Equal            ${creation_text.${country}}    ${text}
+

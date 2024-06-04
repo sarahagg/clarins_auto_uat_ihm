@@ -7,7 +7,7 @@ Enter Email
     [Arguments]    ${Email}
 
     IF  $Email == 'default'
-        RETURN    emailderesr@gmail.com
+        RETURN    ${default_values.EMAIL}
     END
 
 
@@ -18,7 +18,7 @@ Enter Password
     [Arguments]    ${mypassword}
 
     IF  $mypassword == 'default'
-        RETURN    azerty12ui
+        RETURN    ${default_values.password}
     END
 
     RETURN          ${mypassword}

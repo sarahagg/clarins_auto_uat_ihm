@@ -4,8 +4,9 @@ Resource            ..${/}..${/}..${/}Ressources${/}SFCC/Common${/}common.resour
 
 *** Keywords ***
 connect a user
-   [Arguments]    ${Email}   ${mypassword}
+   [Arguments]    ${Email}   ${mypassword}   ${country}
 
+    Import FakerLibrary     ${country}
     Click                       ${connexion_button}
     Log To Console              connexion page
     ${Email}=                   Enter Email    ${Email}
@@ -17,3 +18,6 @@ connect a user
     Fill Secret                 ${connexion_password}    $mypassword
     Click                       ${connexion_submit}
 
+     Wait For Elements State    ${dashboard}    visible
+    ${text}=    Get Text    ${dashboard}
+    Should Be Equal    ${creation_text.${country}}    ${text}
