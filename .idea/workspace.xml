@@ -6,9 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="first push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/CookiesAndAuthentification.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/CookiesAndAuthentification.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/common.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jeux de données/SFCC/New_account/jdd_New_account.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Jeux de données/SFCC/New_account/jdd_New_account.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/common_variables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/common_variables.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/locator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/locator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/New_account/GenericInformation.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/New_account/GenericInformation.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/New_account/New_account.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/New_account/New_account.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Newsletter/newsletter.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Newsletter/newsletter.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/SFCC/New_account/New_account.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/New_account/New_account.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/SFCC/Newsletter/Newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/Newsletter/Newsletter.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,9 +97,7 @@
           <option value="ENV:UAT" />
         </list>
       </option>
-      <option name="env">
-        <map />
-      </option>
+      <option name="env" />
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
@@ -109,9 +112,7 @@
           <option value="ENV:UAT" />
         </list>
       </option>
-      <option name="env">
-        <map />
-      </option>
+      <option name="env" />
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
@@ -133,29 +134,10 @@
       <option name="makeSuite" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Test" type="RobotFramework" factoryName="RobotFramework">
-      <option name="target" value="$ProjectFileDir$/Tests/test1.robot" />
-      <option name="args">
-        <list>
-          <option value="-d" />
-          <option value="Resultats/login_ihm_uat/logs" />
-          <option value="-v" />
-          <option value="ENV:UAT" />
-          <option value="-i" />
-          <option value="login_ihm" />
-          <option value="Tests" />
-        </list>
-      </option>
-      <option name="env" />
-      <option name="workingDir" value="$ProjectFileDir$" />
-      <option name="makeSuite" value="false" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Robot Framework.Connection" />
       <item itemvalue="Robot Framework.NewAccount" />
       <item itemvalue="Robot Framework.Newsletter" />
-      <item itemvalue="Robot Framework.Test" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -182,7 +164,8 @@
       <workItem from="1716817550738" duration="8921000" />
       <workItem from="1716886727884" duration="50809000" />
       <workItem from="1717084871385" duration="181000" />
-      <workItem from="1717085069152" duration="11747000" />
+      <workItem from="1717085069152" duration="51238000" />
+      <workItem from="1717512242725" duration="5753000" />
     </task>
     <task id="LOCAL-00001" summary="first push">
       <option name="closed" value="true" />
@@ -192,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717156059484</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first push">
+      <option name="closed" value="true" />
+      <created>1717487113393</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717487113393</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

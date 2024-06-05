@@ -41,7 +41,6 @@ Generate Email
 
     RETURN     ${Email}
 
-
 Generate Password
     [Arguments]    ${mypassword}
 
@@ -58,23 +57,30 @@ Generate BirthDate
         ${min_date}=    Evaluate    datetime.date(1930, 1, 1)    datetime
         ${max_date}=    Evaluate    datetime.date(2006, 1, 1)    datetime
         ${random_BirthDate}=     Run Keyword    Faker_${TEST_NAME}.Date Between    ${min_date}    ${max_date}
-
-        #${min_date}=    Evaluate    datetime.date(1930, 1, 1)    datetime
-        #${max_date}=    Evaluate    datetime.date.today()    datetime
-        ##${random_date}=    Evaluate    str(${min_date} + datetime.timedelta(days=random.randint(0, (${max_date} - ${min_date}).days)))    datetime    random    min_date=${min_date}    max_date=${max_date}
-
         RETURN    ${random_BirthDate}
     END
 
     RETURN     ${BirthDate}
 
 choose salutation
-    [Arguments]    ${salutation}
+    [Arguments]    ${salutation}    ${country}
 
     IF  $salutation == 'auto'
-        #${random_gender}=     Append To List      ${cuContact_lov_gender}        ${EMPTY}
         ${random_salutation}=     Evaluate            random.choice($salutations)
+        IF    $country == 'BNL' or $country == 'CHE'
+           ${random_salutation}=     Evaluate            random.choice($BNLsalutations)
+        END
         RETURN    ${random_salutation}
     END
 
     RETURN     ${salutation}
+
+Generate Region
+    [Arguments]    ${regions}
+
+    IF  $regions == 'auto'
+        ${random_regions}=     Evaluate            random.choice($BNLregion)
+        RETURN    ${random_regions}
+    END
+
+    RETURN     ${regions}

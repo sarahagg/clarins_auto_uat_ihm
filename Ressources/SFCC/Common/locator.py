@@ -1,23 +1,37 @@
 # locators.py
 
-# cookies
+##################
+# accept cookies #
+##################
 my_popup = "xpath=//*[@id='didomi-popup']"
 accept_cookies =  "xpath=//*[@id='didomi-notice-agree-button']"
 
-#newsletter
+##############
+# newsletter #
+##############
 newsletter_email = "xpath=//*[starts-with(@id, 'email')]"
 newsletter_inscription_button = "xpath=//*[starts-with(@id, 'confirm')]"
 newsletter_div = "xpath=//*[starts-with(@id, 'email')]"
 newsletter_message = "xpath=//*[@class='text-center text-uppercase']"
+#italie newletter
 italie_privacy_policy="xpath=//*[starts-with(@id, 'newsletterTerms')]"
+#BNL newsletter
+newsletter_region="xpath=//*[starts-with(@id ,'dwfrm_newsletterformbuilder')]/div/i-select"
+newsletter_Belgique="xpath=//*[@id='dwfrm_newsletterformbuilder_countries_country_BE']"
+newsletter_Luxembourg="xpath=//*[@id='dwfrm_newsletterformbuilder_countries_country_LU']"
+newsletter_Nederland="xpath=//*[@id='dwfrm_newsletterformbuilder_countries_country_NL']"
 
-#enter email
+###############
+# Enter email #
+###############
 connexion_button= "xpath=//*[@class='header-menu-login__icon header-menu__icon flex-vertical-center']"
 insert_email = "xpath=//i-input[@class='full-width']/input[starts-with(@id, 'email')]"
 remember = "xpath=//*[starts-with(@id, 'rememberme')]"
 continuer= "xpath=//*[starts-with(@id, 'submit')]"
 
-#create account
+##################
+# create account #
+##################
 First_Name_field="xpath=//*[starts-with(@id, 'firstname')]"
 last_name_field="xpath=//*[starts-with(@id, 'lastname')]"
 email_div= "xpath=//*[starts-with(@id, 'email')and (@data-auto-id='account-registration-email')]"
@@ -34,25 +48,24 @@ dashboard="xpath=//*[@id='wrapper']//i-account-inner-pages-title/h2"
 M="xpath=//*[@id='dwfrm_cba__registration_customer_title-Mr']"
 Mme="xpath=//*[@id='dwfrm_cba__registration_customer_title-Mrs']"
 Mlle="xpath=//*[@id='dwfrm_cba__registration_customer_title-Ms']"
-
-
-#connexion
-connexion_path="xpath=//*[@id='wrapper']/div[2]/div[1]/i-account-login/h1"
-connexion_password="xpath=//*[starts-with(@id, 'password')and @name='dwfrm_cba__login_password']"
-connexion_submit="xpath=//*[starts-with(@id, 'submit') and @name='dwfrm_cba__login_submit']"
-
-
-
-#USA
+#USA create account
 agreeToTerms="xpath=//*[starts-with(@id, 'termsandconditions')]"
-#italie
+#italie create account
 privacyPolicy="xpath=//*[@id='dwfrm_cba__registration_customer_agreedpersonalizedemails-0']"
 italie_cookies="xpath=//*[@id='didomi-notice-disagree-button']"
 italie_popup="xpath=//*[@id='didomi-popup']/div/div"
 italie_connexion_button= "xpath=//*[@id='header-wrapper-smart-tribune']//i-disclosure-content"
-#BNL
+#BNL create account
 region="xpath=//*[starts-with(@id ,'dwfrm_cba__registration')]/div/i-select"
-newsletter_region="xpath=//*[starts-with(@id ,'dwfrm_newsletterformbuilder')]/div/i-select"
-newsletter_belgique="xpath=//*[@id='dwfrm_newsletterformbuilder_countries_country_BE']"
-Belgique="xpath=//*[@id='dwfrm_cba__registration_customer_country_countryProfile_BE']"
+NewAcc_Belgique="xpath=//*[@id='dwfrm_cba__registration_customer_country_countryProfile_BE']"
+NewAcc_Luxembourg="xpath=//*[@id='dwfrm_cba__registration_customer_country_countryProfile_LU']"
+NewAcc_Nederland="xpath=//*[@id='dwfrm_cba__registration_customer_country_countryProfile_NL']"
+
+#############
+# connexion #
+#############
+connexion_path="xpath=//*[@id='wrapper']/div[2]/div[1]/i-account-login/h1"
+connexion_password="xpath=//*[starts-with(@id, 'password')and @name='dwfrm_cba__login_password']"
+connexion_submit="xpath=//*[starts-with(@id, 'submit') and @name='dwfrm_cba__login_submit']"
+
 

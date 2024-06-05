@@ -4,7 +4,7 @@ Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common.res
 
 *** Keywords ***
 Creation de compte
-    [Arguments]    ${FirstName}     ${LastName}     ${Email}    ${mypassword}   ${BirthDate}   ${country}   ${emailOption}  ${isLoyaltyMember}  ${salutation}
+    [Arguments]    ${FirstName}     ${LastName}     ${Email}    ${mypassword}   ${BirthDate}   ${country}   ${emailOption}  ${isLoyaltyMember}  ${salutation}   ${regions}
 
     Import FakerLibrary         ${country}
 
@@ -20,15 +20,17 @@ Creation de compte
     Click                       ${continuer}
 
     #salutation
-     ${salutation}              choose salutation        ${salutation}
-     IF         $salutation == 'M'
-        click                      ${M}
-     ELSE IF    $salutation == 'Mme'
-        click                      ${Mme}
-     ELSE
-        click                      ${Mlle}
-     END
+     ${salutation}=             choose salutation        ${salutation}   ${country}
 
+     IF     $country != 'USA'
+         IF         $salutation == 'M'
+            click                      ${M}
+         ELSE IF    $salutation == 'Mme'
+            click                      ${Mme}
+         ELSE
+            click                      ${Mlle}
+         END
+     END
     #First name
     ${FirstName}=               Generate FirstName          ${FirstName}
     Fill Text                   ${First_Name_field}         ${FirstName}
@@ -52,12 +54,18 @@ Creation de compte
     #region BNL
      IF    $country == 'BNL'
          Click                  ${region}
-         Click                  ${Belgique}
+         ${regions}=            Generate Region     ${regions}
+         IF         $regions == 'Belgique'
+             Click                  ${NewAcc_Belgique}
+         ELSE IF    $regions == 'Luxembourg '
+             Click                  ${NewAcc_Luxembourg}
+         ELSE
+             Click                  ${NewAcc_Nederland}
+         END
      END
 
     #bouttons
-        #Recevoir des informations par mail
-
+        #receive infos by Email
     IF    $emailOption == 'YES'
         Click                   ${emailOptionYes}
     ELSE
@@ -69,7 +77,7 @@ Creation de compte
     ELSE
         Click                   ${isLoyaltyMemberNo}
     END
-         #additional buttons
+         #additional buttons for usa and italy
     IF    $country == 'USA'
          Click                  ${agreeToTerms}
     END

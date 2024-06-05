@@ -47,7 +47,8 @@ ${TARGET_PAGE_URL}           https://staging-clarins-ecommera.demandware.net/on/
 ...                        CHE=
 ...                        ITA=GRAZIE PER L'ISCRIZIONE!
 
-
-@{salutations}                     M     Mlle    Mme
+@{BNLregion}                      Belgique   Luxembourg    Nederland
+@{salutations}                    M       Mlle    Mme
+@{BNLsalutations}                 M       Mme
 @{touch_countries}                ESP     ZAF     CAN     AUS     FRA     JPN     SGP    USA     CHE     IRL     HKG     CHN     CHL
 @{non_touch_countries}            USA     CHE     IRL     HKG     CHN     CHL
