@@ -1,0 +1,8 @@
+Resultats/**/*.html
+Resultats/**/*.xml
+Resultats/**/*
+Utile/*ssh*
+**/*.tmp
+**/*.txt
+**/*.DS_Store
+.idea/*
