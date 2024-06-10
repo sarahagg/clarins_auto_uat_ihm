@@ -15,12 +15,12 @@ Library         FakerLibrary
 Variables       ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}locator.py
 
 #resources
-Resource        ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common_variables.resource
+Resource        ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common-variables.resource
 Resource        ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common.resource
 Resource        ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}CookiesAndAuthentification.resource
 
-Resource        ..${/}..${/}..${/}Ressources${/}SFCC${/}New_account${/}GenericInformation.resource
-Resource        ..${/}..${/}..${/}Ressources${/}SFCC${/}New_account${/}New_account.resource
+Resource        ..${/}..${/}..${/}Ressources${/}SFCC${/}New-account${/}GenericInformation.resource
+Resource        ..${/}..${/}..${/}Ressources${/}SFCC${/}New-account${/}New-account.resource
 
 Resource        ..${/}..${/}..${/}Ressources${/}SFCC${/}Newsletter${/}newsletter.resource
 Resource        ..${/}..${/}..${/}Ressources${/}SFCC${/}Newsletter${/}GenericInformation.resource

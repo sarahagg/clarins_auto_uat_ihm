@@ -5,15 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="first push">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/CookiesAndAuthentification.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/Newsletter/GenericInformation.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jeux de données/SFCC/New_account/jdd_New_account.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Jeux de données/SFCC/New_account/jdd_New_account.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/common_variables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/common_variables.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jeux de données/SFCC/New_account/jdd_New_account.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/common.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/common_variables.resource" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/locator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/locator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/New_account/GenericInformation.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/New_account/GenericInformation.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/New_account/New_account.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/New_account/New_account.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Newsletter/newsletter.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Newsletter/newsletter.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/SFCC/New_account/New_account.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/New_account/New_account.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/SFCC/Newsletter/Newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/Newsletter/Newsletter.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/New_account/GenericInformation.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/New_account/New_account.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resultats\login_ihm_uat\logs/log.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resultats\login_ihm_uat\logs/output.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resultats\login_ihm_uat\logs/playwright-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resultats\login_ihm_uat\logs/report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/SFCC/Connection/Connection.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/Connection.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/SFCC/New_account/New_account.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/SFCC/Newsletter/Newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/Newsletter.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,16 +87,16 @@
       <recent name="$PROJECT_DIR$/utile" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Tests/SFCC" />
       <recent name="$PROJECT_DIR$/Ressources/SFCC/Common" />
       <recent name="$PROJECT_DIR$/Ressources/SFCC/Connection" />
       <recent name="$PROJECT_DIR$/Ressources/SFCC/New_account" />
       <recent name="$PROJECT_DIR$/Ressources/SFCC/Common/CookiesAndAuthentification" />
-      <recent name="$PROJECT_DIR$/Tests/SFCC" />
     </key>
   </component>
-  <component name="RunManager" selected="Robot Framework.Connection">
+  <component name="RunManager" selected="Robot Framework.Newsletter">
     <configuration name="Connection" type="RobotFramework" factoryName="RobotFramework">
-      <option name="target" value="$ProjectFileDir$/Tests/SFCC/Connection/Connection.robot" />
+      <option name="target" value="$ProjectFileDir$/Tests/SFCC/Connection.robot" />
       <option name="args">
         <list>
           <option value="-d" />
@@ -97,28 +105,32 @@
           <option value="ENV:UAT" />
         </list>
       </option>
-      <option name="env" />
+      <option name="env">
+        <map />
+      </option>
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="NewAccount" type="RobotFramework" factoryName="RobotFramework">
-      <option name="target" value="$ProjectFileDir$/Tests/SFCC/New_account/New_account.robot" />
+      <option name="target" value="$ProjectFileDir$/Tests/SFCC/New-account.robot" />
       <option name="args">
         <list>
           <option value="-d" />
-          <option value="Resultats/SFCC/New_account/logs" />
+          <option value="Resultats/SFCC/New-account/logs" />
           <option value="-v" />
           <option value="ENV:UAT" />
         </list>
       </option>
-      <option name="env" />
+      <option name="env">
+        <map />
+      </option>
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="Newsletter" type="RobotFramework" factoryName="RobotFramework">
-      <option name="target" value="$ProjectFileDir$/Tests/SFCC/Newsletter/Newsletter.robot" />
+      <option name="target" value="$ProjectFileDir$/Tests/SFCC/Newsletter.robot" />
       <option name="args">
         <list>
           <option value="-d" />
@@ -165,7 +177,12 @@
       <workItem from="1716886727884" duration="50809000" />
       <workItem from="1717084871385" duration="181000" />
       <workItem from="1717085069152" duration="51238000" />
-      <workItem from="1717512242725" duration="5753000" />
+      <workItem from="1717512242725" duration="10057000" />
+      <workItem from="1718005003830" duration="1325000" />
+      <workItem from="1718006347713" duration="4167000" />
+      <workItem from="1718012831034" duration="334000" />
+      <workItem from="1718013207485" duration="773000" />
+      <workItem from="1718014211759" duration="88000" />
     </task>
     <task id="LOCAL-00001" summary="first push">
       <option name="closed" value="true" />
@@ -183,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717487113393</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="first push">
+      <option name="closed" value="true" />
+      <created>1717590766104</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717590766104</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

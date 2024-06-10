@@ -1,9 +1,9 @@
 *** Settings ***
-Force Tags          New_account
+Force Tags          New-account
 Documentation       But du Test
 ...                 Vérifier que la création d'un nouveau compte se passe bien
-...                 python3 -m robot  -d "Resultats/New_account/logs" -v ENV:UAT  -i "New_account" Tests
-Library             DataDriver      file=..${/}..${/}..${/}Jeux de données${/}SFCC${/}New_account${/}jdd_New_account.xlsx
+...                 python3 -m robot  -d "Resultats/New-account/logs" -v ENV:UAT  -i "New-account" Tests
+Library             DataDriver      file=..${/}..${/}..${/}Jeux de données${/}SFCC${/}New-account${/}jdd_New-account.xlsx
 Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common.resource
 Test Template       Create a new account
 *** Test Cases ***
@@ -17,5 +17,5 @@ Create a new account
         Authentificate and accept cookies   ${country}
         Creation de compte   ${FirstName}     ${LastName}     ${Email}        ${mypassword}   ${BirthDate}   ${country}    ${emailOption}    ${isLoyaltyMember}    ${salutation}    ${regions}
         sleep   5s
-        close browser
+        Close Browser
     END

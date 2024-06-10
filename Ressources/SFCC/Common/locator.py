@@ -4,7 +4,7 @@
 # accept cookies #
 ##################
 my_popup = "xpath=//*[@id='didomi-popup']"
-accept_cookies =  "xpath=//*[@id='didomi-notice-agree-button']"
+accept_cookies=  "xpath=//*[@id='didomi-notice-agree-button']"
 
 ##############
 # newsletter #

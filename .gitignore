@@ -1,0 +1,7 @@
+Resultats/**/*.html
+Resultats/**/*.xml
+**/*.tmp
+Utile/*ssh*
+.idea/*
+**/*.txt
+Resultats/**/*
