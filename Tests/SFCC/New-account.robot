@@ -3,8 +3,8 @@ Force Tags          New-account
 Documentation       But du Test
 ...                 Vérifier que la création d'un nouveau compte se passe bien
 ...                 python3 -m robot  -d "Resultats/New-account/logs" -v ENV:UAT  -i "New-account" Tests
-Library             DataDriver      file=..${/}..${/}..${/}Jeux de données${/}SFCC${/}New-account${/}jdd_New-account.xlsx
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common.resource
+Library             DataDriver      file=..${/}..${/}Jeux de donnees${/}SFCC${/}New-account${/}jdd-New-account.xlsx
+Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}common.resource
 Test Template       Create a new account
 *** Test Cases ***
 Test Par Defaut Si Aucune Donnee

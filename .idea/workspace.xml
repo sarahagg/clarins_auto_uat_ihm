@@ -5,23 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="first push">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/CookiesAndAuthentification.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/Newsletter/GenericInformation.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jeux de donnees/SFCC/Connection/jdd-Connection.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jeux de donnees/SFCC/New-account/jdd-New-account.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jeux de donnees/SFCC/Newsletter/jdd-Newsletter.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jeux de données/SFCC/New_account/jdd_New_account.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/common.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/common_variables.resource" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/locator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/locator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/New_account/GenericInformation.resource" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/New_account/New_account.resource" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resultats\login_ihm_uat\logs/log.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resultats\login_ihm_uat\logs/output.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resultats\login_ihm_uat\logs/playwright-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resultats\login_ihm_uat\logs/report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/SFCC/Connection/Connection.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/Connection.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/SFCC/New_account/New_account.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/SFCC/Newsletter/Newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/Newsletter.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jeux de données/SFCC/Connection/jdd-Connection.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jeux de données/SFCC/New-account/jdd-New-account.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jeux de données/SFCC/Newsletter/jdd-Newsletter.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/SFCC/Connection.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/Connection.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/SFCC/New-account.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/New-account.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/SFCC/Newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/Newsletter.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +175,7 @@
       <workItem from="1718006347713" duration="4167000" />
       <workItem from="1718012831034" duration="334000" />
       <workItem from="1718013207485" duration="773000" />
-      <workItem from="1718014211759" duration="88000" />
+      <workItem from="1718014211759" duration="1758000" />
     </task>
     <task id="LOCAL-00001" summary="first push">
       <option name="closed" value="true" />
@@ -208,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717590766104</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="first push">
+      <option name="closed" value="true" />
+      <created>1718014452249</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718014452249</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

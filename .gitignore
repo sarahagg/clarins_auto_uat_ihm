@@ -1,7 +1,8 @@
 Resultats/**/*.html
 Resultats/**/*.xml
-**/*.tmp
-Utile/*ssh*
-.idea/*
-**/*.txt
 Resultats/**/*
+Utile/*ssh*
+**/*.tmp
+**/*.txt
+**/*.DS_Store
+.idea/*

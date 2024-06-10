@@ -3,8 +3,8 @@ Force Tags          Connection
 Documentation       But du Test
 ...                 Vérifier que la connexion se passe bien
 ...                 python3 -m robot  -d "Resultats/Connection/logs" -v ENV:UAT  -i "Connection" Tests
-Library             DataDriver      file=..${/}..${/}..${/}Jeux de données${/}SFCC${/}Connection${/}jdd_Connection.xlsx
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common.resource
+Library             DataDriver      file=..${/}..${/}Jeux de donnees${/}SFCC${/}Connection${/}jdd-Connection.xlsx
+Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}common.resource
 Test Template       Connect to an existing account
 
 *** Test Cases ***
