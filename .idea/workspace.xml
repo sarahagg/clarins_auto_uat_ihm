@@ -4,17 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="first push">
-      <change afterPath="$PROJECT_DIR$/Jeux de donnees/SFCC/Connection/jdd-Connection.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jeux de donnees/SFCC/New-account/jdd-New-account.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jeux de donnees/SFCC/Newsletter/jdd-Newsletter.xlsx" afterDir="false" />
+    <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Common/Authentification.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Common/common-variables.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Common/common.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Common/locator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Modify/Choice.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Modify/FillText.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Modify/modify.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Verify/Verify.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Verify/isSmtg.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/STEP/Login.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/STEP/Modify.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/STEP/Verify.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jeux de données/SFCC/Connection/jdd-Connection.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jeux de données/SFCC/New-account/jdd-New-account.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jeux de données/SFCC/Newsletter/jdd-Newsletter.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/SFCC/Connection.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/Connection.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/SFCC/New-account.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/New-account.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/SFCC/Newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/Newsletter.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jeux de donnees/SFCC/New-account/jdd-New-account.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Jeux de donnees/SFCC/New-account/jdd-New-account.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,20 +68,24 @@
     &quot;Robot Framework.NewAccount.executor&quot;: &quot;Run&quot;,
     &quot;Robot Framework.Newsletter.executor&quot;: &quot;Run&quot;,
     &quot;Robot Framework.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.login.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.modify.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.verify.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;refacto&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/s.aggour/Library/CloudStorage/OneDrive-ONEPOINT/Clarins/clarins-auto-uat-ihm/utile&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;STEP&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/s.aggour/Library/CloudStorage/OneDrive-ONEPOINT/Clarins/clarins-auto-uat-ihm/Ressources/STEP/Common&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;duplicates.index&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Ressources/STEP/Common" />
       <recent name="$PROJECT_DIR$/utile" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -87,8 +96,8 @@
       <recent name="$PROJECT_DIR$/Ressources/SFCC/Common/CookiesAndAuthentification" />
     </key>
   </component>
-  <component name="RunManager" selected="Robot Framework.Newsletter">
-    <configuration name="Connection" type="RobotFramework" factoryName="RobotFramework">
+  <component name="RunManager" selected="Robot Framework.modify">
+    <configuration name="Connection" type="RobotFramework" factoryName="RobotFramework" folderName="SFCC">
       <option name="target" value="$ProjectFileDir$/Tests/SFCC/Connection.robot" />
       <option name="args">
         <list>
@@ -98,14 +107,12 @@
           <option value="ENV:UAT" />
         </list>
       </option>
-      <option name="env">
-        <map />
-      </option>
+      <option name="env" />
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="NewAccount" type="RobotFramework" factoryName="RobotFramework">
+    <configuration name="NewAccount" type="RobotFramework" factoryName="RobotFramework" folderName="SFCC">
       <option name="target" value="$ProjectFileDir$/Tests/SFCC/New-account.robot" />
       <option name="args">
         <list>
@@ -115,14 +122,12 @@
           <option value="ENV:UAT" />
         </list>
       </option>
-      <option name="env">
-        <map />
-      </option>
+      <option name="env" />
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Newsletter" type="RobotFramework" factoryName="RobotFramework">
+    <configuration name="Newsletter" type="RobotFramework" factoryName="RobotFramework" folderName="SFCC">
       <option name="target" value="$ProjectFileDir$/Tests/SFCC/Newsletter.robot" />
       <option name="args">
         <list>
@@ -132,9 +137,52 @@
           <option value="ENV:UAT" />
         </list>
       </option>
-      <option name="env">
-        <map />
+      <option name="env" />
+      <option name="workingDir" value="$ProjectFileDir$" />
+      <option name="makeSuite" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="login" type="RobotFramework" factoryName="RobotFramework" folderName="STEP">
+      <option name="target" value="$ProjectFileDir$/Tests/STEP/Login.robot" />
+      <option name="args">
+        <list>
+          <option value="-d" />
+          <option value="Resultats/STEP/Login" />
+          <option value="-v" />
+          <option value="ENV:UAT" />
+        </list>
       </option>
+      <option name="env" />
+      <option name="workingDir" value="$ProjectFileDir$" />
+      <option name="makeSuite" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="modify" type="RobotFramework" factoryName="RobotFramework" folderName="STEP">
+      <option name="target" value="$ProjectFileDir$/Tests/STEP/Modify.robot" />
+      <option name="args">
+        <list>
+          <option value="-d" />
+          <option value="Resultats/STEP/Modify" />
+          <option value="-v" />
+          <option value="ENV:UAT" />
+        </list>
+      </option>
+      <option name="env" />
+      <option name="workingDir" value="$ProjectFileDir$" />
+      <option name="makeSuite" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="verify" type="RobotFramework" factoryName="RobotFramework" folderName="STEP">
+      <option name="target" value="$ProjectFileDir$/Tests/STEP/Verify.robot" />
+      <option name="args">
+        <list>
+          <option value="-d" />
+          <option value="Resultats/STEP/Verify" />
+          <option value="-v" />
+          <option value="ENV:UAT" />
+        </list>
+      </option>
+      <option name="env" />
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
@@ -143,6 +191,9 @@
       <item itemvalue="Robot Framework.Connection" />
       <item itemvalue="Robot Framework.NewAccount" />
       <item itemvalue="Robot Framework.Newsletter" />
+      <item itemvalue="Robot Framework.login" />
+      <item itemvalue="Robot Framework.verify" />
+      <item itemvalue="Robot Framework.modify" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -176,6 +227,11 @@
       <workItem from="1718012831034" duration="334000" />
       <workItem from="1718013207485" duration="773000" />
       <workItem from="1718014211759" duration="1758000" />
+      <workItem from="1718350494913" duration="7990000" />
+      <workItem from="1718487652397" duration="590000" />
+      <workItem from="1718868973703" duration="22673000" />
+      <workItem from="1719166301396" duration="57513000" />
+      <workItem from="1719394114735" duration="1482000" />
     </task>
     <task id="LOCAL-00001" summary="first push">
       <option name="closed" value="true" />
@@ -209,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718014452249</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="SFCC final commit">
+      <option name="closed" value="true" />
+      <created>1718181553287</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718181553287</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +304,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first push" />
-    <option name="LAST_COMMIT_MESSAGE" value="first push" />
+    <MESSAGE value="SFCC final commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="SFCC final commit" />
   </component>
 </project>
