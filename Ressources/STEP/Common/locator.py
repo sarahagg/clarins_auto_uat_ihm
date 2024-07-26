@@ -77,4 +77,3 @@ loc_save="xpath=//span[text()='Save']"
 
 multipleElements="xpath=//*[@id='ListTable']/div"
 FirstElement="xpath=//*[@id='ListTable']//tr[1]/td[3]"
-#//*[@id="ListTable"]/div/div[3]/table/tbody/tr[1]/td[3]

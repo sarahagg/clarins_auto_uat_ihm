@@ -8,7 +8,6 @@ Library             BuiltIn
 
 Write Data
     [Arguments]    ${csv_file}    ${data}
-    #${row}=        Create List    @{data}
     ${file_exists}=    Run Keyword And Ignore Error    File Should Exist    ${csv_file}
     ${file_status}=    Set Variable    ${file_exists}[0]
     Run Keyword If    '${file_status}' == 'PASS'    Append row To CSV    ${csv_file}    ${data}    ELSE    Create CSV   ${csv_file}    ${data}
@@ -30,7 +29,6 @@ Append row To CSV
    [Arguments]    ${csv_file}    ${row}
     ${row_strings}=    Create List
     FOR    ${element}    IN    @{row}
-        #${element_string}=    Run Keyword If    '${element}' in ['datetime.date', 'datetime.datetime']    Convert Date To String    ${element}    ELSE    Convert To String    ${element}
         ${element_string}=    Convert To String    ${element}
         Append To List    ${row_strings}    ${element_string}
     END

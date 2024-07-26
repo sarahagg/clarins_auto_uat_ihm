@@ -6,3 +6,4 @@ Utile/*ssh*
 **/*.txt
 **/*.DS_Store
 .idea/*
+/Jeux de donnees/LINKFILES.csv

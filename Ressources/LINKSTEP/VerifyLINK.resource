@@ -1,0 +1,32 @@
+*** Settings ***
+Documentation       all the keywords needed to verify a user's information on STEP
+Resource            ..${/}..${/}Ressources${/}LINKSTEP${/}common.resource
+
+*** Keywords ***
+VerifyLINK
+    [Arguments]     ${FirstName}   ${LastName}   ${Email}   ${BirthDate}   ${country}  ${salutation}  ${regions}  ${emailOption}   ${isLoyaltyMember}
+
+    ${GetCountry}=             Get Text                                    ${loc_Country}
+    Should Contain             ${full_country.${country}}                  ${GetCountry}
+
+    ${Getsalutation}=           Get Text                                   ${loc_salutation}
+    Should Contain              ${translate_salutation.${salutation}}      ${Getsalutation}
+
+    ${GetFirstName}=            Get Text                                   ${loc_FirstName}
+    ${is_equal}=                Normalize And Compare    ${FirstName}      ${GetFirstName}
+    Should Be True              ${is_equal}
+
+    ${GetLastName}=             Get Text                                   ${loc_LastName}
+    Should Contain              ${LastName}                                ${GetLastName}
+
+    ${GetBirthDate}=            Get Text                                   ${loc_BirthDate}
+    Should Contain              ${BirthDate}                               ${GetBirthDate}
+
+    Click                       ${loc_IsLoyaltyMember_history}
+    ${GetIsLoyaltyMember}=      Get Text                                   ${loc_IsLoyaltyMember}
+    Should Contain              ${yes_no.${IsLoyaltyMember}}               ${GetIsLoyaltyMember}
+    Mouse Button                down
+
+    ${GetEmail}=                Get Text                                   ${loc_Email}
+    Should Contain              ${Email}                                   ${GetEmail}
+

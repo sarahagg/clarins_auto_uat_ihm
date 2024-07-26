@@ -10,7 +10,7 @@ Test Template       Link SFCC
 Test Par Defaut Si Aucune Donnee
 
 *** Keywords ***
-   # Clear CSV File   ${CSV_FILE}
+
 Link SFCC
     [Arguments]  ${playTest}   ${FirstName}     ${LastName}     ${Email}      ${mypassword}   ${BirthDate}  ${country}   ${emailOption}    ${isLoyaltyMember}   ${salutation}  ${regions}
 
