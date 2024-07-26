@@ -11,7 +11,7 @@ ${today_format}             %Y_%m_%d
 ${USERNAME}                 storefront
 ${PASSWORD}                 unlimited22
 ${TARGET_PAGE_URL}           https://staging-clarins-ecommera.demandware.net/on/demandware.store/Sites-clarinsfr-Site/fr_FR/Home-Show
-
+${CSV_FILE}                  file=..${/}..${/}Jeux de donnees${/}LINKFILES.csv
 
 &{default_values}         EMAIL=emailderesr@gmail.com
 ...                       country=FRA
@@ -47,8 +47,12 @@ ${TARGET_PAGE_URL}           https://staging-clarins-ecommera.demandware.net/on/
 ...                        CHE=
 ...                        ITA=GRAZIE PER L'ISCRIZIONE!
 
+
+
 @{BNLregion}                      Belgique   Luxembourg    Nederland
 @{salutations}                    M       Mlle    Mme
 @{BNLsalutations}                 M       Mme
 @{touch_countries}                ESP     ZAF     CAN     AUS     FRA     JPN     SGP    USA     CHE     IRL     HKG     CHN     CHL
 @{non_touch_countries}            USA     CHE     IRL     HKG     CHN     CHL
+${UNWANTED_CHARACTERS}            []
+@{generated_data}                 Josephine   Picard   gdupre@example.net   datetime.date(1988, 5, 14)   FRA    auto

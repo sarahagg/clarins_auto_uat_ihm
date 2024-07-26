@@ -1,3 +1,4 @@
+
 # locators.py
 
 ####################
@@ -72,3 +73,8 @@ loc_add_consent="xpath=//*[@id='Consent_Info']//button"
 loc_delete_consent="xpath=//div[@class='data-container-records-list-element'][1]/i"
 ##Save
 loc_save="xpath=//span[text()='Save']"
+
+
+multipleElements="xpath=//*[@id='ListTable']/div"
+FirstElement="xpath=//*[@id='ListTable']//tr[1]/td[3]"
+#//*[@id="ListTable"]/div/div[3]/table/tbody/tr[1]/td[3]

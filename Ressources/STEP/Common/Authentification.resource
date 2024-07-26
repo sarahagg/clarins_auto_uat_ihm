@@ -13,14 +13,19 @@ Authentificate
     Fill text                   ${Step_login}     ${STEP_USERNAME}
     Fill secret                 ${Step_pass}     $STEP_PASSWORD
     Click                       ${LogIn}
-    #go to ClarinsWebUI and loop up a searchItem
+
+    #go to ClarinsWebUI
     Click                       ${ClarinsWebUI}
+
+    #Search for an email
     Click                       ${GlobalSearch}
-    #${SearchItem}=SetValue              ${Email}
-    Fill text                   ${Recherche}         ${Email}
-    Click                       ${IconRechercher}
+    Fill Text    ${Recherche}    ${Email}
+    Press Keys    ${Recherche}    Enter
+    ${is_visible}=    Is Element Visible    ${multipleElements}
+    Run Keyword If    ${is_visible}    Click    ${FirstElement}    ELSE    Sleep    1s
 
 
-
-
-
+Is Element Visible
+    [Arguments]    ${selector}
+    ${state}=    Run Keyword And Return Status    Wait For Elements State    ${selector}    visible    timeout=500ms
+    [Return]    ${state}

@@ -4,7 +4,7 @@ Resource            ..${/}..${/}..${/}Ressources${/}STEP${/}Common${/}common.res
 
 *** Keywords ***
 Verify
-    [Arguments]    ${ClarinscontactID}   ${Brand}  ${Country}   ${IsGuest}  ${gender}  ${salutation}  ${FirstName}  ${localFirstName}  ${LastName}  ${localLastName}   ${BirthDate}  ${Language}  ${Nationality}  ${isRegistered}  ${IsLoyaltyMember}  ${isAnonymized}  ${isFrozen}  ${Email}
+    [Arguments]   ${ClarinscontactID}   ${Brand}  ${Country}   ${IsGuest}  ${gender}  ${salutation}  ${FirstName}  ${localFirstName}  ${LastName}  ${localLastName}   ${BirthDate}  ${Language}  ${Nationality}  ${isRegistered}  ${IsLoyaltyMember}  ${isAnonymized}  ${isFrozen}  ${Email}
 
     ${GetcontactID}=           Get Text                                ${loc_ClarinscontactId}
     Should Contain             ${ClarinscontactID}                     ${GetcontactID}
@@ -51,7 +51,6 @@ Verify
     ${GetNationality}=          Get Text                                ${loc_Nationality}
     Should Contain              ${Nationality}                          ${GetNationality}
 
-    #IsSomething   ${var}
     Click                       ${loc_isRegistered_history}
     ${GetisRegistered}=         Get Text                                ${loc_isRegistered}
     Should Contain              ${isRegistered}                         ${GetisRegistered}

@@ -10,13 +10,10 @@ Generate FirstName
     END
     IF  $FirstName == 'auto'
         ${random_FirstName}=  Run Keyword    Faker_${TEST_NAME}.First Name
+        ${FirstName}=    Set Variable   ${random_FirstName}
         RETURN    ${random_FirstName}
     END
     RETURN     ${FirstName}
-FillFirstname
-    [Arguments]    ${FirstName}
-    ${FirstName}=               Generate FirstName          ${FirstName}
-    Fill Text                   ${First_Name_field}         ${FirstName}
 Generate lastName
     [Arguments]    ${LastName}
     IF  $LastName == 'default'
@@ -24,28 +21,19 @@ Generate lastName
     END
     IF  $LastName == 'auto'
         ${random_LastName}=     Run Keyword    Faker_${TEST_NAME}.Last Name
+         ${LastName}=   Set Variable  ${random_LastName}
         RETURN    ${random_LastName}
     END
     RETURN     ${LastName}
-FillLastName
-    [Arguments]     ${LastName}
-    ${LastName}=                Generate lastName           ${LastName}
-    Fill Text                   ${last_name_field}          ${LastName}
-
 Generate Email
     [Arguments]    ${Email}
     IF  $Email == 'auto'
-        ${Email}=     Run Keyword    Faker_${TEST_NAME}.Email
-        RETURN    ${Email}
+        ${randomEmail}=     Run Keyword    Faker_${TEST_NAME}.Email
+        ${Email}=   set variable  ${randomEmail}
+        RETURN    ${randomEmail}
     END
-    RETURN     ${Email}
 
-FillEmail
-    [Arguments]   ${Email}
-    ${Email}=                   Generate Email               ${Email}
-    Fill text                   ${insert_email}              ${Email}
-    Click                       ${remember}
-    Click                       ${continuer}
+    RETURN     ${Email}
 Generate Password
     [Arguments]    ${mypassword}
     IF  $mypassword== 'auto'
@@ -63,26 +51,10 @@ Generate BirthDate
         ${min_date}=    Evaluate    datetime.date(1930, 1, 1)    datetime
         ${max_date}=    Evaluate    datetime.date(2006, 1, 1)    datetime
         ${random_BirthDate}=     Run Keyword    Faker_${TEST_NAME}.Date Between    ${min_date}    ${max_date}
-        RETURN    ${random_BirthDate}
+        ${BirthDate}=   Set Variable   ${random_BirthDate}
+        RETURN    ${BirthDate}
     END
     RETURN     ${BirthDate}
-FillBirthdate
-    [Arguments]   ${BirthDate}
-    ${BirthDate}=               Generate BirthDate          ${BirthDate}
-    Fill Text                   ${birthday}                 ${BirthDate}
-    Wait For Elements State     ${date_invalide}            hidden    timeout=1s
-FillSalutation
-    [Arguments]    ${salutation}    ${country}
-     ${salutation}=             choose salutation        ${salutation}   ${country}
-     IF     $country != 'USA'
-         IF         $salutation == 'M'
-            click                      ${M}
-         ELSE IF    $salutation == 'Mme'
-            click                      ${Mme}
-         ELSE
-            click                      ${Mlle}
-         END
-     END
 
 choose salutation
     [Arguments]    ${salutation}    ${country}
@@ -91,7 +63,7 @@ choose salutation
         IF    $country == 'BNL' or $country == 'CHE'
            ${random_salutation}=     Evaluate            random.choice($BNLsalutations)
         END
-        RETURN    ${random_salutation}
+        RETURN     ${random_salutation}
     END
     RETURN     ${salutation}
 
@@ -110,34 +82,31 @@ Connection Button
     END
     Click                       ${connexion_button}
 
-FillBNL
-    [Arguments]   ${country}   ${region}  ${regions}
-        IF    $country == 'BNL'
-         Click                  ${region}
-         ${regions}=            Generate Region     ${regions}
-         IF         $regions == 'Belgique'
-             Click                  ${NewAcc_Belgique}
-         ELSE IF    $regions == 'Luxembourg '
-             Click                  ${NewAcc_Luxembourg}
-         ELSE
-             Click                  ${NewAcc_Nederland}
-         END
-     END
-
-FillButtons
-    [Arguments]   ${emailOption}   ${isLoyaltyMember}  ${country}
+FillButton emailOption
+    [Arguments]   ${emailOption}     ${country}
         #receive infos by Email
     IF    $emailOption == 'YES'
         Click                   ${emailOptionYes}
+        RETURN    ${emailOption}
     ELSE
         Click                   ${emailOptionNo}
+        RETURN    ${emailOption}
     END
+
+    RETURN    ${emailOption}
+
+FillButton isLoyaltyMember
+    [Arguments]   ${isLoyaltyMember}  ${country}
         # Become a loyalty member
     IF    $isLoyaltyMember == 'YES'
         Click                   ${isLoyaltyMemberYes}
+        RETURN    ${isLoyaltyMember}
     ELSE
         Click                   ${isLoyaltyMemberNo}
+        RETURN    ${isLoyaltyMember}
     END
+FillButton agreeToTerms and privacypolicy
+    [Arguments]    ${country}
          #additional buttons for usa and italy
     IF    $country == 'USA'
          Click                  ${agreeToTerms}
@@ -145,6 +114,7 @@ FillButtons
     IF    $country == 'ITA'
          Click                  ${privacyPolicy}
     END
+
 VerifyCreation
     [Arguments]   ${country}
     Wait For Elements State    ${dashboard}                   visible
