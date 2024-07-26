@@ -9,6 +9,9 @@ Library         KeePassLibrary
 Library         OperatingSystem
 Library         DateTime
 Library         FakerLibrary
+Library         Collections
+Library         String
+
 
 
 #variables
@@ -27,7 +30,7 @@ Resource        ..${/}..${/}..${/}Ressources${/}SFCC${/}Newsletter${/}GenericInf
 
 Resource        ..${/}..${/}..${/}Ressources${/}SFCC${/}Connection${/}GenericInformation.resource
 Resource        ..${/}..${/}..${/}Ressources${/}SFCC${/}Connection${/}Connection.resource
-
+Resource        ..${/}..${/}..${/}Ressources${/}LINKSFCC${/}Link.resource
 *** Keywords ***
 Import FakerLibrary
     [Arguments]    ${country}

@@ -68,4 +68,3 @@ connexion_path="xpath=//*[@id='wrapper']/div[2]/div[1]/i-account-login/h1"
 connexion_password="xpath=//*[starts-with(@id, 'password')and @name='dwfrm_cba__login_password']"
 connexion_submit="xpath=//*[starts-with(@id, 'submit') and @name='dwfrm_cba__login_submit']"
 
-

@@ -1,0 +1,24 @@
+*** Settings ***
+Force Tags          verify
+Documentation       But du Test
+...                 Comparer les infos step et SFCC
+...                 python3 -m robot  -d "Resultats/STEP/Verify" -v ENV:UAT  -i "verify" Tests
+Library             DataDriver      file=..${/}..${/}Jeux de donnees${/}STEP${/}jdd-Verify.xlsx
+Resource            ..${/}..${/}Ressources${/}STEP${/}Common${/}common.resource
+Test Template       Comparer
+
+*** Test Cases ***
+Test Par Defaut Si Aucune Donnee
+
+*** Keywords ***
+
+Comparer
+    [Arguments]   ${playTest}   ${ClarinscontactID}   ${Brand}  ${Country}   ${IsGuest}  ${gender}  ${salutation}  ${FirstName}  ${localFirstName}  ${LastName}  ${localLastName}   ${BirthDate}  ${Language}  ${Nationality}  ${isRegistered}  ${IsLoyaltyMember}  ${isAnonymized}  ${isFrozen}  ${Email}
+
+    IF    $playTest == "YES"
+     Authentificate   ${Email}
+     sleep   2s
+     Verify    ${ClarinscontactID}   ${Brand}  ${Country}   ${IsGuest}  ${gender}  ${salutation}  ${FirstName}  ${localFirstName}  ${LastName}  ${localLastName}   ${BirthDate}  ${Language}  ${Nationality}  ${isRegistered}  ${IsLoyaltyMember}  ${isAnonymized}  ${isFrozen}  ${Email}
+     Sleep    5s
+     Close Browser
+    END

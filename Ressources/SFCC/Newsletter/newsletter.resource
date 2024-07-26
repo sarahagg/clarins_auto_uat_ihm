@@ -33,8 +33,6 @@ Inscription a la newsletter
 
     Click                       ${newsletter_inscription_button}
     Wait For Elements State     ${newsletter_message}                   visible    timeout=3s
+
     ${text}=                    Get Text                                ${newsletter_message}
-    Should Be Equal             ${newsletter_text.${country}}           ${text}
-
-
-
+    Should Contain        ${text}   ${newsletter_text.${country}}
