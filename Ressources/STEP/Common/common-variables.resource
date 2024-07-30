@@ -1,31 +1,47 @@
 *** Settings ***
-Documentation   here are all the common variables
-Resource        ..${/}..${/}..${/}Ressources${/}STEP${/}Common${/}common.resource
+Documentation       here are all the common variables
+
+Resource            ..${/}..${/}..${/}Ressources${/}STEP${/}Common${/}common.resource
+
 
 *** Variables ***
-
-${ENV}
+${ENV}                      ${EMPTY}
 ${STEP_BROWSER}             chromium
 ${STEP_USERNAME}            SAGGOUR
 ${STEP_PASSWORD}            saggour24042024
 ${PAGE_URL}                 https://clarins-qa.mdm.stibosystems.com/
 ${SearchItem}               UC1_UAT@gg.com
 
-@{lov_OptinChannel}    captainWallet (captainWallet)  email (email)  phoneHome (phoneHome)  phoneMobileSMS (phoneMobileSMS)   phoneMobileVoice (phoneMobileVoice)   phoneOffice (phoneOffice)   postalAddress (postalAddress)   profiling (profiling)   socialMediaFacebook (socialMediaFacebook)   socialMediaInstagram (socialMediaInstagram)  socialMediaLINE (socialMediaLINE)   socialMediaTwitter (socialMediaTwitter)   socialMediaWeChat (socialMediaWeChat)   socialMediaWhatsApp (socialMediaWhatsApp)
-@{lov_Optin}           yes (yes)   waiting (waiting)   no (no)
-@{lov_phonetype}            home (home)   mobile (mobile)  office (office)
+@{lov_OptinChannel}
+...                         captainWallet (captainWallet)
+...                         email (email)
+...                         phoneHome (phoneHome)
+...                         phoneMobileSMS (phoneMobileSMS)
+...                         phoneMobileVoice (phoneMobileVoice)
+...                         phoneOffice (phoneOffice)
+...                         postalAddress (postalAddress)
+...                         profiling (profiling)
+...                         socialMediaFacebook (socialMediaFacebook)
+...                         socialMediaInstagram (socialMediaInstagram)
+...                         socialMediaLINE (socialMediaLINE)
+...                         socialMediaTwitter (socialMediaTwitter)
+...                         socialMediaWeChat (socialMediaWeChat)
+...                         socialMediaWhatsApp (socialMediaWhatsApp)
+@{lov_Optin}                yes (yes)    waiting (waiting)    no (no)
+@{lov_phonetype}            home (home)    mobile (mobile)    office (office)
+@{touch_countries}          ESP    ZAF    CAN    AUS    FRA    JPN    SGP    USA    ITA    UK
+@{non_touch_countries}      CHE    IRL    HKG    CHN    CHL
 
+&{full_country}             UK=United Kingdom
+...                         FRA=France
+...                         BNL=Benelux
+...                         USA=United States
+...                         CHE=Suisse
+...                         ITA=Italy
 
-&{full_country}            UK=United Kingdom
-...                        FRA=France
-...                        BNL=Benelux
-...                        USA=United States
-...                        CHE=Suisse
-...                        ITA=Italy
+&{translate_salutation}     Mlle=Ms
+...                         M=Mr
+...                         Mme=Mrs
 
-&{translate_salutation}    Mlle=Ms
-...                        M=Mr
-...                        Mme=Mrs
-
-&{yes_no}                  Yes=true
-...                        NO=false
+&{yes_no}                   Yes=true
+...                         NO=false
