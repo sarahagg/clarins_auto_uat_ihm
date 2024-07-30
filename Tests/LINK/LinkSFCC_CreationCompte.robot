@@ -1,14 +1,14 @@
 *** Settings ***
 Documentation       But du Test
-...                 Vérifier que la création d'un nouveau compte se passe bien
-...                 python3 -m robot    -d "Resultats/New-account/logs" -v ENV:UAT    -i "New-account" Tests
+...                 Créer un nouveau compte sur SFCC et mettre les données dans un datadriver LINKFILESCREATE.csv
+...                 python3 -m robot    -d "Resultats/LinkSFCC_CreationCompte/logs" -v ENV:UAT    -i "Link SFCC" Tests
 
 Library             DataDriver    file=..${/}..${/}Jeux de donnees${/}SFCC${/}New-account${/}jdd-New-account.xlsx
-Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}common.resource
+Resource            ..${/}..${/}Ressources${/}LinkSFCC_CreationCompte${/}common.resource
 
-Test Template       Create a new account
+Test Template       Link SFCC
 
-Force Tags          new-account
+Force Tags          Link SFCC
 
 
 *** Test Cases ***
@@ -16,7 +16,7 @@ Default Test If No Data
 
 
 *** Keywords ***
-Create a new account
+Link SFCC
     [Arguments]
     ...    ${playTest}
     ...    ${FirstName}
@@ -29,6 +29,7 @@ Create a new account
     ...    ${isLoyaltyMember}
     ...    ${salutation}
     ...    ${regions}
+
     IF    $playTest == "YES"
         Authentificate and accept cookies    ${country}
         sleep    1s
@@ -43,6 +44,7 @@ Create a new account
         ...    ${isLoyaltyMember}
         ...    ${salutation}
         ...    ${regions}
-        log    ${generated_data}
+        Write Data    ${CSV_FILE}    ${generated_data}
+        sleep    5s
         Close Browser
     END
