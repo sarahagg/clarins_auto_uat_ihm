@@ -3,7 +3,7 @@ Documentation       But du Test
 ...                 Supprimer le fichier CVS généré par SFCC
 ...                 python3 -m robot    -d "Resultats/Delete/logs" -v ENV:UAT    -i "Delete Newsletter CSV" Tests
 
-Resource            ..${/}..${/}Ressources${/}LinkSFCC_NEWSLETTER${/}common.resource
+Resource            ..${/}..${/}Ressources${/}LinkSFCC_Newsletter${/}common.resource
 
 Force Tags          delete newsletter csv
 
