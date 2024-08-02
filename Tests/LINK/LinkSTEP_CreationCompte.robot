@@ -8,7 +8,7 @@ Resource            ..${/}..${/}Ressources${/}LinkSTEP_CreationCompte${/}common.
 
 Test Template       Verify Account
 
-Force Tags          verify account
+Force Tags          link-step new-account
 
 
 *** Test Cases ***

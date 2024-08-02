@@ -8,7 +8,7 @@ Resource            ..${/}..${/}Ressources${/}LinkSTEP_Newsletter${/}common.reso
 
 Test Template       Verify Account Newsletter
 
-Force Tags          verify account newsletter
+Force Tags          link-step newsletter
 
 
 *** Test Cases ***
