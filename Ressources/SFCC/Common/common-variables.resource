@@ -22,7 +22,7 @@ ${csv_file_Newsletter}      file=..${/}..${/}Jeux de donnees${/}LINKFILESNEWSLET
 ...                         LastName= Evans
 
 # country
-&{locale_values}            UK=uk_UA
+&{locale_values}            UK=en_GB
 ...                         FRA=fr_FR
 ...                         BNL=nl_BE
 ...                         USA=en_US

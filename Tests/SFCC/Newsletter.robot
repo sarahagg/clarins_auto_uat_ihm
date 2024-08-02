@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation       But du Test
-...                 Vérifier l'inscription à  la Newsletter
+...                 Vérifier l'inscription à    la Newsletter
 ...                 python3 -m robot    -d "Resultats/Newsletter/logs" -v ENV:UAT    -i "Newsletter" Tests
 
 Library             DataDriver    file=..${/}..${/}Jeux de donnees${/}SFCC${/}Newsletter${/}jdd-Newsletter.xlsx    sheet_name=Test Cases

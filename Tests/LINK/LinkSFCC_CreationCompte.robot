@@ -8,7 +8,7 @@ Resource            ..${/}..${/}Ressources${/}LinkSFCC_CreationCompte${/}common.
 
 Test Template       Link SFCC
 
-Force Tags          Link SFCC
+Force Tags          link sfcc
 
 
 *** Test Cases ***

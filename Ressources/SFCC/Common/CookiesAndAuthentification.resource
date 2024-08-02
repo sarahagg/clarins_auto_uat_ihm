@@ -23,3 +23,11 @@ Authentificate and accept cookies
         Click    ${accept_cookies}
         Log To Console    Cookie accepted
     END
+    IF    $country == 'ITA'
+        ${is_visible}    Is Element Visible    ${welcome_offer}
+        IF    ${is_visible}
+            Click    ${refuse_welcome_offer}
+        ELSE
+            Sleep    1s
+        END
+    END
