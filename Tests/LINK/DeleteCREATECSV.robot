@@ -8,7 +8,7 @@ Resource            ..${/}..${/}Ressources${/}LinkSFCC_CreationCompte${/}common.
 
 Test Template       Delete NewAccount CSV
 
-Force Tags          Delete NewAccount CSV
+Force Tags          delete newaccount csv
 
 
 *** Test Cases ***

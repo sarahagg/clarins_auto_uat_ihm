@@ -19,7 +19,6 @@ Create account
     ...    ${regions}
     sleep    1s
     Import FakerLibrary    ${country}
-
     # COUNTRY
     ${generated_country}=    Set Variable    ${country}
     Connection Button    ${country}

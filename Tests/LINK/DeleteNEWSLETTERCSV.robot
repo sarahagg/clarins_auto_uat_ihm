@@ -8,7 +8,7 @@ Resource            ..${/}..${/}Ressources${/}LinkSFCC_NEWSLETTER${/}common.reso
 
 Test Template       Delete Newsletter CSV
 
-Force Tags          Delete Newsletter CSV
+Force Tags          delete newsletter csv
 
 
 *** Test Cases ***

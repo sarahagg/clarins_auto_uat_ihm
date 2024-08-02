@@ -5,25 +5,25 @@
 ##################
 my_popup = "xpath=//*[@id='didomi-popup']"
 accept_cookies = "xpath=//*[@id='didomi-notice-agree-button']"
-
-
+welcome_offer ="xpath=//*[@id='bx-form-1520728-step-1']"
+refuse_welcome_offer="xpath=//*[@id='bx-close-inside-1520728']"
 
 ##############
 # newsletter #
 ##############
-newsletter_email = "xpath=//*[starts-with(@id, 'email')]"
-newsletter_inscription_button = "xpath=//*[starts-with(@id, 'confirm')]"
+newsletter_email = "xpath=//footer//i-newsletter-form//input[starts-with(@id,'email')]"
+newsletter_inscription_button = "xpath=//footer//i-newsletter-form//button[starts-with(@id, 'confirm')]"
 newsletter_div = "xpath=//*[starts-with(@id, 'email')]"
 newsletter_message = "xpath=//*[@class='text-center text-uppercase']"
 
 #italie newletter
-italie_privacy_policy = "xpath=//*[starts-with(@id, 'newsletterTerms')]"
+italie_privacy_policy = "xpath=//footer//input[starts-with(@id, 'newsletterTerms')]"
 
 #BNL newsletter
-newsletter_region = "xpath=//*[starts-with(@id ,'dwfrm_newsletterformbuilder')]/div/i-select"
-newsletter_Belgique = "xpath=//*[@id='dwfrm_newsletterformbuilder_countries_country_BE']"
-newsletter_Luxembourg = "xpath=//*[@id='dwfrm_newsletterformbuilder_countries_country_LU']"
-newsletter_Nederland = "xpath=//*[@id='dwfrm_newsletterformbuilder_countries_country_NL']"
+newsletter_region = "xpath=//footer//*[starts-with(@id ,'dwfrm_newsletterformbuilder')]/div/i-select"
+newsletter_Belgique = "xpath=//footer//*[@id='dwfrm_newsletterformbuilder_countries_country_BE']"
+newsletter_Luxembourg = "xpath=//footer//*[@id='dwfrm_newsletterformbuilder_countries_country_LU']"
+newsletter_Nederland = "xpath=//footer//*[@id='dwfrm_newsletterformbuilder_countries_country_NL']"
 
 
 

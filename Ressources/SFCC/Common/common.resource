@@ -41,3 +41,8 @@ Import FakerLibrary
     END
 
     Import Library    FakerLibrary    locale=${locale_values.${country}}    WITH NAME    Faker_${TEST_NAME}
+
+Is Element Visible
+    [Arguments]    ${selector}
+    ${state}=    Run Keyword And Return Status    Wait For Elements State    ${selector}    visible    timeout=500ms
+    RETURN    ${state}
