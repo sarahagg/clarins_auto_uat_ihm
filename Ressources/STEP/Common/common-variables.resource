@@ -44,4 +44,8 @@ ${SearchItem}               UC1_UAT@gg.com
 ...                         Mme=Mrs
 
 &{yes_no}                   Yes=true
+...                         Yes=true
+...                         yes=true
 ...                         NO=false
+...                         No=false
+...                         no=false
