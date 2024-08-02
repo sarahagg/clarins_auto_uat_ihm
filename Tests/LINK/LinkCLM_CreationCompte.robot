@@ -8,7 +8,7 @@ Resource            ..${/}..${/}Ressources${/}LinkCLM_CreationCompte${/}common${
 
 Test Template       LinkCLM_CreationCompte
 
-Force Tags          linkclm_creationcompte
+Force Tags          link-clm new-account
 
 
 *** Test Cases ***
