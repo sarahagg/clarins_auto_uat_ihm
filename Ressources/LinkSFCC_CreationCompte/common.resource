@@ -25,3 +25,6 @@ Resource            ..${/}..${/}Ressources${/}SFCC${/}Newsletter${/}GenericInfor
 Resource            ..${/}..${/}Ressources${/}SFCC${/}Connection${/}GenericInformation.resource
 Resource            ..${/}..${/}Ressources${/}SFCC${/}Connection${/}Connection.resource
 Resource            ..${/}..${/}Ressources${/}LinkSFCC_CreationCompte${/}Link.resource
+
+*** Variables ***
+${csv_file_Newaccount}      ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}LINKFILENEWACCOUNT.csv

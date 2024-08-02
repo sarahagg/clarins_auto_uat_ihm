@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       all the keywords needed to login to the website and accept the cookies
 
-Resource            ..${/}..${/}Ressources${/}LinkSFCC_CreationCompte${/}common.resource
+Resource            common.resource
 Library             OperatingSystem
 Library             DateTime
 Library             BuiltIn
@@ -9,18 +9,18 @@ Library             BuiltIn
 
 *** Keywords ***
 Write Data
-    [Arguments]    ${csv_file}    ${data}
-    ${file_exists}=    Run Keyword And Ignore Error    File Should Exist    ${csv_file}
+    [Arguments]       ${data}
+    ${file_exists}=    Run Keyword And Ignore Error    File Should Exist    ${csv_file_Newaccount}
     ${file_status}=    Set Variable    ${file_exists}[0]
     IF    '${file_status}' == 'PASS'
-        Append row To CSV    ${csv_file}    ${data}
+        Append row To CSV       ${data}
     ELSE
-        Create CSV    ${csv_file}    ${data}
+        Create CSV       ${data}
     END
 
 Create CSV
-    [Arguments]    ${csv_file}    ${row}
-    Create File    ${csv_file}
+    [Arguments]     ${row}
+    Create File    ${csv_file_Newaccount}
     ${headers}=    Create List
     ...    $\{FirstName}
     ...    $\{LastName}
@@ -31,16 +31,16 @@ Create CSV
     ...    $\{regions}
     ...    $\{emailOption}
     ...    $\{isLoyaltyMember}
-    Append header To CSV    ${csv_file}    ${headers}
-    Append row To CSV    ${csv_file}    ${row}
+    Append header To CSV       ${headers}
+    Append row To CSV       ${row}
 
 Append header To CSV
-    [Arguments]    ${csv_file}    ${row}
+    [Arguments]       ${row}
     ${row_string}=    Evaluate    ';'.join($row)
-    Append To File    ${csv_file}    ${row_string}\n
+    Append To File    ${csv_file_Newaccount}    ${row_string}\n
 
 Append row To CSV
-    [Arguments]    ${csv_file}    ${row}
+    [Arguments]      ${row}
     ${row_strings}=    Create List
     FOR    ${element}    IN    @{row}
         ${element_string}=    Convert To String    ${element}
@@ -48,13 +48,10 @@ Append row To CSV
     END
     Log    ${row_strings}
     ${row_string}=    Evaluate    ';'.join($row_strings)
-    Append To File    ${csv_file}    ${row_string}\n
+    Append To File    ${csv_file_Newaccount}    ${row_string}\n
 
 Convert Date To String
     [Arguments]    ${date}
     ${formatted_date}=    Evaluate    ${date}.strftime('%Y-%m-%d')
     RETURN    ${formatted_date}
 
-Clear CSV File
-    [Arguments]    ${csv_file}
-    Remove File    ${csv_file}

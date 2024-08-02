@@ -7,7 +7,7 @@ Documentation       All the common resources
 Library             Browser    run_on_failure=${False}    timeout=0:01:00
 Library             OperatingSystem
 Library             DateTime
-Library             python.py
+Library             utils.py
 # variables
 Variables           ..${/}..${/}Ressources${/}STEP${/}Common${/}locator.py
 # resources

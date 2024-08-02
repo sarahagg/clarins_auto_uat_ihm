@@ -12,8 +12,6 @@ ${today_format}             %Y_%m_%d
 ${USERNAME}                 storefront
 ${PASSWORD}                 unlimited22
 ${TARGET_PAGE_URL}          https://staging-clarins-ecommera.demandware.net/on/demandware.store/Sites-clarinsfr-Site/fr_FR/Home-Show
-${CSV_FILE}                 file=..${/}..${/}Jeux de donnees${/}LINKFILESCREATE.csv
-${csv_file_Newsletter}      file=..${/}..${/}Jeux de donnees${/}LINKFILESNEWSLETTER.csv
 &{default_values}           EMAIL=emailderesr@gmail.com
 ...                         country=FRA
 ...                         password= azerty12ui

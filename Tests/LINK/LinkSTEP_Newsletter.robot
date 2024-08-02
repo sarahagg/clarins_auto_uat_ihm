@@ -3,7 +3,7 @@ Documentation       But du Test
 ...                 verifier que l'inscription à la newsletter est faite sur STEP
 ...                 python3 -m robot    -d "Resultats/LinkSTEP_Newsletter/logs" -v ENV:UAT    -i "verify account newsletter" Tests
 
-Library             DataDriver    file=..${/}..${/}Jeux de donnees${/}LINKFILESNEWSLETTER.csv
+Library             DataDriver    file=..${/}..${/}Jeux de donnees${/}LINKFILENEWSLETTER.csv
 Resource            ..${/}..${/}Ressources${/}LinkSTEP_Newsletter${/}common.resource
 
 Test Template       Verify Account Newsletter

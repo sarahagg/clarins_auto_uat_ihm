@@ -13,7 +13,6 @@ Library             Collections
 Library             String
 # variables
 Variables           ..${/}..${/}Ressources${/}SFCC${/}Common${/}locator.py
-Variables           ..${/}..${/}Ressources${/}STEP${/}Common${/}locator.py
 # resources
 Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}common-variables.resource
 Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}common.resource
@@ -25,3 +24,6 @@ Resource            ..${/}..${/}Ressources${/}SFCC${/}Newsletter${/}GenericInfor
 Resource            ..${/}..${/}Ressources${/}SFCC${/}Connection${/}GenericInformation.resource
 Resource            ..${/}..${/}Ressources${/}SFCC${/}Connection${/}Connection.resource
 Resource            ..${/}..${/}Ressources${/}LinkSFCC_Newsletter${/}Link.resource
+
+*** Variables ***
+${csv_file_Newsletter}      ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}LINKFILENEWSLETTER.csv

@@ -16,13 +16,15 @@ Authentificate and accept cookies
     New Page    ${websites.${country}}
 
 # Accept cookies
-    ${is_visible}    Run Keyword And Return Status    Wait For Elements State    ${my_popup}    visible    timeout=2s
+    ${is_visible}    Run Keyword And Return Status    Wait For Elements State    ${my_popup}    visible    timeout=5s
     IF    ${is_visible}
         Log To Console    Waiting for cookie banner to appear
-        Wait For Elements State    ${my_popup}    visible    timeout=3s
+        Wait For Elements State    ${my_popup}    visible    timeout=5s
         Click    ${accept_cookies}
         Log To Console    Cookie accepted
+
     END
+    sleep  2s
     IF    $country == 'ITA'
         ${is_visible}    Is Element Visible    ${welcome_offer}
         IF    ${is_visible}

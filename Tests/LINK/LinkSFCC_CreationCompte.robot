@@ -44,7 +44,7 @@ Link SFCC
         ...    ${isLoyaltyMember}
         ...    ${salutation}
         ...    ${regions}
-        Write Data    ${CSV_FILE}    ${generated_data}
+        Write Data      ${generated_data}
         sleep    5s
         Close Browser
     END

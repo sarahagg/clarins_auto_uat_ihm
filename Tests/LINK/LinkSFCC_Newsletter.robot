@@ -23,7 +23,7 @@ Link SFCC Newsletter
         Authentificate and accept cookies    ${country}
         sleep    1s
         ${generated_data_newsletter}=    Subscribe to Newsletter    ${Email}    ${country}    ${regions}
-        Write Data Newsletter    ${CSV_FILE_newsletter}    ${generated_data_newsletter}
+        Write Data Newsletter     ${generated_data_newsletter}
         sleep    5s
         Close Browser
     END
