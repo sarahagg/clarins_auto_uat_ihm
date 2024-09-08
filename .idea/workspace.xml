@@ -4,26 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="Version CLM 3">
+    <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="Version CLM 5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jeux de donnees/SFCC/New-account/jdd-New-account.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Jeux de donnees/SFCC/New-account/jdd-New-account.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/LinkSFCC_CreationCompte/Link.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSFCC_CreationCompte/Link.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LinkSFCC_CreationCompte/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSFCC_CreationCompte/common.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LinkSFCC_Newsletter/Link.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSFCC_Newsletter/Link.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LinkSFCC_Newsletter/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSFCC_Newsletter/common.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LinkSTEP_CreationCompte/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSTEP_CreationCompte/common.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LinkSTEP_CreationCompte/python.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSTEP_CreationCompte/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LinkSTEP_Newsletter/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSTEP_Newsletter/common.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LinkSTEP_Newsletter/python.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSTEP_Newsletter/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/CookiesAndAuthentification.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/CookiesAndAuthentification.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/common-variables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/common-variables.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/LINK/Delete_newaccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/Delete_newaccount.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/LINK/Delete_newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/Delete_newsletter.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/LINK/LinkCLM_CreationCompte.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/LinkCLM_CreationCompte.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/LINK/LinkSFCC_CreationCompte.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/LinkSFCC_CreationCompte.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/LINK/LinkSFCC_Newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/LinkSFCC_Newsletter.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/LINK/LinkSTEP_CreationCompte.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/LinkSTEP_CreationCompte.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/LINK/LinkSTEP_Newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/LinkSTEP_Newsletter.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,35 +51,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Robot Framework.Connection.executor": "Run",
-    "Robot Framework.LinkCLM_CreationCompte.executor": "Run",
-    "Robot Framework.LinkSFCC_CreationCompte.executor": "Run",
-    "Robot Framework.LinkSFCC_Newsletter.executor": "Run",
-    "Robot Framework.LinkSTEP_CreationCompte.executor": "Run",
-    "Robot Framework.LinkSTEP_Newsletter.executor": "Run",
-    "Robot Framework.NewAccount.executor": "Run",
-    "Robot Framework.Newsletter.executor": "Run",
-    "Robot Framework.Test.executor": "Run",
-    "Robot Framework.linkSFCC.executor": "Run",
-    "Robot Framework.linksfc.executor": "Run",
-    "Robot Framework.linkstep.executor": "Run",
-    "Robot Framework.login.executor": "Run",
-    "Robot Framework.modify.executor": "Run",
-    "Robot Framework.verify.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/s.aggour/Library/CloudStorage/OneDrive-ONEPOINT/Clarins/clarins-auto-uat-ihm/Ressources/STEP/Common",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Robot Framework.Connection.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.LinkCLM_CreationCompte.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.LinkSFCC_CreationCompte.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.LinkSFCC_Newsletter.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.LinkSTEP_CreationCompte.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.LinkSTEP_Newsletter.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.NewAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.Newsletter.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.linkSFCC.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.linksfc.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.linkstep.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.login.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.modify.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.verify.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/s.aggour/Library/CloudStorage/OneDrive-ONEPOINT/Clarins/clarins-auto-uat-ihm/Ressources/STEP/Common&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Ressources/STEP/Common" />
@@ -332,6 +317,13 @@
       <workItem from="1722336399218" duration="6273000" />
       <workItem from="1722348650888" duration="13777000" />
       <workItem from="1722502179996" duration="12134000" />
+      <workItem from="1722865557259" duration="3836000" />
+      <workItem from="1723799323174" duration="6777000" />
+      <workItem from="1724165765961" duration="1683000" />
+      <workItem from="1724167457653" duration="982000" />
+      <workItem from="1724169005154" duration="44932000" />
+      <workItem from="1724771387271" duration="8687000" />
+      <workItem from="1724861019778" duration="8137000" />
     </task>
     <task id="LOCAL-00001" summary="first push">
       <option name="closed" value="true" />
@@ -445,7 +437,55 @@
       <option name="project" value="LOCAL" />
       <updated>1722605832817</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Version CLM 4">
+      <option name="closed" value="true" />
+      <created>1722611464447</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1722611464447</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Version CLM 4">
+      <option name="closed" value="true" />
+      <created>1722611497466</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1722611497466</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Version CLM 5">
+      <option name="closed" value="true" />
+      <created>1722613306578</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1722613306578</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Version CLM 5">
+      <option name="closed" value="true" />
+      <created>1722613679568</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1722613679568</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Version CLM 5">
+      <option name="closed" value="true" />
+      <created>1722614126137</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1722614126137</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Version CLM 5">
+      <option name="closed" value="true" />
+      <created>1722614479272</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1722614479272</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,6 +523,8 @@
     <MESSAGE value="Version CLM 1" />
     <MESSAGE value="Version CLM 2" />
     <MESSAGE value="Version CLM 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version CLM 3" />
+    <MESSAGE value="Version CLM 4" />
+    <MESSAGE value="Version CLM 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version CLM 5" />
   </component>
 </project>

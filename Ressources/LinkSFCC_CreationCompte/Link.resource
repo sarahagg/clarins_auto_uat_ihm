@@ -21,16 +21,7 @@ Write Data
 Create CSV
     [Arguments]     ${row}
     Create File    ${csv_file_Newaccount}
-    ${headers}=    Create List
-    ...    $\{FirstName}
-    ...    $\{LastName}
-    ...    $\{Email}
-    ...    $\{BirthDate}
-    ...    $\{country}
-    ...    $\{salutation}
-    ...    $\{regions}
-    ...    $\{emailOption}
-    ...    $\{isLoyaltyMember}
+    ${headers}=    Create List   $\{FirstName}  $\{LastName}   $\{Email}    $\{BirthDate}  $\{country}  $\{salutation}   $\{regions}   $\{emailOption}   $\{isLoyaltyMember}
     Append header To CSV       ${headers}
     Append row To CSV       ${row}
 
