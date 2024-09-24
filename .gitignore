@@ -7,3 +7,4 @@ Utile/*ssh*
 **/*.DS_Store
 .idea/*
 /Jeux de donnees/*.csv
+__pycache__/

@@ -16,12 +16,14 @@ Subscribe to Newsletter
     IF    $country == 'BNL'
         Click    ${newsletter_region}
         ${regions}=    Generate Newsletter Region    ${regions}
-        IF    $regions == 'Belgique'
+        IF    $regions == 'BEL'
             Click    ${newsletter_Belgique}
-        ELSE IF    $regions == 'Luxembourg '
+        ELSE IF    $regions == 'LUX'
             Click    ${newsletter_Luxembourg}
-        ELSE
+        ELSE IF    $regions == 'NLD'
             Click    ${newsletter_Nederland}
+        ELSE
+            Log To Console    BNL country not authorized
         END
     END
 
@@ -31,9 +33,14 @@ Subscribe to Newsletter
     IF    $country == 'ITA'    Click    ${italie_privacy_policy}
 
     Click    ${newsletter_inscription_button}
-    Wait For Elements State    ${newsletter_message}    visible    timeout=3s
+    Wait For Elements State    ${newsletter_message}    visible    timeout=30s
 
     ${text}=    Get Text    ${newsletter_message}
-    Should Contain    ${text}    ${newsletter_text.${country}}
+    ${text} =   Convert To String    ${text}
+    IF    $country == 'BNL'
+        Should Contain    ${text}    ${newsletter_text.${regions}}
+    ELSE
+        Should Contain    ${text}    ${newsletter_text.${country}}
+    END
 
     RETURN    ${Email}    ${country}

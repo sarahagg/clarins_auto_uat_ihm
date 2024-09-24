@@ -11,4 +11,4 @@ Force Tags          delete newsletter csv
 *** Test Cases ***
 
 Delete Newsletter CSV
-       Remove File    ${csv_file_Newsletter}
+       Remove File    ${csv_file_Newsletter_STEP}

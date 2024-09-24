@@ -26,4 +26,4 @@ Resource            ..${/}..${/}Ressources${/}SFCC${/}Connection${/}Connection.r
 Resource            ..${/}..${/}Ressources${/}LinkSFCC_Newsletter${/}Link.resource
 
 *** Variables ***
-${csv_file_Newsletter}      ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}LINKFILENEWSLETTER.csv
+${csv_file_Newsletter_STEP}      ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}LINKFILENEWSLETTER_STEP.csv

@@ -6,20 +6,24 @@ Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common.res
 
 *** Keywords ***
 Authentificate and accept cookies
-    [Arguments]    ${country}
+    [Arguments]    ${country}    ${regions}
 
 # Authentification
     Log To Console    New Browser
     New Browser    ${BROWSER}    headless=${headless}    reuse_existing=${False}    slowMo=0:00:02
     &{httpCredentials}    Create Dictionary    username=$USERNAME    password=$PASSWORD
     New Context    httpCredentials=${httpCredentials}
-    New Page    ${websites.${country}}
+    IF    $country == 'BNL'
+        New Page    ${websites.${regions}}
+    ELSE
+        New Page    ${websites.${country}}
+    END
 
 # Accept cookies
     ${is_visible}    Run Keyword And Return Status    Wait For Elements State    ${my_popup}    visible    timeout=5s
     IF    ${is_visible}
         Log To Console    Waiting for cookie banner to appear
-        Wait For Elements State    ${my_popup}    visible    timeout=5s
+        Wait For Elements State    ${my_popup}    visible    timeout=30s
         Click    ${accept_cookies}
         Log To Console    Cookie accepted
 

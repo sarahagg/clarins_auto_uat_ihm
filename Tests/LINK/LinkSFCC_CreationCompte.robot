@@ -29,9 +29,10 @@ Link SFCC
     ...    ${isLoyaltyMember}
     ...    ${salutation}
     ...    ${regions}
+    ...    ${checkSystems}
 
     IF    $playTest == "YES"
-        Authentificate and accept cookies    ${country}
+        Authentificate and accept cookies    ${country}    ${regions}
         sleep    1s
         ${generated_data}=    Create account
         ...    ${FirstName}
@@ -44,7 +45,8 @@ Link SFCC
         ...    ${isLoyaltyMember}
         ...    ${salutation}
         ...    ${regions}
-        Write Data      ${generated_data}
+
+        Write Data      ${generated_data}    ${checkSystems}
         sleep    5s
         Close Browser
     END

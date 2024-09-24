@@ -3,7 +3,7 @@ Documentation       But du Test
 ...                 verifier que la création d'un compte est faite sur STEP
 ...                 python3 -m robot    -d "Resultats/LinkSTEP_CreationCompte/logs" -v ENV:UAT    -i "verify account" Tests
 
-Library             DataDriver    file=..${/}..${/}Jeux de donnees${/}LINKFILENEWACCOUNT.csv
+Library             DataDriver    file=..${/}..${/}Jeux de donnees${/}LINKFILENEWACCOUNT_STEP.csv
 Resource            ..${/}..${/}Ressources${/}LinkSTEP_CreationCompte${/}common.resource
 
 Test Template       Verify Account
@@ -28,8 +28,10 @@ Verify Account
     ...    ${emailOption}
     ...    ${isLoyaltyMember}
 
+    name
+
     IF    '${country}' in @{touch_countries}
-        # $country != 'CHE' and $country != 'BNL'
+
         Authentificate
         access contact page    ${Email}
         VerifyLINK

@@ -5,10 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="Version CLM 5">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jeux de donnees/SFCC/New-account/jdd-New-account.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Jeux de donnees/SFCC/New-account/jdd-New-account.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jeux de donnees/SFCC/Newsletter/jdd-Newsletter.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Jeux de donnees/SFCC/Newsletter/jdd-Newsletter.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/LinkSFCC_CreationCompte/Link.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSFCC_CreationCompte/Link.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkSFCC_CreationCompte/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSFCC_CreationCompte/common.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkSFCC_Newsletter/Link.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSFCC_Newsletter/Link.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkSFCC_Newsletter/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSFCC_Newsletter/common.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkSTEP_CreationCompte/VerifyLINK.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSTEP_CreationCompte/VerifyLINK.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/CookiesAndAuthentification.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/CookiesAndAuthentification.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/common-variables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/common-variables.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/New-account/GenericInformation.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/New-account/GenericInformation.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/New-account/New-account.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/New-account/New-account.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Newsletter/newsletter.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Newsletter/newsletter.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/STEP/Common/common-variables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/STEP/Common/common-variables.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/LINK/Delete_newaccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/Delete_newaccount.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/LINK/Delete_newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/Delete_newsletter.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/LINK/LinkCLM_CreationCompte.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/LinkCLM_CreationCompte.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/LINK/LinkSFCC_CreationCompte.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/LinkSFCC_CreationCompte.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/LINK/LinkSFCC_Newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/LinkSFCC_Newsletter.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/LINK/LinkSTEP_CreationCompte.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/LinkSTEP_CreationCompte.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/LINK/LinkSTEP_Newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/LinkSTEP_Newsletter.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +88,8 @@
     &quot;Robot Framework.verify.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/s.aggour/Library/CloudStorage/OneDrive-ONEPOINT/Clarins/clarins-auto-uat-ihm/Ressources/STEP/Common&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/s.ramos-izquierdo/OneDrive - ONEPOINT/Bureau/Clarins/Outils/clarins_auto_xray_report&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -94,7 +113,7 @@
       <recent name="$PROJECT_DIR$/Ressources/LINKSFCC" />
     </key>
   </component>
-  <component name="RunManager" selected="Robot Framework.LinkSFCC_CreationCompte">
+  <component name="RunManager" selected="Robot Framework.LinkSTEP_CreationCompte">
     <configuration name="Connection" type="RobotFramework" factoryName="RobotFramework" folderName="SFCC">
       <option name="target" value="$ProjectFileDir$/Tests/SFCC/Connection.robot" />
       <option name="args">
@@ -115,7 +134,7 @@
       <option name="args">
         <list>
           <option value="-d" />
-          <option value="Resultats/LinkCLM_CreationCompte/logs" />
+          <option value="Resultats/CLM/NewAccount" />
           <option value="-v" />
           <option value="headless:false" />
         </list>
@@ -130,7 +149,7 @@
       <option name="args">
         <list>
           <option value="-d" />
-          <option value="Resultats/LinkSFCC_CreationCompte/logs" />
+          <option value="Resultats/SFCC/NewAccount" />
           <option value="-v" />
           <option value="headless:false" />
         </list>
@@ -145,12 +164,14 @@
       <option name="args">
         <list>
           <option value="-d" />
-          <option value="Resultats/LinkSFCC_Newsletter/logs" />
+          <option value="Resultats/SFCC/Newsletter" />
           <option value="-v" />
           <option value="headless:false" />
         </list>
       </option>
-      <option name="env" />
+      <option name="env">
+        <map />
+      </option>
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
@@ -160,12 +181,14 @@
       <option name="args">
         <list>
           <option value="-d" />
-          <option value="Resultats/LinkSTEP_CreationCompte/logs" />
+          <option value="Resultats/STEP/NewAccount" />
           <option value="-v" />
           <option value="headless:false" />
         </list>
       </option>
-      <option name="env" />
+      <option name="env">
+        <map />
+      </option>
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
@@ -175,12 +198,14 @@
       <option name="args">
         <list>
           <option value="-d" />
-          <option value="Resultats/LinkSTEP_Newsletter/logs" />
+          <option value="Resultats/STEP/Newsletter" />
           <option value="-v" />
           <option value="headless:false" />
         </list>
       </option>
-      <option name="env" />
+      <option name="env">
+        <map />
+      </option>
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />

@@ -80,10 +80,9 @@ Generate Region
     RETURN    ${regions}
 
 Connection Button
-    [Arguments]    ${country}
-    IF    $country == 'ITA'
-        ${connexion_button}=    Set Variable    ${italie_connexion_button}
-    END
+    #IF    $country == 'ITA'
+       # ${connexion_button}=    Set Variable    ${italie_connexion_button}
+    #END
     Click    ${connexion_button}
 
 Fill Button emailOption

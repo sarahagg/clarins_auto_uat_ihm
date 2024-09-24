@@ -17,13 +17,13 @@ Default Test If No Data
 
 *** Keywords ***
 Link SFCC Newsletter
-    [Arguments]    ${playTest}    ${Email}    ${country}    ${regions}
+    [Arguments]    ${playTest}    ${Email}    ${country}    ${regions}    ${checkSystems}
 
     IF    $playTest == "YES"
-        Authentificate and accept cookies    ${country}
+        Authentificate and accept cookies    ${country}    ${regions}
         sleep    1s
         ${generated_data_newsletter}=    Subscribe to Newsletter    ${Email}    ${country}    ${regions}
-        Write Data Newsletter     ${generated_data_newsletter}
+        Write Data Newsletter     ${generated_data_newsletter}    ${checkSystems}
         sleep    5s
         Close Browser
     END

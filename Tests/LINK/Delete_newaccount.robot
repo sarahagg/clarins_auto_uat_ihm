@@ -11,4 +11,5 @@ Force Tags          delete new-account csv
 *** Test Cases ***
 
 Delete NewAccount CSV
-    Remove File    ${csv_file_Newaccount}
+    Remove File    ${csv_file_Newaccount_STEP}
+    Remove File    ${csv_file_Newaccount_CLM}

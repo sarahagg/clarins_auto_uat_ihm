@@ -21,7 +21,7 @@ Create account
     Import FakerLibrary    ${country}
     # COUNTRY
     ${generated_country}=    Set Variable    ${country}
-    Connection Button    ${country}
+    Connection Button
 
     # EMAIL
     ${Email}=    Generate Email    ${Email}
@@ -69,12 +69,14 @@ Create account
     IF    $country == 'BNL'
         Click    ${region}
         ${regions}=    Generate Region    ${regions}
-        IF    $regions == 'Belgique'
+        IF    $regions == 'BEL'
             Click    ${NewAcc_Belgique}
-        ELSE IF    $regions == 'Luxembourg '
+        ELSE IF    $regions == 'LUX'
             Click    ${NewAcc_Luxembourg}
-        ELSE
+        ELSE IF    $regions == 'NLD'
             Click    ${NewAcc_Nederland}
+        ELSE
+            Log To Console    BNL country not authorized
         END
     END
     ${generated_regions}=    Set Variable    ${regions}

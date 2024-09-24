@@ -9,34 +9,38 @@ Library             BuiltIn
 
 *** Keywords ***
 Write Data Newsletter
-    [Arguments]       ${data}
-    ${file_exists}=    Run Keyword And Ignore Error    File Should Exist    ${csv_file_Newsletter}
-    ${file_status}=    Set Variable    ${file_exists}[0]
-    IF    '${file_status}' == 'PASS'
-        Append row To CSV Newsletter      ${data}
-    ELSE
-        Create CSV Newsletter       ${data}
+    [Arguments]       ${data}    ${checkSystems}
+    FOR    ${system}    IN    @{checkSystems}
+        ${file_exists}=    Run Keyword And Ignore Error    File Should Exist    ${csv_file_Newsletter_${system}}
+        ${file_status}=    Set Variable    ${file_exists}[0]
+        IF    '${file_status}' == 'PASS'
+            Append row To CSV Newsletter      ${data}    ${system}
+        ELSE
+            Create CSV Newsletter       ${data}    ${system}
+        END
     END
 
 Create CSV Newsletter
-    [Arguments]      ${row}
-    Create File    ${csv_file_Newsletter}
-    ${headers}=    Create List    $\{Email}    $\{country}
-    Append header To CSV Newsletter        ${headers}
-    Append row To CSV Newsletter     ${row}
+    [Arguments]      ${data}    ${system}
+    Create File    ${csv_file_Newsletter_${system}}
+    ${headers}=    Create List    ***Test Cases***    $\{Email}    $\{country}
+    Append header To CSV Newsletter        ${headers}    ${system}
+    Append row To CSV Newsletter     ${data}    ${system}
 
 Append header To CSV Newsletter
-    [Arguments]       ${row}
-    ${row_string}=    Evaluate    ';'.join($row)
-    Append To File    ${csv_file_Newsletter}    ${row_string}\n
+    [Arguments]       ${headers}    ${system}
+    ${headers_string}=    Evaluate    ';'.join($headers)
+    Append To File    ${csv_file_Newsletter_${system}}    ${headers_string}\n
 
 Append row To CSV Newsletter
-    [Arguments]       ${row}
+    [Arguments]       ${data}    ${system}
     ${row_strings}=    Create List
-    FOR    ${element}    IN    @{row}
+    ${new_test_name}=    Replace String    ${TEST_NAME}    SFCC    ${system}
+    Append To List    ${row_strings}    ${new_test_name}
+    FOR    ${element}    IN    @{data}
         ${element_string}=    Convert To String    ${element}
         Append To List    ${row_strings}    ${element_string}
     END
     Log    ${row_strings}
     ${row_string}=    Evaluate    ';'.join($row_strings)
-    Append To File    ${csv_file_Newsletter}    ${row_string}\n
+    Append To File    ${csv_file_Newsletter_${system}}    ${row_string}\n

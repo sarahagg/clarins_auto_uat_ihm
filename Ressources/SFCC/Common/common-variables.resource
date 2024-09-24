@@ -31,6 +31,9 @@ ${TARGET_PAGE_URL}          https://staging-clarins-ecommera.demandware.net/on/d
 ...                         UK=https://staging-clarins-ecommera.demandware.net/on/demandware.store/Sites-clarinsuk-Site
 ...                         FRA=https://staging-clarins-ecommera.demandware.net/on/demandware.store/Sites-clarinsfr-Site
 ...                         BNL=https://staging-clarins-ecommera.demandware.net/on/demandware.store/Sites-clarinsbnl-Site
+...                         BEL=https://staging-clarins-ecommera.demandware.net/on/demandware.store/Sites-clarinsbnl-Site/fr/Default-Start
+...                         LUX=https://staging-clarins-ecommera.demandware.net/on/demandware.store/Sites-clarinsbnl-Site/fr/Default-Start
+...                         NLD=https://staging-clarins-ecommera.demandware.net/on/demandware.store/Sites-clarinsbnl-Site/nl/Default-Start
 ...                         USA=https://staging-clarins-ecommera.demandware.net/on/demandware.store/Sites-clarinsus-Site
 ...                         CHE=https://staging-clarins-ecommera.demandware.net/on/demandware.store/Sites-clarinsch-Site
 ...                         ITA=https://staging-clarins-ecommera.demandware.net/on/demandware.store/Sites-clarinsit-Site
@@ -46,6 +49,9 @@ ${TARGET_PAGE_URL}          https://staging-clarins-ecommera.demandware.net/on/d
 ...                         UK=THANK YOU FOR SUBSCRIBING. PLEASE NOTE THAT YOU WILL NOT RECEIVE A WELCOME EMAIL IF YOU ARE ALREADY SUBSCRIBED TO CLARINS NEWSLETTERS.
 ...                         FRA=MERCI POUR VOTRE INSCRIPTION !
 ...                         BNL=BEDANKT VOOR JE INSCHRIJVING!
+...                         BEL=MERCI POUR VOTRE INSCRIPTION\xa0!
+...                         LUX=MERCI POUR VOTRE INSCRIPTION\xa0!
+...                         NLD=BEDANKT VOOR JE INSCHRIJVING!
 ...                         USA=THANKS! CHECK YOUR EMAIL FOR YOUR 10% OFF CODE. PLEASE NOTE THAT YOU WILL NOT RECEIVE A WELCOME EMAIL IF YOU ARE ALREADY SUBSCRIBED TO CLARINS NEWSLETTERS.\nVIEW T&CS
 ...                         CHE=MERCI POUR VOTRE INSCRIPTION\xa0!
 ...                         ITA=GRAZIE PER L'ISCRIZIONE!

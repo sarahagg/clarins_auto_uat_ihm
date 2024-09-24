@@ -29,12 +29,15 @@ ${SearchItem}               UC1_UAT@gg.com
 ...                         socialMediaWhatsApp (socialMediaWhatsApp)
 @{lov_Optin}                yes (yes)    waiting (waiting)    no (no)
 @{lov_phonetype}            home (home)    mobile (mobile)    office (office)
-@{touch_countries}          ESP    ZAF    CAN    AUS    FRA    JPN    SGP    USA    ITA    UK
-@{non_touch_countries}      CHE    IRL    HKG    CHN    CHL
+@{touch_countries}          ESP    ZAF    CAN    AUS    FRA    IRL    HKG    JPN    SGP    USA    ITA    UK    CHE    BNL
+@{non_touch_countries}      CHN    CHL
 
 &{full_country}             UK=United Kingdom
 ...                         FRA=France
 ...                         BNL=Benelux
+...                         BEL=Belgium
+...                         LUX=Luxembourg
+...                         NLD=Netherlands
 ...                         USA=United States
 ...                         CHE=Suisse
 ...                         ITA=Italy

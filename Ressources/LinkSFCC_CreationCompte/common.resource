@@ -27,4 +27,5 @@ Resource            ..${/}..${/}Ressources${/}SFCC${/}Connection${/}Connection.r
 Resource            ..${/}..${/}Ressources${/}LinkSFCC_CreationCompte${/}Link.resource
 
 *** Variables ***
-${csv_file_Newaccount}      ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}LINKFILENEWACCOUNT.csv
+${csv_file_Newaccount_STEP}      ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}LINKFILENEWACCOUNT_STEP.csv
+${csv_file_Newaccount_CLM}      ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}LINKFILENEWACCOUNT_CLM.csv

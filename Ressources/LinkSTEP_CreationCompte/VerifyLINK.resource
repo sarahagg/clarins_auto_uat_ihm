@@ -18,7 +18,12 @@ Verify LINK
     ...    ${isLoyaltyMember}
 
     ${GetCountry}=    Get Text    ${loc_Country}
-    Should Contain    ${full_country.${country}}    ${GetCountry}
+    IF    $country == 'BNL'
+        Should Contain    ${full_country.${regions}}    ${GetCountry}
+    ELSE
+        Should Contain    ${full_country.${country}}    ${GetCountry}
+    END
+
 
     ${Getsalutation}=    Get Text    ${loc_salutation}
     Should Contain    ${translate_salutation.${salutation}}    ${Getsalutation}
