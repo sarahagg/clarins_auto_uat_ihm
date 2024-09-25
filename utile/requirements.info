@@ -1,0 +1,10 @@
+robotframework==6.1.1
+robotframework-keepasslibrary==0.4.0
+robotframework-requests==0.9.6
+rpaframework==28.4.1
+robotframework-datadriver[XLS]==1.11.0
+robotframework-faker==5.0.0
+robotframework-templateddata==1.4.0
+robotframework-jsonlibrary==0.5
+robotframework-browser==18.3.0
+nodeenv=1.9.1

@@ -1,0 +1,11 @@
+1) Installer Python sur la machine : https://www.python.org/ (eviter la toute dernière version et prendre celle stable d'il y a au moins 1 an)
+2) Creer un environnement virtuel : python3 -m venv path/to/venv
+3) Activer l'environnement virtuel : . venv/bin/activate
+3) Installer les packages dans le venv en se basant sur le fichier de requirements : pip install -r requirements.txt
+4) Installer nodeenv : pip install nodeenv
+5) Créer un environnement node virtuel : nodeenv --node=18.17.1 env
+6) Activer l'environnement nodejs virtuel : . env/bin/activate
+7) Installer les dépendances nodejs dans l'environnement virtuel nodejs : rfbrowser init chromium
+
+
+99) désactiver l'environnement virtuel : deactivate 
