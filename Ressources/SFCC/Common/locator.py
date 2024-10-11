@@ -47,6 +47,7 @@ modifier = ("xpath=//*[starts-with(@id, 'dwfrm_cba__registration')]/i-link/a[@cl
             "edit-email-js cba-link-style']")
 account_password = "xpath=//*[starts-with(@id, 'dwfrm_cba__registration')]/i-password/input"
 birthday = "xpath=//*[starts-with(@id, 'birthday')]"
+phone_field = "xpath=//div[contains(@class,'i-phone-input__info')]/input"
 emailOptionYes = "xpath=//*[@id='dwfrm_cba__registration_customer_emailoptin-yes']"
 emailOptionNo = "xpath=//*[@id='dwfrm_cba__registration_customer_emailoptin-no']"
 isLoyaltyMemberYes = "xpath=//*[@id='dwfrm_cba__registration_customer_issalesforceloyaltymember-yes']"

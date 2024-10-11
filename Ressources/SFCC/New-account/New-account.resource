@@ -59,6 +59,17 @@ Create account
     # FILL THE PASSWORD
     FillPassword    ${mypassword}
 
+    # FILL THE PHONE (UK only)
+     IF  $country == 'UK'
+        ${phone_number}=            Run Keyword    Faker_${TEST_NAME}.Phone Number
+        ${phone_number}=            Replace String Using Regexp    ${phone_number[::-1]}    [^0-9]    ${EMPTY}
+
+        IF  $country == 'UK'
+            Fill Text    ${phone_field}    ${phone_number[0:10][::-1]}
+        END
+
+    END
+
     ###FILL THE BIRTHDATE
     ${BirthDate}=    Generate BirthDate    ${BirthDate}
     ${generated_BirthDate}=    Set Variable    ${BirthDate}
@@ -82,12 +93,12 @@ Create account
     ${generated_regions}=    Set Variable    ${regions}
 
     ###CLICK ALL THE BUTTONS (LOYALTY, OPTIN ....) AND SUBMIT
-    ${emailOption}=    FillButton emailOption    ${emailOption}    ${country}
+    ${emailOption}=    Click Button emailOption    ${emailOption}
     ${generated_emailOption}=    Set Variable    ${emailOption}
 
-    ${isLoyaltyMember}=    FillButton isLoyaltyMember    ${isLoyaltyMember}    ${country}
+    ${isLoyaltyMember}=    Click Button isLoyaltyMember    ${isLoyaltyMember}
     ${generated_isLoyaltyMember}=    Set Variable    ${isLoyaltyMember}
 
-    FillButton agreeToTerms and privacypolicy    ${country}
+    Click Button agreeToTerms and privacypolicy    ${country}
     Click    ${submit}
     RETURN    ${generated_FirstName}    ${generated_LastName}    ${generated_Email}    ${generated_BirthDate}    ${generated_country}    ${generated_salutation}    ${regions}    ${generated_emailOption}    ${generated_isLoyaltyMember}

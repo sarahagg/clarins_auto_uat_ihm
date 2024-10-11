@@ -85,8 +85,8 @@ Connection Button
     #END
     Click    ${connexion_button}
 
-Fill Button emailOption
-    [Arguments]    ${emailOption}    ${country}
+Click Button emailOption
+    [Arguments]    ${emailOption}
     # receive infos by Email
     IF    $emailOption == 'YES'
         Click    ${emailOptionYes}
@@ -98,8 +98,8 @@ Fill Button emailOption
 
     RETURN    ${emailOption}
 
-Fill Button isLoyaltyMember
-    [Arguments]    ${isLoyaltyMember}    ${country}
+Click Button isLoyaltyMember
+    [Arguments]    ${isLoyaltyMember}
     # Become a loyalty member
     IF    $isLoyaltyMember == 'YES'
         Click    ${isLoyaltyMemberYes}
@@ -109,7 +109,7 @@ Fill Button isLoyaltyMember
         RETURN    ${isLoyaltyMember}
     END
 
-Fill Button agreeToTerms and privacypolicy
+Click Button agreeToTerms and privacypolicy
     [Arguments]    ${country}
     # additional buttons for usa and italy
     IF    $country == 'USA'    Click    ${agreeToTerms}
