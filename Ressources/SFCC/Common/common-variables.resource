@@ -14,10 +14,10 @@ ${PASSWORD}                 unlimited22
 ${TARGET_PAGE_URL}          https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsfr-Site/fr_FR/Home-Show
 &{default_values}           EMAIL=emailderesr@gmail.com
 ...                         country=FRA
-...                         password= azerty12ui
-...                         salutation= M
-...                         FirstName= Bob
-...                         LastName= Evans
+...                         password=azerty12ui
+...                         salutation=M
+...                         FirstName=Bob
+...                         LastName=Evans
 
 # country
 &{locale_values}            UK=en_GB
@@ -28,15 +28,15 @@ ${TARGET_PAGE_URL}          https://stg-eu.npr.clarins.com/on/demandware.store/S
 ...                         ITA=it_IT
 
 &{websites}
-...                         UK=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsuk-Site
-...                         FRA=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsfr-Site
-...                         BNL=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsbnl-Site
-...                         BEL=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsbnl-Site/fr/Default-Start
-...                         LUX=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsbnl-Site/fr/Default-Start
-...                         NLD=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsbnl-Site/nl/Default-Start
-...                         USA=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsus-Site
-...                         CHE=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsch-Site
-...                         ITA=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsit-Site
+...                         UK=https://stg-eu.npr.clarins.com/uk/
+...                         FRA=https://stg-eu.npr.clarins.com/fr/
+...                         BNL=https://stg-eu.npr.clarins.com/bnl/
+...                         BEL=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsbnl-Site/fr/Home-Show
+...                         LUX=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsbnl-Site/fr/Home-Show
+...                         NLD=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsbnl-Site/nl/Home-Show
+...                         USA=https://stg-eu.npr.clarins.com/us/
+...                         CHE=https://stg-eu.npr.clarins.com/ch/
+...                         ITA=https://stg-eu.npr.clarins.com/it/
 
 &{creation_text}            UK=My dashboard
 ...                         FRA=Mon tableau de bord
