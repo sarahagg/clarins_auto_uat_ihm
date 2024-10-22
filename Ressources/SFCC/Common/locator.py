@@ -5,8 +5,8 @@
 ##################
 my_popup = "xpath=//*[@id='didomi-popup']"
 accept_cookies = "xpath=//*[@id='didomi-notice-agree-button']"
-welcome_offer ="xpath=//*[@id='bx-form-1520728-step-1']"
-refuse_welcome_offer="xpath=//*[@id='bx-close-inside-1520728']"
+welcome_offer_popup ="xpath=//*[contains(@id,'bx-form') and contains(@id, 'step-1')]"
+refuse_welcome_offer="xpath=//*[contains(@id,'bx-form') and contains(@id, 'step-1')]/descendant::button[@data-click='close']"
 
 ##############
 # newsletter #

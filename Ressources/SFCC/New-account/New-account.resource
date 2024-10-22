@@ -30,6 +30,16 @@ Create account
     Click    ${remember}
     Click    ${continuer}
 
+
+    ${is_visible}    Run Keyword And Return Status    Wait For Elements State    ${welcome_offer_popup}    visible
+    IF    ${is_visible}
+        Log To Console    Waiting for welcome offer to appear
+        Wait For Elements State    ${refuse_welcome_offer}    visible    timeout=30s
+        Click    ${refuse_welcome_offer}
+        Log To Console    Welcome offer refused
+    END
+
+
     # SALUTATION
     ${newsalutation}=    choose salutation    ${salutation}    ${country}
     ${generated_salutation}=    set variable    ${newsalutation}
@@ -77,20 +87,20 @@ Create account
     Wait For Elements State    ${date_invalide}    hidden    timeout=1s
 
     ###CHOOSE THE COUNTRY IF THE USER IS FROM THE BNL
-    IF    $country == 'BNL'
-        Click    ${region}
-        ${regions}=    Generate Region    ${regions}
-        IF    $regions == 'BEL'
-            Click    ${NewAcc_Belgique}
-        ELSE IF    $regions == 'LUX'
-            Click    ${NewAcc_Luxembourg}
-        ELSE IF    $regions == 'NLD'
-            Click    ${NewAcc_Nederland}
-        ELSE
-            Log To Console    BNL country not authorized
-        END
-    END
-    ${generated_regions}=    Set Variable    ${regions}
+#    IF    $country == 'BNL'
+#        Click    ${region}
+#        ${regions}=    Generate Region    ${regions}
+#        IF    $regions == 'BEL'
+#            Click    ${NewAcc_Belgique}
+#        ELSE IF    $regions == 'LUX'
+#            Click    ${NewAcc_Luxembourg}
+#        ELSE IF    $regions == 'NLD'
+#            Click    ${NewAcc_Nederland}
+#        ELSE
+#            Log To Console    BNL country not authorized
+#        END
+#    END
+#    ${generated_regions}=    Set Variable    ${regions}
 
     ###CLICK ALL THE BUTTONS (LOYALTY, OPTIN ....) AND SUBMIT
     ${emailOption}=    Click Button emailOption    ${emailOption}
