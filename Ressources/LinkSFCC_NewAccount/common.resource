@@ -13,5 +13,5 @@ Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}common.resource
 Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}commonvariables.resource
 Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}authentification.resource
 
-Resource            ..${/}..${/}Ressources${/}SFCC${/}Newsletter${/}newsletter.resource
-Resource            ..${/}..${/}Ressources${/}SFCC${/}Newsletter${/}genericinformation.resource
+Resource            ..${/}..${/}Ressources${/}SFCC${/}NewAccount${/}newaccount.resource
+Resource            ..${/}..${/}Ressources${/}SFCC${/}NewAccount${/}genericinformation.resource

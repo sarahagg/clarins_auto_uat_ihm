@@ -8,7 +8,7 @@ Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common.res
 Subscribe to Newsletter
     [Arguments]    ${Email}    ${country}    ${regions}
 
-    Import FakerLibrary    ${country}
+    Import FakerLibrary    ${country}    ${regions}
     Scroll By    ${none}    100%    0
     sleep    2s
     Scroll To Element    ${newsletter_email}
@@ -17,11 +17,11 @@ Subscribe to Newsletter
         Click    ${newsletter_region}
         ${regions}=    Generate Newsletter Region    ${regions}
         IF    $regions == 'BEL'
-            Click    ${newsletter_Belgique}
+            Click    ${newsletter_belgique}
         ELSE IF    $regions == 'LUX'
-            Click    ${newsletter_Luxembourg}
+            Click    ${newsletter_luxembourg}
         ELSE IF    $regions == 'NLD'
-            Click    ${newsletter_Nederland}
+            Click    ${newsletter_netherlands}
         ELSE
             Log To Console    BNL country not authorized
         END
@@ -30,7 +30,7 @@ Subscribe to Newsletter
     ${Email}=    Generate Newsletter Email    ${Email}
     Fill Text    ${newsletter_email}    ${Email}
 
-    IF    $country == 'ITA'    Click    ${italie_privacy_policy}
+    IF    $country == 'ITA'    Click    ${italy_privacy_policy}
 
     Click    ${newsletter_inscription_button}
     Wait For Elements State    ${newsletter_message}    visible    timeout=30s
@@ -43,4 +43,4 @@ Subscribe to Newsletter
         Should Contain    ${text}    ${newsletter_text.${country}}
     END
 
-    RETURN    ${Email}    ${country}
+    RETURN    ${Email}    ${country}    ${regions}

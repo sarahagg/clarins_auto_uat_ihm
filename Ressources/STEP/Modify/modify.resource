@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       all the keywords needed to modify a user's information on STEP
 
-Resource            ..${/}..${/}..${/}Ressources${/}STEP/Common${/}common.resource
+Resource            ..${/}Common${/}common.resource
 
 
 *** Keywords ***

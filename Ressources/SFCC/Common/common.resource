@@ -1,34 +1,29 @@
 *** Settings ***
 Documentation       All the common resources
-...                 All the different libraries
 ...                 All the different resources
 
-# libraries
-Library             Browser    run_on_failure=Take Screenshot \ EMBED  timeout=0:03:00
-Library             KeePassLibrary
-Library             OperatingSystem
-Library             DateTime
-Library             FakerLibrary
-Library             Collections
-Library             String
 # variables
-Variables           ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}locator.py
+Variables           locator.py
 # resources
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common-variables.resource
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common.resource
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}CookiesAndAuthentification.resource
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}New-account${/}GenericInformation.resource
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}New-account${/}New-account.resource
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Newsletter${/}newsletter.resource
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Newsletter${/}GenericInformation.resource
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Connection${/}GenericInformation.resource
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Connection${/}Connection.resource
-Resource            ..${/}..${/}..${/}Ressources${/}LinkSFCC_CreationCompte${/}Link.resource
+Resource            ..${/}..${/}..${/}Ressources${/}Common${/}common.resource
+
+Resource            common.resource
+Resource            commonvariables.resource
+Resource            authentification.resource
+
+Resource            ..${/}NewAccount${/}newaccount.resource
+Resource            ..${/}NewAccount${/}genericinformation.resource
+
+Resource            ..${/}Newsletter${/}newsletter.resource
+Resource            ..${/}Newsletter${/}genericinformation.resource
+
+Resource            ..${/}Connection${/}connection.resource
+Resource            ..${/}Connection${/}genericinformation.resource
 
 
 *** Keywords ***
 Import FakerLibrary
-    [Arguments]    ${country}
+    [Arguments]    ${country}    ${regions}
 
     IF    len($country) == 0
         ${country}=    Set Variable    ${default_values.country}
@@ -40,9 +35,12 @@ Import FakerLibrary
         RETURN
     END
 
-    Import Library    FakerLibrary    locale=${locale_values.${country}}    WITH NAME    Faker_${TEST_NAME}
+    IF    $country == 'BNL'
+        Import Library    FakerLibrary    locale=${locale_values.${regions}}    WITH NAME    Faker_${TEST_NAME}
+    ELSE
+        Import Library    FakerLibrary    locale=${locale_values.${country}}    WITH NAME    Faker_${TEST_NAME}
+    END
 
-Is Element Visible
-    [Arguments]    ${selector}
-    ${state}=    Run Keyword And Return Status    Wait For Elements State    ${selector}    visible    timeout=500ms
-    RETURN    ${state}
+
+
+
