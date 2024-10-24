@@ -17,12 +17,3 @@ Generate Newsletter Email
 
     RETURN    ${Email}
 
-Generate Newsletter Region
-    [Arguments]    ${regions}
-
-    IF    $regions == 'auto'
-        ${random_regions}=    Evaluate    random.choice($BNLregion)
-        RETURN    ${random_regions}
-    END
-
-    RETURN    ${regions}

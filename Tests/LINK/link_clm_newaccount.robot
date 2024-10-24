@@ -24,13 +24,12 @@ LinkCLM_CreationCompte
     ...    ${BirthDate}
     ...    ${country}
     ...    ${salutation}
-    ...    ${regions}
     ...    ${emailOption}
     ...    ${isLoyaltyMember}
 
     IF    $isLoyaltyMember == 'YES'
         Authentificate CLM
-        Access Contact Page CLM    ${country}    ${regions}
+        Access Contact Page CLM    ${country}
         Search Email CLM    ${Email}
         Verify CLM
         ...    ${FirstName}
@@ -38,7 +37,6 @@ LinkCLM_CreationCompte
         ...    ${BirthDate}
         ...    ${country}
         ...    ${salutation}
-        ...    ${regions}
         ...    ${emailOption}
         # Sleep    5s
         Close Browser

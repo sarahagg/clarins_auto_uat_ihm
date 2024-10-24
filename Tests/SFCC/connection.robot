@@ -17,10 +17,11 @@ Default Test If No Data
 
 *** Keywords ***
 Connect to an existing account
-    [Arguments]    ${playTest}    ${Email}    ${mypassword}    ${country}    ${regions}
+    [Arguments]    ${playTest}    ${Email}    ${mypassword}    ${country}
+
     IF    $playTest == "YES"
-        Authentificate and close all popups    ${country}    ${regions}
-        Connect A User    ${Email}    ${mypassword}    ${country}    ${regions}
+        Authentificate and close all popups    ${country}
+        Connect A User    ${Email}    ${mypassword}    ${country}
         sleep    5s
         close browser
     END

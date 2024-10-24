@@ -6,21 +6,20 @@ Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common.res
 
 *** Keywords ***
 Subscribe to Newsletter
-    [Arguments]    ${Email}    ${country}    ${regions}
+    [Arguments]    ${Email}    ${country}
 
-    Import FakerLibrary    ${country}    ${regions}
+    Import FakerLibrary    ${country}
     Scroll By    ${none}    100%    0
     sleep    2s
     Scroll To Element    ${newsletter_email}
 
-    IF    $country == 'BNL'
+    IF    $country == 'BEL' or $country == 'LUX' or $country == 'NLD'
         Click    ${newsletter_region}
-        ${regions}=    Generate Newsletter Region    ${regions}
-        IF    $regions == 'BEL'
+        IF    $country == 'BEL'
             Click    ${newsletter_belgique}
-        ELSE IF    $regions == 'LUX'
+        ELSE IF    $country == 'LUX'
             Click    ${newsletter_luxembourg}
-        ELSE IF    $regions == 'NLD'
+        ELSE IF    $country == 'NLD'
             Click    ${newsletter_netherlands}
         ELSE
             Log To Console    BNL country not authorized
@@ -37,10 +36,7 @@ Subscribe to Newsletter
 
     ${text}=    Get Text    ${newsletter_message}
     ${text} =   Convert To String    ${text}
-    IF    $country == 'BNL'
-        Should Contain    ${text}    ${newsletter_text.${regions}}
-    ELSE
-        Should Contain    ${text}    ${newsletter_text.${country}}
-    END
 
-    RETURN    ${Email}    ${country}    ${regions}
+    Should Contain    ${text}    ${newsletter_text.${country}}
+
+    RETURN    ${Email}    ${country}

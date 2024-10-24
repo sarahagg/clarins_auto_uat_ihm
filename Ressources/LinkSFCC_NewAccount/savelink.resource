@@ -19,7 +19,7 @@ Write Data
 Create CSV
     [Arguments]     ${data}    ${system}
     Create File    ${csv_file_Newaccount_${system}}
-    ${headers}=    Create List   ***Test Cases***    $\{FirstName}    $\{LastName}    $\{Email}    $\{BirthDate}    $\{country}    $\{salutation}    $\{regions}   $\{emailOption}    $\{isLoyaltyMember}
+    ${headers}=    Create List   ***Test Cases***    $\{FirstName}    $\{LastName}    $\{Email}    $\{BirthDate}    $\{country}    $\{salutation}    $\{emailOption}    $\{isLoyaltyMember}
     Append header To CSV       ${headers}    ${system}
     Append row To CSV       ${data}    ${system}
 

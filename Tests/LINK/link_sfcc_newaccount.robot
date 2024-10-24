@@ -28,11 +28,10 @@ Link SFCC
     ...    ${emailOption}
     ...    ${isLoyaltyMember}
     ...    ${salutation}
-    ...    ${regions}
     ...    ${checkSystems}
 
     IF    $playTest == "YES"
-        Authentificate and close all popups    ${country}    ${regions}
+        Authentificate and close all popups    ${country}
         sleep    1s
         ${generated_data}=    Create account
         ...    ${FirstName}
@@ -44,7 +43,6 @@ Link SFCC
         ...    ${emailOption}
         ...    ${isLoyaltyMember}
         ...    ${salutation}
-        ...    ${regions}
 
         Write Data      ${generated_data}    ${checkSystems}
         sleep    5s

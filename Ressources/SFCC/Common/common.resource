@@ -23,7 +23,7 @@ Resource            ..${/}Connection${/}genericinformation.resource
 
 *** Keywords ***
 Import FakerLibrary
-    [Arguments]    ${country}    ${regions}
+    [Arguments]    ${country}
 
     IF    len($country) == 0
         ${country}=    Set Variable    ${default_values.country}
@@ -35,12 +35,4 @@ Import FakerLibrary
         RETURN
     END
 
-    IF    $country == 'BNL'
-        Import Library    FakerLibrary    locale=${locale_values.${regions}}    WITH NAME    Faker_${TEST_NAME}
-    ELSE
-        Import Library    FakerLibrary    locale=${locale_values.${country}}    WITH NAME    Faker_${TEST_NAME}
-    END
-
-
-
-
+    Import Library    FakerLibrary    locale=${locale_values.${country}}    WITH NAME    Faker_${TEST_NAME}

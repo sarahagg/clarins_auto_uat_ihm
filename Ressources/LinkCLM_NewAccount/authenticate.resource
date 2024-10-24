@@ -28,13 +28,9 @@ Authentificate CLM
     sleep    3S
 
 Access Contact Page CLM
-    [Arguments]    ${country}    ${regions}
+    [Arguments]    ${country}
     click    ${profil_icon}
     Click    ${changer_le_programme_de_fidelite}
     Click    ${Programmechoice}
-    IF    $country != 'BNL' and $country != 'ITA'
-        Click    ${programmes.${country}}
-    ELSE
-        Click    ${programmes.${regions}}
-    END
+    Click    ${programmes.${country}}
     Click    ${confirmer}

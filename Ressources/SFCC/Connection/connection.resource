@@ -6,9 +6,9 @@ Resource            ..${/}..${/}..${/}Ressources${/}SFCC/Common${/}common.resour
 
 *** Keywords ***
 Connect A User
-    [Arguments]    ${Email}    ${mypassword}    ${country}    ${regions}
+    [Arguments]    ${Email}    ${mypassword}    ${country}
 
-    Import FakerLibrary    ${country}    ${regions}
+    Import FakerLibrary    ${country}
 
     Click    ${connexion_button}
     Log To Console    connexion page

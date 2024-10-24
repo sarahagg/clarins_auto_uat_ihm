@@ -6,9 +6,12 @@ Resource            ..${/}..${/}Ressources${/}LinkSTEP_Newsletter${/}common.reso
 
 *** Keywords ***
 Verify LINK Newsletter
-    [Arguments]    ${Email}
+    [Arguments]    ${Email}    ${country}
 
     Mouse Button    down
 
     ${GetEmail}=    Get Text    ${loc_Email}
     Should Contain    ${Email}    ${GetEmail}
+
+    ${GetCountry}=    Get Text    ${loc_Country}
+    Should Contain    ${full_country.${country}}    ${GetCountry}

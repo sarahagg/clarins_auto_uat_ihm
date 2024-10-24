@@ -13,17 +13,11 @@ Verify LINK
     ...    ${BirthDate}
     ...    ${country}
     ...    ${salutation}
-    ...    ${regions}
     ...    ${emailOption}
     ...    ${isLoyaltyMember}
 
     ${GetCountry}=    Get Text    ${loc_Country}
-    IF    $country == 'BNL'
-        Should Contain    ${full_country.${regions}}    ${GetCountry}
-    ELSE
-        Should Contain    ${full_country.${country}}    ${GetCountry}
-    END
-
+     Should Contain    ${full_country.${country}}    ${GetCountry}
 
     ${Getsalutation}=    Get Text    ${loc_salutation}
     Should Contain    ${translate_salutation.${salutation}}    ${Getsalutation}

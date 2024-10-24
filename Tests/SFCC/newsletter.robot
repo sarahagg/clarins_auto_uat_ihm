@@ -17,10 +17,10 @@ Default Test If No Data
 
 *** Keywords ***
 Create a newsletter
-    [Arguments]    ${playTest}    ${Email}    ${country}    ${regions}
+    [Arguments]    ${playTest}    ${Email}    ${country}
 
     IF    $playTest == "YES"
-        Authentificate and close all popups    ${country}    ${regions}
-        Subscribe to Newsletter    ${Email}    ${country}    ${regions}
+        Authentificate and close all popups    ${country}
+        Subscribe to Newsletter    ${Email}    ${country}
         Close Browser
     END

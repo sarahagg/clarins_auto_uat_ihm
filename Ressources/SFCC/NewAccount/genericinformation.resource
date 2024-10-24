@@ -20,7 +20,7 @@ Generate FirstName
 
     RETURN    ${FirstName}
 
-Generate lastName
+Generate LastName
     [Arguments]    ${LastName}
 
     IF    $LastName == 'default'
@@ -72,21 +72,13 @@ Choose Salutation
     [Arguments]    ${salutation}    ${country}
     IF    $salutation == 'auto'
         ${random_salutation}=    Evaluate    random.choice($salutations)
-        IF    $country == 'BNL' or $country == 'CHE'
+        IF    $country == 'BEL' or $country == 'LUX' or $country == 'NLD' or $country == 'CHE'
             ${random_salutation}=    Evaluate    random.choice($BNLsalutations)
         END
         RETURN    ${random_salutation}
     END
     IF    $salutation == 'default'    RETURN    ${default_values.salutation}
     RETURN    ${salutation}
-
-Generate Region
-    [Arguments]    ${regions}
-    IF    $regions == 'auto'
-        ${random_regions}=    Evaluate    random.choice($BNLregion)
-        RETURN    ${random_regions}
-    END
-    RETURN    ${regions}
 
 Connection Button
     #IF    $country == 'ITA'
@@ -109,7 +101,6 @@ Click Button emailOption
 
 Click Button isLoyaltyMember
     [Arguments]    ${isLoyaltyMember}
-    # Become a loyalty member
     IF    $isLoyaltyMember == 'YES'
         Click    ${is_loyalty_member_yes}
         RETURN    ${isLoyaltyMember}
@@ -118,7 +109,7 @@ Click Button isLoyaltyMember
         RETURN    ${isLoyaltyMember}
     END
 
-Click Button agreeToTerms and privacypolicy
+Click Button agreeToTerms and privacyPolicy
     [Arguments]    ${country}
     # additional buttons for usa and italy
     IF    $country == 'USA'    Click    ${agree_to_terms}

@@ -21,7 +21,6 @@ Verify CLM
     ...    ${BirthDate}
     ...    ${country}
     ...    ${salutation}
-    ...    ${regions}
     ...    ${emailOption}
 
     ${GetFirstName}=    Get Text    ${first_name_loc}

@@ -17,12 +17,12 @@ Default Test If No Data
 
 *** Keywords ***
 Link SFCC Newsletter
-    [Arguments]    ${playTest}    ${Email}    ${country}    ${regions}    ${checkSystems}
+    [Arguments]    ${playTest}    ${Email}    ${country}   ${checkSystems}
 
     IF    $playTest == "YES"
-        Authentificate and close all popups    ${country}    ${regions}
+        Authentificate and close all popups    ${country}
         sleep    1s
-        ${generated_data_newsletter}=    Subscribe to Newsletter    ${Email}    ${country}    ${regions}
+        ${generated_data_newsletter}=    Subscribe to Newsletter    ${Email}    ${country}
         Write Data Newsletter     ${generated_data_newsletter}    ${checkSystems}
         sleep    5s
         Close Browser

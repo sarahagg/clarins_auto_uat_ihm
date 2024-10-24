@@ -20,7 +20,6 @@ ${today_format}             %Y_%m_%d
 
 &{websites}                 GBR=https://stg-eu.npr.clarins.com/uk/
 ...                         FRA=https://stg-eu.npr.clarins.com/fr/
-...                         BNL=https://stg-eu.npr.clarins.com/bnl/
 ...                         BEL=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsbnl-Site/fr/Home-Show
 ...                         LUX=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsbnl-Site/fr/Home-Show
 ...                         NLD=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsbnl-Site/nl/Home-Show
@@ -30,14 +29,15 @@ ${today_format}             %Y_%m_%d
 
 &{creation_text}            GBR=My dashboard
 ...                         FRA=Mon tableau de bord
-...                         BNL=Mijn overzicht
+...                         BEL=Mon tableau de bord
+...                         LUX=Mon tableau de bord
+...                         NLD=Mijn overzicht
 ...                         USA=My dashboard
 ...                         CHE=Mon tableau de bord
 ...                         ITA=La mia bacheca
 
 &{newsletter_text}          GBR=THANK YOU FOR SUBSCRIBING. PLEASE NOTE THAT YOU WILL NOT RECEIVE A WELCOME EMAIL IF YOU ARE ALREADY SUBSCRIBED TO CLARINS NEWSLETTERS.
 ...                         FRA=MERCI POUR VOTRE INSCRIPTION !
-...                         BNL=BEDANKT VOOR JE INSCHRIJVING!
 ...                         BEL=MERCI POUR VOTRE INSCRIPTION\xa0!
 ...                         LUX=MERCI POUR VOTRE INSCRIPTION\xa0!
 ...                         NLD=BEDANKT VOOR JE INSCHRIJVING!
@@ -46,4 +46,3 @@ ${today_format}             %Y_%m_%d
 ...                         ITA=GRAZIE PER L'ISCRIZIONE!
 
 ${UNWANTED_CHARACTERS}      []
-#@{generated_data}           Josephine    Picard    gdupre@example.net    datetime.date(1988, 5, 14)    FRA    auto

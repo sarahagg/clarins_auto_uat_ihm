@@ -16,9 +16,8 @@ Create account
     ...    ${emailOption}
     ...    ${isLoyaltyMember}
     ...    ${salutation}
-    ...    ${regions}
 
-    Import FakerLibrary    ${country}    ${regions}
+    Import FakerLibrary    ${country}
 
     # COUNTRY
     ${generated_country}=    Set Variable    ${country}
@@ -70,12 +69,12 @@ Create account
     # FILL THE PASSWORD
     FillPassword    ${mypassword}
 
-    # FILL THE PHONE (UK only)
-     IF  $country == 'UK'
+    # FILL THE PHONE (GBR only)
+     IF  $country == 'GBR'
         ${phone_number}=            Run Keyword    Faker_${TEST_NAME}.Phone Number
         ${phone_number}=            Replace String Using Regexp    ${phone_number[::-1]}    [^0-9]    ${EMPTY}
 
-        IF  $country == 'UK'
+        IF  $country == 'GBR'
             Fill Text    ${phone_field}    ${phone_number[0:10][::-1]}
         END
 
@@ -88,20 +87,11 @@ Create account
     Wait For Elements State    ${date_invalid}    hidden    timeout=10s
 
     ###CHOOSE THE COUNTRY IF THE USER IS FROM THE BNL
-#    IF    $country == 'BNL'
-#        Click    ${region}
-#        ${regions}=    Generate Region    ${regions}
-#        IF    $regions == 'BEL'
-#            Click    ${NewAcc_Belgique}
-#        ELSE IF    $regions == 'LUX'
-#            Click    ${NewAcc_Luxembourg}
-#        ELSE IF    $regions == 'NLD'
-#            Click    ${NewAcc_Nederland}
-#        ELSE
-#            Log To Console    BNL country not authorized
-#        END
-#    END
-#    ${generated_regions}=    Set Variable    ${regions}
+    IF    $country == 'BEL' or $country == 'LUX' or $country == 'NLD'
+        Click    ${select_region}
+        Click    ${newaccount_${country}}
+    END
+#
 
     ###CLICK ALL THE BUTTONS (LOYALTY, OPTIN ....) AND SUBMIT
     ${emailOption}=    Click Button emailOption    ${emailOption}
@@ -112,4 +102,4 @@ Create account
 
     Click Button agreeToTerms and privacypolicy    ${country}
     Click    ${submit_button}
-    RETURN    ${generated_FirstName}    ${generated_LastName}    ${generated_Email}    ${generated_BirthDate}    ${generated_country}    ${generated_salutation}    ${regions}    ${generated_emailOption}    ${generated_isLoyaltyMember}
+    RETURN    ${generated_FirstName}    ${generated_LastName}    ${generated_Email}    ${generated_BirthDate}    ${generated_country}    ${generated_salutation}     ${generated_emailOption}    ${generated_isLoyaltyMember}

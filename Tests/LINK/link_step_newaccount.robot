@@ -24,7 +24,6 @@ Verify Account
     ...    ${BirthDate}
     ...    ${country}
     ...    ${salutation}
-    ...    ${regions}
     ...    ${emailOption}
     ...    ${isLoyaltyMember}
 
@@ -39,7 +38,6 @@ Verify Account
         ...    ${BirthDate}
         ...    ${country}
         ...    ${salutation}
-        ...    ${regions}
         ...    ${emailOption}
         ...    ${isLoyaltyMember}
         Sleep    5s

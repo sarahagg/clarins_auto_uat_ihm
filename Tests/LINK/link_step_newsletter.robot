@@ -17,12 +17,12 @@ Default Test If No Data
 
 *** Keywords ***
 Verify Account Newsletter
-    [Arguments]    ${Email}    ${country}    ${regions}
+    [Arguments]    ${Email}    ${country}
 
     IF    '${country}' in @{touch_countries}
         Authentificate
         Access Contact Page    ${Email}
-        Verify LINK Newsletter    ${Email}
+        Verify LINK Newsletter    ${Email}    ${country}
         Sleep    5s
         Close Browser
     END

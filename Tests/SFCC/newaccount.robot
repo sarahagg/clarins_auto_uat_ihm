@@ -28,10 +28,9 @@ Create a new account
     ...    ${emailOption}
     ...    ${isLoyaltyMember}
     ...    ${salutation}
-    ...    ${regions}
 
     IF    $playTest == "YES"
-        Authentificate and close all popups    ${country}    ${regions}
+        Authentificate and close all popups    ${country}
 
         sleep    1s
 
@@ -45,7 +44,6 @@ Create a new account
         ...    ${emailOption}
         ...    ${isLoyaltyMember}
         ...    ${salutation}
-        ...    ${regions}
 
         log    ${generated_data}
 

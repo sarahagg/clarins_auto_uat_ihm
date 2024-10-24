@@ -6,19 +6,14 @@ Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common.res
 
 *** Keywords ***
 Authentificate and close all popups
-    [Arguments]    ${country}    ${regions}
+    [Arguments]    ${country}
 
 # Authentification
     Log To Console    New Browser
     New Browser    ${BROWSER}    headless=${headless}    reuse_existing=${False}    slowMo=0:00:02
     &{httpCredentials}    Create Dictionary    username=$USERNAME    password=$PASSWORD
     New Context    httpCredentials=${httpCredentials}
-
-    IF    $country == 'BNL'
-        New Page    ${websites.${regions}}
-    ELSE
-        New Page    ${websites.${country}}
-    END
+    New Page    ${websites.${country}}
 
     Sleep  2s
 

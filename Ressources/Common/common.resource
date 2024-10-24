@@ -42,7 +42,7 @@ ${csv_file_Newsletter_ADOBE}        ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}
 @{lov_Optin}                yes (yes)    waiting (waiting)    no (no)
 @{lov_phonetype}            home (home)    mobile (mobile)    office (office)
 
-@{touch_countries}          ESP    ZAF    CAN    AUS    FRA    IRL    HKG    JPN    SGP    USA    ITA    GBR    CHE    BNL    BEL    LUX    NLD
+@{touch_countries}          ESP    ZAF    CAN    AUS    FRA    IRL    HKG    JPN    SGP    USA    ITA    GBR    CHE    BEL    LUX    NLD
 @{non_touch_countries}      CHN    CHL
 @{BNLregion}                BEL    LUX    NLD
 
@@ -76,9 +76,3 @@ ${csv_file_Newsletter_ADOBE}        ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}
 &{translate_salutation}     Mlle=Ms
 ...                         M=Mr
 ...                         Mme=Mrs
-
-*** Keywords ***
-Is Element Visible
-    [Arguments]    ${selector}
-    ${state}=    Run Keyword And Return Status    Wait For Elements State    ${selector}    visible
-    RETURN    ${state}

@@ -61,10 +61,10 @@ agree_to_terms = "xpath=//*[starts-with(@id, 'termsandconditions')]"
 privacy_policy = "xpath=//*[@id='dwfrm_cba__registration_customer_agreedpersonalizedemails-0']"
 
 # #BNL create account
-# region = "xpath=//*[starts-with(@id ,'dwfrm_cba__registration')]/div/i-select"
-# NewAcc_Belgique = "xpath=//*[@id='dwfrm_cba__registration_customer_country_countryProfile_BE']"
-# NewAcc_Luxembourg = "xpath=//*[@id='dwfrm_cba__registration_customer_country_countryProfile_LU']"
-# NewAcc_Nederland = "xpath=//*[@id='dwfrm_cba__registration_customer_country_countryProfile_NL']"
+select_region = "xpath=//*[starts-with(@id ,'dwfrm_cba__registration')]/div/i-select"
+newaccount_belgique = "xpath=//*[@id='dwfrm_cba__registration_customer_country_countryProfile_BE']"
+newaccount_luxembourg = "xpath=//*[@id='dwfrm_cba__registration_customer_country_countryProfile_LU']"
+newaccount_netherlands = "xpath=//*[@id='dwfrm_cba__registration_customer_country_countryProfile_NL']"
 
 ##############
 # connection #

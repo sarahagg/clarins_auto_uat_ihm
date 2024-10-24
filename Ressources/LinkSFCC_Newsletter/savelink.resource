@@ -19,7 +19,7 @@ Write Data Newsletter
 Create CSV Newsletter
     [Arguments]      ${data}    ${system}
     Create File    ${csv_file_Newsletter_${system}}
-    ${headers}=    Create List    ***Test Cases***    $\{Email}    $\{country}    $\{regions}
+    ${headers}=    Create List    ***Test Cases***    $\{Email}    $\{country}
     Append header To CSV Newsletter        ${headers}    ${system}
     Append row To CSV Newsletter     ${data}    ${system}
 
