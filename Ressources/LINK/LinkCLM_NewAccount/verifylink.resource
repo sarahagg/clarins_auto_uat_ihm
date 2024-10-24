@@ -1,18 +1,18 @@
 *** Settings ***
 Documentation       all the keywords needed to authentificate and accept the cookiesResource
 
-Resource            ..${/}..${/}Ressources${/}LinkCLM_NewAccount${/}Common${/}common.resource
+Resource            common.resource
 
 
 *** Keywords ***
 Search Email CLM
     [Arguments]    ${Email}
 
-    Click    ${email_arrow}
-    Fill text    ${email_search_input}    ${Email}
-    Click    ${email_search_button}
-    Click    ${first_email}
-    sleep    1s
+    Click           ${email_arrow}
+    Fill text       ${email_search_input}    ${Email}
+    Click           ${email_search_button}
+    Click           ${first_email}
+    sleep           1s
 
 Verify CLM
     [Arguments]

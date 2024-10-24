@@ -3,7 +3,7 @@ Documentation       But du Test
 ...                 S'inscrire à une Newsletter sur SFCC et mettre les données dans un datadriver LINKFILESNEWSLETTER.csv
 ...                 python3 -m robot    -d "Resultats/LinkSFCC_Newsletter/logs" -v ENV:UAT    -i "link-sfcc newsletter" Tests
 
-Resource            ..${/}..${/}Ressources${/}LinkSFCC_Newsletter${/}common.resource
+Resource            ..${/}..${/}Ressources${/}LINK${/}LinkSFCC_Newsletter${/}common.resource
 Library             DataDriver    file=..${/}..${/}Jeux de donnees${/}SFCC${/}Newsletter${/}jdd-Newsletter.xlsx    sheet_name=Test Cases
 
 Test Template       Link SFCC Newsletter

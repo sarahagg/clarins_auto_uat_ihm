@@ -3,8 +3,8 @@ Documentation       But du Test
 ...                 Verifier que les comptes qui sont loyalty member se trouvent sur CLM
 ...                 python3 -m robot    -d "Resultats/LinkCLM_CreationCompte/logs" -v ENV:UAT    -i "Link CLM" Tests
 
+Resource            ..${/}..${/}Ressources${/}LINK${/}LinkCLM_NewAccount${/}common.resource
 Library             DataDriver    file=..${/}..${/}Jeux de donnees${/}LINKFILENEWACCOUNT_CLM.csv
-Resource            ..${/}..${/}Ressources${/}LinkCLM_NewAccount${/}common${/}common.resource
 
 Test Template       LinkCLM_CreationCompte
 

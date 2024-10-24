@@ -5,34 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="Version CLM 5">
+      <change afterPath="$PROJECT_DIR$/Ressources/LINK/LinkCLM_NewAccount/common.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/LINK/LinkSFCC_NewAccount/common.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/LINK/LinkSFCC_Newsletter/common.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/LINK/LinkSTEP_NewAccount/common.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/LINK/LinkSTEP_Newsletter/common.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jeux de donnees/SFCC/Connection/jdd-Connection.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Jeux de donnees/SFCC/Connection/jdd-Connection.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jeux de donnees/SFCC/NewAccount/jdd-New-account.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Jeux de donnees/SFCC/NewAccount/jdd-New-account.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jeux de donnees/SFCC/Newsletter/jdd-Newsletter.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Jeux de donnees/SFCC/Newsletter/jdd-Newsletter.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Common/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Common/common.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LinkCLM_NewAccount/authenticate.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkCLM_NewAccount/authenticate.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LinkCLM_NewAccount/link.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkCLM_NewAccount/link.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LinkSFCC_NewAccount/savelink.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSFCC_NewAccount/savelink.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LinkSFCC_Newsletter/savelink.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSFCC_Newsletter/savelink.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LinkSTEP_NewAccount/verifylink.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSTEP_NewAccount/verifylink.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LinkSTEP_Newsletter/verifylink.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LinkSTEP_Newsletter/verifylink.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/authentification.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/authentification.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkCLM_NewAccount/Common/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/CLM/Common/common.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkCLM_NewAccount/Common/commonvariables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/CLM/Common/commonvariables.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkCLM_NewAccount/Common/locator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/CLM/Common/locator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkCLM_NewAccount/authenticate.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/CLM/Common/authentification.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkCLM_NewAccount/link.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LINK/LinkCLM_NewAccount/verifylink.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkSFCC_NewAccount/common.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkSFCC_NewAccount/savelink.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LINK/LinkSFCC_NewAccount/savelink.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkSFCC_Newsletter/common.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkSFCC_Newsletter/savelink.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LINK/LinkSFCC_Newsletter/savelink.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkSTEP_NewAccount/common.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkSTEP_NewAccount/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LINK/LinkSTEP_NewAccount/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkSTEP_NewAccount/verifylink.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LINK/LinkSTEP_NewAccount/verifylink.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkSTEP_Newsletter/common.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkSTEP_Newsletter/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LINK/LinkSTEP_Newsletter/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LinkSTEP_Newsletter/verifylink.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LINK/LinkSTEP_Newsletter/verifylink.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/common.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/commonvariables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/commonvariables.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/locator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/locator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Connection/connection.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Connection/connection.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/NewAccount/genericinformation.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/NewAccount/genericinformation.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/NewAccount/newaccount.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/NewAccount/newaccount.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Newsletter/genericinformation.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Newsletter/genericinformation.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Newsletter/newsletter.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Newsletter/newsletter.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/LINK/delete_newaccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/delete_newaccount.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/LINK/delete_newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/delete_newsletter.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/LINK/link_clm_newaccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/link_clm_newaccount.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/LINK/link_sfcc_newaccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/link_sfcc_newaccount.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/LINK/link_sfcc_newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/link_sfcc_newsletter.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/LINK/link_step_newaccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/link_step_newaccount.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/LINK/link_step_newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LINK/link_step_newsletter.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/SFCC/connection.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/connection.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/SFCC/newaccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/newaccount.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/SFCC/newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SFCC/newsletter.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,14 +117,14 @@
       <recent name="$PROJECT_DIR$/utile" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\s.ramos-izquierdo\OneDrive - ONEPOINT\Bureau\Clarins\Outils\clarins_auto_uat_ihm\Ressources\LINK" />
+      <recent name="C:\Users\s.ramos-izquierdo\OneDrive - ONEPOINT\Bureau\Clarins\Outils\clarins_auto_uat_ihm\Ressources\CLM" />
+      <recent name="C:\Users\s.ramos-izquierdo\OneDrive - ONEPOINT\Bureau\Clarins\Outils\clarins_auto_uat_ihm\Ressources\LinkCLM_NewAccount\Common" />
       <recent name="$PROJECT_DIR$/Ressources/LinkCLM_CreationCompte/Common" />
       <recent name="$PROJECT_DIR$/Ressources/LINKSTEP" />
-      <recent name="$PROJECT_DIR$/Ressources/LINKSFCC-STEP" />
-      <recent name="$PROJECT_DIR$/Ressources/STEP/Verify" />
-      <recent name="$PROJECT_DIR$/Ressources/LINKSFCC" />
     </key>
   </component>
-  <component name="RunManager" selected="Robot Framework.LinkSTEP_NewAccount">
+  <component name="RunManager" selected="Robot Framework.LinkCLM_NewAccount">
     <configuration name="LinkCLM_NewAccount" type="RobotFramework" factoryName="RobotFramework" folderName="LINK">
       <option name="target" value="$ProjectFileDir$/Tests/LINK/link_clm_newaccount.robot" />
       <option name="args">

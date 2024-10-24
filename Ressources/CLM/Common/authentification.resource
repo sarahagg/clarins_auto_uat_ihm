@@ -1,15 +1,14 @@
 *** Settings ***
 Documentation       all the keywords needed to authentificate and accept the cookiesResource
 
-Resource            ..${/}..${/}Ressources${/}LinkCLM_NewAccount${/}Common${/}common.resource
-# Resource    /Users/s.aggour/Library/CloudStorage/OneDrive-ONEPOINT/Clarins/clarins-auto-uat-ihm/Ressources/LinkCLM_CreationCompte/Common/common.resource
+Resource            common.resource
 
 
 *** Keywords ***
 Authentificate CLM
     Log To Console    New Browser
     New Browser    ${BROWSER}    headless=${headless}    reuse_existing=${False}    slowMo=0:00:02
-    New Page    ${PAGE_URL}
+    New Page       ${PAGE_URL}
 
     WHILE    True
         ${is_visible} =    Run Keyword And Return Status
@@ -29,7 +28,7 @@ Authentificate CLM
 
 Access Contact Page CLM
     [Arguments]    ${country}
-    click    ${profil_icon}
+    Click    ${profil_icon}
     Click    ${changer_le_programme_de_fidelite}
     Click    ${Programmechoice}
     Click    ${programmes.${country}}

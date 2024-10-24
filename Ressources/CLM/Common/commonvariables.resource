@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       here are all the common variables
 
-Resource            ..${/}..${/}..${/}Ressources${/}LinkCLM_NewAccount${/}Common${/}common.resource
+Resource            common.resource
 
 
 *** Variables ***

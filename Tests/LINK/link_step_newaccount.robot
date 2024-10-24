@@ -3,8 +3,8 @@ Documentation       But du Test
 ...                 verifier que la création d'un compte est faite sur STEP
 ...                 python3 -m robot    -d "Resultats/LinkSTEP_CreationCompte/logs" -v ENV:UAT    -i "verify account" Tests
 
+Resource            ..${/}..${/}Ressources${/}LINK${/}LinkSTEP_NewAccount${/}common.resource
 Library             DataDriver    file=..${/}..${/}Jeux de donnees${/}LINKFILENEWACCOUNT_STEP.csv
-Resource            ..${/}..${/}Ressources${/}LinkSTEP_NewAccount${/}common.resource
 
 Test Template       Verify Account
 

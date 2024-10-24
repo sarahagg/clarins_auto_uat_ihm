@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       all the keywords needed to verify a user's information on STEP
 
-Resource            ..${/}..${/}Ressources${/}LinkSTEP_NewAccount${/}common.resource
+Resource            common.resource
 
 
 *** Keywords ***

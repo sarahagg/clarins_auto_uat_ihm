@@ -3,7 +3,7 @@ Documentation       But du Test
 ...                 Supprimer le fichier CVS généré par SFCC
 ...                 python3 -m robot    -d "Resultats/Delete/logs" -v ENV:UAT    -i "Delete CSV" Tests
 
-Resource            ..${/}..${/}Ressources${/}LinkSFCC_NewAccount${/}common.resource
+Resource            ..${/}..${/}Ressources${/}Common${/}common.resource
 
 Force Tags          delete new-account csv
 
