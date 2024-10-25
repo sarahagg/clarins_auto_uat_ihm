@@ -7,7 +7,8 @@
     <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="Version CLM 5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/Common/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Common/common.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/STEP/Common/authentification.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/STEP/Common/authentification.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/common.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/commonvariables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/commonvariables.resource" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

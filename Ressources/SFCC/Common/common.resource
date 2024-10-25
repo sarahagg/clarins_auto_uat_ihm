@@ -19,20 +19,3 @@ Resource            ..${/}Newsletter${/}genericinformation.resource
 
 Resource            ..${/}Connection${/}connection.resource
 Resource            ..${/}Connection${/}genericinformation.resource
-
-
-*** Keywords ***
-Import FakerLibrary
-    [Arguments]    ${country}
-
-    IF    len($country) == 0
-        ${country}=    Set Variable    ${default_values.country}
-    END
-
-    ${all_available_countries}=    Set Variable    ${touch_countries}
-    IF    $country not in $all_available_countries
-        Import Library    FakerLibrary    WITH NAME    Faker_${TEST_NAME}
-        RETURN
-    END
-
-    Import Library    FakerLibrary    locale=${locale_values.${country}}    WITH NAME    Faker_${TEST_NAME}
