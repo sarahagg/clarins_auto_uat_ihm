@@ -24,7 +24,4 @@ Access Contact Page
     ${is_visible}=    Is Element Visible    ${loc_multipleElements}
     IF    ${is_visible}    Click    ${loc_FirstElement}    ELSE    Sleep    1s
 
-Is Element Visible
-    [Arguments]    ${selector}
-    ${state}=    Run Keyword And Return Status    Wait For Elements State    ${selector}    visible    timeout=500ms
-    RETURN    ${state}
+

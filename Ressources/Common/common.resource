@@ -76,3 +76,10 @@ ${csv_file_Newsletter_ADOBE}        ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}
 &{translate_salutation}     Mlle=Ms
 ...                         M=Mr
 ...                         Mme=Mrs
+
+
+*** Keywords ***
+Is Element Visible
+    [Arguments]    ${selector}
+    ${return_status}    ${return_value}=    Run Keyword And Warn On Failure    Wait For Elements State    ${selector}    visible
+    RETURN    ${return_status}
