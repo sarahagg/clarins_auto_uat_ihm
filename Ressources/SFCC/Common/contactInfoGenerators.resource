@@ -1,8 +1,7 @@
 *** Settings ***
-Documentation       all the keywords needed to login to the website and accept the cookies
+Documentation       All the keywords to generate contact informations
 
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common.resource
-
+Resource    a_import_all_common_SFCC.resource
 
 *** Keywords ***
 Generate FirstName
@@ -36,6 +35,9 @@ Generate LastName
 
 Generate Email
     [Arguments]    ${Email}
+
+    IF    $Email == 'default'    RETURN    emailderesr@gmail.com
+
     IF    $Email == 'auto'
         ${randomEmail}=    Run Keyword    Faker_${TEST_NAME}.Email
         ${Email}=    set variable    ${randomEmail}
@@ -52,23 +54,19 @@ Generate Password
     END
     RETURN    ${mypassword}
 
-Fill Password
-    [Arguments]    ${mypassword}
-    ${mypassword}=    Generate Password    ${mypassword}
-    Fill Secret    ${account_password}    $mypassword
-
 Generate BirthDate
     [Arguments]    ${BirthDate}
+
     IF    $BirthDate == 'default' or $BirthDate == 'auto'
         ${min_date}=    Evaluate    datetime.date(1930, 1, 1)    datetime
         ${max_date}=    Evaluate    datetime.date(2006, 1, 1)    datetime
         ${random_BirthDate}=    Run Keyword    Faker_${TEST_NAME}.Date Between    ${min_date}    ${max_date}
-        ${BirthDate}=    Set Variable    ${random_BirthDate}
-        RETURN    ${BirthDate}
+        RETURN    ${random_BirthDate}
     END
+
     RETURN    ${BirthDate}
 
-Choose Salutation
+Generate Salutation
     [Arguments]    ${salutation}    ${country}
     IF    $salutation == 'auto'
         ${random_salutation}=    Evaluate    random.choice($salutations)
@@ -79,44 +77,3 @@ Choose Salutation
     END
     IF    $salutation == 'default'    RETURN    ${default_values.salutation}
     RETURN    ${salutation}
-
-Connection Button
-    #IF    $country == 'ITA'
-       # ${connexion_button}=    Set Variable    ${italie_connexion_button}
-    #END
-    Click    ${connexion_button}
-
-Click Button emailOption
-    [Arguments]    ${emailOption}
-    # receive infos by Email
-    IF    $emailOption == 'YES'
-        Click    ${email_option_yes}
-        RETURN    ${emailOption}
-    ELSE
-        Click    ${email_option_no}
-        RETURN    ${emailOption}
-    END
-
-    RETURN    ${emailOption}
-
-Click Button isLoyaltyMember
-    [Arguments]    ${isLoyaltyMember}
-    IF    $isLoyaltyMember == 'YES'
-        Click    ${is_loyalty_member_yes}
-        RETURN    ${isLoyaltyMember}
-    ELSE
-        Click    ${is_loyalty_member_no}
-        RETURN    ${isLoyaltyMember}
-    END
-
-Click Button agreeToTerms and privacyPolicy
-    [Arguments]    ${country}
-    # additional buttons for usa and italy
-    IF    $country == 'USA'    Click    ${agree_to_terms}
-    IF    $country == 'ITA'    Click    ${privacy_policy}
-
-Verify Creation
-    [Arguments]    ${country}
-    Wait For Elements State    ${dashboard}    visible
-    ${text}=    Get Text    ${dashboard}
-    Should Be Equal    ${creation_text.${country}}    ${text}

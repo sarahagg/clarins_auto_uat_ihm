@@ -1,11 +1,5 @@
-*** Settings ***
-Documentation       all the keywords needed to login to the website and accept the cookies
-
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}common.resource
-
-
 *** Keywords ***
-Create account
+Create A New Account
     [Arguments]
     ...    ${FirstName}
     ...    ${LastName}
@@ -17,18 +11,16 @@ Create account
     ...    ${isLoyaltyMember}
     ...    ${salutation}
 
-    Import FakerLibrary    ${country}
+
+    Generate And Fill Email Input
+
+
 
     # COUNTRY
     ${generated_country}=    Set Variable    ${country}
-    Connection Button
 
-    # EMAIL
-    ${Email}=    Generate Email    ${Email}
-    ${generated_Email}=    Set Variable    ${Email}
-    Fill text    ${insert_email}    ${Email}
-    Click    ${rememberme_button}
-    Click    ${submit_button}
+
+
 
     # Decline welcome offer
     ${return_status}    ${return_value}=    Run Keyword And Warn On Failure    Wait For Elements State    ${welcome_offer_popup}    visible
@@ -103,3 +95,50 @@ Create account
     Click Button agreeToTerms and privacypolicy    ${country}
     Click    ${submit_button}
     RETURN    ${generated_FirstName}    ${generated_LastName}    ${generated_Email}    ${generated_BirthDate}    ${generated_country}    ${generated_salutation}     ${generated_emailOption}    ${generated_isLoyaltyMember}
+
+
+
+
+
+Fill Password
+    [Arguments]    ${mypassword}
+    ${mypassword}=    Generate Password    ${mypassword}
+    Fill Secret    ${account_password}    $mypassword
+
+
+
+
+Click Button emailOption
+    [Arguments]    ${emailOption}
+    # receive infos by Email
+    IF    $emailOption == 'YES'
+        Click    ${email_option_yes}
+        RETURN    ${emailOption}
+    ELSE
+        Click    ${email_option_no}
+        RETURN    ${emailOption}
+    END
+
+    RETURN    ${emailOption}
+
+Click Button isLoyaltyMember
+    [Arguments]    ${isLoyaltyMember}
+    IF    $isLoyaltyMember == 'YES'
+        Click    ${is_loyalty_member_yes}
+        RETURN    ${isLoyaltyMember}
+    ELSE
+        Click    ${is_loyalty_member_no}
+        RETURN    ${isLoyaltyMember}
+    END
+
+Click Button agreeToTerms and privacyPolicy
+    [Arguments]    ${country}
+    # additional buttons for usa and italy
+    IF    $country == 'USA'    Click    ${agree_to_terms}
+    IF    $country == 'ITA'    Click    ${privacy_policy}
+
+Verify Creation
+    [Arguments]    ${country}
+    Wait For Elements State    ${dashboard}    visible
+    ${text}=    Get Text    ${dashboard}
+    Should Be Equal    ${creation_text.${country}}    ${text}
