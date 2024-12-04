@@ -1,0 +1,1 @@
+updateAccountPage_dashboard = "xpath=//*[@id='wrapper']//i-account-inner-pages-title/h2"

@@ -24,3 +24,7 @@ Import FakerLibrary
     END
 
     Import Library    FakerLibrary    locale=${locale_values.${country}}    WITH NAME    Faker_${TEST_NAME}
+
+
+Custom Run On Failure
+    Take Screenshot         EMBED

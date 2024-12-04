@@ -10,10 +10,11 @@ Access And Complete Newsletter Form
     Go To Newsletter Form
 
     IF    $country == 'BEL' or $country == 'LUX' or $country == 'NLD'
-        Select BNL Region    ${country}
+        Select Newsletter BNL Region    ${country}
     END
 
-    Generate And Fill Email    ${email}
+    ${email}=    Generate Email    ${email}
+    Fill Text    ${newsletterForm_email_input}    ${email}
 
     IF    $country == 'ITA'    Click    ${newsletterForm_ITA_privacy_policy_checkbox}
 
@@ -26,7 +27,7 @@ Go To Newsletter Form
     Sleep    2
     Scroll To Element    ${newsletterForm_email_input}
 
-Select BNL Region
+Select Newsletter BNL Region
     [Arguments]    ${country}
     Click    ${newsletterForm_region_select}
     IF    $country == 'BEL'
@@ -38,11 +39,6 @@ Select BNL Region
     ELSE
         Log    BNL country not authorized
     END
-
-Generate And Fill Email
-    [Arguments]    ${email}
-    ${email}=    Generate Email    ${email}
-    Fill Text    ${newsletterForm_email_input}    ${email}
 
 Check Newsletter Subscription
     [Arguments]    ${country}

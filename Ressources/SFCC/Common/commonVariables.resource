@@ -1,10 +1,12 @@
 *** Settings ***
-Documentation       here are all the common variables
+Documentation       here are all the common variables to SFCC test cases
 
 
 *** Variables ***
 ${USERNAME}                 storefront
 ${PASSWORD}                 unlimited22
+
+${number_of_retry_to_wait_an_element}   2
 
 ${timestamp_format}         %Y_%m_%dT%H_%M_%S
 ${today_format}             %Y_%m_%d
@@ -21,14 +23,15 @@ ${today_format}             %Y_%m_%d
 ...                         AUT=https://stg-eu.npr.clarins.com/at/
 ...                         PRT=https://stg-eu.npr.clarins.com/pt/
 
-&{creation_text}            GBR=My dashboard
+&{account_dashboard_text}
+...                         GBR=My dashboard
 ...                         FRA=Mon tableau de bord
 ...                         BEL=Mon tableau de bord
 ...                         LUX=Mon tableau de bord
 ...                         NLD=Mijn overzicht
 ...                         USA=My dashboard
 ...                         CHE=Mon tableau de bord
-...                         POL=TBD
+...                         POL=Mój pulpit
 ...                         AUT=TBD
 ...                         PRT=TBD
 
@@ -44,3 +47,7 @@ ${today_format}             %Y_%m_%d
 ...                         AUT=TBD
 ...                         PRT=TBD
 
+# SPECIFICITIES BY COUNTRY
+@{welcome_offer_countries}             TBD
+@{push_ad_up_banner_countries}         POL
+@{simplified_salutations_countries}    BEL    LUX    NLD    POL

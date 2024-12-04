@@ -1,51 +1,53 @@
 *** Settings ***
 Documentation       But du Test
-...                 Vérifier que la création d'un nouveau compte se passe bien
-...                 python3 -m robot    -d "Resultats/New-account/logs" -v ENV:UAT    -i "New-account" Tests
+...                 Vérifier la création d'un nouveau compte
 
-Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}common.resource
-Library             DataDriver    file=..${/}..${/}Jeux de donnees${/}SFCC${/}NewAccount${/}jdd-New-account.xlsx
+Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}a_import_all_common_SFCC.resource
+Library             DataDriver    file=..${/}..${/}Ressources${/}SFCC${/}TestData${/}2_createAccount.xlsx    sheet_name=Test Cases
 
 Test Template       Create a new account
+Test Teardown       Close Browser
 
 Force Tags          newaccount
 
 
 *** Test Cases ***
-Default Test If No Data
+Default Values If No Data    NO
 
 
 *** Keywords ***
-Create a new account
+Create A New Account
     [Arguments]
     ...    ${playTest}
-    ...    ${FirstName}
-    ...    ${LastName}
-    ...    ${Email}
-    ...    ${mypassword}
-    ...    ${BirthDate}
-    ...    ${country}
-    ...    ${emailOption}
-    ...    ${isLoyaltyMember}
+    ...    ${email}
     ...    ${salutation}
+    ...    ${firstName}
+    ...    ${lastName}
+    ...    ${password}
+    ...    ${phoneNumber}
+    ...    ${birthDate}
+    ...    ${emailOptin}
+    ...    ${SMSOptin}
+    ...    ${isLoyaltyMember}
+    ...    ${country}
 
     IF    $playTest == "YES"
-        Authentificate and close all popups    ${country}
 
-        sleep    1s
+        Initialize Test Context    ${country}
+        Open Browser And Go To Home Page    ${country}
+        Wait And Close All Popups   ${country}
+        Go To Login Page
+        Connect As A New User    ${email}
+        Complete Registration Form
+        ...                         ${salutation}
+        ...                         ${firstName}
+        ...                         ${lastName}
+        ...                         ${password}
+        ...                         ${phoneNumber}
+        ...                         ${birthDate}
+        ...                         ${emailOptin}
+        ...                         ${SMSOptin}
+        ...                         ${isLoyaltyMember}
+        ...                         ${country}
 
-        ${generated_data}=    Create account
-        ...    ${FirstName}
-        ...    ${LastName}
-        ...    ${Email}
-        ...    ${mypassword}
-        ...    ${BirthDate}
-        ...    ${country}
-        ...    ${emailOption}
-        ...    ${isLoyaltyMember}
-        ...    ${salutation}
-
-        log    ${generated_data}
-
-        Close Browser
     END

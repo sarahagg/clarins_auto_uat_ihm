@@ -4,7 +4,7 @@ Documentation       all the keywords needed to navigate on the Login Page
 Resource            ..${/}Common${/}a_import_all_common_SFCC.resource
 
 *** Keywords ***
-Connect As A User
+Connect As An Existing User
     [Arguments]    ${email}    ${password}    ${country}
 
     Fill text    ${loginPage_email_input}    ${email}
@@ -14,7 +14,17 @@ Connect As A User
     Fill Secret    ${loginPage_connection_password_input}    $password
     Click    ${loginPage_submit_connection_button}
 
-    Wait For Elements State    ${createAccountPage_dashboard}    visible
-    ${text}=    Get Text    ${createAccountPage_dashboard}
-    Should Be Equal    ${creation_text.${country}}    ${text}
+    Wait For Elements State    ${updateAccountPage_dashboard}    visible
+    ${text}=    Get Text    ${updateAccountPage_dashboard}
+    Should Be Equal    ${account_dashboard_text.${country}}    ${text}
+
+
+Connect As A New User
+    [Arguments]    ${email}
+
+    ${generated_email}=    Generate Email    ${email}
+
+    Fill text    ${loginPage_email_input}    ${generated_email}
+    Click    ${loginPage_rememberme_button}
+    Click    ${loginPage_submit_email_button}
 

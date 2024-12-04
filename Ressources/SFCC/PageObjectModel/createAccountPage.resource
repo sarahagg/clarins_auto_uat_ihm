@@ -1,144 +1,103 @@
+*** Settings ***
+Documentation       all the keywords needed to navigate on Create Account Page
+
+Resource            ..${/}Common${/}a_import_all_common_SFCC.resource
+
 *** Keywords ***
-Create A New Account
+Complete Registration Form
     [Arguments]
-    ...    ${FirstName}
-    ...    ${LastName}
-    ...    ${Email}
-    ...    ${mypassword}
-    ...    ${BirthDate}
-    ...    ${country}
-    ...    ${emailOption}
-    ...    ${isLoyaltyMember}
     ...    ${salutation}
+    ...    ${firstName}
+    ...    ${lastName}
+    ...    ${password}
+    ...    ${phoneNumber}
+    ...    ${birthDate}
+    ...    ${emailOptin}
+    ...    ${SMSOptin}
+    ...    ${isLoyaltyMember}
+    ...    ${country}
 
-
-    Generate And Fill Email Input
-
-
-
-    # COUNTRY
-    ${generated_country}=    Set Variable    ${country}
-
-
-
-
-    # Decline welcome offer
-    ${return_status}    ${return_value}=    Run Keyword And Warn On Failure    Wait For Elements State    ${welcome_offer_popup}    visible
-    IF    $return_status == 'PASS'
-        Log To Console    Waiting for welcome offer to appear
-        Wait For Elements State    ${refuse_welcome_offer}    visible    timeout=30s
-        Click    ${refuse_welcome_offer}
-        Log To Console    Welcome offer refused
+    # GENERATE and FILL SALUTATION
+    IF    $salutation != '${EMPTY}'
+        ${generated_salutation}=    Generate Salutation    ${salutation}    ${country}
+        Click    ${createAccountPage_salutation_option.replace('$SALUTATION$', '${translated_salutations.${generated_salutation}}')}
     END
 
-    # SALUTATION
-    IF  $country != 'USA' and $country != 'CAN'
-        ${newsalutation}=    Choose Salutation    ${salutation}    ${country}
-        ${generated_salutation}=    Set Variable    ${newsalutation}
-
-        IF    $newsalutation == 'M'
-            Click    ${M}
-        ELSE IF    $newsalutation == 'Mme'
-            Click    ${Mme}
-        ELSE
-            Click    ${Mlle}
-        END
+    # GENERATE and FILL FIRST NAME
+    IF    $firstName != '${EMPTY}'
+        ${generated_firstName}=    Generate FirstName    ${firstName}
+        Fill Text    ${createAccountPage_first_name_input}    ${generated_firstName}
     END
 
-    # FIRST NAME
-    ${FirstName}=    Generate FirstName    ${FirstName}
-    ${generated_FirstName}=    Set Variable    ${FirstName}
-    Fill Text    ${First_Name_field}    ${FirstName}
-
-    # LAST NAME
-    ${LastName}=    Generate lastName    ${LastName}
-    ${generated_LastName}=    Set Variable    ${LastName}
-    Fill Text    ${last_name_field}    ${LastName}
-
-    # CLICK ON EMAIL TO NOT CHANGE IT
-    Click    ${email_div}
-
-    # FILL THE PASSWORD
-    FillPassword    ${mypassword}
-
-    # FILL THE PHONE (GBR only)
-     IF  $country == 'GBR'
-        ${phone_number}=            Run Keyword    Faker_${TEST_NAME}.Phone Number
-        ${phone_number}=            Replace String Using Regexp    ${phone_number[::-1]}    [^0-9]    ${EMPTY}
-
-        IF  $country == 'GBR'
-            Fill Text    ${phone_field}    ${phone_number[0:10][::-1]}
-        END
-
+    # GENERATE and FILL LAST NAME
+    IF    $lastName != '${EMPTY}'
+        ${generated_lastName}=    Generate lastName    ${lastName}
+        Fill Text    ${createAccountPage_last_name_input}    ${generated_lastName}
     END
 
-    ###FILL THE BIRTHDATE
-    ${BirthDate}=    Generate BirthDate    ${BirthDate}
-    ${generated_BirthDate}=    Set Variable    ${BirthDate}
-    Fill Text    ${birthday}    ${BirthDate}
-    Wait For Elements State    ${date_invalid}    hidden    timeout=10s
+    # GENERATE and FILL PASSWORD
+    IF    $password != '${EMPTY}'
+        ${generated_password}=    Generate Password    ${password}
+        Fill Secret    ${createAccountPage_account_password_input}    $generated_password
+    END
 
-    ###CHOOSE THE COUNTRY IF THE USER IS FROM THE BNL
+    # GENERATE and FILL PHONE NUMBER
+    IF    $phoneNumber != '${EMPTY}'
+        ${generated_phoneNumber}=    Generate phoneNumber    ${phoneNumber}
+        Click    ${createAccountPage_phone_number_country_code_select}
+        Click    ${createAccountPage_phone_number_country_code_option.replace('$COUNTRY_ALPHA2$', '${translated_countries_to_alpha2.${country}}')}
+        Fill Text    ${createAccountPage_phone_number_input}    ${generated_phoneNumber[0:${phone_number_size_by_country.${country}}][::-1]}
+    END
+
+    # GENERATE and FILL BIRTHDATE
+    IF    $birthDate != '${EMPTY}'
+        ${generated_birthDate}=    Generate BirthDate    ${birthDate}
+        Fill Text    ${createAccountPage_birthday_input}    ${generated_birthDate}
+        Wait For Elements State    ${createAccountPage_birthday_date_invalid_message}    hidden
+    END
+
+    # CHOOSE THE COUNTRY IF THE USER IS FROM THE BNL
     IF    $country == 'BEL' or $country == 'LUX' or $country == 'NLD'
-        Click    ${select_region}
-        Click    ${newaccount_${country}}
+        Click    ${createAccountPage_region_select}
+        Click    ${createAccountPage_region_option.replace('$COUNTRY_ALPHA2$', '${translated_countries_to_alpha2.${country}}')}
     END
 #
+    # CLICK ALL THE BUTTONS (LOYALTY, OPTIN ....)
+    IF    $emailOptin != '${EMPTY}'         Click    ${createAccountPage_email_optin_option.replace('$EMAIL_OPTIN_VALUE$', '${emailOptin.lower()}')}
+    IF    $SMSOptin != '${EMPTY}'           Click    ${createAccountPage_sms_optin_option.replace('$SMS_OPTIN_VALUE$', '${SMSOptin.lower()}')}
+    IF    $isLoyaltyMember != '${EMPTY}'    Click    ${createAccountPage_is_loyalty_member_option.replace('$IS_LOYALTY_MEMBER_VALUE$', '${isLoyaltyMember.lower()}')}
 
-    ###CLICK ALL THE BUTTONS (LOYALTY, OPTIN ....) AND SUBMIT
-    ${emailOption}=    Click Button emailOption    ${emailOption}
-    ${generated_emailOption}=    Set Variable    ${emailOption}
+    # SUBMIT
+    Click Button agreeToTerms and privacyPolicy    ${country}
+    Click    ${createAccountPage_submit_button}
 
-    ${isLoyaltyMember}=    Click Button isLoyaltyMember    ${isLoyaltyMember}
-    ${generated_isLoyaltyMember}=    Set Variable    ${isLoyaltyMember}
-
-    Click Button agreeToTerms and privacypolicy    ${country}
-    Click    ${submit_button}
-    RETURN    ${generated_FirstName}    ${generated_LastName}    ${generated_Email}    ${generated_BirthDate}    ${generated_country}    ${generated_salutation}     ${generated_emailOption}    ${generated_isLoyaltyMember}
-
-
+    # CHECK IF ACCOUNT CREATION IS OK
+    Verify Account Creation     ${country}
 
 
+    RETURN    ${generated_salutation}    ${generated_firstName}    ${generated_lastName}     ${generated_password}    ${generated_birthDate}
 
-Fill Password
-    [Arguments]    ${mypassword}
-    ${mypassword}=    Generate Password    ${mypassword}
-    Fill Secret    ${account_password}    $mypassword
-
-
-
-
-Click Button emailOption
-    [Arguments]    ${emailOption}
-    # receive infos by Email
-    IF    $emailOption == 'YES'
-        Click    ${email_option_yes}
-        RETURN    ${emailOption}
-    ELSE
-        Click    ${email_option_no}
-        RETURN    ${emailOption}
-    END
-
-    RETURN    ${emailOption}
-
-Click Button isLoyaltyMember
-    [Arguments]    ${isLoyaltyMember}
-    IF    $isLoyaltyMember == 'YES'
-        Click    ${is_loyalty_member_yes}
-        RETURN    ${isLoyaltyMember}
-    ELSE
-        Click    ${is_loyalty_member_no}
-        RETURN    ${isLoyaltyMember}
-    END
 
 Click Button agreeToTerms and privacyPolicy
     [Arguments]    ${country}
     # additional buttons for usa and italy
-    IF    $country == 'USA'    Click    ${agree_to_terms}
-    IF    $country == 'ITA'    Click    ${privacy_policy}
+    IF    $country == 'USA'    Click    ${createAccountPage_USA_agree_to_terms_checkbox}
+    IF    $country == 'ITA'    Click    ${createAccountPage_ITA_privacy_policy_checkbox}
 
-Verify Creation
+Verify Account Creation
     [Arguments]    ${country}
-    Wait For Elements State    ${dashboard}    visible
-    ${text}=    Get Text    ${dashboard}
-    Should Be Equal    ${creation_text.${country}}    ${text}
+
+    ${return_status}=   Check If Element Is Visible And Warn If Not    ${updateAccountPage_dashboard}
+    WHILE    $return_status == 'FAIL'    limit=${number_of_retry_to_wait_an_element}    on_limit=pass
+        Log    Waiting for welcome offer to appear
+        ${return_status}=   Check If Element Is Visible And Warn If Not    ${updateAccountPage_dashboard}
+    END
+
+    IF    $return_status == 'PASS'
+        ${text}=    Get Text    ${updateAccountPage_dashboard}
+        Should Be Equal    ${account_dashboard_text.${country}}    ${text}
+        Log      Account created
+    END
+
+
+

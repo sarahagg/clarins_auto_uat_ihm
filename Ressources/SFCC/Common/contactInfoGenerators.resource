@@ -4,76 +4,95 @@ Documentation       All the keywords to generate contact informations
 Resource    a_import_all_common_SFCC.resource
 
 *** Keywords ***
-Generate FirstName
-    [Arguments]    ${FirstName}
-
-    IF    $FirstName == 'default'
-        RETURN    ${default_values.FistName}
-    END
-
-    IF    $FirstName == 'auto'
-        ${random_FirstName}=    Run Keyword    Faker_${TEST_NAME}.First Name
-        ${FirstName}=    Set Variable    ${random_FirstName}
-        RETURN    ${random_FirstName}
-    END
-
-    RETURN    ${FirstName}
-
-Generate LastName
-    [Arguments]    ${LastName}
-
-    IF    $LastName == 'default'
-        RETURN    ${default_values.LastName}
-    END
-
-    IF    $LastName == 'auto'
-        ${random_LastName}=    Run Keyword    Faker_${TEST_NAME}.Last Name
-        ${LastName}=    Set Variable    ${random_LastName}
-        RETURN    ${random_LastName}
-    END
-    RETURN    ${LastName}
-
 Generate Email
-    [Arguments]    ${Email}
+    [Arguments]    ${email}
 
-    IF    $Email == 'default'    RETURN    emailderesr@gmail.com
+    IF    $email == 'default'    RETURN    ${default_values.email}
 
-    IF    $Email == 'auto'
+    IF    $email == 'auto'
         ${randomEmail}=    Run Keyword    Faker_${TEST_NAME}.Email
-        ${Email}=    set variable    ${randomEmail}
         RETURN    ${randomEmail}
     END
 
-    RETURN    ${Email}
-
-Generate Password
-    [Arguments]    ${mypassword}
-    IF    $mypassword== 'auto'
-        ${random-mypassword}=    Run Keyword    Faker_${TEST_NAME}.Name
-        RETURN    ${random-mypassword}
-    END
-    RETURN    ${mypassword}
-
-Generate BirthDate
-    [Arguments]    ${BirthDate}
-
-    IF    $BirthDate == 'default' or $BirthDate == 'auto'
-        ${min_date}=    Evaluate    datetime.date(1930, 1, 1)    datetime
-        ${max_date}=    Evaluate    datetime.date(2006, 1, 1)    datetime
-        ${random_BirthDate}=    Run Keyword    Faker_${TEST_NAME}.Date Between    ${min_date}    ${max_date}
-        RETURN    ${random_BirthDate}
-    END
-
-    RETURN    ${BirthDate}
+    RETURN    ${email}
 
 Generate Salutation
     [Arguments]    ${salutation}    ${country}
-    IF    $salutation == 'auto'
-        ${random_salutation}=    Evaluate    random.choice($salutations)
-        IF    $country == 'BEL' or $country == 'LUX' or $country == 'NLD' or $country == 'CHE'
-            ${random_salutation}=    Evaluate    random.choice($BNLsalutations)
-        END
-        RETURN    ${random_salutation}
-    END
+
     IF    $salutation == 'default'    RETURN    ${default_values.salutation}
+
+    IF    $salutation == 'auto'
+
+        IF    $country in ${simplified_salutations_countries}
+            ${randomSalutation}=    Evaluate    random.choice($simplified_salutations)
+        ELSE
+            ${randomSalutation}=    Evaluate    random.choice($salutations)
+        END
+
+        RETURN    ${randomSalutation}
+    END
+
     RETURN    ${salutation}
+
+Generate FirstName
+    [Arguments]    ${FirstName}
+
+    IF    $firstName == 'default'    RETURN    ${default_values.firstName}
+
+    IF    $firstName == 'auto'
+        ${randomFirstName}=    Run Keyword    Faker_${TEST_NAME}.First Name
+        RETURN    ${randomFirstName}
+    END
+
+    RETURN    ${firstName}
+
+Generate LastName
+    [Arguments]    ${lastName}
+
+    IF    $lastName == 'default'   RETURN    ${default_values.lastName}
+
+    IF    $lastName == 'auto'
+        ${randomLastName}=    Run Keyword    Faker_${TEST_NAME}.Last Name
+        RETURN    ${randomLastName}
+    END
+
+    RETURN    ${lastName}
+
+Generate PhoneNumber
+    [Arguments]    ${phoneNumber}
+
+    IF    $phoneNumber == 'default'    RETURN    ${default_values.phoneNumber}
+
+    IF    $phoneNumber == 'auto'
+        ${randomPhoneNumber}=     Run Keyword    Faker_${TEST_NAME}.Phone Number
+        ${randomPhoneNumber}=     Replace String Using Regexp    ${randomPhoneNumber[::-1]}    [^0-9]    ${EMPTY}
+
+        RETURN    ${randomPhoneNumber}
+    END
+
+    RETURN    ${phoneNumber}
+
+Generate Password
+    [Arguments]    ${password}
+
+    IF    $password == 'default'    RETURN    ${default_values.password}
+
+    IF    $password== 'auto'
+        ${randomPassword}=    Run Keyword    Faker_${TEST_NAME}.Password
+        RETURN    ${randomPassword}
+    END
+    RETURN    ${randomPassword}
+
+Generate BirthDate
+    [Arguments]    ${birthDate}
+
+    IF    $birthDate == 'default'    RETURN    ${default_values.birthDate}
+
+    IF    $birthDate == 'auto'
+        ${min_date}=    Evaluate    datetime.date(1930, 1, 1)    datetime
+        ${max_date}=    Evaluate    datetime.date(2006, 1, 1)    datetime
+        ${randomBirthDate}=    Run Keyword    Faker_${TEST_NAME}.Date Between    ${min_date}    ${max_date}
+        RETURN    ${randomBirthDate}
+    END
+
+    RETURN    ${birthDate}

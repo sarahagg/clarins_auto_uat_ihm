@@ -14,12 +14,14 @@ ${csv_file_Newsletter_STEP}         ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}
 ${csv_file_Newsletter_ADOBE}        ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}LINKFILENEWSLETTER_ADOBE.csv
 
 
-&{default_values}           FirstName=John
-...                         LastName=Doe
-...                         Salutation=M
-...                         Email=john.doe@qq.com
-...                         Password=johndoe
-...                         Birthdate=1980-01-01
+&{default_values}
+...                         email=john.doe@qq.com
+...                         salutation=M
+...                         firstName=John
+...                         lastName=Doe
+...                         password=johndoe
+...                         phoneNumber=123456789
+...                         birthDate=1980-01-01
 
 
 @{lov_OptinChannel}         captainWallet (captainWallet)
@@ -42,6 +44,14 @@ ${csv_file_Newsletter_ADOBE}        ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}
 @{touch_countries}          ESP    ZAF    CAN    AUS    FRA    IRL    HKG    JPN    SGP    USA    ITA    GBR    CHE    BEL    LUX    NLD    POL    AUT    PRT    NZL
 @{non_touch_countries}      CHN    CHL
 @{BNL_regions}              BEL    LUX    NLD
+
+&{translated_countries_to_alpha2}
+...                         GBR=UK
+...                         BEL=BE
+...                         LUX=LU
+...                         NLD=NL
+...                         POL=PL
+
 
 &{full_country}             GBR=United Kingdom
 ...                         FRA=France
@@ -72,7 +82,12 @@ ${csv_file_Newsletter_ADOBE}        ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}
 ...                         no=false
 
 @{salutations}                  M    Mme    Mlle
-@{BNL_salutations}              M    Mme
+@{simplified_salutations}       M    Mme
 &{translated_salutations}       M=Mr
 ...                             Mme=Mrs
 ...                             Mlle=Ms
+
+
+&{phone_number_size_by_country}
+...                               GBR=10
+...                               POL=9

@@ -22,7 +22,7 @@ Subscribe To The Newsletter
     IF    $playTest == "YES"
         Initialize Test Context    ${country}
         Open Browser And Go To Home Page    ${country}
-        Wait And Close All Popups
+        Wait And Close All Popups    ${country}
         ${generated_data}=    Access And Complete Newsletter Form    ${email}    ${country}
         Check Newsletter Subscription    ${country}
     END
