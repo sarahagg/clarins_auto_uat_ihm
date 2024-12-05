@@ -8,6 +8,4 @@ newsletterForm_ITA_privacy_policy_checkbox = "xpath=//footer//input[starts-with(
 
 # BNL newsletter
 newsletterForm_region_select = "xpath=//footer//*[starts-with(@id ,'dwfrm_newsletterformbuilder')]/div/i-select"
-newsletterForm_belgium_option = "xpath=//footer//*[@id='dwfrm_newsletterformbuilder_countries_country_BE']"
-newsletterForm_luxembourg_option = "xpath=//footer//*[@id='dwfrm_newsletterformbuilder_countries_country_LU']"
-newsletterForm_netherlands_option = "xpath=//footer//*[@id='dwfrm_newsletterformbuilder_countries_country_NL']"
+newsletterForm_region_option = "xpath=//footer//*[@id='dwfrm_newsletterformbuilder_countries_country_$COUNTRY_ALPHA2$']"

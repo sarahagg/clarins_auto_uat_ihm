@@ -1,8 +1,8 @@
 *** Settings ***
-Documentation       All the common resources
-...                 All the different keywords
+Documentation       All the different common keywords
 
 Resource   common.resource
+
 
 *** Keywords ***
 Check If Element Is Visible And Warn If Not

@@ -1,28 +1,38 @@
 *** Settings ***
-Documentation       All the common resources
-...                 All the different variables
+Documentation       All the different common variables
+
 
 *** Variables ***
 ${BROWSER}                  chromium
 
-${csv_file_Newaccount_STEP}         ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}LINKFILENEWACCOUNT_STEP.csv
-${csv_file_Newaccount_CLM}          ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}LINKFILENEWACCOUNT_CLM.csv
-${csv_file_Newaccount_ADOBE}        ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}LINKFILENEWACCOUNT_ADOBE.csv
-${csv_file_Newaccount_Y2}           ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}LINKFILENEWACCOUNT_Y2.csv
+${number_of_retry_to_wait_an_element}   2
 
-${csv_file_Newsletter_STEP}         ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}LINKFILENEWSLETTER_STEP.csv
-${csv_file_Newsletter_ADOBE}        ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}LINKFILENEWSLETTER_ADOBE.csv
+${timestamp_format}         %Y_%m_%dT%H_%M_%S
+${today_format}             %Y_%m_%d
 
+&{canonical_form_contact_link_files}
+...                                 \${email}=
+...                                 \${salutation}=
+...                                 \${firstName}=
+...                                 \${lastName}=
+...                                 \${password}=
+...                                 \${phoneNumber}=
+...                                 \${birthDate}=
+...                                 \${emailOptin}=
+...                                 \${SMSOptin}=
+...                                 \${isLoyaltyMember}=
+...                                 \${country}=
+
+${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 
 &{default_values}
 ...                         email=john.doe@qq.com
 ...                         salutation=M
 ...                         firstName=John
 ...                         lastName=Doe
-...                         password=johndoe
+...                         password=Johndoe!
 ...                         phoneNumber=123456789
 ...                         birthDate=1980-01-01
-
 
 @{lov_OptinChannel}         captainWallet (captainWallet)
 ...                         email (email)
@@ -51,7 +61,6 @@ ${csv_file_Newsletter_ADOBE}        ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}
 ...                         LUX=LU
 ...                         NLD=NL
 ...                         POL=PL
-
 
 &{full_country}             GBR=United Kingdom
 ...                         FRA=France
@@ -86,7 +95,6 @@ ${csv_file_Newsletter_ADOBE}        ${CURDIR}${/}..${/}..${/}Jeux de donnees${/}
 &{translated_salutations}       M=Mr
 ...                             Mme=Mrs
 ...                             Mlle=Ms
-
 
 &{phone_number_size_by_country}
 ...                               GBR=10

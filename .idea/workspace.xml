@@ -5,23 +5,95 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="Version CLM 5">
-      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/Locators/updateAccountPage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/CLM/Common/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/CLM/Locators/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/CLM/PageObjectModel/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/CLM/TestData/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/Common/commonResources.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/LINK/LinkFiles/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/LINK/LinkFiles/link_csv_file_from_SFCC_to_STEP_for_createAccount.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/LINK/LinkFiles/link_csv_file_from_SFCC_to_STEP_for_subscribeNewsletter.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/LINK/write_data_to_link_csv_files.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/a_import_all_data_generators_SFCC.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/generate_testData_createAccount.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/generate_testData_subscribeNewsletter.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/Locators/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/updateAccountPage.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/1_subscribeNewsletter.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/2_createAccount.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/3_updateAccount.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/4_deleteSomeAccountInfo.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/5_makeTransaction.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Common/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Locators/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Locators/a_import_all_locators_STEP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Locators/contactPage/contactTab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Locators/contactPage/historyTab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Locators/contactPage/sourceTraceabilityTab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Locators/contactPage/trackingTab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Locators/homePage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Locators/leftMenu/contactsTab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Locators/leftMenu/globalSearchTab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Locators/leftMenu/listOfValuesTab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Locators/leftMenu/tasksTab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/Locators/loginPage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/PageObjectModel/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/PageObjectModel/a_import_all_page_object_model_STEP.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/PageObjectModel/loginPage.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/TestData/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/TestData/jdd-Modify.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/STEP/TestData/jdd-Verify.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jeux de donnees/STEP/jdd-Modify.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jeux de donnees/STEP/jdd-Verify.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Common/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Common/common.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/Common/commonKeywords.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Common/commonKeywords.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/Common/commonLibraries.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Common/commonLibraries.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/Common/commonVariables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Common/commonVariables.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LINK/LinkSFCC_NewAccount/common.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LINK/LinkSFCC_NewAccount/savelink.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LINK/LinkSFCC_Newsletter/common.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LINK/LinkSFCC_Newsletter/savelink.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/a_import_all_common_SFCC.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/a_import_all_common_SFCC.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/commonVariables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/commonVariables.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/contactInfoGenerators.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/contactInfoGenerators.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Locators/a_import_all_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Locators/a_import_all_locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Locators/createAccountPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Locators/createAccountPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Locators/popupElement.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Locators/popupElement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/contactInfoGenerators.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/contactInformation_generators.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/initialization.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/initialization.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Locators/a_import_all_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Locators/a_import_all_locators_SFCC.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Locators/homePage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Locators/headerMenu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Locators/newsletterForm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Locators/newsletterForm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/a_import_all_page_object_model.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/a_import_all_page_object_model_SFCC.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/createAccountPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/createAccountPage.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/homePage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/headerMenu.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/loginPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/loginPage.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/newsletterForm.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/newsletterForm.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/popupElement.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/popupElement.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/TestData/2_createAccount.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/TestData/2_createAccount.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/SFCC/1_subscribeNewsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SFCC/1_subscribeNewsletter.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/SFCC/2_createAccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SFCC/2_createAccount.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/TestData/1_subscribeNewsletter.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/TestData/2_createAccount.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/TestData/3_updateAccount.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/TestData/4_deleteSomeAccountInfo.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/TestData/5_makeTransaction.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/STEP/Common/authentification.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/STEP/Common/initialization.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/STEP/Common/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/STEP/Common/a_import_all_common_STEP.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/STEP/Common/commonvariables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/STEP/Common/commonVariables.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/STEP/Common/locator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/STEP/Locators/locator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/STEP/Modify/choice.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/STEP/PageObjectModel/choice.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/STEP/Modify/filltext.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/STEP/PageObjectModel/filltext.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/STEP/Modify/modify.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/STEP/PageObjectModel/modify.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/STEP/Verify/verify.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/STEP/PageObjectModel/verify.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/LINK/delete_newaccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tasks/delete_link_csv_files.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/LINK/delete_newsletter.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/LINK/link_clm_newaccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/CLM/FROM_OTHER/link_clm_newaccount.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/LINK/link_sfcc_newaccount.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/LINK/link_sfcc_newsletter.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/LINK/link_step_newaccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/STEP/FROM_OTHER/1_verifyContactInformation.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/LINK/link_step_newsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/STEP/FROM_OTHER/link_step_newsletter.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/SFCC/1_subscribeNewsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/1_subscribeNewsletter.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/SFCC/2_createAccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/2_createAccount.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/STEP/modify.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/STEP/FROM_STEP/1_updateAccount.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/STEP/verify.robot" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,60 +138,61 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Robot Framework.Connection.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.LinkCLM_CreationCompte.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.LinkSFCC_CreationCompte.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.LinkSFCC_Newsletter.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.LinkSTEP_CreationCompte.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.LinkSTEP_Newsletter.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.NewAccount.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.Newsletter.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.linkSFCC.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.linksfc.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.linkstep.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.login.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.modify.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.verify.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;refonte__orga__code&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/s.ramos-izquierdo/OneDrive - ONEPOINT/Bureau/Clarins/Outils/clarins_auto_uat_ihm/Ressources/LinkSFCC_Newsletter&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Robot Framework.Connection.executor": "Run",
+    "Robot Framework.LinkCLM_CreationCompte.executor": "Run",
+    "Robot Framework.LinkSFCC_CreationCompte.executor": "Run",
+    "Robot Framework.LinkSFCC_Newsletter.executor": "Run",
+    "Robot Framework.LinkSTEP_CreationCompte.executor": "Run",
+    "Robot Framework.LinkSTEP_Newsletter.executor": "Run",
+    "Robot Framework.NewAccount.executor": "Run",
+    "Robot Framework.Newsletter.executor": "Run",
+    "Robot Framework.Test.executor": "Run",
+    "Robot Framework.linkSFCC.executor": "Run",
+    "Robot Framework.linksfc.executor": "Run",
+    "Robot Framework.linkstep.executor": "Run",
+    "Robot Framework.login.executor": "Run",
+    "Robot Framework.modify.executor": "Run",
+    "Robot Framework.verify.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "refonte__orga__code",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/s.ramos-izquierdo/OneDrive - ONEPOINT/Bureau/Clarins/Outils/clarins_auto_uat_ihm/Ressources/SFCC/DataGenerators",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\s.ramos-izquierdo\OneDrive - ONEPOINT\Bureau\Clarins\Outils\clarins_auto_uat_ihm\Ressources\SFCC\DataGenerators" />
       <recent name="C:\Users\s.ramos-izquierdo\OneDrive - ONEPOINT\Bureau\Clarins\Outils\clarins_auto_uat_ihm\Ressources\LinkSFCC_Newsletter" />
       <recent name="$PROJECT_DIR$/Ressources/STEP/Common" />
       <recent name="$PROJECT_DIR$/Ressources/LINKSFCC" />
       <recent name="$PROJECT_DIR$/utile" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\s.ramos-izquierdo\OneDrive - ONEPOINT\Bureau\Clarins\Outils\clarins_auto_uat_ihm\Ressources\SFCC\Locators" />
-      <recent name="C:\Users\s.ramos-izquierdo\OneDrive - ONEPOINT\Bureau\Clarins\Outils\clarins_auto_uat_ihm\Ressources\LINK" />
-      <recent name="C:\Users\s.ramos-izquierdo\OneDrive - ONEPOINT\Bureau\Clarins\Outils\clarins_auto_uat_ihm\Ressources\CLM" />
-      <recent name="C:\Users\s.ramos-izquierdo\OneDrive - ONEPOINT\Bureau\Clarins\Outils\clarins_auto_uat_ihm\Ressources\LinkCLM_NewAccount\Common" />
-      <recent name="$PROJECT_DIR$/Ressources/LinkCLM_CreationCompte/Common" />
+      <recent name="C:\Users\s.ramos-izquierdo\OneDrive - ONEPOINT\Bureau\Clarins\Outils\clarins_auto_uat_ihm\Ressources\SFCC\DataGenerators" />
+      <recent name="C:\Users\s.ramos-izquierdo\OneDrive - ONEPOINT\Bureau\Clarins\Outils\clarins_auto_uat_ihm\Ressources\STEP\PageObjectModel" />
+      <recent name="C:\Users\s.ramos-izquierdo\OneDrive - ONEPOINT\Bureau\Clarins\Outils\clarins_auto_uat_ihm\Ressources\STEP\Locators" />
+      <recent name="C:\Users\s.ramos-izquierdo\OneDrive - ONEPOINT\Bureau\Clarins\Outils\clarins_auto_uat_ihm\TestCases\STEP\FROM OTHER" />
+      <recent name="C:\Users\s.ramos-izquierdo\OneDrive - ONEPOINT\Bureau\Clarins\Outils\clarins_auto_uat_ihm\TestCases\CLM\FROM OTHER" />
     </key>
   </component>
   <component name="RunManager" selected="Robot Framework.2_createAccount">
-    <configuration name="1_subscribeNewsletter" type="RobotFramework" factoryName="RobotFramework" folderName="SFCC">
-      <option name="target" value="$ProjectFileDir$/TestCases/SFCC/1_subscribeNewsletter.robot" />
+    <configuration name="1_subscribeNewsletter" type="RobotFramework" factoryName="RobotFramework" folderName="SFCC_FROM_SFCC">
+      <option name="target" value="$ProjectFileDir$/TestCases/SFCC/FROM_SFCC/1_subscribeNewsletter.robot" />
       <option name="args">
         <list>
           <option value="-d" />
-          <option value="Resultats/SFCC/1_subscribeNewsletter" />
+          <option value="Resultats/SFCC/FROM_SFCC/1_subscribeNewsletter" />
           <option value="-v" />
           <option value="headless:false" />
         </list>
@@ -131,12 +204,37 @@
       <option name="makeSuite" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="2_createAccount" type="RobotFramework" factoryName="RobotFramework" folderName="SFCC">
-      <option name="target" value="$ProjectFileDir$/TestCases/SFCC/2_createAccount.robot" />
+    <configuration name="1_verifyContactInformation_FROM_SFCC_subscribeNewsletter" type="RobotFramework" factoryName="RobotFramework" folderName="STEP_FROM_OTHER">
+      <option name="target" value="$ProjectFileDir$/TestCases/STEP/FROM_OTHER/1_verifyContactInformation.robot" />
       <option name="args">
         <list>
           <option value="-d" />
-          <option value="Resultats/SFCC/2_createAccount" />
+          <option value="Resultats/STEP/FROM_OTHER/1_verifyAccount" />
+          <option value="-v" />
+          <option value="headless:false" />
+          <option value="-v" />
+          <option value="sourceSystem:SFCC" />
+          <option value="-v" />
+          <option value="oneCheckSystem:STEP" />
+          <option value="-v" />
+          <option value="testScenario:subscribeNewsletter" />
+          <option value="-v" />
+          <option value="args:['omg','lol']" />
+        </list>
+      </option>
+      <option name="env">
+        <map />
+      </option>
+      <option name="workingDir" value="$ProjectFileDir$" />
+      <option name="makeSuite" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="2_createAccount" type="RobotFramework" factoryName="RobotFramework" folderName="SFCC_FROM_SFCC">
+      <option name="target" value="$ProjectFileDir$/TestCases/SFCC/FROM_SFCC/2_createAccount.robot" />
+      <option name="args">
+        <list>
+          <option value="-d" />
+          <option value="Resultats/SFCC/FROM_SFCC/2_createAccount" />
           <option value="-v" />
           <option value="headless:false" />
         </list>
@@ -148,121 +246,52 @@
       <option name="makeSuite" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="LinkCLM_NewAccount" type="RobotFramework" factoryName="RobotFramework" folderName="LINK">
-      <option name="target" value="$ProjectFileDir$/Tests/LINK/link_clm_newaccount.robot" />
+    <configuration name="2_verifyContactInformation_FROM_SFCC_createAccount" type="RobotFramework" factoryName="RobotFramework" folderName="STEP_FROM_OTHER">
+      <option name="target" value="$ProjectFileDir$/TestCases/STEP/FROM_OTHER/1_verifyContactInformation.robot" />
       <option name="args">
         <list>
           <option value="-d" />
-          <option value="Resultats/LINKCLM/NewAccount" />
+          <option value="Resultats/STEP/FROM_OTHER/1_verifyAccount" />
           <option value="-v" />
           <option value="headless:false" />
+          <option value="-v" />
+          <option value="sourceSystem:SFCC" />
+          <option value="-v" />
+          <option value="oneCheckSystem:STEP" />
+          <option value="-v" />
+          <option value="testScenario:createAccount" />
         </list>
       </option>
-      <option name="env" />
+      <option name="env">
+        <map />
+      </option>
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="LinkSFCC_NewAccount" type="RobotFramework" factoryName="RobotFramework" folderName="LINK">
-      <option name="target" value="$ProjectFileDir$/Tests/LINK/link_sfcc_newaccount.robot" />
+    <configuration name="delete_link_csv_files" type="RobotFramework" factoryName="RobotFramework" folderName="LINK">
+      <option name="target" value="$ProjectFileDir$/Tasks/delete_link_csv_files.robot" />
       <option name="args">
         <list>
           <option value="-d" />
-          <option value="Resultats/LINKSFCC/NewAccount" />
+          <option value="Resultats/LINK/delete_link_csv_files" />
           <option value="-v" />
           <option value="headless:false" />
         </list>
       </option>
-      <option name="env" />
-      <option name="workingDir" value="$ProjectFileDir$" />
-      <option name="makeSuite" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="LinkSFCC_Newsletter" type="RobotFramework" factoryName="RobotFramework" folderName="LINK">
-      <option name="target" value="Tests/LINK/link_sfcc_newsletter.robot" />
-      <option name="args">
-        <list>
-          <option value="-d" />
-          <option value="Resultats/LINKSFCC/Newsletter" />
-          <option value="-v" />
-          <option value="headless:false" />
-        </list>
+      <option name="env">
+        <map />
       </option>
-      <option name="env" />
-      <option name="workingDir" value="$ProjectFileDir$" />
-      <option name="makeSuite" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="LinkSTEP_NewAccount" type="RobotFramework" factoryName="RobotFramework" folderName="LINK">
-      <option name="target" value="$ProjectFileDir$/Tests/LINK/link_step_newaccount.robot" />
-      <option name="args">
-        <list>
-          <option value="-d" />
-          <option value="Resultats/LINKSTEP/NewAccount" />
-          <option value="-v" />
-          <option value="headless:false" />
-        </list>
-      </option>
-      <option name="env" />
-      <option name="workingDir" value="$ProjectFileDir$" />
-      <option name="makeSuite" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="LinkSTEP_Newsletter" type="RobotFramework" factoryName="RobotFramework" folderName="LINK">
-      <option name="target" value="$ProjectFileDir$/Tests/LINK/link_step_newsletter.robot" />
-      <option name="args">
-        <list>
-          <option value="-d" />
-          <option value="Resultats/LINKSTEP/Newsletter" />
-          <option value="-v" />
-          <option value="headless:false" />
-        </list>
-      </option>
-      <option name="env" />
-      <option name="workingDir" value="$ProjectFileDir$" />
-      <option name="makeSuite" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="modify" type="RobotFramework" factoryName="RobotFramework" folderName="STEP">
-      <option name="target" value="$ProjectFileDir$/Tests/STEP/Modify.robot" />
-      <option name="args">
-        <list>
-          <option value="-d" />
-          <option value="Resultats/STEP/Modify" />
-          <option value="-v" />
-          <option value="headless:false" />
-        </list>
-      </option>
-      <option name="env" />
-      <option name="workingDir" value="$ProjectFileDir$" />
-      <option name="makeSuite" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="verify" type="RobotFramework" factoryName="RobotFramework" folderName="STEP">
-      <option name="target" value="$ProjectFileDir$/Tests/STEP/Verify.robot" />
-      <option name="args">
-        <list>
-          <option value="-d" />
-          <option value="Resultats/STEP/Verify" />
-          <option value="-v" />
-          <option value="headless:false" />
-        </list>
-      </option>
-      <option name="env" />
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Robot Framework.LinkSFCC_NewAccount" />
-      <item itemvalue="Robot Framework.LinkSFCC_Newsletter" />
-      <item itemvalue="Robot Framework.LinkSTEP_NewAccount" />
-      <item itemvalue="Robot Framework.LinkCLM_NewAccount" />
-      <item itemvalue="Robot Framework.LinkSTEP_Newsletter" />
+      <item itemvalue="Robot Framework.delete_link_csv_files" />
       <item itemvalue="Robot Framework.1_subscribeNewsletter" />
       <item itemvalue="Robot Framework.2_createAccount" />
-      <item itemvalue="Robot Framework.verify" />
-      <item itemvalue="Robot Framework.modify" />
+      <item itemvalue="Robot Framework.1_verifyContactInformation_FROM_SFCC_subscribeNewsletter" />
+      <item itemvalue="Robot Framework.2_verifyContactInformation_FROM_SFCC_createAccount" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -527,7 +556,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="robot-line">
-          <url>file://$PROJECT_DIR$/Ressources/SFCC/Common/contactInfoGenerators.resource</url>
+          <url>file://$PROJECT_DIR$/Ressources/SFCC/DataGenerators/contactInformation_generators.resource</url>
           <line>87</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>

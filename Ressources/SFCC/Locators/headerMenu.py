@@ -1,0 +1,1 @@
+headerMenu_login_button = "xpath=//*[@class='header-menu-login__icon header-menu__icon flex-vertical-center']"

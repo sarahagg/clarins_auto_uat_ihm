@@ -6,11 +6,6 @@ Documentation       here are all the common variables to SFCC test cases
 ${USERNAME}                 storefront
 ${PASSWORD}                 unlimited22
 
-${number_of_retry_to_wait_an_element}   2
-
-${timestamp_format}         %Y_%m_%dT%H_%M_%S
-${today_format}             %Y_%m_%d
-
 &{websites}                 GBR=https://stg-eu.npr.clarins.com/uk/
 ...                         FRA=https://stg-eu.npr.clarins.com/fr/
 ...                         BEL=https://stg-eu.npr.clarins.com/on/demandware.store/Sites-clarinsbnl-Site/fr/Home-Show

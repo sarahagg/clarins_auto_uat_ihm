@@ -33,11 +33,11 @@ Wait And Close All Popups
         END
      END
 
-    # If necessary > decline push ad
+    # If necessary > decline push ad up banner
     IF    $country in ${push_ad_up_banner_countries}
         ${return_status}=   Check If Element Is Visible And Warn If Not    ${popupElement_push_ad_banner_popup}
         WHILE    $return_status == 'FAIL'    limit=${number_of_retry_to_wait_an_element}    on_limit=pass
-            Log    Waiting for push ad banner to appear
+            Log    Waiting for push ad up banner to appear
             ${return_status}=   Check If Element Is Visible And Warn If Not    ${popupElement_push_ad_banner_popup}
         END
 

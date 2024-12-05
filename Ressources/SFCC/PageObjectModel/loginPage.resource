@@ -20,11 +20,7 @@ Connect As An Existing User
 
 
 Connect As A New User
-    [Arguments]    ${email}
-
-    ${generated_email}=    Generate Email    ${email}
-
-    Fill text    ${loginPage_email_input}    ${generated_email}
-    Click    ${loginPage_rememberme_button}
-    Click    ${loginPage_submit_email_button}
-
+    ${email}=    Set Variable    ${canonical_form_contact_link_files.get('\${email}')}
+    Fill text       ${loginPage_email_input}    ${email}
+    Click           ${loginPage_rememberme_button}
+    Click           ${loginPage_submit_email_button}

@@ -5,9 +5,10 @@ Resource            a_import_all_common_SFCC.resource
 
 
 *** Keywords ***
-Initialize Test Context
-    [Arguments]    ${country}
-    Import FakerLibrary    ${country}
+Initialize Website Context
+    ${country}=    Set Variable    ${canonical_form_contact_link_files.get('\${country}')}
+    Open Browser And Go To Home Page    ${country}
+    Wait And Close All Popups   ${country}
 
 Open Browser And Go To Home Page
     [Arguments]    ${country}
