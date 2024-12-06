@@ -1,10 +1,117 @@
 *** Settings ***
-Documentation       all the keywords needed to modify a user's information on STEP
+Documentation       all the keywords needed to check and modify a user's information on STEP
 
-Resource            ..${/}Common${/}common.resource
+Resource            ..${/}..${/}Common${/}a_import_all_common_STEP.resource
 
 
 *** Keywords ***
+Verify Contact Info
+    [Arguments]    ${email}
+            ...    ${salutation}
+            ...    ${firstName}
+            ...    ${lastName}
+            ...    ${password}
+            ...    ${phoneNumber}
+            ...    ${birthDate}
+            ...    ${emailOptin}
+            ...    ${SMSOptin}
+            ...    ${isLoyaltyMember}
+            ...    ${country}
+
+    IF    '${country}' != '${EMPTY}'
+        ${GetCountry}=    Get Text    ${contactTab_country_value}
+        Should Contain    ${full_country.${country}}    ${GetCountry}
+    END
+
+    IF    '${salutation}' != '${EMPTY}'
+        ${GetSalutation}=    Get Text    ${contactTab_salutation_value}
+        Should Contain    ${translate_salutation.${salutation}}    ${GetSalutation}
+    END
+
+    IF    '${firstName}' != '${EMPTY}'
+        ${GetFirstName}=    Get Text    ${contactTab_firstName_value}
+        ${is_equal}=    Normalize And Compare    ${firstName}    ${GetFirstName}
+        Should Be True    ${is_equal}
+    END
+
+    IF    '${lastName}' != '${EMPTY}'
+        ${GetLastName}=    Get Text    ${contactTab_lastName_value}
+        ${is_equal}=    Normalize And Compare    ${lastName}    ${GetLastName}
+        Should Be True    ${is_equal}
+    END
+
+    IF    '${birthDate}' != '${EMPTY}'
+        ${GetBirthDate}=    Get Text    ${contactTab_birthDate_value}
+        Should Contain    ${birthDate}    ${GetBirthDate}
+    END
+
+    IF    '${isLoyaltyMember}' != '${EMPTY}'
+        Click    ${contactTab_isLoyaltyMember_history_button}
+        ${GetIsLoyaltyMember}=    Get Text    ${contactTab_isLoyaltyMember_value}
+        Should Contain    ${yes_no.${isLoyaltyMember}}    ${GetIsLoyaltyMember}
+        Mouse Button    down
+    END
+
+    IF    '${email}' != '${EMPTY}'
+        ${GetEmail}=    Get Text    ${contactTab_email_value}
+        Should Contain    ${email}    ${GetEmail}
+    END
+
+Modify Salutation
+    [Arguments]    ${salutation}
+    IF    len($salutation)>0
+        Click    ${loc_salutation}
+        Fill text    ${loc_salutation}    ${salutation}
+    END
+
+Modify FirstName
+    [Arguments]    ${FirstName}
+    IF    len($FirstName)>0
+        Click    ${loc_FirstName}
+        Fill text    ${loc_FirstName}    ${FirstName}
+    END
+
+Modify LastName
+    [Arguments]    ${LastName}
+    IF    len($LastName)>0
+        Click    ${loc_LastName}
+        Fill text    ${loc_LastName}    ${LastName}
+    END
+
+Modify BirthDate
+    [Arguments]    ${BirthDate}
+    IF    len($BirthDate)>0
+        Click    ${loc_BirthDate}
+        Fill text    ${loc_BirthDate}    ${BirthDate}
+    END
+
+Modify Language
+    [Arguments]    ${Language}
+    IF    len($Language)>0
+        Click    ${loc_Language}
+        Fill text    ${loc_Language}    ${Language}
+    END
+
+Modify Email
+    [Arguments]    ${NewEmail}
+    IF    len($NewEmail)>0
+        Click    ${loc_Email}
+        Click    ${loc_email_input}
+        Fill text    ${loc_email_input}    ${NewEmail}
+        Click    ${loc_continuer}
+    END
+
+Modify Consent
+    [Arguments]    ${OptinChannel}    ${Optin}
+    IF    len($Optin)>0
+        ${elements}=    Get Elements    ${all_consent}
+        FOR    ${element}    IN    @{elements}
+            Click    ${element}
+            ModifyOptin    ${OptinChannel}    ${Optin}
+            # ModifyOptin    ${loc_consent_first}    ${Optin}
+        END
+    END
+
 Modify Is Guest
     [Arguments]    ${IsGuest}
     IF    len($IsGuest) > 0
@@ -114,9 +221,10 @@ Modify PhoneInfos
 Create Consent
     [Arguments]    ${loc_consent_first}    ${Optin}
     Click          ${loc_add_consent}
-    ModifyOptin    ${loc_consent_first}    ${Optin}
+    Modify Optin    ${loc_consent_first}    ${Optin}
 
 Delete Consent
     Click    ${loc_consent_first}
     Click    ${loc_delete_consent}
     Click    ${loc_phone_continuer}
+

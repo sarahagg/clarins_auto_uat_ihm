@@ -7,6 +7,7 @@ Resource            ..${/}..${/}Common${/}common.resource
 
 Resource            commonVariables.resource
 Resource            initialization.resource
+Library             utils.py
 
 Variables           ..${/}Locators${/}a_import_all_locators_STEP.py
 

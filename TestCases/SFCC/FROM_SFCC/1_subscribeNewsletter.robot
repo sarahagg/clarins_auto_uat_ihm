@@ -6,6 +6,7 @@ Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}a_import_a
 Library             DataDriver    file=..${/}..${/}..${/}Ressources${/}SFCC${/}TestData${/}FROM_SFCC${/}1_subscribeNewsletter.xlsx    sheet_name=Test Cases
 
 Test Template       Subscribe To The Newsletter
+Test Setup          Initialize Test Context
 Test Teardown       Close Browser
 
 Force Tags          SFCC_FROM_SFCC_1_subscribeNewsletter
@@ -23,7 +24,7 @@ Subscribe To The Newsletter
 
         Generate Test Data Newsletter    ${email}    ${country}
 
-        Initialize Website Context
+        Initialize SFCC Website Context
         Access And Complete Newsletter Form
         Verify Newsletter Subscription
 

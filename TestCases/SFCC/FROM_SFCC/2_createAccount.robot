@@ -6,6 +6,7 @@ Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}a_import_a
 Library             DataDriver    file=..${/}..${/}..${/}Ressources${/}SFCC${/}TestData${/}FROM_SFCC${/}2_createAccount.xlsx    sheet_name=Test Cases
 
 Test Template       Create A New Account
+Test Setup          Initialize Test Context
 Test Teardown       Close Browser
 
 Force Tags          STEP_FROM_OTHER_1_verifyContactInformation
@@ -47,9 +48,9 @@ Create A New Account
                                         ...    ${isLoyaltyMember}
                                         ...    ${country}
 
-        Initialize Website Context
+        Initialize SFCC Website Context
         Go To Login Page
-        Connect As A New User
+        Connect As A New SFCC User
         Complete Registration Form
         Verify Account Creation
 

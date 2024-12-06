@@ -70,6 +70,9 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                         USA=United States
 ...                         CHE=Suisse
 ...                         ITA=Italy
+...                         POL=Poland
+...                         AUT=TBD
+...                         PRT=TBD
 
 &{locale_values}            GBR=en_GB
 ...                         FRA=fr_FR

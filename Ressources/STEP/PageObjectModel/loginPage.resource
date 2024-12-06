@@ -1,11 +1,14 @@
+*** Settings ***
+Documentation       all the keywords needed to authentificate and access to the WebUI
+
+Resource            ..${/}Common${/}a_import_all_common_STEP.resource
+
+
 *** Keywords ***
-Access Contact Page
-    [Arguments]    ${Email}
-    # Go to ClarinsWebUI
-    Click    ${loc_clarinswebui}
-    # Search by email
-    Click    ${loc_globalSearch}
-    Fill Text    ${loc_research}    ${Email}
-    Press Keys    ${loc_research}    Enter
-    ${is_visible}=    Is Element Visible    ${loc_multipleElements}
-    IF    ${is_visible}    Click    ${loc_FirstElement}    ELSE    Sleep    1s
+Connect As An Existing STEP User
+    Fill text    ${loginPage_username_input}    ${USERNAME}
+    Fill secret    ${loginPage_password_input}    $PASSWORD
+    Click    ${loginPage_login_button}
+
+Access Clarins Web UI Home Page
+    Click    ${loginPage_clarinsWebUI_button}

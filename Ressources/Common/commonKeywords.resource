@@ -28,3 +28,11 @@ Import FakerLibrary
 
 Custom Run On Failure
     Take Screenshot         EMBED
+
+
+Initialize Test Context
+
+    ${allKeys}=    Get Dictionary Keys    ${canonical_form_contact_link_files}
+    FOR    ${oneKey}    IN    @{allKeys}
+        Set To Dictionary    ${canonical_form_contact_link_files}    ${oneKey}    ${EMPTY}
+    END
