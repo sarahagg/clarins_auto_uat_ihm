@@ -56,7 +56,7 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 @{BNL_regions}              BEL    LUX    NLD
 
 &{translated_countries_to_alpha2}
-...                         GBR=UK
+...                         GBR=GB
 ...                         BEL=BE
 ...                         LUX=LU
 ...                         NLD=NL

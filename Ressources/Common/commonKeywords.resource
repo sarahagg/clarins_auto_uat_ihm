@@ -31,6 +31,7 @@ Custom Run On Failure
 
 
 Initialize Test Context
+    # Reset all global variables
 
     ${allKeys}=    Get Dictionary Keys    ${canonical_form_contact_link_files}
     FOR    ${oneKey}    IN    @{allKeys}

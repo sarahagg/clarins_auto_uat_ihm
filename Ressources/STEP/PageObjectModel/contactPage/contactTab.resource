@@ -25,7 +25,7 @@ Verify Contact Info
 
     IF    '${salutation}' != '${EMPTY}'
         ${GetSalutation}=    Get Text    ${contactTab_salutation_value}
-        Should Contain    ${translate_salutation.${salutation}}    ${GetSalutation}
+        Should Contain    ${translated_salutations.${salutation}}    ${GetSalutation}
     END
 
     IF    '${firstName}' != '${EMPTY}'

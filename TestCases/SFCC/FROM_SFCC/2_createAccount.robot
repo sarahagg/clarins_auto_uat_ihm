@@ -54,6 +54,6 @@ Create A New Account
         Complete Registration Form
         Verify Account Creation
 
-        Write Data To Link CSV Files    SFCC    ${allCheckSystems}    createAccount
+        Write Data To Link CSV Files    contact    SFCC    ${allCheckSystems}    createAccount
 
     END

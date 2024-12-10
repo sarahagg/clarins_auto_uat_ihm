@@ -59,8 +59,7 @@ Complete Registration Form
     # CLICK ALL THE BUTTONS (LOYALTY, OPTIN ....)
     IF    '${emailOptin}' != '${EMPTY}'         Click    ${createAccountPage_email_optin_option.replace('$EMAIL_OPTIN_VALUE$', '${emailOptin.lower()}')}
     IF    '${SMSOptin}' != '${EMPTY}'           Click    ${createAccountPage_sms_optin_option.replace('$SMS_OPTIN_VALUE$', '${SMSOptin.lower()}')}
-    IF    '${isLoyaltyMember}' != '${EMPTY}'    Click    ${createAccountPage_is_loyalty_member_option.replace('$IS_LOYALTY_MEMBER_VALUE$', '${isLoyaltyMember.lower()')}')}
-
+    IF    '${isLoyaltyMember}' != '${EMPTY}'    Click    ${createAccountPage_is_loyalty_member_option.replace('$IS_LOYALTY_MEMBER_VALUE$', '${isLoyaltyMember.lower()}')}
     # SUBMIT
     Click Button agreeToTerms and privacyPolicy    ${country}
     Click    ${createAccountPage_submit_button}

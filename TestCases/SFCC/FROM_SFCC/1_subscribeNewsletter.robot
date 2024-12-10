@@ -28,6 +28,6 @@ Subscribe To The Newsletter
         Access And Complete Newsletter Form
         Verify Newsletter Subscription
 
-        Write Data To Link CSV Files    SFCC    ${allCheckSystems}    subscribeNewsletter
+        Write Data To Link CSV Files    contact    SFCC    ${allCheckSystems}    subscribeNewsletter
 
     END
