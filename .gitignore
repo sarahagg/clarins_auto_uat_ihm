@@ -6,5 +6,5 @@ Utile/*ssh*
 **/*.txt
 **/*.DS_Store
 .idea/*
-/Jeux de donnees/*.csv
+**/*.csv
 __pycache__/

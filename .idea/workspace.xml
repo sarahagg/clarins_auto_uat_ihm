@@ -5,39 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="Version CLM 5">
-      <change afterPath="$PROJECT_DIR$/Ressources/CLM/Locators/a_import_all_locators_CLM.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/CLM/Locators/contactPage/contactPage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/CLM/Locators/contactPage/customerTab/detailsInfo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/CLM/Locators/contactPage/topNavigationMenu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/CLM/Locators/headerMenu/changeLoyaltyProgramPopup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/CLM/Locators/headerMenu/headerMenu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/CLM/Locators/homePage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/CLM/Locators/loginPage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/CLM/PageObjectModel/a_import_all_page_object_model_CLM.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/CLM/PageObjectModel/contactPage/customerTab/detailsInfo.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/CLM/PageObjectModel/headerMenu/changeLoyaltyProgramPopup.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/CLM/PageObjectModel/headerMenu/headerMenu.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/CLM/PageObjectModel/homePage.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/CLM/PageObjectModel/loginPage.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/LINK/LinkFiles/link_csv_file_from_SFCC_to_CLM_for_createAccount.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/CLM/Common/authentification.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/CLM/Common/initialization.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/CLM/Common/common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/CLM/Common/a_import_all_common_CLM.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/CLM/Common/commonvariables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/CLM/Common/commonVariables.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/CLM/Common/locator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Common/commonKeywords.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Common/commonKeywords.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Common/commonVariables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Common/commonVariables.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LINK/LinkCLM_NewAccount/common.resource" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LINK/LinkCLM_NewAccount/verifylink.resource" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LINK/LinkFiles/link_csv_file_from_SFCC_to_STEP_for_createAccount.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LINK/LinkFiles/link_csv_file_from_SFCC_to_STEP_for_createAccount.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/LINK/write_data_to_link_csv_files.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LINK/write_data_to_link_csv_files.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/createAccountPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/createAccountPage.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/2_createAccount.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/2_createAccount.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/STEP/PageObjectModel/contactPage/contactTab.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/STEP/PageObjectModel/contactPage/contactTab.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/CLM/FROM_OTHER/link_clm_newaccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/CLM/FROM_OTHER/1_verifyContactInformation.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/1_subscribeNewsletter.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/1_subscribeNewsletter.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/2_createAccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/2_createAccount.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/STEP/FROM_OTHER/link_step_newsletter.robot" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/LINK/LinkFiles/link_csv_file_from_SFCC_to_ADOBE_for_subscribeNewsletter.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/LINK/LinkFiles/link_csv_file_from_SFCC_to_CLM_for_subscribeNewsletter.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,38 +52,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Robot Framework.Connection.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.LinkCLM_CreationCompte.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.LinkSFCC_CreationCompte.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.LinkSFCC_Newsletter.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.LinkSTEP_CreationCompte.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.LinkSTEP_Newsletter.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.NewAccount.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.Newsletter.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.linkSFCC.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.linksfc.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.linkstep.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.login.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.modify.executor&quot;: &quot;Run&quot;,
-    &quot;Robot Framework.verify.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;refonte__orga__code&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/s.ramos-izquierdo/OneDrive - ONEPOINT/Bureau/Clarins/Outils/clarins_auto_uat_ihm/Ressources/STEP/Common&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Robot Framework.Connection.executor": "Run",
+    "Robot Framework.LinkCLM_CreationCompte.executor": "Run",
+    "Robot Framework.LinkSFCC_CreationCompte.executor": "Run",
+    "Robot Framework.LinkSFCC_Newsletter.executor": "Run",
+    "Robot Framework.LinkSTEP_CreationCompte.executor": "Run",
+    "Robot Framework.LinkSTEP_Newsletter.executor": "Run",
+    "Robot Framework.NewAccount.executor": "Run",
+    "Robot Framework.Newsletter.executor": "Run",
+    "Robot Framework.Test.executor": "Run",
+    "Robot Framework.linkSFCC.executor": "Run",
+    "Robot Framework.linksfc.executor": "Run",
+    "Robot Framework.linkstep.executor": "Run",
+    "Robot Framework.login.executor": "Run",
+    "Robot Framework.modify.executor": "Run",
+    "Robot Framework.verify.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "update__account__SFCC",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/s.ramos-izquierdo/OneDrive - ONEPOINT/Bureau/Clarins/Outils/clarins_auto_uat_ihm/Ressources/STEP/Common",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\s.ramos-izquierdo\OneDrive - ONEPOINT\Bureau\Clarins\Outils\clarins_auto_uat_ihm\Ressources\STEP\Common" />
@@ -162,9 +132,7 @@
           <option value="testScenario:createAccount" />
         </list>
       </option>
-      <option name="env">
-        <map />
-      </option>
+      <option name="env" />
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
@@ -185,9 +153,7 @@
           <option value="testScenario:subscribeNewsletter" />
         </list>
       </option>
-      <option name="env">
-        <map />
-      </option>
+      <option name="env" />
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
@@ -223,9 +189,7 @@
           <option value="testScenario:createAccount" />
         </list>
       </option>
-      <option name="env">
-        <map />
-      </option>
+      <option name="env" />
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
@@ -246,12 +210,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Robot Framework.delete_link_csv_files" />
       <item itemvalue="Robot Framework.1_subscribeNewsletter" />
-      <item itemvalue="Robot Framework.2_createAccount" />
-      <item itemvalue="Robot Framework.1_verifyContactInformation_FROM_SFCC_subscribeNewsletter" />
-      <item itemvalue="Robot Framework.2_verifyContactInformation_FROM_SFCC_createAccount" />
       <item itemvalue="Robot Framework.1_verifyContactInformation_FROM_SFCC_createAccount" />
+      <item itemvalue="Robot Framework.1_verifyContactInformation_FROM_SFCC_subscribeNewsletter" />
+      <item itemvalue="Robot Framework.2_createAccount" />
+      <item itemvalue="Robot Framework.2_verifyContactInformation_FROM_SFCC_createAccount" />
+      <item itemvalue="Robot Framework.delete_link_csv_files" />
     </list>
   </component>
   <component name="SharedIndexes">
