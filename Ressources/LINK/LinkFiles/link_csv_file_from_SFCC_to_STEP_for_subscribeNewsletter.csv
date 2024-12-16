@@ -1,0 +1,2 @@
+***Test Cases***;${email};${salutation};${firstName};${lastName};${password};${phoneNumber};${birthDate};${emailOptin};${SMSOptin};${isLoyaltyMember};${country}
+UC9_STEP_Newsletter_POL_UAT;cyprian95@example.org;;;;;;;;;;POL
