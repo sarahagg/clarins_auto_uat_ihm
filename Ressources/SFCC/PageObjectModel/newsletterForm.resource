@@ -3,6 +3,7 @@ Documentation       all the keywords needed to use the Newsletter Form
 
 Resource            ..${/}Common${/}a_import_all_common_SFCC.resource
 
+
 *** Keywords ***
 Access And Complete Newsletter Form
 
@@ -18,9 +19,10 @@ Access And Complete Newsletter Form
 
     Fill Text    ${newsletterForm_email_input}    ${email}
 
-    IF    $country == 'ITA'    Click    ${newsletterForm_ITA_privacy_policy_checkbox}
-
-    Click    ${newsletterForm_subscribe_button}
+    IF    '${country}' in @{newsletterForm_privacy_policy_countries}
+        Click    ${newsletterForm_privacy_policy_checkbox}
+    END
+    Click     ${newsletterForm_subscribe_button}
 
 Go To Newsletter Form
     Scroll By    ${none}    100%    0

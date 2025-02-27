@@ -74,8 +74,7 @@ contactTab_allConsent_value = ("xpath=//div[@title='Consent Info']/ancestor::div
 contactTab_optinChannel_select = "xpath=//*[@id='datacontainer-attributes-view_Optin-channel']"
 contactTab_optinValue_select = "xpath=//*[@id='datacontainer-attributes-view_Optin']"
 
-contactTab_phoneInfo_value = ("xpath=//div[@title='Phone Info']/ancestor::div[@class='labelColumn labelColumn--direct-input "
-             "component-7']/following-sibling::div[@class='widgetColumn']")
+contactTab_phoneInfo_value = ("xpath=//div[@title='Phone Info']/ancestor::div[@class='labelColumn labelColumn--direct-input component-7']/following-sibling::div[@class='widgetColumn']//*[@class='DataContainerSubContainer']")
 contactTab_phoneNumber_select = "xpath=//*[@id='datacontainer-attributes-view_Phone-number']"
 contactTab_phoneType_select = "xpath=//*[@id='datacontainer-attributes-view_Phone-type']"
 
@@ -83,3 +82,6 @@ contactTab_addConsent_button = "xpath=//*[@id='Consent_Info']//button"
 contactTab_deleteConsent_button = "xpath=//div[@class='data-container-records-list-element'][1]/i"
 
 contactTab_continue_button = ("xpath=//div[@class='portal-alert-buttons']")
+
+#ccid
+contactTab_ccid_value = "xpath=//*[@id='Clarins_contact_ID']/div/div/div"

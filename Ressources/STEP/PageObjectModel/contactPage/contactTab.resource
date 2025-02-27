@@ -5,46 +5,78 @@ Resource            ..${/}..${/}Common${/}a_import_all_common_STEP.resource
 
 
 *** Keywords ***
-Verify Contact Info
-    [Arguments]    ${email}
-            ...    ${salutation}
-            ...    ${firstName}
-            ...    ${lastName}
-            ...    ${password}
-            ...    ${phoneNumber}
-            ...    ${birthDate}
-            ...    ${emailOptin}
-            ...    ${SMSOptin}
-            ...    ${isLoyaltyMember}
-            ...    ${country}
+############################
+#verify contact information
+#############################
+Verify Step infos
+    [Arguments]     ${email}  ${salutation}  ${firstName}  ${lastName}   ${birthDate}  ${isLoyaltyMember}  ${country}
 
-    IF    '${country}' != '${EMPTY}'
-        ${GetCountry}=    Get Text    ${contactTab_country_value}
-        Should Contain    ${full_country.${country}}    ${GetCountry}
+        Verify email               ${email}
+        Verify salutation          ${salutation}
+        Verify firstName           ${firstName}
+        Verify lastName            ${lastName}
+        Verify birthDate           ${birthDate}
+        verify isLoyaltyMember     ${isLoyaltyMember}
+        Verify country             ${country}
+
+Verify email
+    [Arguments]    ${email}
+    IF    '${email}' != '${EMPTY}'
+        ${GetEmail}=    Get Text    ${contactTab_email_value}
+        Should Contain    ${email}    ${GetEmail}
     END
 
+Verify salutation
+    [Arguments]    ${salutation}
     IF    '${salutation}' != '${EMPTY}'
         ${GetSalutation}=    Get Text    ${contactTab_salutation_value}
         Should Contain    ${translated_salutations.${salutation}}    ${GetSalutation}
     END
 
+Verify firstName
+    [Arguments]    ${firstName}
     IF    '${firstName}' != '${EMPTY}'
         ${GetFirstName}=    Get Text    ${contactTab_firstName_value}
         ${is_equal}=    Normalize And Compare    ${firstName}    ${GetFirstName}
         Should Be True    ${is_equal}
     END
 
+Verify lastName
+    [Arguments]    ${lastName}
     IF    '${lastName}' != '${EMPTY}'
         ${GetLastName}=    Get Text    ${contactTab_lastName_value}
         ${is_equal}=    Normalize And Compare    ${lastName}    ${GetLastName}
         Should Be True    ${is_equal}
     END
 
+verify phoneNumber
+    [Arguments]    ${phoneNumber}  ${country}
+    IF    '${phoneNumber}' != '${EMPTY}'
+        Click    ${contactTab_phoneInfo_value}
+        ${GetphoneNumber}=    Get Text    ${contactTab_phoneNumber_select}
+        Should Contain    ${phone_number_country_code.${country}}${phoneNumber}    ${GetphoneNumber}
+    END
+
+Verify birthDate
+    [Arguments]    ${birthDate}
     IF    '${birthDate}' != '${EMPTY}'
         ${GetBirthDate}=    Get Text    ${contactTab_birthDate_value}
         Should Contain    ${birthDate}    ${GetBirthDate}
     END
 
+
+Verify empty birthDate
+    ${GetBirthDate}=    Get Text    ${contactTab_birthDate_value}
+    Should Contain    ${EMPTY}    ${GetBirthDate}
+
+#verify emailOptin
+#     [Arguments]    ${emailOptin}
+
+#verify SMSOptin
+#     [Arguments]    ${SMSOptin}
+
+verify isLoyaltyMember
+    [Arguments]    ${isLoyaltyMember}
     IF    '${isLoyaltyMember}' != '${EMPTY}'
         Click    ${contactTab_isLoyaltyMember_history_button}
         ${GetIsLoyaltyMember}=    Get Text    ${contactTab_isLoyaltyMember_value}
@@ -52,11 +84,16 @@ Verify Contact Info
         Mouse Button    down
     END
 
-    IF    '${email}' != '${EMPTY}'
-        ${GetEmail}=    Get Text    ${contactTab_email_value}
-        Should Contain    ${email}    ${GetEmail}
+Verify country
+    [Arguments]    ${country}
+    IF    '${country}' != '${EMPTY}'
+        ${GetCountry}=    Get Text    ${contactTab_country_value}
+        Should Contain    ${full_country.${country}}    ${GetCountry}
     END
 
+###########################
+#Modify Contact Information
+###########################
 Modify Salutation
     [Arguments]    ${salutation}
     IF    len($salutation)>0
@@ -217,6 +254,7 @@ Modify PhoneInfos
         END
     END
     Click    ${loc_phone_continuer}
+
 
 Create Consent
     [Arguments]    ${loc_consent_first}    ${Optin}

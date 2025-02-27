@@ -8,7 +8,9 @@ Resource            a_import_all_common_SFCC.resource
 Initialize SFCC Website Context
     ${country}=    Set Variable    ${canonical_form_contact_link_files.get('\${country}')}
     Open Browser And Go To Home Page    ${country}
-    Wait And Close All Popups   ${country}
+    IF  '${country}' != 'NZL' and '${country}' != 'ARE'
+        Wait And Close All Popups   ${country}
+    END
 
 Open Browser And Go To Home Page
     [Arguments]    ${country}

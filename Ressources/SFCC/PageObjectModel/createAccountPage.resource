@@ -9,7 +9,7 @@ Complete Registration Form
     ${salutation}=          Set Variable    ${canonical_form_contact_link_files.get('\${salutation}')}
     ${firstName}=           Set Variable    ${canonical_form_contact_link_files.get('\${firstName}')}
     ${lastName}=            Set Variable    ${canonical_form_contact_link_files.get('\${lastName}')}
-    ${password}=            Set Variable    ${canonical_form_contact_link_files.get('\${password}')}
+    ${password}=            Set Variable    ${canonical_form_contact_link_files.get('\${email}')}
     ${phoneNumber}=         Set Variable    ${canonical_form_contact_link_files.get('\${phoneNumber}')}
     ${birthDate}=           Set Variable    ${canonical_form_contact_link_files.get('\${birthDate}')}
     ${emailOptin}=          Set Variable    ${canonical_form_contact_link_files.get('\${emailOptin}')}
@@ -18,7 +18,7 @@ Complete Registration Form
     ${country}=             Set Variable    ${canonical_form_contact_link_files.get('\${country}')}
 
     # FILL SALUTATION
-    IF    '${salutation}' != '${EMPTY}'
+    IF    '${salutation}' != '${EMPTY}' and '${country}' not in @{no_salutation_countries}
         Click    ${createAccountPage_salutation_option.replace('$SALUTATION$', '${translated_salutations.${salutation}}')}
     END
 
@@ -32,6 +32,14 @@ Complete Registration Form
         Fill Text    ${createAccountPage_last_name_input}    ${lastName}
     END
 
+    # FILL LAST NAME (fugirana) and name (fugirana) for japan
+    IF    $country == 'JPN'
+        ${last_name_furigana}=    Run Keyword    Faker_${TEST_NAME}.First Name
+        ${name_furigana}=    Run Keyword    Faker_${TEST_NAME}.Last Name
+        Fill Text    ${createAccountPage_last_name_furigana_input}    ${last_name_furigana}
+        Fill Text    ${createAccountPage_name_furigana_input}    ${name_furigana}
+    END
+
     # FILL PASSWORD
     IF    '${password}' != '${EMPTY}'
         Fill Secret    ${createAccountPage_account_password_input}    $password
@@ -41,7 +49,8 @@ Complete Registration Form
     IF    '${phoneNumber}' != '${EMPTY}'
         Click    ${createAccountPage_phone_number_country_code_select}
         Click    ${createAccountPage_phone_number_country_code_option.replace('$COUNTRY_ALPHA2$', '${translated_countries_to_alpha2.${country}}')}
-        Fill Text    ${createAccountPage_phone_number_input}    ${phoneNumber[0:${phone_number_size_by_country.${country}}][::-1]}
+        Fill Text    ${createAccountPage_phone_number_input}    ${phoneNumber}
+        #Fill Text    ${createAccountPage_phone_number_input}    ${phoneNumber[0:${phone_number_size_by_country.${country}}][::-1]}
     END
 
     # FILL BIRTHDATE
@@ -55,35 +64,69 @@ Complete Registration Form
         Click    ${createAccountPage_region_select}
         Click    ${createAccountPage_region_option.replace('$COUNTRY_ALPHA2$', '${translated_countries_to_alpha2.${country}}')}
     END
-#
-    # CLICK ALL THE BUTTONS (LOYALTY, OPTIN ....)
-    IF    '${emailOptin}' != '${EMPTY}'         Click    ${createAccountPage_email_optin_option.replace('$EMAIL_OPTIN_VALUE$', '${emailOptin.lower()}')}
-    IF    '${SMSOptin}' != '${EMPTY}'           Click    ${createAccountPage_sms_optin_option.replace('$SMS_OPTIN_VALUE$', '${SMSOptin.lower()}')}
+
+    # Email OPTIN
+    IF    '${emailOptin}' != '${EMPTY}' and '${country}' != 'ITA'       Click    ${createAccountPage_email_optin_option.replace('$EMAIL_OPTIN_VALUE$', '${emailOptin.lower()}')}
+
+    # SMS Optin
+    IF   '${country}' in @{sms_optin_countries}
+        ${SMSOptin}=    Evaluate    random.choice($lov_yes_or_no_optin)
+        Click    ${createAccountPage_sms_optin_option.replace('$SMS_OPTIN_VALUE$', '${SMSOptin.lower()}')}
+    END
+
+    # Whatsapp optin
+    IF   '${country}' in @{whatsapp_optin_countries}
+        ${whatsappOptin}=    Evaluate    random.choice($lov_yes_or_no_optin)
+        Click    ${createAccountPage_whatsapp_optin_option.replace('$WHATSAPP_OPTIN_VALUE$', '${whatsappOptin.lower()}')}
+    END
+
+    #Loyalty member
     IF    '${isLoyaltyMember}' != '${EMPTY}'    Click    ${createAccountPage_is_loyalty_member_option.replace('$IS_LOYALTY_MEMBER_VALUE$', '${isLoyaltyMember.lower()}')}
-    # SUBMIT
+
+    # agree to privacy policy for Japan
+    IF    $country == 'JPN'
+          Click   ${createAccountPage_JPN_privacy_policy_checkbox}
+    END
+
+    # agree to terms and conditions
     Click Button agreeToTerms and privacyPolicy    ${country}
+
+    # SUBMIT
     Click    ${createAccountPage_submit_button}
 
 Click Button agreeToTerms and privacyPolicy
     [Arguments]    ${country}
-    # additional buttons for USA and ITA
-    IF    $country == 'USA'    Click    ${createAccountPage_USA_agree_to_terms_checkbox}
-    IF    $country == 'ITA'    Click    ${createAccountPage_ITA_privacy_policy_checkbox}
+    IF    $country in ${agree_to_terms_and_condition_countries}
+        Click    ${createAccountPage_agree_to_terms_checkbox}
+    END
+
+    # additional buttons for ITA
+    IF    $country == 'ITA'
+        ${checkbox}=     Evaluate    random.choice($lov_yes_or_no_optin)
+        IF  '${checkbox}' == 'yes'
+            Click    ${createAccountPage_ITA_privacy_policy_checkbox_yes}
+            ${emailOptin}=     Evaluate    random.choice($lov_yes_or_no_optin)
+            Click    ${createAccountPage_email_optin_option.replace('$EMAIL_OPTIN_VALUE$', '${emailOptin.lower()}')}
+        END
+        IF  '${checkbox}' == 'no'
+            Click    ${createAccountPage_ITA_privacy_policy_checkbox_no}
+        END
+    END
 
 Verify Account Creation
     ${country}=    Set Variable    ${canonical_form_contact_link_files.get('\${country}')}
+    IF  $country != 'DEU'
+        ${return_status}=   Check If Element Is Visible And Warn If Not    ${myDashboardPage_dashboard_title}
+        WHILE    $return_status == 'FAIL'    limit=${number_of_retry_to_wait_an_element}    on_limit=pass
+            Log    Waiting dashboard title to appear
+            ${return_status}=   Check If Element Is Visible And Warn If Not    ${myDashboardPage_dashboard_title}
+        END
 
-    ${return_status}=   Check If Element Is Visible And Warn If Not    ${updateAccountPage_dashboard}
-    WHILE    $return_status == 'FAIL'    limit=${number_of_retry_to_wait_an_element}    on_limit=pass
-        Log    Waiting dashboard title to appear
-        ${return_status}=   Check If Element Is Visible And Warn If Not    ${updateAccountPage_dashboard}
+        IF    $return_status == 'PASS'
+            ${text}=    Get Text    ${myDashboardPage_dashboard_title}
+            Should Be Equal    ${account_dashboard_text.${country}}    ${text}
+            Log      Account created
+        END
     END
-
-    IF    $return_status == 'PASS'
-        ${text}=    Get Text    ${updateAccountPage_dashboard}
-        Should Be Equal    ${account_dashboard_text.${country}}    ${text}
-        Log      Account created
-    END
-
 
 

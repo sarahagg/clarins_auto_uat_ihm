@@ -1,0 +1,1 @@
+shoppingBasketPage_finalize_your_order_button="xpath=//*[@class='page-content__column page-content__column-sidebar cart-content__summary']//*[@data-auto-id='cart-checkout-button']"

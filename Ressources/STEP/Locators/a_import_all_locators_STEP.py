@@ -3,10 +3,11 @@ from contactPage.contactTab import *
 from contactPage.historyTab import *
 from contactPage.sourceTraceabilityTab import *
 from contactPage.trackingTab import *
+from homePage import *
+from leftMenu.advancedSearchPage import *
 from leftMenu.contactsTab import *
 from leftMenu.globalSearchTab import *
 from leftMenu.leftMenu import *
 from leftMenu.listOfValuesTab import *
 from leftMenu.tasksTab import *
-from homePage import *
 from loginPage import *

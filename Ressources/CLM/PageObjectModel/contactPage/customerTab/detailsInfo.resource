@@ -10,7 +10,6 @@ Verify Details Info Customer Personal Data
             ...    ${salutation}
             ...    ${firstName}
             ...    ${lastName}
-            ...    ${password}
             ...    ${phoneNumber}
             ...    ${birthDate}
             ...    ${emailOptin}

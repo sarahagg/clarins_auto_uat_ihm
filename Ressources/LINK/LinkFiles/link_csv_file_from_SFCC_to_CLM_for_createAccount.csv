@@ -1,2 +1,0 @@
-***Test Cases***;${email};${salutation};${firstName};${lastName};${password};${phoneNumber};${birthDate};${emailOptin};${SMSOptin};${isLoyaltyMember};${country}
-UC4_CLM_Create_Account_GBR_UAT;fiona51@example.net;M;Sandra;Garner;wbdy)4LfiB;555069413144;1966-01-23;YES;;YES;GBR
