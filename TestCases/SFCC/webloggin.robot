@@ -1,30 +1,28 @@
 *** Settings ***
 Documentation       But du Test
-...                 Vérifier la création d'un nouveau compte
+...                 Vérifier la modification d'un compte
 
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}a_import_all_common_SFCC.resource
-Library             DataDriver    file=..${/}..${/}..${/}Ressources${/}SFCC${/}TestData${/}FROM_SFCC${/}2_createAccount.xlsx    sheet_name=Test Cases
+Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}a_import_all_common_SFCC.resource
+Library             DataDriver    file=..${/}..${/}Ressources${/}SFCC${/}TestData${/}FROM_SFCC${/}3_updateAccount.xlsx    sheet_name=Test Cases    encoding=utf_8
 
-Test Template       Create A New Account
+Test Template       Webloggin
 Test Setup          Initialize Test Context
 Test Teardown       Close Browser
 
-Force Tags          STEP_FROM_OTHER_1_verifyContactInformation
+Force Tags          SFCC_webloggin
 
 
 *** Test Cases ***
-Default Values If No Data    NO
-
+Default Values If No Data
 
 *** Keywords ***
-Create A New Account
+Webloggin
     [Arguments]
     ...    ${playTest}
     ...    ${email}
     ...    ${salutation}
     ...    ${firstName}
     ...    ${lastName}
-    ...    ${password}
     ...    ${phoneNumber}
     ...    ${birthDate}
     ...    ${emailOptin}
@@ -35,25 +33,23 @@ Create A New Account
 
     IF    $playTest == "YES"
 
-        Generate Test Data Create Account
+        Generate Test Data Update Account
                                         ...    ${email}
                                         ...    ${salutation}
                                         ...    ${firstName}
                                         ...    ${lastName}
-                                        ...    ${password}
                                         ...    ${phoneNumber}
                                         ...    ${birthDate}
                                         ...    ${emailOptin}
                                         ...    ${SMSOptin}
                                         ...    ${isLoyaltyMember}
                                         ...    ${country}
+                                        ...    sfcc
+        Generate Test Data Last Interaction Date    websiteLogin
 
         Initialize SFCC Website Context
         Go To Login Page
-        Connect As A New SFCC User
-        Complete Registration Form
-        Verify Account Creation
-
-        Write Data To Link CSV Files    contact    SFCC    ${allCheckSystems}    createAccount
-
+        Connect As An Existing SFCC User    ${email}     ${country}
+        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    webloggin
+        sleep  3s
     END

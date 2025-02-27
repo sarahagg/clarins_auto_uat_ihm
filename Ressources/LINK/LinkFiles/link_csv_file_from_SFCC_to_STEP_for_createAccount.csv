@@ -1,3 +1,0 @@
-***Test Cases***;${email};${salutation};${firstName};${lastName};${password};${phoneNumber};${birthDate};${emailOptin};${SMSOptin};${isLoyaltyMember};${country}
-UC9_STEP_Create_Account_POL_UAT;gabriel21@example.org;Mme;Kaja;Słabosz;2^8X6eYt)s;35879900684;1972-08-04;YES;YES;;POL
-UC4_STEP_Create_Account_GBR_UAT;fiona51@example.net;M;Sandra;Garner;wbdy)4LfiB;555069413144;1966-01-23;YES;;YES;GBR

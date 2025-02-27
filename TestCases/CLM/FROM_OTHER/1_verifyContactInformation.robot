@@ -21,7 +21,6 @@ Verify Contact Information
             ...    ${salutation}
             ...    ${firstName}
             ...    ${lastName}
-            ...    ${password}
             ...    ${phoneNumber}
             ...    ${birthDate}
             ...    ${emailOptin}
@@ -42,7 +41,6 @@ Verify Contact Information
             ...    ${salutation}
             ...    ${firstName}
             ...    ${lastName}
-            ...    ${password}
             ...    ${phoneNumber}
             ...    ${birthDate}
             ...    ${emailOptin}

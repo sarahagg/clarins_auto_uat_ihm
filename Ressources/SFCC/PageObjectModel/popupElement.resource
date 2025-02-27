@@ -15,7 +15,7 @@ Wait And Close All Popups
     END
 
     IF    $return_status == 'PASS'
-        Click    ${popupElement_cookies_agree_button}
+    Click    ${popupElement_cookies_agree_button}
         Log    Cookie accepted
     END
 
@@ -46,3 +46,20 @@ Wait And Close All Popups
             Log      Push Ad refused
         END
     END
+
+Transaction popup
+    [Arguments]    ${country}
+    # If necessary > decline git for you popup
+    IF    $country in ${transaction_gift_countries}
+        ${return_status}=   Check If Element Is Visible And Warn If Not    ${popupElement_gift_popup}
+        WHILE    $return_status == 'FAIL'    limit=${number_of_retry_to_wait_an_element}    on_limit=pass
+            Log    Waiting for gift popup to appear
+            ${return_status}=   Check If Element Is Visible And Warn If Not    ${popupElement_gift_popup}
+        END
+
+        IF    $return_status == 'PASS'
+            Click    ${popupElement_gift_popup_decline_button}
+            Log      gift popup refused
+        END
+    END
+

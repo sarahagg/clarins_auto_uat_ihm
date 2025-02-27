@@ -6,3 +6,6 @@ popupElement_welcome_offer_decline_button = "xpath=//*[contains(@id,'bx-form') a
 
 popupElement_push_ad_banner_popup = "xpath=//*[contains(@id,'pushAdUpBanner')]"
 popupElement_push_ad_banner_decline_button = "xpath=//*[contains(@id,'pushAdUpBanner')]/descendant::div[@id='pushAd_disagree_button']"
+
+popupElement_gift_popup = "xpath=//*[@id='wrapper']//i-dynamic-dialog"
+popupElement_gift_popup_decline_button = "xpath=//*[@id='wrapper']//svg[@class='cross-grey-icon__icon']"

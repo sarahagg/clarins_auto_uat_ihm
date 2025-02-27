@@ -8,3 +8,5 @@ Library             OperatingSystem
 Library             DateTime
 Library             Collections
 Library             String
+Library             unidecode
+

@@ -9,7 +9,8 @@ Write Data To Link CSV Files
 
     FOR    ${oneCheckSystem}    IN    @{allCheckSystems}
 
-        ${link_csv_file}=    Set Variable    ${path_to_link_csv_file}${/}link_csv_file_from_${sourceSystem}_to_${oneCheckSystem}_for_${testScenario}.csv
+        ${link_csv_file}=    Set Variable    ${path_to_link_csv_file}${/}link_csv_file_${format}_from_${sourceSystem}_to_${oneCheckSystem}_for_${testScenario}.csv
+        #${link_csv_file}=    Set Variable    ${path_to_link_csv_file}${/}link_csv_file_${format}_from_${sourceSystem}_to_${oneCheckSystem}_for_${testScenario}.csv  avec format = contact,lid ou transaction
 
         ${file_exists}=    Run Keyword And Ignore Error    File Should Exist    ${link_csv_file}
         IF    '${file_exists}[0]' != 'PASS'
@@ -45,8 +46,6 @@ Append row To CSV
         ${element_string}=    Convert To String    ${element}
         Append To List    ${row_strings}    ${element_string}
     END
-
-    Log    ${row_strings}
 
     ${row_string}=    Evaluate    ';'.join($row_strings)
     Append To File    ${link_csv_file}    ${row_string}\n
