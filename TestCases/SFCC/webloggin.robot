@@ -50,6 +50,6 @@ Webloggin
         Initialize SFCC Website Context
         Go To Login Page
         Connect As An Existing SFCC User    ${email}     ${country}
-        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    webloggin
+        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    webloggin  ${country}
         sleep  3s
     END

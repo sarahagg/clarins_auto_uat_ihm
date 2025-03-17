@@ -52,8 +52,10 @@ Delete Some Account Info
         Go To My Profile
         Complete Delete Some Info Form
         Verify Account Update
-        Write Data To Link CSV Files    contact                SFCC    ${allCheckSystems}    deleteSomeAccountInfo
-        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    deleteSomeAccountInfo
+
+        Write Data To Link CSV Files    contact                SFCC    ${allCheckSystems}    deleteSomeAccountInfo  ${country}
+        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    deleteSomeAccountInfo  ${country}
+
         sleep  3s
 
     END

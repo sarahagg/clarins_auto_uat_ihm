@@ -35,6 +35,6 @@ Subscribe To The Newsletter
         Access And Complete Newsletter Form
         Verify Newsletter Subscription
 
-        Write Data To Link CSV Files    contact               SFCC    ${allCheckSystems}    subscribeNewsletter
-        Write Data To Link CSV Files    lastInteractionDate   SFCC    ${allCheckSystems}    subscribeNewsletter
+        Write Data To Link CSV Files    contact               SFCC    ${allCheckSystems}    subscribeNewsletter  ${country}
+        Write Data To Link CSV Files    lastInteractionDate   SFCC    ${allCheckSystems}    subscribeNewsletter  ${country}
     END

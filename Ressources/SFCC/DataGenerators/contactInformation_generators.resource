@@ -4,13 +4,13 @@ Resource    ..${/}Common${/}a_import_all_common_SFCC.resource
 
 *** Keywords ***
 Generate Email
-    [Arguments]    ${email}  ${generated_firstName}   ${country}
+    [Arguments]    ${email}     ${country}
 
     IF    $email == 'default'    RETURN    ${default_values.email}
 
     IF    $email == 'auto'
         ${email_uuid}=    Generate Random String    7    [LOWER][NUMBERS]
-        ${email_firstName}=    Set Variable   ${generated_firstName}
+        ${email_firstName}=      Run Keyword    Faker_${TEST_NAME}.First Name
         ${longueur}=    Get Length    ${email_firstName}
         Run Keyword If    ${longueur} > 6    Set Variable    ${email_firstName}=${email_firstName}[0:6]
 

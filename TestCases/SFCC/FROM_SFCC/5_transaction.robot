@@ -73,8 +73,8 @@ Make Transaction
                                              ...    ${country}
         Verify Transaction success
         Get CLR
-        Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeTransaction
-        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    makeTransaction
+        Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeTransaction  ${country}
+        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    makeTransaction  ${country}
 
         sleep  2s
 

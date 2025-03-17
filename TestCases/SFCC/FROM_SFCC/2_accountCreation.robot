@@ -31,29 +31,28 @@ Create A New Account
     ...    ${country}
     ...    ${allCheckSystems}
 
-    IF    $playTest == "YES"
+        IF    $playTest == "YES"
+            Generate Test Data Create Account
+                                            ...    ${email}
+                                            ...    ${salutation}
+                                            ...    ${firstName}
+                                            ...    ${lastName}
+                                            ...    ${phoneNumber}
+                                            ...    ${birthDate}
+                                            ...    ${emailOptin}
+                                            ...    ${SMSOptin}
+                                            ...    ${isLoyaltyMember}
+                                            ...    ${country}
+                                            ...    sfcc
+                                            ...    sfcc
+            Generate Test Data Last Interaction Date      contactProfileUpdate
 
-        Generate Test Data Create Account
-                                        ...    ${email}
-                                        ...    ${salutation}
-                                        ...    ${firstName}
-                                        ...    ${lastName}
-                                        ...    ${phoneNumber}
-                                        ...    ${birthDate}
-                                        ...    ${emailOptin}
-                                        ...    ${SMSOptin}
-                                        ...    ${isLoyaltyMember}
-                                        ...    ${country}
-                                        ...    sfcc
-                                        ...    sfcc
-        Generate Test Data Last Interaction Date      contactProfileUpdate
+            Initialize SFCC Website Context
+            Go To Login Page
+            Connect As A New SFCC User
+            Complete Registration Form
+            Verify Account Creation
 
-        Initialize SFCC Website Context
-        Go To Login Page
-        Connect As A New SFCC User
-        Complete Registration Form
-        Verify Account Creation
-
-        Write Data To Link CSV Files    contact                SFCC    ${allCheckSystems}    createAccount
-        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    createAccount
-    END
+            Write Data To Link CSV Files    contact                SFCC    ${allCheckSystems}    createAccount  ${country}
+            Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    createAccount  ${country}
+        END
