@@ -5,7 +5,7 @@ Resource            ..${/}Common${/}common.resource
 
 *** Keywords ***
 Write Data To Link CSV Files
-    [Arguments]    ${format}    ${sourceSystem}    ${allCheckSystems}    ${testScenario}
+    [Arguments]    ${format}    ${sourceSystem}    ${allCheckSystems}    ${testScenario}    ${country}
 
     FOR    ${oneCheckSystem}    IN    @{allCheckSystems}
 
@@ -17,7 +17,7 @@ Write Data To Link CSV Files
             Create CSV       ${format}    ${link_csv_file}
         END
 
-        Append row To CSV       ${format}    ${sourceSystem}    ${oneCheckSystem}    ${link_csv_file}
+        Append row To CSV       ${format}    ${sourceSystem}    ${oneCheckSystem}    ${link_csv_file}    ${testScenario}  ${country}
     END
 
 Create CSV
@@ -34,9 +34,10 @@ Create CSV
     Append To File    ${link_csv_file}    ${headers_string}\n
 
 Append row To CSV
-    [Arguments]      ${format}    ${sourceSystem}    ${oneCheckSystem}    ${link_csv_file}
+    [Arguments]      ${format}    ${sourceSystem}    ${oneCheckSystem}    ${link_csv_file}   ${testScenario}  ${country}
 
-    ${new_test_name}=    Replace String    ${TEST_NAME}    ${sourceSystem}     ${oneCheckSystem}
+    #${new_test_name}=    Replace String    ${TEST_NAME}    ${sourceSystem}     ${oneCheckSystem}
+    ${new_test_name}=  Set Variable   ${format}_from_${sourceSystem}_to_${oneCheckSystem}_for_${testScenario}_${country}
 
     ${row_strings}=      Create List
     Append To List      ${row_strings}    ${new_test_name}

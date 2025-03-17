@@ -54,7 +54,7 @@ Update SFCC Account
         Complete Update Form
         Verify Account Update
 
-        Write Data To Link CSV Files    contact                SFCC    ${allCheckSystems}    updateAccount
-        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    updateAccount
+        Write Data To Link CSV Files    contact                SFCC    ${allCheckSystems}    updateAccount  ${country}
+        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    updateAccount  ${country}
         sleep  3s
     END

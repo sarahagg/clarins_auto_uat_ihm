@@ -9,7 +9,7 @@ Library             DataDriver    file=..${/}..${/}..${/}Ressources${/}LINK${/}L
 Test Template       Search Contact By CCID
 Test Teardown       Close Browser
 
-Force Tags          STEP_FROM_STEP_5_SearchContactByCCIDt
+Force Tags          STEP_FROM_STEP_5_SearchContactByCCID
 
 
 *** Test Cases ***

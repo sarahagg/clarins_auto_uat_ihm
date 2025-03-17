@@ -71,8 +71,8 @@ Make Guest Transaction
                                           ...    ${country}
     Verify Transaction success
     Get CLR
-    Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeGuestTransaction
-    Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    makeGuestTransaction
+    Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeGuestTransaction  ${country}
+    Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    makeGuestTransaction  ${country}
     sleep  3s
 
     END

@@ -21,7 +21,7 @@ Generate Test Data Create Account
     Import FakerLibrary    ${country}
 
     ${generated_firstName}=         Generate FirstName          ${firstName}
-    ${generated_email}=             Generate Email              ${email}   ${generated_firstName}   ${country}
+    ${generated_email}=             Generate Email              ${email}         ${country}
     ${generated_salutation}=        Generate Salutation         ${salutation}    ${country}
     ${generated_lastName}=          Generate LastName           ${lastName}
     ${generated_phoneNumber}=       Generate PhoneNumber        ${phoneNumber}   ${country}
