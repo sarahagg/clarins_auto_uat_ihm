@@ -2,8 +2,8 @@
 Documentation       But du Test
 ...                 Vérifier une transaction
 
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}a_import_all_common_SFCC.resource
-Library             DataDriver    file=..${/}..${/}..${/}Ressources${/}SFCC${/}TestData${/}FROM_SFCC${/}5_makeTransaction.xlsx   sheet_name=Test Cases
+Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}a_import_all_common_SFCC.resource
+Library             DataDriver    file=..${/}..${/}Ressources${/}SFCC${/}TestData${/}FROM_SFCC${/}5_makeTransaction.xlsx   sheet_name=Test Cases
 
 Test Template       Make Transaction
 Test Setup          Initialize Test Context
@@ -58,12 +58,18 @@ Make Transaction
         Generate Test Data Last Interaction Date      transaction
 
         Initialize SFCC Website Context
+        Go To Login Page
+        Connect As A New SFCC User
+        Complete Registration Form
+        Verify Account Creation
+
         Search For A Product     ${PRODUCT_LIST}
-        #Add Chosen Product To Cart
         Transaction popup   ${country}
         View Cart
+        Order Summary Calculation
         Finalize Order
-        complete Delivery Form And Pay For New User
+
+        Complete Delivery Form And Pay For loged in User
                                              ...    ${adress}
                                              ...    ${postalCode}
                                              ...    ${city}
