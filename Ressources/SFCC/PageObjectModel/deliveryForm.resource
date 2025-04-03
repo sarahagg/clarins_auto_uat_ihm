@@ -28,6 +28,26 @@ Complete Delivery Form And Pay For New User
                                               ...    ${country}
     Payment Form            ${country}
 
+Complete Delivery Form And Pay For loged in User
+    [Arguments]                                      ${adress}
+                                              ...    ${postalCode}
+                                              ...    ${city}
+                                              ...    ${billingAdress}
+                                              ...    ${DPDdelivery}
+                                              ...    ${inPostPickUp}
+                                              ...    ${marketingConsent}
+                                              ...    ${country}
+    Shipping Info
+                                              ...    ${adress}
+                                              ...    ${postalCode}
+                                              ...    ${city}
+                                              ...    ${billingAdress}
+                                              ...    ${DPDdelivery}
+                                              ...    ${inPostPickUp}
+                                              ...    ${marketingConsent}
+                                              ...    ${country}
+    Payment Form            ${country}
+
 Complete Delivery Form And Pay For Guest
     [Arguments]                                      ${adress}
                                               ...    ${postalCode}

@@ -2,21 +2,21 @@
 Documentation       But du Test
 ...                 Vérifier une transaction
 
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}a_import_all_common_SFCC.resource
-Library             DataDriver    file=..${/}..${/}..${/}Ressources${/}SFCC${/}TestData${/}FROM_SFCC${/}5_makeTransaction.xlsx   sheet_name=Test Cases
+Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}a_import_all_common_SFCC.resource
+Library             DataDriver    file=..${/}..${/}Ressources${/}SFCC${/}TestData${/}FROM_SFCC${/}5_makeTransaction.xlsx   sheet_name=Test Cases
 
-Test Template       Make Transaction
+Test Template       S2 Earn Loyalty Points
 Test Setup          Initialize Test Context
 Test Teardown       Close Browser
 
-Force Tags          SFCC_FROM_SFCC_5_transaction
+Force Tags          S2 Earn Loyalty Points
 
 
 *** Test Cases ***
 Default Values If No Data
 
 *** Keywords ***
-Make Transaction
+S2 Earn Loyalty Points
     [Arguments]
     ...    ${playTest}
     ...    ${PRODUCT_LIST}
@@ -40,6 +40,7 @@ Make Transaction
     ...    ${country}
     ...    ${allCheckSystems}
 
+
     IF    $playTest == "YES"
         Generate Test Data Create Account
                                         ...    ${email}
@@ -58,12 +59,15 @@ Make Transaction
         Generate Test Data Last Interaction Date      transaction
 
         Initialize SFCC Website Context
+        Go To Login Page
+        Connect As An Existing SFCC User    ${email}     ${country}
         Search For A Product     ${PRODUCT_LIST}
-        #Add Chosen Product To Cart
         Transaction popup   ${country}
         View Cart
+        Order Summary Calculation
         Finalize Order
-        complete Delivery Form And Pay For New User
+
+        Complete Delivery Form And Pay For loged in User
                                              ...    ${adress}
                                              ...    ${postalCode}
                                              ...    ${city}
@@ -76,6 +80,7 @@ Make Transaction
         Get CLR
         Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeTransaction  ${country}
         Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    makeTransaction  ${country}
+
 
         sleep  2s
 

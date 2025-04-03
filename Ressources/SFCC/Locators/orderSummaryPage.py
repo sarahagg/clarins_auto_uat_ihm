@@ -1,2 +1,7 @@
 orderSummaryPage_transaction_success_title = "xpath=//*[@id='wrapper']//h1"
 orderSummaryPage_transaction_LID_value = "xpath=//p[@class='confirmation__info-line mb-20'][1]"
+orderSummaryPage_estimated_total  = "xpath=//li[@class='order-totals__line clearfix order-totals__line--bold']/span[@class='value']"
+orderSummaryPage_tax = "xpath=//li[@data-auto-id='summary-order-tax']/span[@class='value']"
+orderSummaryPage_calculate = "xpath=//a[@class='link link--uppercase calculate-loyalty-summary-js cba-link-style']"
+orderSummaryPage_subtotal = "xpath=//li[@data-auto-id='summary-order-subtotal']/span[@class='value']"
+orderSummaryPage_earned = "xpath=//span[@class='rb-order-loyalty-summary__value']"
