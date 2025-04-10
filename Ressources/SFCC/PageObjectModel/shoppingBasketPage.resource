@@ -2,6 +2,7 @@
 Documentation       all the keywords needed to navigate on the Home Page
 
 Resource            ..${/}Common${/}a_import_all_common_SFCC.resource
+Library    RPA.Archive
 
 *** Keywords ***
 
@@ -30,3 +31,11 @@ Order Summary Calculation
     Log  lo montant doit etre : ${earned_points}
 
     Should Be Equal As Numbers    ${earned_points}    ${expected_points}
+
+See Points And Calculate
+    Click    ${orderSummaryPage_calculate}
+
+    ${earned_points}      Get Text    ${orderSummaryPage_earned}
+    ${earned_points}      Evaluate    float("${earned_points}".replace("pts", "").replace(",", "").strip())
+
+    ${points}=             Set Variable     ${earned_points}

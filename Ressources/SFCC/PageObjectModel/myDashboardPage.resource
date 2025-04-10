@@ -32,3 +32,19 @@ Verify Correct Loyalty
         ${text}=     Get Text    ${myDashboardPage_loyalty_status_value}
         Should Be Equal      ${text}    Member
     END
+
+
+Verify my points recap in SFCC
+    [Arguments]     ${expectedpoints}
+
+    Hover     ${headerMenu_login_button}
+    Wait For Elements State    ${headerMenu_myAccount_popup_menu}    visible
+    click  ${headerMenu_my_points_recap_button}
+    # missing the display part in the website cuz it waits for the pending period to be over
+    Should Be Equal      ${expectedpoints}    ${points}
+
+Choose Rewards
+    Hover     ${headerMenu_login_button}
+    Wait For Elements State    ${headerMenu_myAccount_popup_menu}    visible
+    click  ${headerMenu_my_rewards_button}
+

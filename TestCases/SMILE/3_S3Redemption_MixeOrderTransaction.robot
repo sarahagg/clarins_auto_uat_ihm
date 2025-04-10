@@ -56,39 +56,14 @@ S2 Earn Loyalty Points
                                         ...    sfcc
                                         ...    sfcc
 
-        Generate Test Data Transaction
-        Generate Test Data Last Interaction Date      transaction
         Initialize SFCC Website Context
         Go To Login Page
-        Connect As An Existing SFCC User    ${email}     ${country}
-
-        ### make the transaction
-        Search For A Product     ${PRODUCT_LIST}
-        Transaction popup   ${country}
-        View Cart
-        #Order Summary Calculation
-        See Points And Calculate
-        Finalize Order
-        Complete Delivery Form And Pay For loged in User
-                                             ...    ${adress}
-                                             ...    ${postalCode}
-                                             ...    ${city}
-                                             ...    ${billingAdress}
-                                             ...    ${DPDdelivery}
-                                             ...    ${inPostPickUp}
-                                             ...    ${marketingConsent}
-                                             ...    ${country}
-        Verify Transaction success
-        Get CLR
-
-        ## make sure the points count is correct on SFCC
-        Verify my points recap in SFCC      ${expectedpoints}
-        #5. Connect to CLM NCC, and go to "Activity History" > "Transactions" sections, and check that the transaction has been propagated and that the loyalty member has earned points.
+        Choose Rewards
 
 
 
-        Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeTransaction  ${country}
-        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    makeTransaction  ${country}
+
+
         sleep  2s
 
     END
