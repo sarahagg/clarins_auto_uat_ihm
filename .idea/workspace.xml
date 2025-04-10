@@ -4,22 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="version 17/03">
-      <change afterPath="$PROJECT_DIR$/TestCases/SMILE/1_S1EnrollmentAndLoyaltyAccount.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestCases/SMILE/2_S2EarnLoyaltyPoints.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestCases/SMILE/5_transactionsAndCalculate.robot" afterDir="false" />
+    <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="version 03/04/25">
+      <change afterPath="$PROJECT_DIR$/TestCases/SMILE/3_S3Redemption_MixeOrderTransaction.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/commonVariables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/commonVariables.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/generate_testData_createAccount.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/generate_testData_createAccount.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Locators/headerMenu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Locators/headerMenu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Locators/myDashboardPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Locators/myDashboardPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Locators/orderSummaryPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Locators/orderSummaryPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/createAccountPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/createAccountPage.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/deliveryForm.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/deliveryForm.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/headerMenu.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/headerMenu.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/myDashboardPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/myDashboardPage.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/shoppingBasketPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/shoppingBasketPage.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/2_createAccount.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/2_createAccount.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/5_makeTransaction.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/5_makeTransaction.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/5_transaction.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/5_transaction.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/SMILE/1_S1EnrollmentAndLoyaltyAccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SMILE/1_S1EnrollmentAndLoyaltyAccount.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/SMILE/2_S2EarnLoyaltyPoints.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SMILE/2_S2EarnLoyaltyPoints.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,89 +63,89 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Robot Framework.1_Import_new_contacts_from_a_ThirdParty_file(no CCID).executor": "Run",
-    "Robot Framework.1_LIDCreateSFCCAccount.executor": "Run",
-    "Robot Framework.1_LastInteractionDate_update_create_an_account_SFCC.executor": "Run",
-    "Robot Framework.1_S1EnrollmentAndLoyaltyAccount.executor": "Run",
-    "Robot Framework.1_SearchContactByFullName.executor": "Run",
-    "Robot Framework.1_VerifyContactInformation.executor": "Run",
-    "Robot Framework.1_lastInteractionDateUpdate_CreateAnAccountSFCC.executor": "Run",
-    "Robot Framework.1_newsletterOfferPage.executor": "Run",
-    "Robot Framework.1_searchContactByFullName.executor": "Run",
-    "Robot Framework.1_subscribeNewsletter.executor": "Run",
-    "Robot Framework.1_verifyContactInformation_FROM_SFCC_createAccount.executor": "Run",
-    "Robot Framework.1_verifyContactInformation_FROM_SFCC_subscribeNewsletter.executor": "Run",
-    "Robot Framework.1_verifyNewsletterInformation.executor": "Run",
-    "Robot Framework.1_verifyNewsletterOfferPage.executor": "Run",
-    "Robot Framework.2_LastInteractionDate_update_newsletter.executor": "Run",
-    "Robot Framework.2_S2EarnLoyaltyPoints.executor": "Run",
-    "Robot Framework.2_SearchContactByFirstName.executor": "Run",
-    "Robot Framework.2_VerifyContactInformation.executor": "Run",
-    "Robot Framework.2_accountCreation.executor": "Run",
-    "Robot Framework.2_createAccount.executor": "Run",
-    "Robot Framework.2_lastInteractionDateUpdate_Newsletter.executor": "Run",
-    "Robot Framework.2_searchContactByFirstName.executor": "Run",
-    "Robot Framework.2_verifyAccountCreation.executor": "Run",
-    "Robot Framework.2_verifyContactInformation_FROM_SFCC_createAccount.executor": "Run",
-    "Robot Framework.3_LastInteractionDate_update_webloggin.executor": "Run",
-    "Robot Framework.3_SearchContactByLastName.executor": "Run",
-    "Robot Framework.3_lastInteractionDateUpdate_Webloggin.executor": "Run",
-    "Robot Framework.3_searchContactByLastName.executor": "Run",
-    "Robot Framework.3_updateAccount.executor": "Run",
-    "Robot Framework.3_updateAnAccount.executor": "Run",
-    "Robot Framework.3_verifyUpdateAccount.executor": "Run",
-    "Robot Framework.3_verifyUpdateAnAccount.executor": "Run",
-    "Robot Framework.4_LastInteractionDate_update_make_a_purchase_in_sfcc.executor": "Run",
-    "Robot Framework.4_SearchContactByPhoneNumber.executor": "Run",
-    "Robot Framework.4_deleteSomeAccountInfo.executor": "Run",
-    "Robot Framework.4_deleteSomeInformationFromAnAccount.executor": "Run",
-    "Robot Framework.4_lastInteractionDateUpdate_MakeAPurchaseInSfcc.executor": "Run",
-    "Robot Framework.4_searchContactByPhoneNumber.executor": "Run",
-    "Robot Framework.4_verifyDeleteSomeAccountInfo.executor": "Run",
-    "Robot Framework.4_verifyDeleteSomeInformationFromAnAccount.executor": "Run",
-    "Robot Framework.5_SearchContactByCCID.executor": "Run",
-    "Robot Framework.5_makeTransaction.executor": "Run",
-    "Robot Framework.5_searchContactByCCID.executor": "Run",
-    "Robot Framework.5_transaction.executor": "Run",
-    "Robot Framework.5_transactionsAndCalculate.executor": "Run",
-    "Robot Framework.6_advancedSearch.executor": "Run",
-    "Robot Framework.6_guest.executor": "Run",
-    "Robot Framework.6_guestAccount.executor": "Run",
-    "Robot Framework.CREATE_N_SFCC_ACCOUNT.executor": "Run",
-    "Robot Framework.Connection.executor": "Run",
-    "Robot Framework.LinkCLM_CreationCompte.executor": "Run",
-    "Robot Framework.LinkSFCC_CreationCompte.executor": "Run",
-    "Robot Framework.LinkSFCC_Newsletter.executor": "Run",
-    "Robot Framework.LinkSTEP_CreationCompte.executor": "Run",
-    "Robot Framework.LinkSTEP_Newsletter.executor": "Run",
-    "Robot Framework.NewAccount.executor": "Run",
-    "Robot Framework.Newsletter.executor": "Run",
-    "Robot Framework.Test.executor": "Run",
-    "Robot Framework.linkSFCC.executor": "Run",
-    "Robot Framework.linksfc.executor": "Run",
-    "Robot Framework.linkstep.executor": "Run",
-    "Robot Framework.login.executor": "Run",
-    "Robot Framework.modify.executor": "Run",
-    "Robot Framework.verify.executor": "Run",
-    "Robot Framework.webloggin.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "update__account__SFCC",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/s.aggour/OneDrive - ONEPOINT/Bureau/clarins_auto_uat_ihm/TestCases/SMILE",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Robot Framework.1_Import_new_contacts_from_a_ThirdParty_file(no CCID).executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.1_LIDCreateSFCCAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.1_LastInteractionDate_update_create_an_account_SFCC.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.1_S1EnrollmentAndLoyaltyAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.1_SearchContactByFullName.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.1_VerifyContactInformation.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.1_lastInteractionDateUpdate_CreateAnAccountSFCC.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.1_newsletterOfferPage.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.1_searchContactByFullName.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.1_subscribeNewsletter.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.1_verifyContactInformation_FROM_SFCC_createAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.1_verifyContactInformation_FROM_SFCC_subscribeNewsletter.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.1_verifyNewsletterInformation.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.1_verifyNewsletterOfferPage.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.2_LastInteractionDate_update_newsletter.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.2_S2EarnLoyaltyPoints.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.2_SearchContactByFirstName.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.2_VerifyContactInformation.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.2_accountCreation.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.2_createAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.2_lastInteractionDateUpdate_Newsletter.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.2_searchContactByFirstName.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.2_verifyAccountCreation.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.2_verifyContactInformation_FROM_SFCC_createAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.3_LastInteractionDate_update_webloggin.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.3_SearchContactByLastName.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.3_lastInteractionDateUpdate_Webloggin.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.3_searchContactByLastName.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.3_updateAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.3_updateAnAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.3_verifyUpdateAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.3_verifyUpdateAnAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.4_LastInteractionDate_update_make_a_purchase_in_sfcc.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.4_SearchContactByPhoneNumber.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.4_deleteSomeAccountInfo.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.4_deleteSomeInformationFromAnAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.4_lastInteractionDateUpdate_MakeAPurchaseInSfcc.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.4_searchContactByPhoneNumber.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.4_verifyDeleteSomeAccountInfo.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.4_verifyDeleteSomeInformationFromAnAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.5_SearchContactByCCID.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.5_makeTransaction.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.5_searchContactByCCID.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.5_transaction.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.5_transactionsAndCalculate.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.6_advancedSearch.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.6_guest.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.6_guestAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.CREATE_N_SFCC_ACCOUNT.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.Connection.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.LinkCLM_CreationCompte.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.LinkSFCC_CreationCompte.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.LinkSFCC_Newsletter.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.LinkSTEP_CreationCompte.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.LinkSTEP_Newsletter.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.NewAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.Newsletter.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.linkSFCC.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.linksfc.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.linkstep.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.login.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.modify.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.verify.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.webloggin.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;update__account__SFCC&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/s.aggour/OneDrive - ONEPOINT/Bureau/clarins_auto_uat_ihm/TestCases/SMILE&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\s.aggour\OneDrive - ONEPOINT\Bureau\clarins_auto_uat_ihm\TestCases\SMILE" />
@@ -177,9 +173,7 @@
           <option value="headless:false" />
         </list>
       </option>
-      <option name="env">
-        <map />
-      </option>
+      <option name="env" />
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="true" />
       <method v="2" />
@@ -272,9 +266,7 @@
           <option value="testScenario:createAccount" />
         </list>
       </option>
-      <option name="env">
-        <map />
-      </option>
+      <option name="env" />
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
@@ -331,9 +323,7 @@
           <option value="headless:false" />
         </list>
       </option>
-      <option name="env">
-        <map />
-      </option>
+      <option name="env" />
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="true" />
       <method v="2" />
@@ -348,9 +338,7 @@
           <option value="headless:false" />
         </list>
       </option>
-      <option name="env">
-        <map />
-      </option>
+      <option name="env" />
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="false" />
       <method v="2" />
@@ -641,9 +629,7 @@
           <option value="headless:false" />
         </list>
       </option>
-      <option name="env">
-        <map />
-      </option>
+      <option name="env" />
       <option name="workingDir" value="$ProjectFileDir$" />
       <option name="makeSuite" value="true" />
       <method v="2" />
@@ -990,7 +976,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742201824747</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="version 03/04/25">
+      <option name="closed" value="true" />
+      <created>1743666737587</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1743666737587</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1037,7 +1031,8 @@
     <MESSAGE value="Version CLM 5" />
     <MESSAGE value="version 27/02" />
     <MESSAGE value="version 17/03" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 17/03" />
+    <MESSAGE value="version 03/04/25" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 03/04/25" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -39,6 +39,7 @@ S1 Enrollment and Loyalty Account
     ...    ${marketingConsent}
     ...    ${country}
     ...    ${allCheckSystems}
+    ...    ${expectedpoints}
 
     IF    $playTest == "YES"
         Generate Test Data Create Account
@@ -63,8 +64,9 @@ S1 Enrollment and Loyalty Account
         Complete Registration Form
         Verify Account Creation
         Verify Correct Loyalty
-        ##verify in CLM  (i didnt find ARE in programme de fidélité)
-        ##verify in STEP
+
+        ##7. Go to CLM NCC, go to the member's customer card by typing their name in the search bar and go to the "Points & Counters" and "Points Balance" sections (i didnt find ARE in programme de fidélité)
+        ##8. Go to STEP and check that the loyalty member can be found (please note that it can take a bit of time for the information to propagate - up to 2 hours)
         sleep  2s
 
     END
