@@ -19,10 +19,10 @@ Verify Transaction success
         Log      Account created
     END
 
-Get CLR
+Store transaction number
 
-    ${C}=        Get Text    ${orderSummaryPage_transaction_LID_value}
-    Log    Le texte extrait est : ${C}
-    ${match}=      Get Regexp Matches    ${C}    CLR_[A-Z0-9]+
-    ${C}=       Set Variable  ${match[0]}
-    Set To Dictionary    ${canonical_form_transaction_link_files}       \${transactionNumber}          ${C}
+    ${CLR}=        Get Text    ${orderSummaryPage_transaction_LID_value}
+    Log    Le texte extrait est : ${CLR}
+    ${match}=      Get Regexp Matches    ${CLR}    CLR_[A-Z0-9]+
+    ${CLR}=       Set Variable  ${match[0]}
+    Set To Dictionary    ${canonical_form_transaction_link_files}       \${transactionNumber}          ${CLR}

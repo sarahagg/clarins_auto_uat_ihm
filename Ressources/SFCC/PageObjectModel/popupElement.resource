@@ -47,8 +47,8 @@ Wait And Close All Popups
         END
     END
 
-Transaction popup
-    [Arguments]    ${country}
+Wait And Close Transaction Gift Popup
+    ${country} =          Set Variable    ${canonical_form_transaction_link_files.get('\${country}')}
     # If necessary > decline git for you popup
     IF    $country in ${transaction_gift_countries}
         ${return_status}=   Check If Element Is Visible And Warn If Not    ${popupElement_gift_popup}

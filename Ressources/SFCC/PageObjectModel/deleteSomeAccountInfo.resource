@@ -11,7 +11,7 @@ Complete Delete Some Info Form
     ${country}=             Set Variable    ${canonical_form_contact_link_files.get('\${country}')}
 
 
-    # FILL BIRTHDATE
+    #Delete BIRTHDATE
     IF    '${birthDate}' != 'DEL'
         Clear Text    ${updateAccountPage_birthday_input}
         Wait For Elements State    ${updateAccountPage_birthday_date_invalid_message}    hidden

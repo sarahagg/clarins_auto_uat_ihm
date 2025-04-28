@@ -15,8 +15,7 @@ Generate Test Data Create Account
             ...    ${SMSOptin}
             ...    ${isLoyaltyMember}
             ...    ${country}
-            ...    ${creationSystem}
-            ...    ${lastModificationSystem}
+
 
 
     Import FakerLibrary    ${country}
@@ -41,8 +40,6 @@ Generate Test Data Create Account
     Set To Dictionary    ${canonical_form_contact_link_files}    \${SMSOptin}                    ${generated_SMSOptin}
     Set To Dictionary    ${canonical_form_contact_link_files}    \${isLoyaltyMember}             ${isLoyaltyMember}
     Set To Dictionary    ${canonical_form_contact_link_files}    \${country}                     ${country}
-    Set To Dictionary    ${canonical_form_contact_link_files}    \${creationSystem}              ${creationSystem}
     Set To Dictionary    ${canonical_form_contact_link_files}    \${createDate}                  ${current_date}
-    Set To Dictionary    ${canonical_form_contact_link_files}    \${lastModificationSystem}      ${lastModificationSystem}
-    Set To Dictionary    ${canonical_form_contact_link_files}    \${lastUpdateDate}        ${current_date}
+    Set To Dictionary    ${canonical_form_contact_link_files}    \${lastUpdateDate}              ${current_date}
 

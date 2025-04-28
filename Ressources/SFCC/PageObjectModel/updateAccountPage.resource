@@ -24,6 +24,7 @@ Complete Update Form
             Click    ${updateAccountPage_salutation_option.replace('$SALUTATION$', '${translated_salutations.${salutation}}')}
         END
     END
+
     # FILL FIRST NAME
     IF    '${firstName}' != '${EMPTY}'
         Fill Text    ${updateAccountPage_first_name_input}    ${firstName}
@@ -36,9 +37,9 @@ Complete Update Form
 
     # FILL PHONE NUMBER
     IF    '${phoneNumber}' != '${EMPTY}'
-        Click    ${updateAccountPage_phone_number_country_code_select}
-        Click    ${updateAccountPage_phone_number_country_code_option.replace('$COUNTRY_ALPHA2$', '${translated_countries_to_alpha2.${country}}')}
-        Fill Text    ${updateAccountPage_phone_number_input}    ${phoneNumber}
+       # Click    ${createAccountPage_phone_number_country_code_select}
+        #Click    ${createAccountPage_phone_number_country_code_option.replace('$COUNTRY_ALPHA2$', '${translated_countries_to_alpha2.${country}}')}
+        Fill Text    ${createAccountPage_phone_number_input}    ${phoneNumber}
     END
 
     # FILL BIRTHDATE

@@ -12,7 +12,7 @@ Finalize Order
     Click    ${shoppingBasketPage_finalize_your_order_button}
     sleep  1S
 
-Order Summary Calculation
+Click Calculate And Verify Calculation
 
      Click    ${orderSummaryPage_calculate}
 
@@ -32,10 +32,15 @@ Order Summary Calculation
 
     Should Be Equal As Numbers    ${earned_points}    ${expected_points}
 
-See Points And Calculate
+Click Calculate And See Points
+    Set Test Variable    ${currentPoints}
     Click    ${orderSummaryPage_calculate}
 
-    ${earned_points}      Get Text    ${orderSummaryPage_earned}
-    ${earned_points}      Evaluate    float("${earned_points}".replace("pts", "").replace(",", "").strip())
+    ${earned_points}      Get Text        ${orderSummaryPage_earned}
+    ${earned_points}      Evaluate        float("${earned_points}".replace("pts", "").replace(",", "").strip())
+    ${currentPoints}=     Set Variable     ${earned_points}
 
-    ${points}=             Set Variable     ${earned_points}
+
+    #click et calculate
+    #calcul automatique
+    #2 different keyword

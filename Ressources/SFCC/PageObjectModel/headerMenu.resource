@@ -8,8 +8,7 @@ Go To Login Page
     Click    ${headerMenu_login_button}
 
 Search For A Product
-    [Arguments]   ${PRODUCT_LIST}
-
+    ${PRODUCT_LIST} =          Set Variable    ${canonical_form_transaction_link_files.get('\${PRODUCT_LIST}')}
     FOR    ${item}    IN    @{PRODUCT_LIST}
         ${split_result} =    Evaluate    str("${item}").split(":") if ":" in str("${item}") else ["${item}", "1"]
         ${product}    ${quantity} =    Set Variable    ${split_result}[0]    ${split_result}[1]
@@ -28,7 +27,7 @@ Search For A Product
         Wait For Elements State    ${searchResult_add_to_bag_button}    visible
 
         IF    ${quantity} > 1
-            FOR    ${i}    IN RANGE    ${quantity - 1}
+            FOR    ${i}    IN RANGE    ${quantity -1}
                 Hover    ${headerMenu_plus_button}
                 Click    ${headerMenu_plus_button}
                 Sleep    0.5s

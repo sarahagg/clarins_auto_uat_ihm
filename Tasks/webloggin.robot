@@ -20,36 +20,18 @@ Webloggin
     [Arguments]
     ...    ${playTest}
     ...    ${email}
-    ...    ${salutation}
-    ...    ${firstName}
-    ...    ${lastName}
-    ...    ${phoneNumber}
-    ...    ${birthDate}
-    ...    ${emailOptin}
-    ...    ${SMSOptin}
-    ...    ${isLoyaltyMember}
     ...    ${country}
     ...    ${allCheckSystems}
 
     IF    $playTest == "YES"
 
-        Generate Test Data Update Account
+        Generate Test Data connection
                                         ...    ${email}
-                                        ...    ${salutation}
-                                        ...    ${firstName}
-                                        ...    ${lastName}
-                                        ...    ${phoneNumber}
-                                        ...    ${birthDate}
-                                        ...    ${emailOptin}
-                                        ...    ${SMSOptin}
-                                        ...    ${isLoyaltyMember}
                                         ...    ${country}
-                                        ...    sfcc
         Generate Test Data Last Interaction Date    websiteLogin
 
         Initialize SFCC Website Context
-        Go To Login Page
-        Connect As An Existing SFCC User    ${email}     ${country}
+        Connect As An Existing SFCC User
         Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    webloggin  ${country}
         sleep  3s
     END

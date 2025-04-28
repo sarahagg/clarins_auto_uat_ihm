@@ -53,17 +53,25 @@ S1 Enrollment and Loyalty Account
                                         ...    ${SMSOptin}
                                         ...    ${isLoyaltyMember}
                                         ...    ${country}
-                                        ...    sfcc
-                                        ...    sfcc
-        Generate Test Data Transaction
-        Generate Test Data Last Interaction Date      transaction
 
+        Generate Test Data Transaction
+                                             ...    ${adress}
+                                             ...    ${postalCode}
+                                             ...    ${city}
+                                             ...    ${billingAdress}
+                                             ...    ${DPDdelivery}
+                                             ...    ${inPostPickUp}
+                                             ...    ${marketingConsent}
+                                             ...    ${country}
+                                             ...    ${PRODUCT_LIST}
+                                             ...    ${expectedpoints}
+        Generate Test Data Last Interaction Date      transaction
         Initialize SFCC Website Context
         Go To Login Page
         Connect As A New SFCC User
         Complete Registration Form
         Verify Account Creation
-        Verify Correct Loyalty
+        Verify Contact Loyalty Status
 
         ##7. Go to CLM NCC, go to the member's customer card by typing their name in the search bar and go to the "Points & Counters" and "Points Balance" sections (i didnt find ARE in programme de fidélité)
         ##8. Go to STEP and check that the loyalty member can be found (please note that it can take a bit of time for the information to propagate - up to 2 hours)

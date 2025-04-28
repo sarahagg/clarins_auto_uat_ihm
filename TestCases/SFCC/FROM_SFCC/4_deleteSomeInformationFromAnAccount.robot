@@ -47,8 +47,7 @@ Delete Some Account Info
                                             ...    sfcc
         Generate Test Data Last Interaction Date      contactProfileUpdate
         Initialize SFCC Website Context
-        Go To Login Page
-        Connect As An Existing SFCC User    ${email}     ${country}
+        Connect As An Existing SFCC User
         Go To My Profile
         Complete Delete Some Info Form
         Verify Account Update

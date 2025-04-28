@@ -5,79 +5,33 @@ Resource            ..${/}Common${/}a_import_all_common_SFCC.resource
 
 *** Keywords ***
 Complete Delivery Form And Pay For New User
-    [Arguments]                                      ${adress}
-                                              ...    ${postalCode}
-                                              ...    ${city}
-                                              ...    ${billingAdress}
-                                              ...    ${DPDdelivery}
-                                              ...    ${inPostPickUp}
-                                              ...    ${marketingConsent}
-                                              ...    ${country}
+
     Connect As A New SFCC User
     sleep  1S
     Complete Registration Form
     sleep  1S
     Shipping Info
-                                              ...    ${adress}
-                                              ...    ${postalCode}
-                                              ...    ${city}
-                                              ...    ${billingAdress}
-                                              ...    ${DPDdelivery}
-                                              ...    ${inPostPickUp}
-                                              ...    ${marketingConsent}
-                                              ...    ${country}
-    Payment Form            ${country}
+    Payment Form
 
-Complete Delivery Form And Pay For loged in User
-    [Arguments]                                      ${adress}
-                                              ...    ${postalCode}
-                                              ...    ${city}
-                                              ...    ${billingAdress}
-                                              ...    ${DPDdelivery}
-                                              ...    ${inPostPickUp}
-                                              ...    ${marketingConsent}
-                                              ...    ${country}
+Complete Delivery And Payment For Logged In User
     Shipping Info
-                                              ...    ${adress}
-                                              ...    ${postalCode}
-                                              ...    ${city}
-                                              ...    ${billingAdress}
-                                              ...    ${DPDdelivery}
-                                              ...    ${inPostPickUp}
-                                              ...    ${marketingConsent}
-                                              ...    ${country}
-    Payment Form            ${country}
+    Payment Form
 
 Complete Delivery Form And Pay For Guest
-    [Arguments]                                      ${adress}
-                                              ...    ${postalCode}
-                                              ...    ${city}
-                                              ...    ${billingAdress}
-                                              ...    ${DPDdelivery}
-                                              ...    ${inPostPickUp}
-                                              ...    ${marketingConsent}
-                                              ...    ${country}
     Connect As A Guest
     Shipping Info
-                                              ...    ${adress}
-                                              ...    ${postalCode}
-                                              ...    ${city}
-                                              ...    ${billingAdress}
-                                              ...    ${DPDdelivery}
-                                              ...    ${inPostPickUp}
-                                              ...    ${marketingConsent}
-                                              ...    ${country}
-    Payment Form           ${country}
+    Payment Form
 
 Shipping Info
-         [Arguments]                                 ${adress}
-                                              ...    ${postalCode}
-                                              ...    ${city}
-                                              ...    ${billingAdress}
-                                              ...    ${DPDdelivery}
-                                              ...    ${inPostPickUp}
-                                              ...    ${marketingConsent}
-                                              ...    ${country}
+
+      ${adress} =              Set Variable    ${canonical_form_transaction_link_files.get('\${adress}')}
+      ${postalCode} =          Set Variable    ${canonical_form_transaction_link_files.get('\${postalCode}')}
+      ${city} =                Set Variable    ${canonical_form_transaction_link_files.get('\${city}')}
+      ${billingAdress} =       Set Variable    ${canonical_form_transaction_link_files.get('\${billingAdress}')}
+      ${DPDdelivery} =         Set Variable    ${canonical_form_transaction_link_files.get('\${DPDdelivery}')}
+      ${inPostPickUp} =        Set Variable    ${canonical_form_transaction_link_files.get('\${inPostPickUp}')}
+      ${marketingConsent} =    Set Variable    ${canonical_form_transaction_link_files.get('\${marketingConsent}')}
+      ${country} =             Set Variable    ${canonical_form_transaction_link_files.get('\${country}')}
 
 
     ${return_status}=               Check If Element Is Visible And Warn If Not    ${deliveryForm_adress_input}
@@ -120,9 +74,7 @@ Shipping Info
      log          delivery infos saved
 
 Payment Form
-    [arguments]   ${country}
-
-
+   ${country} =             Set Variable    ${canonical_form_transaction_link_files.get('\${country}')}
     IF    $country in ${credit_card_cybersource_countries}
         ${card_type}=   Set Variable    Cybersource
     ELSE IF   $country in ${credit_card_adyen_countries}

@@ -10,20 +10,20 @@ Write Data To Link CSV Files
     FOR    ${oneCheckSystem}    IN    @{allCheckSystems}
 
         ${link_csv_file}=    Set Variable    ${path_to_link_csv_file}${/}link_csv_file_${format}_from_${sourceSystem}_to_${oneCheckSystem}_for_${testScenario}.csv
-        #${link_csv_file}=    Set Variable    ${path_to_link_csv_file}${/}link_csv_file_${format}_from_${sourceSystem}_to_${oneCheckSystem}_for_${testScenario}.csv  avec format = contact,lid ou transaction
+        #${link_csv_file}=   Set Variable    ${path_to_link_csv_file}${/}link_csv_file_${format}_from_${sourceSystem}_to_${oneCheckSystem}_for_${testScenario}.csv  avec format = contact,lid ou transaction
 
-        ${file_exists}=    Run Keyword And Ignore Error    File Should Exist    ${link_csv_file}
+        ${file_exists}=      Run Keyword And Ignore Error    File Should Exist    ${link_csv_file}
         IF    '${file_exists}[0]' != 'PASS'
             Create CSV       ${format}    ${link_csv_file}
         END
 
-        Append row To CSV       ${format}    ${sourceSystem}    ${oneCheckSystem}    ${link_csv_file}    ${testScenario}  ${country}
+        Append row To CSV    ${format}    ${sourceSystem}    ${oneCheckSystem}    ${link_csv_file}    ${testScenario}  ${country}
     END
 
 Create CSV
-    [Arguments]     ${format}    ${link_csv_file}
+    [Arguments]              ${format}    ${link_csv_file}
 
-    Create File    ${link_csv_file}
+    Create File               ${link_csv_file}
 
     ${data_keys}=    Get Dictionary Keys    ${canonical_form_${format}_link_files}   sort_keys=False
 
