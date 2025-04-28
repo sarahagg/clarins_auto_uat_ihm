@@ -26,9 +26,6 @@ Subscribe To The Newsletter
         Generate Test Data Newsletter
                                         ...    ${email}
                                         ...    ${country}
-                                        ...    sfcc
-                                        ...    sfcc
-
         Generate Test Data Last Interaction Date      contactProfileUpdate
 
         Initialize SFCC Website Context

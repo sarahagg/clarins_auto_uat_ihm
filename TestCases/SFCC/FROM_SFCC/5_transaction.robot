@@ -39,6 +39,8 @@ Make Transaction
     ...    ${marketingConsent}
     ...    ${country}
     ...    ${allCheckSystems}
+    ...    ${expectedpoints}
+
 
     IF    $playTest == "YES"
         Generate Test Data Create Account
@@ -52,18 +54,8 @@ Make Transaction
                                         ...    ${SMSOptin}
                                         ...    ${isLoyaltyMember}
                                         ...    ${country}
-                                        ...    sfcc
-                                        ...    sfcc
-        Generate Test Data Transaction
-        Generate Test Data Last Interaction Date      transaction
 
-        Initialize SFCC Website Context
-        Search For A Product     ${PRODUCT_LIST}
-        #Add Chosen Product To Cart
-        Transaction popup   ${country}
-        View Cart
-        Finalize Order
-        complete Delivery Form And Pay For New User
+        Generate Test Data Transaction
                                              ...    ${adress}
                                              ...    ${postalCode}
                                              ...    ${city}
@@ -72,8 +64,20 @@ Make Transaction
                                              ...    ${inPostPickUp}
                                              ...    ${marketingConsent}
                                              ...    ${country}
+                                             ...    ${PRODUCT_LIST}
+                                             ...    ${expectedpoints}
+        Generate Test Data Last Interaction Date      transaction
+        Initialize SFCC Website Context
+        Search For A Product
+        #
+        #Add Chosen Product To Cart
+        #
+        Wait And Close Transaction Gift Popup
+        View Cart
+        Finalize Order
+        complete Delivery Form And Pay For New User
         Verify Transaction success
-        Get CLR
+        Store transaction number
         Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeTransaction  ${country}
         Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    makeTransaction  ${country}
 

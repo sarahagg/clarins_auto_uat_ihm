@@ -5,7 +5,7 @@ createAccountPage_account_password_input = "xpath=//*[starts-with(@id, 'dwfrm_cb
 createAccountPage_birthday_input = "xpath=//*[starts-with(@id, 'birthday')]"
 createAccountPage_birthday_date_invalid_message = "xpath=//*[starts-with(@id, 'error_birthday')]"
 createAccountPage_phone_number_country_code_select = "xpath=//select[starts-with(@id,'phoneCountryCode')]/parent::div"
-createAccountPage_phone_number_country_code_option = "xpath=//*[@id='dwfrm_cba__registration_customer_phoneCountryCode_$COUNTRY_ALPHA2$']"
+createAccountPage_phone_number_country_code_option = "xpath=//*[starts-with(@id,'dwfrm_cba__registration_customer_phoneCountryCode_$COUNTRY_ALPHA2$')]"
 createAccountPage_phone_number_input = "xpath=//div[contains(@class,'i-phone-input__info')]/input"
 createAccountPage_email_optin_option = "xpath=//*[@id='dwfrm_cba__registration_customer_emailoptin-$EMAIL_OPTIN_VALUE$']"
 createAccountPage_sms_optin_option = "xpath=//*[@id='dwfrm_cba__registration_customer_smsoptin-$SMS_OPTIN_VALUE$']"

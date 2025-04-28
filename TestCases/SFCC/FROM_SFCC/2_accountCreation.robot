@@ -43,8 +43,7 @@ Create A New Account
                                             ...    ${SMSOptin}
                                             ...    ${isLoyaltyMember}
                                             ...    ${country}
-                                            ...    sfcc
-                                            ...    sfcc
+
             Generate Test Data Last Interaction Date      contactProfileUpdate
 
             Initialize SFCC Website Context

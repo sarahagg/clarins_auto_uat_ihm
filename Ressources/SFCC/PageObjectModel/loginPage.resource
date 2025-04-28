@@ -11,7 +11,9 @@ Connect As A New SFCC User
     Click           ${loginPage_submit_email_button}
 
 Connect As An Existing SFCC User
-    [Arguments]    ${email}     ${country}
+    Go To Login Page
+    ${email}=    Set Variable    ${canonical_form_contact_link_files.get('\${email}')}
+    ${country}=  Set Variable    ${canonical_form_contact_link_files.get('\${country}')}
 
     fill Login Form            ${email}
 

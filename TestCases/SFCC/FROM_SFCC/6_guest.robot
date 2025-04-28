@@ -38,6 +38,8 @@ Make Guest Transaction
     ...    ${marketingConsent}
     ...    ${country}
     ...    ${allCheckSystems}
+    ...    ${PRODUCT_LIST}
+    ...    ${expectedpoints}
 
     IF    $playTest == "YES"
     Generate Test Data Create Account
@@ -51,9 +53,18 @@ Make Guest Transaction
                                         ...    ${SMSOptin}
                                         ...    ${isLoyaltyMember}
                                         ...    ${country}
-                                        ...    sfcc
-                                        ...    sfcc
+
     Generate Test Data Transaction
+                                             ...    ${adress}
+                                             ...    ${postalCode}
+                                             ...    ${city}
+                                             ...    ${billingAdress}
+                                             ...    ${DPDdelivery}
+                                             ...    ${inPostPickUp}
+                                             ...    ${marketingConsent}
+                                             ...    ${country}
+                                             ...    ${PRODUCT_LIST}
+                                             ...    ${expectedpoints}
     Generate Test Data Last Interaction Date      transaction
     Initialize SFCC Website Context
     Search For A Product
@@ -61,16 +72,8 @@ Make Guest Transaction
     View Cart
     Finalize Order
     Complete Delivery Form And Pay For Guest
-                                          ...    ${adress}
-                                          ...    ${postalCode}
-                                          ...    ${city}
-                                          ...    ${billingAdress}
-                                          ...    ${DPDdelivery}
-                                          ...    ${inPostPickUp}
-                                          ...    ${marketingConsent}
-                                          ...    ${country}
     Verify Transaction success
-    Get CLR
+    Store transaction number
     Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeGuestTransaction  ${country}
     Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    makeGuestTransaction  ${country}
     sleep  3s

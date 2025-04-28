@@ -23,14 +23,24 @@ ${today_format}             %Y_%m_%d
 ...                                 \${country}=
 ...                                 \${creationSystem}=
 ...                                 \${createDate}=
-...                                 \${lastModificationSystem}=
-...                                 \${lastUpdateDate}=
+...                                 \${lastModificationSystem}= sfcc
+...                                 \${lastUpdateDate}= sfcc
 
 
 
 &{canonical_form_transaction_link_files}
 ...                                 \${email}=
 ...                                 \${country}=
+...                                 \{adress}=
+...                                 \${postalCode}=
+...                                 \${city}=
+...                                 \${billingAdress}=
+...                                 \${DPDdelivery}=
+...                                 \${inPostPickUp}=
+...                                 \${marketingConsent}=
+...                                 \${country}=
+...                                 \${PRODUCT_LIST}=
+...                                 \${expectedpoints}=
 ...                                 \${transactionNumber}=
 ...                                 \${lastInteractionDate}=
 
@@ -83,7 +93,7 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 @{lov_yes_or_no_optin}      yes    no
 @{lov_phoneType}            home (home)    mobile (mobile)    office (office)
 
-@{touch_countries}          ESP    ZAF    CAN    AUS    FRA    IRL    HKG    JPN    SGP    USA    ITA    GBR    CHE    DEU    BEL    LUX    NLD    POL    AUT    PRT    NZL   ARE
+@{touch_countries}          ESP    ZAF    CAN    AUS    FRA    IRL    HKG    JPN    SGP    USA    ITA    GBR    CHE    DEU    BEL    LUX    NLD    POL    AUT    PRT    NZL   ARE    SVK    ROU
 @{non_touch_countries}      CHN    CHL
 @{BNL_regions}              BEL    LUX    NLD
 
@@ -110,6 +120,8 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                         HKG=HK
 ...                         NZL=NZ
 ...                         ARE=AE
+...                         SVK=SK
+...                         ROU=RO
 
 &{full_country}             GBR=United Kingdom
 ...                         FRA=France
@@ -133,6 +145,8 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                         HKG=Hong Kong
 ...                         NZL=New Zealand
 ...                         ARE=United Arab Emirates
+...                         SVK=slovakia
+...                         ROU=Romania
 
 
 
@@ -158,6 +172,9 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                         HKG=zh_CN
 ...                         NZL=en_GB
 ...                         ARE=ar_SA
+...                         SVK=sk_SK
+...                         ROU=ro_RO
+
 
 &{yes_no}                   YES=true
 ...                         Yes=true
@@ -195,6 +212,9 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                               HKG=8
 ...                               NZL=9
 ...                               ARE=9
+...                               SVK=9
+...                               ROU=9
+
 
 &{phone_number_country_code}
 ...                               GBR=+44
@@ -219,4 +239,5 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                               HKG=+852
 ...                               NZL=+64
 ...                               ARE=+971
-
+...                               SVK=421
+...                               ROU=+40

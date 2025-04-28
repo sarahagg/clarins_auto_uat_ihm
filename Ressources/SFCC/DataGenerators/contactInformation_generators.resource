@@ -18,6 +18,7 @@ Generate Email
         ${email_firstName}=    Convert To ASCII    ${email_firstName}
 
         ${randomEmail}=    Set Variable    ${email_firstName}${email_uuid}@qq.com
+        ${randomEmail}=    Evaluate    "${randomEmail}".capitalize()
         RETURN    ${randomEmail}
     END
 

@@ -30,6 +30,8 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         HKG=https://stg-ap.npr.clarins.com/clarinshk/
 ...                         NZL=https://stg-ap.npr.clarins.com/clarinsnz/
 ...                         ARE=https://stg-eu.npr.clarins.com/clarinsare/
+...                         SVK=https://sk.npr.clarins.com/
+...                         ROU=https://ro.npr.clarins.com/
 
 
 &{account_dashboard_text}
@@ -55,7 +57,8 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         ITA=La mia bacheca
 ...                         NZL=My dashboard
 ...                         ARE=My dashboard
-
+...                         SVK=Môj prístrojový panel
+...                         ROU=Tabloul meu de bord
 
 
 &{transaction_order_summary_text}
@@ -81,7 +84,8 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         ITA=
 ...                         NZL=Thank you for your order
 ...                         ARE=Thank you for your order
-
+...                         SVK=
+...                         ROU=
 
 &{account_dashboard_profile_text}
 ...                         GBR=My profile
@@ -106,6 +110,8 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         ITA=
 ...                         NZL=My profile
 ...                         ARE=My profile
+...                         SVK=Úpravy
+...                         ROU=Editați profilul
 
 &{newsletter_text}          GBR=THANK YOU FOR SUBSCRIBING. PLEASE NOTE THAT YOU WILL NOT RECEIVE A WELCOME EMAIL IF YOU ARE ALREADY SUBSCRIBED TO CLARINS NEWSLETTERS.
 ...                         FRA=MERCI POUR VOTRE INSCRIPTION !
@@ -130,6 +136,8 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         ITA=
 ...                         NZL=THANK YOU FOR SIGNING UP TO RECEIVE CLARINS NEWSLETTERS.
 ...                         ARE=THANK YOU FOR SUBSCRIBING!
+...                         SVK=
+...                         ROU=
 
 # SPECIFICITIES BY COUNTRY
 @{welcome_offer_countries}                       TBD
@@ -137,11 +145,10 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 @{simplified_salutations_countries}              BEL    LUX    NLD    POL   PRT    AUT    DEU
 @{transaction_gift_countries}                    AUT
 @{no_salutation_countries}                       USA    CAN    AUS    JPN   NZL
-@{sms_optin_countries}                           POL    AUT    PRT    FRA   AUS    SGP    HKG    NZL
+@{sms_optin_countries}                           POL    AUT    PRT    FRA   AUS    SGP    HKG    NZL    SVK   ROU
 @{whatsapp_optin_countries}                      FRA    SGP    HKG
-@{agree_to_terms_and_condition_countries}        USA    AUT    CAN    AUS   SGP    DEU    NZL
+@{agree_to_terms_and_condition_countries}        USA    AUT    CAN    AUS   SGP    DEU    NZL    SVK    ROU
 @{credit_card_cybersource_countries}             USA    CAN    GBR    POL   ZAF    JPN    AUS    SGP    HKG  MYS  MEX  NZL  ARE  SAU  KWT  QAT
 @{credit_card_adyen_countries}                   AUT    BEL    FIN    PRT   IDN    ITA    IRL    CHE    FRA  DEU  ESP  SWE  DNK  NOR  PRT  IDN
 @{newsletterForm_privacy_policy_countries}       ITA    AUT    PRT    NZL
-
-${points}  0
+@{no_popup_countries}                            NZL    ARE    ROU    SVK

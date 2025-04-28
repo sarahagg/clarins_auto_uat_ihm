@@ -25,23 +25,27 @@ Verify Account Creation
         END
     END
 
-Verify Correct Loyalty
+Verify Contact Loyalty Status
     ${country}=             Set Variable    ${canonical_form_contact_link_files.get('\${country}')}
     ${isLoyaltyMember}=     Set Variable    ${canonical_form_contact_link_files.get('\${isLoyaltyMember}')}
     IF  $isLoyaltyMember == 'YES'
         ${text}=     Get Text    ${myDashboardPage_loyalty_status_value}
         Should Be Equal      ${text}    Member
+    ELSE
+        ${text}=     Get Text    ${myDashboardPage_loyalty_status_value}
+        Should Be Equal      ${text}    Non Member
     END
 
 
 Verify my points recap in SFCC
-    [Arguments]     ${expectedpoints}
 
+     ${expectedpoints} =             Set Variable    ${canonical_form_transaction_link_files.get('\${expectedpoints}')}
     Hover     ${headerMenu_login_button}
     Wait For Elements State    ${headerMenu_myAccount_popup_menu}    visible
     click  ${headerMenu_my_points_recap_button}
     # missing the display part in the website cuz it waits for the pending period to be over
-    Should Be Equal      ${expectedpoints}    ${points}
+    Should Be Equal      ${expectedpoints}    ${currentPoints}
+
 
 Choose Rewards
     Hover     ${headerMenu_login_button}

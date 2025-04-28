@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.8 on win32)" generated="20250417 14:54:53.204" rpa="true" schemaversion="4">
+<suite id="s1" name="Testdatageneration" source="C:\Users\s.aggour\OneDrive - ONEPOINT\Bureau\clarins_auto_uat_ihm\Tasks\testdatageneration.robot">
+<test id="s1-t1" name="generate data for countries" line="13">
+<for flavor="IN RANGE">
+<var>${counter}</var>
+<value>1</value>
+<value>${n}</value>
+<iter>
+<var name="${counter}">1</var>
+<kw name="Log" library="BuiltIn">
+<arg>Running test case number ${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250417 14:54:53.747" level="INFO">Running test case number 1</msg>
+<status status="PASS" starttime="20250417 14:54:53.747" endtime="20250417 14:54:53.747"/>
+</kw>
+<kw name="Generate Test Data Create Account" library="generate_testData_createAccount">
+<arg>auto</arg>
+<arg>auto</arg>
+<arg>auto</arg>
+<arg>auto</arg>
+<arg>auto</arg>
+<arg>auto</arg>
+<arg>auto</arg>
+<arg>auto</arg>
+<arg>${EMPTY}</arg>
+<arg>${country}</arg>
+<arg>sfcc</arg>
+<arg>sfcc</arg>
+<kw name="Import FakerLibrary" library="commonKeywords">
+<arg>${country}</arg>
+<if>
+<branch type="IF" condition="len($country) == 0">
+<kw name="Set Variable" library="BuiltIn">
+<var>${country}</var>
+<arg>FRA</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250417 14:54:53.747" endtime="20250417 14:54:53.747"/>
+</kw>
+<status status="NOT RUN" starttime="20250417 14:54:53.747" endtime="20250417 14:54:53.747"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:53.747" endtime="20250417 14:54:53.747"/>
+</if>
+<kw name="Set Variable" library="BuiltIn">
+<var>${all_available_countries}</var>
+<arg>${touch_countries}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250417 14:54:53.747" level="INFO">${all_available_countries} = ['ESP', 'ZAF', 'CAN', 'AUS', 'FRA', 'IRL', 'HKG', 'JPN', 'SGP', 'USA', 'ITA', 'GBR', 'CHE', 'DEU', 'BEL', 'LUX', 'NLD', 'POL', 'AUT', 'PRT', 'NZL', 'ARE']</msg>
+<status status="PASS" starttime="20250417 14:54:53.747" endtime="20250417 14:54:53.747"/>
+</kw>
+<if>
+<branch type="IF" condition="$country not in $all_available_countries">
+<kw name="Import Library" library="BuiltIn">
+<arg>FakerLibrary</arg>
+<arg>WITH NAME</arg>
+<arg>Faker_${TEST_NAME}</arg>
+<doc>Imports a library with the given name and optional arguments.</doc>
+<status status="PASS" starttime="20250417 14:54:53.747" endtime="20250417 14:54:54.032"/>
+</kw>
+<return>
+<status status="PASS" starttime="20250417 14:54:54.032" endtime="20250417 14:54:54.032"/>
+</return>
+<status status="PASS" starttime="20250417 14:54:53.747" endtime="20250417 14:54:54.032"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:53.747" endtime="20250417 14:54:54.032"/>
+</if>
+<kw name="Import Library" library="BuiltIn">
+<arg>FakerLibrary</arg>
+<arg>locale=${locale_values.${country}}</arg>
+<arg>WITH NAME</arg>
+<arg>Faker_${TEST_NAME}</arg>
+<doc>Imports a library with the given name and optional arguments.</doc>
+<status status="NOT RUN" starttime="20250417 14:54:54.032" endtime="20250417 14:54:54.032"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:53.747" endtime="20250417 14:54:54.032"/>
+</kw>
+<kw name="Generate FirstName" library="contactInformation_generators">
+<var>${generated_firstName}</var>
+<arg>${firstName}</arg>
+<if>
+<branch type="IF" condition="$firstName == 'default'">
+<return>
+<value>${default_values.firstName}</value>
+<status status="NOT RUN" starttime="20250417 14:54:54.032" endtime="20250417 14:54:54.032"/>
+</return>
+<status status="NOT RUN" starttime="20250417 14:54:54.032" endtime="20250417 14:54:54.032"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.032" endtime="20250417 14:54:54.032"/>
+</if>
+<if>
+<branch type="IF" condition="$firstName == 'auto'">
+<kw name="Run Keyword" library="BuiltIn">
+<var>${randomFirstName}</var>
+<arg>Faker_${TEST_NAME}.First Name</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="First Name" library="Faker_generate data for countries">
+<status status="PASS" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.047"/>
+</kw>
+<msg timestamp="20250417 14:54:54.047" level="INFO">${randomFirstName} = Rebecca</msg>
+<status status="PASS" starttime="20250417 14:54:54.032" endtime="20250417 14:54:54.047"/>
+</kw>
+<return>
+<value>${randomFirstName}</value>
+<status status="PASS" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.047"/>
+</return>
+<status status="PASS" starttime="20250417 14:54:54.032" endtime="20250417 14:54:54.047"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.032" endtime="20250417 14:54:54.047"/>
+</if>
+<return>
+<value>${firstName}</value>
+<status status="NOT RUN" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.047"/>
+</return>
+<msg timestamp="20250417 14:54:54.047" level="INFO">${generated_firstName} = Rebecca</msg>
+<status status="PASS" starttime="20250417 14:54:54.032" endtime="20250417 14:54:54.047"/>
+</kw>
+<kw name="Generate Email" library="contactInformation_generators">
+<var>${generated_email}</var>
+<arg>${email}</arg>
+<arg>${country}</arg>
+<if>
+<branch type="IF" condition="$email == 'default'">
+<return>
+<value>${default_values.email}</value>
+<status status="NOT RUN" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.047"/>
+</return>
+<status status="NOT RUN" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.047"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.047"/>
+</if>
+<if>
+<branch type="IF" condition="$email == 'auto'">
+<kw name="Generate Random String" library="String">
+<var>${email_uuid}</var>
+<arg>7</arg>
+<arg>[LOWER][NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20250417 14:54:54.047" level="INFO">${email_uuid} = 7iprp29</msg>
+<status status="PASS" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.047"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<var>${email_firstName}</var>
+<arg>Faker_${TEST_NAME}.First Name</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="First Name" library="Faker_generate data for countries">
+<status status="PASS" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.047"/>
+</kw>
+<msg timestamp="20250417 14:54:54.047" level="INFO">${email_firstName} = Christopher</msg>
+<status status="PASS" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.047"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${longueur}</var>
+<arg>${email_firstName}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20250417 14:54:54.047" level="INFO">Length is 11</msg>
+<msg timestamp="20250417 14:54:54.047" level="INFO">${longueur} = 11</msg>
+<status status="PASS" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.047"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${longueur} &gt; 6</arg>
+<arg>Set Variable</arg>
+<arg>${email_firstName}=${email_firstName}[0:6]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Set Variable" library="BuiltIn">
+<arg>${email_firstName}=${email_firstName}[0:6]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.047"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.047"/>
+</kw>
+<kw name="Convert To ASCII" library="commonKeywords">
+<var>${email_firstName}</var>
+<arg>${email_firstName}</arg>
+<kw name="Evaluate" library="BuiltIn">
+<var>${ascii_text}</var>
+<arg>unidecode.unidecode("${text}")</arg>
+<arg>unidecode</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20250417 14:54:54.047" level="INFO">${ascii_text} = Christopher</msg>
+<status status="PASS" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.047"/>
+</kw>
+<kw name="Replace Non Alphanum Characters" library="commonKeywords">
+<var>${ascii_text}</var>
+<arg>${ascii_text}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${output_string}</var>
+<arg>${input_string}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250417 14:54:54.063" level="INFO">${output_string} = Christopher</msg>
+<status status="PASS" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.063"/>
+</kw>
+<kw name="Replace String Using Regexp" library="String">
+<var>${output_string}</var>
+<arg>${output_string}</arg>
+<arg>[^a-zA-Z0-9]</arg>
+<arg>x</arg>
+<doc>Replaces ``pattern`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20250417 14:54:54.063" level="INFO">${output_string} = Christopher</msg>
+<status status="PASS" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.063"/>
+</kw>
+<msg timestamp="20250417 14:54:54.063" level="INFO">${ascii_text} = Christopher</msg>
+<status status="PASS" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.063"/>
+</kw>
+<kw name="Convert To Lower Case" library="String">
+<var>${ascii_text}</var>
+<arg>${ascii_text}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20250417 14:54:54.063" level="INFO">${ascii_text} = christopher</msg>
+<status status="PASS" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.063"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ascii_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250417 14:54:54.063" level="INFO">christopher</msg>
+<status status="PASS" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.063"/>
+</kw>
+<msg timestamp="20250417 14:54:54.063" level="INFO">${email_firstName} = christopher</msg>
+<status status="PASS" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.063"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${randomEmail}</var>
+<arg>${email_firstName}${email_uuid}@qq.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250417 14:54:54.063" level="INFO">${randomEmail} = christopher7iprp29@qq.com</msg>
+<status status="PASS" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.063"/>
+</kw>
+<return>
+<value>${randomEmail}</value>
+<status status="PASS" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.063"/>
+</return>
+<status status="PASS" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.063"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.063"/>
+</if>
+<return>
+<value>${email}</value>
+<status status="NOT RUN" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.063"/>
+</return>
+<msg timestamp="20250417 14:54:54.063" level="INFO">${generated_email} = christopher7iprp29@qq.com</msg>
+<status status="PASS" starttime="20250417 14:54:54.047" endtime="20250417 14:54:54.063"/>
+</kw>
+<kw name="Generate Salutation" library="contactInformation_generators">
+<var>${generated_salutation}</var>
+<arg>${salutation}</arg>
+<arg>${country}</arg>
+<if>
+<branch type="IF" condition="$salutation == 'default'">
+<return>
+<value>${default_values.salutation}</value>
+<status status="NOT RUN" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.063"/>
+</return>
+<status status="NOT RUN" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.063"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.063"/>
+</if>
+<if>
+<branch type="IF" condition="$salutation == 'auto'">
+<if>
+<branch type="IF" condition="$country in ${simplified_salutations_countries}">
+<kw name="Evaluate" library="BuiltIn">
+<var>${randomSalutation}</var>
+<arg>random.choice($simplified_salutations)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.063"/>
+</kw>
+<status status="NOT RUN" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.063"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${randomSalutation}</var>
+<arg>random.choice($salutations)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20250417 14:54:54.070" level="INFO">${randomSalutation} = Mlle</msg>
+<status status="PASS" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.070"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.070"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.070"/>
+</if>
+<return>
+<value>${randomSalutation}</value>
+<status status="PASS" starttime="20250417 14:54:54.070" endtime="20250417 14:54:54.070"/>
+</return>
+<status status="PASS" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.070"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.070"/>
+</if>
+<return>
+<value>${salutation}</value>
+<status status="NOT RUN" starttime="20250417 14:54:54.070" endtime="20250417 14:54:54.070"/>
+</return>
+<msg timestamp="20250417 14:54:54.070" level="INFO">${generated_salutation} = Mlle</msg>
+<status status="PASS" starttime="20250417 14:54:54.063" endtime="20250417 14:54:54.070"/>
+</kw>
+<kw name="Generate LastName" library="contactInformation_generators">
+<var>${generated_lastName}</var>
+<arg>${lastName}</arg>
+<if>
+<branch type="IF" condition="$lastName == 'default'">
+<return>
+<value>${default_values.lastName}</value>
+<status status="NOT RUN" starttime="20250417 14:54:54.070" endtime="20250417 14:54:54.070"/>
+</return>
+<status status="NOT RUN" starttime="20250417 14:54:54.070" endtime="20250417 14:54:54.070"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.070" endtime="20250417 14:54:54.070"/>
+</if>
+<if>
+<branch type="IF" condition="$lastName == 'auto'">
+<kw name="Run Keyword" library="BuiltIn">
+<var>${randomLastName}</var>
+<arg>Faker_${TEST_NAME}.Last Name</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Last Name" library="Faker_generate data for countries">
+<status status="PASS" starttime="20250417 14:54:54.079" endtime="20250417 14:54:54.079"/>
+</kw>
+<msg timestamp="20250417 14:54:54.079" level="INFO">${randomLastName} = Martinez</msg>
+<status status="PASS" starttime="20250417 14:54:54.070" endtime="20250417 14:54:54.079"/>
+</kw>
+<return>
+<value>${randomLastName}</value>
+<status status="PASS" starttime="20250417 14:54:54.079" endtime="20250417 14:54:54.079"/>
+</return>
+<status status="PASS" starttime="20250417 14:54:54.070" endtime="20250417 14:54:54.079"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.070" endtime="20250417 14:54:54.079"/>
+</if>
+<return>
+<value>${lastName}</value>
+<status status="NOT RUN" starttime="20250417 14:54:54.079" endtime="20250417 14:54:54.079"/>
+</return>
+<msg timestamp="20250417 14:54:54.079" level="INFO">${generated_lastName} = Martinez</msg>
+<status status="PASS" starttime="20250417 14:54:54.070" endtime="20250417 14:54:54.079"/>
+</kw>
+<kw name="Generate PhoneNumber" library="contactInformation_generators">
+<var>${generated_phoneNumber}</var>
+<arg>${phoneNumber}</arg>
+<arg>${country}</arg>
+<if>
+<branch type="IF" condition="$phoneNumber == 'default'">
+<return>
+<value>${default_values.phoneNumber}</value>
+<status status="NOT RUN" starttime="20250417 14:54:54.079" endtime="20250417 14:54:54.079"/>
+</return>
+<status status="NOT RUN" starttime="20250417 14:54:54.079" endtime="20250417 14:54:54.079"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.079" endtime="20250417 14:54:54.079"/>
+</if>
+<if>
+<branch type="IF" condition="$phoneNumber == 'auto'">
+<kw name="Run Keyword" library="BuiltIn">
+<var>${randomPhoneNumber}</var>
+<arg>Faker_${TEST_NAME}.Phone Number</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Phone Number" library="Faker_generate data for countries">
+<status status="PASS" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</kw>
+<msg timestamp="20250417 14:54:54.095" level="INFO">${randomPhoneNumber} = 001-643-335-6171x686</msg>
+<status status="PASS" starttime="20250417 14:54:54.079" endtime="20250417 14:54:54.095"/>
+</kw>
+<kw name="Replace String Using Regexp" library="String">
+<var>${randomPhoneNumber}</var>
+<arg>${randomPhoneNumber[::-1]}</arg>
+<arg>[^1-9]</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``pattern`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20250417 14:54:54.095" level="INFO">${randomPhoneNumber} = 68617165333461</msg>
+<status status="PASS" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${length}</var>
+<arg>${randomPhoneNumber}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20250417 14:54:54.095" level="INFO">Length is 14</msg>
+<msg timestamp="20250417 14:54:54.095" level="INFO">${length} = 14</msg>
+<status status="PASS" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</kw>
+<while condition="${length} &lt; 10">
+<iter>
+<kw name="Run Keyword" library="BuiltIn">
+<var>${additionalDigits}</var>
+<arg>Faker_${TEST_NAME}.Phone Number</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="NOT RUN" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</kw>
+<kw name="Replace String Using Regexp" library="String">
+<var>${additionalDigits}</var>
+<arg>${additionalDigits[::-1]}</arg>
+<arg>[^0-9]</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``pattern`` in the given ``string`` with ``replace_with``.</doc>
+<status status="NOT RUN" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${randomPhoneNumber}</var>
+<arg>${randomPhoneNumber}${additionalDigits[:10 - ${length}]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${length}</var>
+<arg>${randomPhoneNumber}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="NOT RUN" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</kw>
+<status status="NOT RUN" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</iter>
+<status status="NOT RUN" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</while>
+<kw name="Set Variable" library="BuiltIn">
+<var>${randomPhoneNumber}</var>
+<arg>${randomPhoneNumber[0:${phone_number_size_by_country.${country}}][::-1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250417 14:54:54.095" level="INFO">${randomPhoneNumber} = 356171686</msg>
+<status status="PASS" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</kw>
+<return>
+<value>${randomPhoneNumber}</value>
+<status status="PASS" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</return>
+<status status="PASS" starttime="20250417 14:54:54.079" endtime="20250417 14:54:54.095"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.079" endtime="20250417 14:54:54.095"/>
+</if>
+<return>
+<value>${phoneNumber}</value>
+<status status="NOT RUN" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</return>
+<msg timestamp="20250417 14:54:54.095" level="INFO">${generated_phoneNumber} = 356171686</msg>
+<status status="PASS" starttime="20250417 14:54:54.079" endtime="20250417 14:54:54.095"/>
+</kw>
+<kw name="Generate BirthDate" library="contactInformation_generators">
+<var>${generated_birthDate}</var>
+<arg>${birthDate}</arg>
+<if>
+<branch type="IF" condition="$birthDate == 'default'">
+<return>
+<value>${default_values.birthDate}</value>
+<status status="NOT RUN" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</return>
+<status status="NOT RUN" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</if>
+<if>
+<branch type="IF" condition="$birthDate == 'auto'">
+<kw name="Evaluate" library="BuiltIn">
+<var>${min_date}</var>
+<arg>datetime.date(1940, 1, 1)</arg>
+<arg>datetime</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20250417 14:54:54.095" level="INFO">${min_date} = 1940-01-01</msg>
+<status status="PASS" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${max_date}</var>
+<arg>datetime.date(2006, 1, 1)</arg>
+<arg>datetime</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20250417 14:54:54.095" level="INFO">${max_date} = 2006-01-01</msg>
+<status status="PASS" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.095"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<var>${randomBirthDate}</var>
+<arg>Faker_${TEST_NAME}.Date Between</arg>
+<arg>${min_date}</arg>
+<arg>${max_date}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Date Between" library="Faker_generate data for countries">
+<arg>${min_date}</arg>
+<arg>${max_date}</arg>
+<doc>Get a Date object based on a random date between two given dates.
+Accepts date strings that can be recognized by strtotime().</doc>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</kw>
+<msg timestamp="20250417 14:54:54.110" level="INFO">${randomBirthDate} = 1986-12-29</msg>
+<status status="PASS" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.110"/>
+</kw>
+<return>
+<value>${randomBirthDate}</value>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</return>
+<status status="PASS" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.110"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.110"/>
+</if>
+<return>
+<value>${birthDate}</value>
+<status status="NOT RUN" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</return>
+<msg timestamp="20250417 14:54:54.110" level="INFO">${generated_birthDate} = 1986-12-29</msg>
+<status status="PASS" starttime="20250417 14:54:54.095" endtime="20250417 14:54:54.110"/>
+</kw>
+<kw name="Generate emailOptin" library="contactInformation_generators">
+<var>${generated_emailOptin}</var>
+<arg>${emailOptin}</arg>
+<if>
+<branch type="IF" condition="$emailOptin == 'auto'">
+<kw name="Evaluate" library="BuiltIn">
+<var>${randomEmailOptin}</var>
+<arg>random.choice($lov_yes_or_no_optin)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20250417 14:54:54.110" level="INFO">${randomEmailOptin} = yes</msg>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</kw>
+<return>
+<value>${randomEmailOptin}</value>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</return>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</if>
+<return>
+<value>${emailOptin}</value>
+<status status="NOT RUN" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</return>
+<msg timestamp="20250417 14:54:54.110" level="INFO">${generated_emailOptin} = yes</msg>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</kw>
+<kw name="Generate SMSOptin" library="contactInformation_generators">
+<var>${generated_SMSOptin}</var>
+<arg>${SMSOptin}</arg>
+<arg>${country}</arg>
+<if>
+<branch type="IF" condition="$country in ${sms_optin_countries}">
+<if>
+<branch type="IF" condition="$SMSOptin == 'auto'">
+<kw name="Evaluate" library="BuiltIn">
+<var>${randomSMSOptin}</var>
+<arg>random.choice($lov_yes_or_no_optin)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</kw>
+<return>
+<value>${randomSMSOptin}</value>
+<status status="NOT RUN" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</return>
+<status status="NOT RUN" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</branch>
+<status status="NOT RUN" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</if>
+<return>
+<value>${SMSOptin}</value>
+<status status="NOT RUN" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</return>
+<status status="NOT RUN" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</branch>
+<branch type="ELSE">
+<return>
+<value>${EMPTY}</value>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</return>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</if>
+<msg timestamp="20250417 14:54:54.110" level="INFO">${generated_SMSOptin} = </msg>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${current_date}</var>
+<arg>result_format=%Y-%m-%d %H:%M:%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20250417 14:54:54.110" level="INFO">${current_date} = 2025-04-17 14:54:54</msg>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${canonical_form_contact_link_files}</arg>
+<arg>\${email}</arg>
+<arg>${generated_email}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${canonical_form_contact_link_files}</arg>
+<arg>\${salutation}</arg>
+<arg>${generated_salutation}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${canonical_form_contact_link_files}</arg>
+<arg>\${firstName}</arg>
+<arg>${generated_firstName}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${canonical_form_contact_link_files}</arg>
+<arg>\${lastName}</arg>
+<arg>${generated_lastName}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.110"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${canonical_form_contact_link_files}</arg>
+<arg>\${phoneNumber}</arg>
+<arg>${generated_phoneNumber}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.110" endtime="20250417 14:54:54.123"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${canonical_form_contact_link_files}</arg>
+<arg>\${birthDate}</arg>
+<arg>${generated_birthDate}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.123" endtime="20250417 14:54:54.123"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${canonical_form_contact_link_files}</arg>
+<arg>\${emailOptin}</arg>
+<arg>${generated_emailOptin}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.123" endtime="20250417 14:54:54.123"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${canonical_form_contact_link_files}</arg>
+<arg>\${SMSOptin}</arg>
+<arg>${generated_SMSOptin}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.123" endtime="20250417 14:54:54.123"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${canonical_form_contact_link_files}</arg>
+<arg>\${isLoyaltyMember}</arg>
+<arg>${isLoyaltyMember}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.123" endtime="20250417 14:54:54.123"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${canonical_form_contact_link_files}</arg>
+<arg>\${country}</arg>
+<arg>${country}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.123" endtime="20250417 14:54:54.123"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${canonical_form_contact_link_files}</arg>
+<arg>\${creationSystem}</arg>
+<arg>${creationSystem}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.123" endtime="20250417 14:54:54.123"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${canonical_form_contact_link_files}</arg>
+<arg>\${createDate}</arg>
+<arg>${current_date}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${canonical_form_contact_link_files}</arg>
+<arg>\${lastModificationSystem}</arg>
+<arg>${lastModificationSystem}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${canonical_form_contact_link_files}</arg>
+<arg>\${lastUpdateDate}</arg>
+<arg>${current_date}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:53.747" endtime="20250417 14:54:54.126"/>
+</kw>
+<kw name="Write Data To Link CSV Files" library="write_data_to_link_csv_files">
+<arg>contact</arg>
+<arg>SFCC</arg>
+<arg>${allCheckSystems}</arg>
+<arg>generate data</arg>
+<arg>${country}</arg>
+<for flavor="IN">
+<var>${oneCheckSystem}</var>
+<value>@{allCheckSystems}</value>
+<iter>
+<var name="${oneCheckSystem}">SFCC</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${link_csv_file}</var>
+<arg>${path_to_link_csv_file}${/}link_csv_file_${format}_from_${sourceSystem}_to_${oneCheckSystem}_for_${testScenario}.csv</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250417 14:54:54.126" level="INFO">${link_csv_file} = C:\Users\s.aggour\OneDrive - ONEPOINT\Bureau\clarins_auto_uat_ihm\Tasks\Ressources\LINK\LinkFiles\link_csv_file_contact_from_SFCC_to_SFCC_for_generate data.csv</msg>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${file_exists}</var>
+<arg>File Should Exist</arg>
+<arg>${link_csv_file}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="File Should Exist" library="OperatingSystem">
+<arg>${link_csv_file}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<msg timestamp="20250417 14:54:54.126" level="INFO" html="true">File '&lt;a href="file://C:\Users\s.aggour\OneDrive - ONEPOINT\Bureau\clarins_auto_uat_ihm\Tasks\Ressources\LINK\LinkFiles\link_csv_file_contact_from_SFCC_to_SFCC_for_generate data.csv"&gt;C:\Users\s.aggour\OneDrive - ONEPOINT\Bureau\clarins_auto_uat_ihm\Tasks\Ressources\LINK\LinkFiles\link_csv_file_contact_from_SFCC_to_SFCC_for_generate data.csv&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<msg timestamp="20250417 14:54:54.126" level="INFO">${file_exists} = ('PASS', None)</msg>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<if>
+<branch type="IF" condition="'${file_exists}[0]' != 'PASS'">
+<kw name="Create CSV" library="write_data_to_link_csv_files">
+<arg>${format}</arg>
+<arg>${link_csv_file}</arg>
+<status status="NOT RUN" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<status status="NOT RUN" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</branch>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</if>
+<kw name="Append row To CSV" library="write_data_to_link_csv_files">
+<arg>${format}</arg>
+<arg>${sourceSystem}</arg>
+<arg>${oneCheckSystem}</arg>
+<arg>${link_csv_file}</arg>
+<arg>${testScenario}</arg>
+<arg>${country}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${new_test_name}</var>
+<arg>${format}_from_${sourceSystem}_to_${oneCheckSystem}_for_${testScenario}_${country}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250417 14:54:54.126" level="INFO">${new_test_name} = contact_from_SFCC_to_SFCC_for_generate data_TWN</msg>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${row_strings}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20250417 14:54:54.126" level="INFO">${row_strings} = []</msg>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${row_strings}</arg>
+<arg>${new_test_name}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<kw name="Get Dictionary Values" library="Collections">
+<var>${data_values}</var>
+<arg>${canonical_form_${format}_link_files}</arg>
+<arg>sort_keys=False</arg>
+<doc>Returns values of the given ``dictionary`` as a list.</doc>
+<msg timestamp="20250417 14:54:54.126" level="INFO">${data_values} = ['christopher7iprp29@qq.com', 'Mlle', 'Rebecca', 'Martinez', '356171686', datetime.date(1986, 12, 29), 'yes', '', '', 'TWN', 'sfcc', '2025-04-17 14:54:54', 'sfcc', '2025-04-17 14:54:54']</msg>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{data_values}</value>
+<iter>
+<var name="${element}">christopher7iprp29@qq.com</var>
+<kw name="Convert To String" library="BuiltIn">
+<var>${element_string}</var>
+<arg>${element}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20250417 14:54:54.126" level="INFO">${element_string} = christopher7iprp29@qq.com</msg>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${row_strings}</arg>
+<arg>${element_string}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</iter>
+<iter>
+<var name="${element}">Mlle</var>
+<kw name="Convert To String" library="BuiltIn">
+<var>${element_string}</var>
+<arg>${element}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20250417 14:54:54.126" level="INFO">${element_string} = Mlle</msg>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${row_strings}</arg>
+<arg>${element_string}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</iter>
+<iter>
+<var name="${element}">Rebecca</var>
+<kw name="Convert To String" library="BuiltIn">
+<var>${element_string}</var>
+<arg>${element}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20250417 14:54:54.126" level="INFO">${element_string} = Rebecca</msg>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${row_strings}</arg>
+<arg>${element_string}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</iter>
+<iter>
+<var name="${element}">Martinez</var>
+<kw name="Convert To String" library="BuiltIn">
+<var>${element_string}</var>
+<arg>${element}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20250417 14:54:54.126" level="INFO">${element_string} = Martinez</msg>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${row_strings}</arg>
+<arg>${element_string}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</iter>
+<iter>
+<var name="${element}">356171686</var>
+<kw name="Convert To String" library="BuiltIn">
+<var>${element_string}</var>
+<arg>${element}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20250417 14:54:54.126" level="INFO">${element_string} = 356171686</msg>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${row_strings}</arg>
+<arg>${element_string}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.126"/>
+</iter>
+<iter>
+<var name="${element}">1986-12-29</var>
+<kw name="Convert To String" library="BuiltIn">
+<var>${element_string}</var>
+<arg>${element}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20250417 14:54:54.142" level="INFO">${element_string} = 1986-12-29</msg>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.142"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${row_strings}</arg>
+<arg>${element_string}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.142" endtime="20250417 14:54:54.143"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.143"/>
+</iter>
+<iter>
+<var name="${element}">yes</var>
+<kw name="Convert To String" library="BuiltIn">
+<var>${element_string}</var>
+<arg>${element}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20250417 14:54:54.143" level="INFO">${element_string} = yes</msg>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${row_strings}</arg>
+<arg>${element_string}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</iter>
+<iter>
+<var name="${element}"/>
+<kw name="Convert To String" library="BuiltIn">
+<var>${element_string}</var>
+<arg>${element}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20250417 14:54:54.143" level="INFO">${element_string} = </msg>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${row_strings}</arg>
+<arg>${element_string}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</iter>
+<iter>
+<var name="${element}"/>
+<kw name="Convert To String" library="BuiltIn">
+<var>${element_string}</var>
+<arg>${element}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20250417 14:54:54.143" level="INFO">${element_string} = </msg>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${row_strings}</arg>
+<arg>${element_string}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</iter>
+<iter>
+<var name="${element}">TWN</var>
+<kw name="Convert To String" library="BuiltIn">
+<var>${element_string}</var>
+<arg>${element}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20250417 14:54:54.143" level="INFO">${element_string} = TWN</msg>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${row_strings}</arg>
+<arg>${element_string}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</iter>
+<iter>
+<var name="${element}">sfcc</var>
+<kw name="Convert To String" library="BuiltIn">
+<var>${element_string}</var>
+<arg>${element}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20250417 14:54:54.143" level="INFO">${element_string} = sfcc</msg>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${row_strings}</arg>
+<arg>${element_string}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</iter>
+<iter>
+<var name="${element}">2025-04-17 14:54:54</var>
+<kw name="Convert To String" library="BuiltIn">
+<var>${element_string}</var>
+<arg>${element}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20250417 14:54:54.143" level="INFO">${element_string} = 2025-04-17 14:54:54</msg>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${row_strings}</arg>
+<arg>${element_string}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</iter>
+<iter>
+<var name="${element}">sfcc</var>
+<kw name="Convert To String" library="BuiltIn">
+<var>${element_string}</var>
+<arg>${element}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20250417 14:54:54.143" level="INFO">${element_string} = sfcc</msg>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${row_strings}</arg>
+<arg>${element_string}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</iter>
+<iter>
+<var name="${element}">2025-04-17 14:54:54</var>
+<kw name="Convert To String" library="BuiltIn">
+<var>${element_string}</var>
+<arg>${element}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20250417 14:54:54.143" level="INFO">${element_string} = 2025-04-17 14:54:54</msg>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${row_strings}</arg>
+<arg>${element_string}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</iter>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.143"/>
+</for>
+<kw name="Evaluate" library="BuiltIn">
+<var>${row_string}</var>
+<arg>';'.join($row_strings)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20250417 14:54:54.143" level="INFO">${row_string} = contact_from_SFCC_to_SFCC_for_generate data_TWN;christopher7iprp29@qq.com;Mlle;Rebecca;Martinez;356171686;1986-12-29;yes;;;TWN;sfcc;2025-04-17 14:54:54;sfcc;2025-04-17 14:54:54</msg>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.143"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${link_csv_file}</arg>
+<arg>${row_string}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20250417 14:54:54.143" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\s.aggour\OneDrive - ONEPOINT\Bureau\clarins_auto_uat_ihm\Tasks\Ressources\LINK\LinkFiles\link_csv_file_contact_from_SFCC_to_SFCC_for_generate data.csv"&gt;C:\Users\s.aggour\OneDrive - ONEPOINT\Bureau\clarins_auto_uat_ihm\Tasks\Ressources\LINK\LinkFiles\link_csv_file_contact_from_SFCC_to_SFCC_for_generate data.csv&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20250417 14:54:54.143" endtime="20250417 14:54:54.157"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.157"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.157"/>
+</iter>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.157"/>
+</for>
+<status status="PASS" starttime="20250417 14:54:54.126" endtime="20250417 14:54:54.157"/>
+</kw>
+<status status="PASS" starttime="20250417 14:54:53.747" endtime="20250417 14:54:54.158"/>
+</iter>
+<status status="PASS" starttime="20250417 14:54:53.747" endtime="20250417 14:54:54.158"/>
+</for>
+<tag>generate data for countries</tag>
+<status status="PASS" starttime="20250417 14:54:53.747" endtime="20250417 14:54:54.158"/>
+</test>
+<doc>But de la tâche est de générer n fiches de contact.</doc>
+<status status="PASS" starttime="20250417 14:54:53.235" endtime="20250417 14:54:55.263"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">generate data for countries</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testdatageneration">Testdatageneration</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

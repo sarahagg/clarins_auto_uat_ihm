@@ -19,7 +19,9 @@ Complete Registration Form
 
     # FILL SALUTATION
     IF    '${salutation}' != '${EMPTY}' and '${country}' not in @{no_salutation_countries}
-        Click    ${createAccountPage_salutation_option.replace('$SALUTATION$', '${translated_salutations.${salutation}}')}
+                Click    ${createAccountPage_salutation_option.replace('$SALUTATION$', '${translated_salutations.${salutation}}')}
+                #Click    ${createAccountPage_salutation_option.replace('$SALUTATION$', '${salutation}')}
+
     END
 
     # FILL FIRST NAME
@@ -66,17 +68,22 @@ Complete Registration Form
     END
 
     # Email OPTIN
-    IF    '${emailOptin}' != '${EMPTY}' and '${country}' != 'ITA'       Click    ${createAccountPage_email_optin_option.replace('$EMAIL_OPTIN_VALUE$', '${emailOptin.lower()}')}
+    IF    '${emailOptin}' != '${EMPTY}' and '${country}' != 'ITA'
+        Click    ${createAccountPage_email_optin_option.replace('$EMAIL_OPTIN_VALUE$', '${emailOptin.lower()}')}
+    END
 
     # SMS Optin
     IF   '${country}' in @{sms_optin_countries}
+        IF      $SMSOptin == 'auto'
         ${SMSOptin}=    Evaluate    random.choice($lov_yes_or_no_optin)
+        END
         Click    ${createAccountPage_sms_optin_option.replace('$SMS_OPTIN_VALUE$', '${SMSOptin.lower()}')}
     END
 
     # Whatsapp optin
     IF   '${country}' in @{whatsapp_optin_countries}
-        ${whatsappOptin}=    Evaluate    random.choice($lov_yes_or_no_optin)
+        #${whatsappOptin}=    Evaluate    random.choice($lov_yes_or_no_optin)
+        ${whatsappOptin}=  set variable   no
         Click    ${createAccountPage_whatsapp_optin_option.replace('$WHATSAPP_OPTIN_VALUE$', '${whatsappOptin.lower()}')}
     END
 
