@@ -33,12 +33,12 @@ Click Calculate And Verify Calculation
     Should Be Equal As Numbers    ${earned_points}    ${expected_points}
 
 Click Calculate And See Points
-    Set Test Variable    ${currentPoints}
+
     Click    ${orderSummaryPage_calculate}
 
     ${earned_points}      Get Text        ${orderSummaryPage_earned}
     ${earned_points}      Evaluate        float("${earned_points}".replace("pts", "").replace(",", "").strip())
-    ${currentPoints}=     Set Variable     ${earned_points}
+    ${currentPoints}=     Set Test Variable     ${earned_points}
 
 
     #click et calculate

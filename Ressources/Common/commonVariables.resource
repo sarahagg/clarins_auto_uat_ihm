@@ -39,7 +39,7 @@ ${today_format}             %Y_%m_%d
 ...                                 \${inPostPickUp}=
 ...                                 \${marketingConsent}=
 ...                                 \${country}=
-...                                 \${PRODUCT_LIST}=
+...                                 \${productList}=
 ...                                 \${expectedpoints}=
 ...                                 \${transactionNumber}=
 ...                                 \${lastInteractionDate}=

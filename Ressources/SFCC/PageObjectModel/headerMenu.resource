@@ -8,8 +8,9 @@ Go To Login Page
     Click    ${headerMenu_login_button}
 
 Search For A Product
-    ${PRODUCT_LIST} =          Set Variable    ${canonical_form_transaction_link_files.get('\${PRODUCT_LIST}')}
-    FOR    ${item}    IN    @{PRODUCT_LIST}
+    ${productList} =          Set Variable    ${canonical_form_transaction_link_files.get('\${productList}')}
+    FOR    ${item}    IN    @{productList}
+        ${item}=    Strip String    ${item}
         ${split_result} =    Evaluate    str("${item}").split(":") if ":" in str("${item}") else ["${item}", "1"]
         ${product}    ${quantity} =    Set Variable    ${split_result}[0]    ${split_result}[1]
         ${quantity} =    Convert To Integer    ${quantity}

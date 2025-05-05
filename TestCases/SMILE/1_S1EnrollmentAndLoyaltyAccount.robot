@@ -19,7 +19,7 @@ Default Values If No Data
 S1 Enrollment and Loyalty Account
     [Arguments]
     ...    ${playTest}
-    ...    ${PRODUCT_LIST}
+    ...    ${productList}
     ...    ${email}
     ...    ${salutation}
     ...    ${firstName}
@@ -29,7 +29,7 @@ S1 Enrollment and Loyalty Account
     ...    ${emailOptin}
     ...    ${SMSOptin}
     ...    ${isLoyaltyMember}
-    ...    ${adress}
+    ...    ${address}
     ...    ${postalCode}
     ...    ${city}
     ...    ${phoneNumber}
@@ -55,7 +55,7 @@ S1 Enrollment and Loyalty Account
                                         ...    ${country}
 
         Generate Test Data Transaction
-                                             ...    ${adress}
+                                             ...    ${address}
                                              ...    ${postalCode}
                                              ...    ${city}
                                              ...    ${billingAdress}
@@ -63,7 +63,7 @@ S1 Enrollment and Loyalty Account
                                              ...    ${inPostPickUp}
                                              ...    ${marketingConsent}
                                              ...    ${country}
-                                             ...    ${PRODUCT_LIST}
+                                             ...    ${productList}
                                              ...    ${expectedpoints}
         Generate Test Data Last Interaction Date      transaction
         Initialize SFCC Website Context

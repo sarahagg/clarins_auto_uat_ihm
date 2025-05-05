@@ -148,7 +148,7 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 @{sms_optin_countries}                           POL    AUT    PRT    FRA   AUS    SGP    HKG    NZL    SVK   ROU
 @{whatsapp_optin_countries}                      FRA    SGP    HKG
 @{agree_to_terms_and_condition_countries}        USA    AUT    CAN    AUS   SGP    DEU    NZL    SVK    ROU
-@{credit_card_cybersource_countries}             USA    CAN    GBR    POL   ZAF    JPN    AUS    SGP    HKG  MYS  MEX  NZL  ARE  SAU  KWT  QAT
+@{credit_card_cybersource_countries}             USA    CAN    GBR    POL   ZAF    JPN    AUS    SGP    HKG  MYS  MEX  NZL  ARE  SAU  KWT  QAT   ROU   SVK
 @{credit_card_adyen_countries}                   AUT    BEL    FIN    PRT   IDN    ITA    IRL    CHE    FRA  DEU  ESP  SWE  DNK  NOR  PRT  IDN
 @{newsletterForm_privacy_policy_countries}       ITA    AUT    PRT    NZL
 @{no_popup_countries}                            NZL    ARE    ROU    SVK
