@@ -24,7 +24,7 @@ Complete Delivery Form And Pay For Guest
 
 Shipping Info
 
-      ${adress} =              Set Variable    ${canonical_form_transaction_link_files.get('\${adress}')}
+      ${address} =              Set Variable    ${canonical_form_transaction_link_files.get('\${address}')}
       ${postalCode} =          Set Variable    ${canonical_form_transaction_link_files.get('\${postalCode}')}
       ${city} =                Set Variable    ${canonical_form_transaction_link_files.get('\${city}')}
       ${billingAdress} =       Set Variable    ${canonical_form_transaction_link_files.get('\${billingAdress}')}
@@ -43,7 +43,7 @@ Shipping Info
          END
          Fill Text    ${deliveryForm_firstname_input}     ${canonical_form_contact_link_files.get('\${firstName}')}
          Fill Text    ${deliveryForm_lastname_input}      ${canonical_form_contact_link_files.get('\${lastName}')}
-         Fill Text    ${deliveryForm_adress_input}        ${adress}
+         Fill Text    ${deliveryForm_adress_input}        ${address}
          IF  '${country}' != 'ARE'
             Fill Text    ${deliveryForm_postalCode_input}    ${postalCode}
             Fill Text    ${deliveryForm_city_input}          ${city}
@@ -53,8 +53,10 @@ Shipping Info
             Click    ${deliveryForm_are_city_select}
             Fill Text    ${deliveryForm_are_city_input}   ${city}
             Click    ${deliveryForm_are_city_choice.replace('$CITYVALUE$', '${city.upper()}')}
-
-
+         END
+         IF  '${country}' == 'ROU'
+            Click    ${deliveryForm_rou_county_select}
+            Click    ${deliveryForm_rou_county_choice_cluj}
          END
          Fill Text    ${deliveryForm_phoneNumber_input}   ${canonical_form_contact_link_files.get('\${phoneNumber}')}
 

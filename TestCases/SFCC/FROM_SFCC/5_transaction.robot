@@ -19,7 +19,7 @@ Default Values If No Data
 Make Transaction
     [Arguments]
     ...    ${playTest}
-    ...    ${PRODUCT_LIST}
+    ...    ${productList}
     ...    ${email}
     ...    ${salutation}
     ...    ${firstName}
@@ -29,7 +29,7 @@ Make Transaction
     ...    ${emailOptin}
     ...    ${SMSOptin}
     ...    ${isLoyaltyMember}
-    ...    ${adress}
+    ...    ${address}
     ...    ${postalCode}
     ...    ${city}
     ...    ${phoneNumber}
@@ -56,7 +56,7 @@ Make Transaction
                                         ...    ${country}
 
         Generate Test Data Transaction
-                                             ...    ${adress}
+                                             ...    ${address}
                                              ...    ${postalCode}
                                              ...    ${city}
                                              ...    ${billingAdress}
@@ -64,7 +64,7 @@ Make Transaction
                                              ...    ${inPostPickUp}
                                              ...    ${marketingConsent}
                                              ...    ${country}
-                                             ...    ${PRODUCT_LIST}
+                                             ...    ${productList}
                                              ...    ${expectedpoints}
         Generate Test Data Last Interaction Date      transaction
         Initialize SFCC Website Context

@@ -18,7 +18,7 @@ Default Values If No Data
 S2 Earn Loyalty Points
     [Arguments]
     ...    ${playTest}
-    ...    ${PRODUCT_LIST}
+    ...    ${productList}
     ...    ${email}
     ...    ${salutation}
     ...    ${firstName}
@@ -28,7 +28,7 @@ S2 Earn Loyalty Points
     ...    ${emailOptin}
     ...    ${SMSOptin}
     ...    ${isLoyaltyMember}
-    ...    ${adress}
+    ...    ${address}
     ...    ${postalCode}
     ...    ${city}
     ...    ${phoneNumber}

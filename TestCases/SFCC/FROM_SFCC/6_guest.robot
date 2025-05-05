@@ -28,7 +28,7 @@ Make Guest Transaction
     ...    ${emailOptin}
     ...    ${SMSOptin}
     ...    ${isLoyaltyMember}
-    ...    ${adress}
+    ...    ${address}
     ...    ${postalCode}
     ...    ${city}
     ...    ${phoneNumber}
@@ -38,7 +38,7 @@ Make Guest Transaction
     ...    ${marketingConsent}
     ...    ${country}
     ...    ${allCheckSystems}
-    ...    ${PRODUCT_LIST}
+    ...    ${productList}
     ...    ${expectedpoints}
 
     IF    $playTest == "YES"
@@ -55,7 +55,7 @@ Make Guest Transaction
                                         ...    ${country}
 
     Generate Test Data Transaction
-                                             ...    ${adress}
+                                             ...    ${address}
                                              ...    ${postalCode}
                                              ...    ${city}
                                              ...    ${billingAdress}
@@ -63,7 +63,7 @@ Make Guest Transaction
                                              ...    ${inPostPickUp}
                                              ...    ${marketingConsent}
                                              ...    ${country}
-                                             ...    ${PRODUCT_LIST}
+                                             ...    ${productList}
                                              ...    ${expectedpoints}
     Generate Test Data Last Interaction Date      transaction
     Initialize SFCC Website Context
