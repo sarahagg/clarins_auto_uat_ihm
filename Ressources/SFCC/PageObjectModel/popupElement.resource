@@ -5,20 +5,19 @@ Resource            ..${/}Common${/}a_import_all_common_SFCC.resource
 
 *** Keywords ***
 Wait And Close All Popups
-    [Arguments]    ${country}
-
     # Accept cookies
-    ${return_status}=   Check If Element Is Visible And Warn If Not    ${popupElement_cookies_popup}
-    WHILE    $return_status == 'FAIL'    limit=${number_of_retry_to_wait_an_element}    on_limit=pass
-        Log    Waiting for cookie banner to appear
+    IF  '${country}' not in @{no_cookies_countries}
         ${return_status}=   Check If Element Is Visible And Warn If Not    ${popupElement_cookies_popup}
-    END
+        WHILE    $return_status == 'FAIL'    limit=${number_of_retry_to_wait_an_element}    on_limit=pass
+            Log    Waiting for cookie banner to appear
+            ${return_status}=   Check If Element Is Visible And Warn If Not    ${popupElement_cookies_popup}
+        END
 
-    IF    $return_status == 'PASS'
-    Click    ${popupElement_cookies_agree_button}
-        Log    Cookie accepted
+        IF    $return_status == 'PASS'
+        Click    ${popupElement_cookies_agree_button}
+            Log    Cookie accepted
+        END
     END
-
     # If necessary > decline welcome offer
     IF    $country in ${welcome_offer_countries}
         ${return_status}=   Check If Element Is Visible And Warn If Not    ${popupElement_welcome_offer_popup}
@@ -48,7 +47,6 @@ Wait And Close All Popups
     END
 
 Wait And Close Transaction Gift Popup
-    ${country} =          Set Variable    ${canonical_form_transaction_link_files.get('\${country}')}
     # If necessary > decline git for you popup
     IF    $country in ${transaction_gift_countries}
         ${return_status}=   Check If Element Is Visible And Warn If Not    ${popupElement_gift_popup}

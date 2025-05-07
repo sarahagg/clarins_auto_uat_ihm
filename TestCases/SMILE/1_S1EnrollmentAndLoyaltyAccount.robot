@@ -41,6 +41,8 @@ S1 Enrollment and Loyalty Account
     ...    ${allCheckSystems}
     ...    ${expectedpoints}
 
+    ${country} =  Set Test Variable    ${country}
+
     IF    $playTest == "YES"
         Generate Test Data Create Account
                                         ...    ${email}
@@ -52,7 +54,6 @@ S1 Enrollment and Loyalty Account
                                         ...    ${emailOptin}
                                         ...    ${SMSOptin}
                                         ...    ${isLoyaltyMember}
-                                        ...    ${country}
 
         Generate Test Data Transaction
                                              ...    ${address}
@@ -62,7 +63,6 @@ S1 Enrollment and Loyalty Account
                                              ...    ${DPDdelivery}
                                              ...    ${inPostPickUp}
                                              ...    ${marketingConsent}
-                                             ...    ${country}
                                              ...    ${productList}
                                              ...    ${expectedpoints}
         Generate Test Data Last Interaction Date      transaction

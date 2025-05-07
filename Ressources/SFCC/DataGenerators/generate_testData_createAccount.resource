@@ -14,20 +14,19 @@ Generate Test Data Create Account
             ...    ${emailOptin}
             ...    ${SMSOptin}
             ...    ${isLoyaltyMember}
-            ...    ${country}
 
 
 
     Import FakerLibrary    ${country}
 
     ${generated_firstName}=         Generate FirstName          ${firstName}
-    ${generated_email}=             Generate Email              ${email}         ${country}
-    ${generated_salutation}=        Generate Salutation         ${salutation}    ${country}
+    ${generated_email}=             Generate Email              ${email}
+    ${generated_salutation}=        Generate Salutation         ${salutation}
     ${generated_lastName}=          Generate LastName           ${lastName}
-    ${generated_phoneNumber}=       Generate PhoneNumber        ${phoneNumber}   ${country}
+    ${generated_phoneNumber}=       Generate PhoneNumber        ${phoneNumber}
     ${generated_birthDate}=         Generate BirthDate          ${birthDate}
     ${generated_emailOptin}=        Generate emailOptin         ${emailOptin}
-    ${generated_SMSOptin}=          Generate SMSOptin           ${SMSOptin}      ${country}
+    ${generated_SMSOptin}=          Generate SMSOptin           ${SMSOptin}
     ${current_date}=                Get Current Date            result_format=%Y-%m-%d %H:%M:%S
 
     Set To Dictionary    ${canonical_form_contact_link_files}    \${email}                       ${generated_email}

@@ -7,40 +7,16 @@ Library    RPA.Archive
 *** Keywords ***
 
 Finalize Order
-
     Wait For Elements State     ${shoppingBasketPage_finalize_your_order_button}   visible
     Click    ${shoppingBasketPage_finalize_your_order_button}
     sleep  1S
 
-Click Calculate And Verify Calculation
-
-     Click    ${orderSummaryPage_calculate}
-
-    ${estimated_total}    Get Text    ${orderSummaryPage_estimated_total}
-    ${estimated_total}    Evaluate    float("${estimated_total}".replace("AED", "").replace(",", "").strip())
-
-    ${tax}                Get Text    ${orderSummaryPage_tax}
-    ${tax}                Evaluate    float("${tax}".replace("AED", "").replace(",", "").strip())
-
-    ${earned_points}      Get Text    ${orderSummaryPage_earned}
-    ${earned_points}      Evaluate    float("${earned_points}".replace("pts", "").replace(",", "").strip())
-
-    ${expected_points}    Evaluate    round(${estimated_total} - ${tax})
-
-    log  la difference est : ${expected_points}
-    Log  lo montant doit etre : ${earned_points}
-
-    Should Be Equal As Numbers    ${earned_points}    ${expected_points}
-
 Click Calculate And See Points
-
     Click    ${orderSummaryPage_calculate}
+    ${earned_points}                          Get Text        ${orderSummaryPage_earned}
+    ${earned_points}                          Evaluate        float("${earned_points}".replace("pts", "").replace(",", "").strip())
+    Set To Dictionary  ${canonical_form_transaction_link_files}   \${currentPointsWhileFinalizingOrder}  ${earned_points}
 
-    ${earned_points}      Get Text        ${orderSummaryPage_earned}
-    ${earned_points}      Evaluate        float("${earned_points}".replace("pts", "").replace(",", "").strip())
-    ${currentPoints}=     Set Test Variable     ${earned_points}
-
-
-    #click et calculate
-    #calcul automatique
-    #2 different keyword
+Verify my points calculate
+        [Arguments]          ${expectedpoints}  ${currentPoints}
+        Should Be Equal      ${expectedpoints}  ${currentPoints}

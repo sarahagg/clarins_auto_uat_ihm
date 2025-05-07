@@ -15,7 +15,6 @@ Complete Registration Form
     ${emailOptin}=          Set Variable    ${canonical_form_contact_link_files.get('\${emailOptin}')}
     ${SMSOptin}=            Set Variable    ${canonical_form_contact_link_files.get('\${SMSOptin}')}
     ${isLoyaltyMember}=     Set Variable    ${canonical_form_contact_link_files.get('\${isLoyaltyMember}')}
-    ${country}=             Set Variable    ${canonical_form_contact_link_files.get('\${country}')}
 
     # FILL SALUTATION
     IF    '${salutation}' != '${EMPTY}' and '${country}' not in @{no_salutation_countries}
@@ -96,13 +95,12 @@ Complete Registration Form
     END
 
     # agree to terms and conditions
-    Click Button agreeToTerms and privacyPolicy    ${country}
+    Click Button agreeToTerms and privacyPolicy
 
     # SUBMIT
     Click    ${createAccountPage_submit_button}
 
 Click Button agreeToTerms and privacyPolicy
-    [Arguments]    ${country}
     IF    $country in ${agree_to_terms_and_condition_countries}
         Click    ${createAccountPage_agree_to_terms_checkbox}
     END

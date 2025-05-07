@@ -5,8 +5,6 @@ Resource            ..${/}Common${/}a_import_all_common_SFCC.resource
 
 *** Keywords ***
 Verify Transaction success
-    ${country}=    Set Variable    ${canonical_form_contact_link_files.get('\${country}')}
-
     ${return_status}=   Check If Element Is Visible And Warn If Not    ${orderSummaryPage_transaction_success_title }
     WHILE    $return_status == 'FAIL'    limit=${number_of_retry_to_wait_an_element}    on_limit=pass
         Log    Waiting dashboard title to appear
@@ -20,7 +18,6 @@ Verify Transaction success
     END
 
 Store transaction number
-
     ${CLR}=        Get Text    ${orderSummaryPage_transaction_LID_value}
     Log    Le texte extrait est : ${CLR}
     ${match}=      Get Regexp Matches    ${CLR}    CLR_[A-Z0-9]+
