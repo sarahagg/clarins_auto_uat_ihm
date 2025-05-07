@@ -8,7 +8,6 @@ Resource            ..${/}Common${/}a_import_all_common_SFCC.resource
 Access And Complete Newsletter Form
 
     ${email}=      Set Variable    ${canonical_form_contact_link_files.get('\${email}')}
-    ${country}=    Set Variable    ${canonical_form_contact_link_files.get('\${country}')}
 
     Go To Newsletter Form
 
@@ -30,8 +29,6 @@ Go To Newsletter Form
     Scroll To Element    ${newsletterForm_email_input}
 
 Verify Newsletter Subscription
-    ${country}=    Set Variable    ${canonical_form_contact_link_files.get('\${country}')}
-
     Wait For Elements State    ${newsletterForm_confirm_message}    visible
 
     ${text}=    Get Text    ${newsletterForm_confirm_message}

@@ -151,4 +151,9 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 @{credit_card_cybersource_countries}             USA    CAN    GBR    POL   ZAF    JPN    AUS    SGP    HKG  MYS  MEX  NZL  ARE  SAU  KWT  QAT   ROU   SVK
 @{credit_card_adyen_countries}                   AUT    BEL    FIN    PRT   IDN    ITA    IRL    CHE    FRA  DEU  ESP  SWE  DNK  NOR  PRT  IDN
 @{newsletterForm_privacy_policy_countries}       ITA    AUT    PRT    NZL
-@{no_popup_countries}                            NZL    ARE    ROU    SVK
+@{no_cookies_countries}                          NZL
+@{no_postal_code_counties}                       ARE
+@{no_city_input_countries}                          ARE
+@{city_dropdown_countries}                       ARE
+@{district_countries}                            ARE
+@{couty_select_countries}                        ROU

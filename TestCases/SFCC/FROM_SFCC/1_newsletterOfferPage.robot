@@ -20,12 +20,17 @@ Default Values If No Data    NO    NA    NA   NA
 
 *** Keywords ***
 Subscribe To The Newsletter
-    [Arguments]    ${playTest}    ${email}    ${country}    ${allCheckSystems}
+    [Arguments]
+        ...    ${playTest}
+        ...    ${email}
+        ...    ${country}
+        ...    ${allCheckSystems}
+
+    ${country} =  Set Test Variable    ${country}
 
     IF    $playTest == "YES"
         Generate Test Data Newsletter
                                         ...    ${email}
-                                        ...    ${country}
         Generate Test Data Last Interaction Date      contactProfileUpdate
 
         Initialize SFCC Website Context

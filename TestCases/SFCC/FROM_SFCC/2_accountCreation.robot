@@ -31,6 +31,8 @@ Create A New Account
     ...    ${country}
     ...    ${allCheckSystems}
 
+    ${country} =  Set Test Variable    ${country}
+
         IF    $playTest == "YES"
             Generate Test Data Create Account
                                             ...    ${email}
@@ -42,7 +44,6 @@ Create A New Account
                                             ...    ${emailOptin}
                                             ...    ${SMSOptin}
                                             ...    ${isLoyaltyMember}
-                                            ...    ${country}
 
             Generate Test Data Last Interaction Date      contactProfileUpdate
 

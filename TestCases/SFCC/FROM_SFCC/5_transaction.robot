@@ -41,7 +41,7 @@ Make Transaction
     ...    ${allCheckSystems}
     ...    ${expectedpoints}
 
-
+    ${country} =  Set Test Variable    ${country}
     IF    $playTest == "YES"
         Generate Test Data Create Account
                                         ...    ${email}
@@ -53,8 +53,6 @@ Make Transaction
                                         ...    ${emailOptin}
                                         ...    ${SMSOptin}
                                         ...    ${isLoyaltyMember}
-                                        ...    ${country}
-
         Generate Test Data Transaction
                                              ...    ${address}
                                              ...    ${postalCode}
@@ -63,19 +61,19 @@ Make Transaction
                                              ...    ${DPDdelivery}
                                              ...    ${inPostPickUp}
                                              ...    ${marketingConsent}
-                                             ...    ${country}
                                              ...    ${productList}
                                              ...    ${expectedpoints}
         Generate Test Data Last Interaction Date      transaction
+
         Initialize SFCC Website Context
         Search For A Product
-        #
-        #Add Chosen Product To Cart
-        #
         Wait And Close Transaction Gift Popup
         View Cart
         Finalize Order
-        complete Delivery Form And Pay For New User
+        Connect As A New SFCC User
+        Complete Registration Form
+        Complete Delivery Form
+        Complete Payment Form
         Verify Transaction success
         Store transaction number
         Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeTransaction  ${country}

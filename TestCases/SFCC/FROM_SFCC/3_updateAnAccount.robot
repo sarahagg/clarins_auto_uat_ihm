@@ -31,6 +31,7 @@ Update SFCC Account
     ...    ${country}
     ...    ${allCheckSystems}
 
+    ${country} =  Set Test Variable    ${country}
     IF    $playTest == "YES"
 
         Generate Test Data Update Account
@@ -43,11 +44,11 @@ Update SFCC Account
                                         ...    ${emailOptin}
                                         ...    ${SMSOptin}
                                         ...    ${isLoyaltyMember}
-                                        ...    ${country}
                                         ...    sfcc
         Generate Test Data Last Interaction Date      contactProfileUpdate
 
         Initialize SFCC Website Context
+        Go To Login Page
         Connect As An Existing SFCC User
         Go To My Profile
         Complete Update Form

@@ -4,26 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="version 28/04/25">
+    <list default="true" id="1c3d66ba-71d8-4f33-aded-3a7ec9c8aed9" name="Changes" comment="version 05/05/25">
+      <change afterPath="$PROJECT_DIR$/TestCases/Interface/test_case_1.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Common/commonVariables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Common/commonVariables.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/LINK/write_data_to_link_csv_files.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/LINK/write_data_to_link_csv_files.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/commonVariables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/commonVariables.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/a_import_all_data_generators_SFCC.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/a_import_all_data_generators_SFCC.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Common/initialization.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Common/initialization.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/contactInformation_generators.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/contactInformation_generators.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/generate_testData_connect.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/generate_testData_connect.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/generate_testData_createAccount.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/generate_testData_createAccount.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/generate_testData_lastInteractionDate.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/generate_testData_lastInteractionDate.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/generate_testData_subscribeNewsletter.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/generate_testData_subscribeNewsletter.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/generate_testData_updateAccount.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/generate_testData_updateAccount.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/gererate_testData_transaction.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/gererate_testData_transaction.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/update_dictionary.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/update_testData.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/Locators/deliveryForm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/Locators/deliveryForm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/update_testData.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/DataGenerators/update_testData.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/createAccountPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/createAccountPage.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/deleteSomeAccountInfo.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/deleteSomeAccountInfo.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/deliveryForm.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/deliveryForm.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/headerMenu.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/headerMenu.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/loginPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/loginPage.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/myDashboardPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/myDashboardPage.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/newsletterForm.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/newsletterForm.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/orderSummaryPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/orderSummaryPage.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/popupElement.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/popupElement.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/shoppingBasketPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/shoppingBasketPage.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/updateAccountPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/PageObjectModel/updateAccountPage.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/2_createAccount.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/2_createAccount.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/5_makeTransaction.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/5_makeTransaction.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/3_updateAccount.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/SFCC/TestData/FROM_SFCC/3_updateAccount.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/1_newsletterOfferPage.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/1_newsletterOfferPage.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/2_accountCreation.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/2_accountCreation.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/3_updateAnAccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/3_updateAnAccount.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/4_deleteSomeInformationFromAnAccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/4_deleteSomeInformationFromAnAccount.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/5_transaction.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/5_transaction.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/6_guest.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SFCC/FROM_SFCC/6_guest.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestCases/SMILE/1_S1EnrollmentAndLoyaltyAccount.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SMILE/1_S1EnrollmentAndLoyaltyAccount.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestCases/SMILE/2_S2EarnLoyaltyPoints.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SMILE/2_S2EarnLoyaltyPoints.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/SMILE/3_S3Redemption_MixeOrderTransaction.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SMILE/3_S3Redemption_MixeOrderTransaction.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/SMILE/5_transactionsAndCalculate.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SMILE/5_transactionsAndCalculate.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/SMILE/update_dictionary.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/SMILE/update_dictionary.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/SMILE/5_transactionsAndCalculate.robot" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +152,7 @@
     &quot;Robot Framework.linkstep.executor&quot;: &quot;Run&quot;,
     &quot;Robot Framework.login.executor&quot;: &quot;Run&quot;,
     &quot;Robot Framework.modify.executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.test_case_1.robot.executor&quot;: &quot;Run&quot;,
     &quot;Robot Framework.testdatageneration.executor&quot;: &quot;Run&quot;,
     &quot;Robot Framework.verify.executor&quot;: &quot;Run&quot;,
     &quot;Robot Framework.webloggin.executor&quot;: &quot;Run&quot;,
@@ -171,7 +187,7 @@
       <recent name="C:\Users\s.aggour\OneDrive - ONEPOINT\Bureau\clarins_auto_uat_ihm\Ressources\STEP\PageObjectModel\leftMenu" />
     </key>
   </component>
-  <component name="RunManager" selected="Robot Framework.5_transaction">
+  <component name="RunManager" selected="Robot Framework.2_accountCreation">
     <configuration name="1_S1EnrollmentAndLoyaltyAccount" type="RobotFramework" factoryName="RobotFramework" folderName="SMILE">
       <option name="target" value="$ProjectFileDir$/TestCases/SMILE/1_S1EnrollmentAndLoyaltyAccount.robot" />
       <option name="args">
@@ -715,6 +731,21 @@
       <option name="makeSuite" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="test_case_1.robot" type="RobotFramework" factoryName="RobotFramework" folderName="New Folder">
+      <option name="target" value="$ProjectFileDir$/TestCases/Interface/test_case_1.robot" />
+      <option name="args">
+        <list>
+          <option value="-d" />
+          <option value="Resultats/Interface/test_case_1" />
+          <option value="-v" />
+          <option value="headless:false" />
+        </list>
+      </option>
+      <option name="env" />
+      <option name="workingDir" value="$ProjectFileDir$" />
+      <option name="makeSuite" value="true" />
+      <method v="2" />
+    </configuration>
     <configuration name="testdatageneration" type="RobotFramework" factoryName="RobotFramework" folderName="Tasks">
       <option name="target" value="$ProjectFileDir$/Tasks/testdatageneration.robot" />
       <option name="args">
@@ -757,36 +788,37 @@
     </configuration>
     <list>
       <item itemvalue="Robot Framework.1_S1EnrollmentAndLoyaltyAccount" />
+      <item itemvalue="Robot Framework.2_S2EarnLoyaltyPoints" />
+      <item itemvalue="Robot Framework.5_transactionsAndCalculate" />
       <item itemvalue="Robot Framework.1_importNewContactsFromAThirdPartyFile(no CCID)" />
       <item itemvalue="Robot Framework.1_lastInteractionDateUpdate_CreateAnAccountSFCC" />
+      <item itemvalue="Robot Framework.2_lastInteractionDateUpdate_Newsletter" />
+      <item itemvalue="Robot Framework.3_lastInteractionDateUpdate_Webloggin" />
+      <item itemvalue="Robot Framework.4_lastInteractionDateUpdate_MakeAPurchaseInSfcc" />
       <item itemvalue="Robot Framework.1_newsletterOfferPage" />
+      <item itemvalue="Robot Framework.2_accountCreation" />
+      <item itemvalue="Robot Framework.3_updateAnAccount" />
+      <item itemvalue="Robot Framework.4_deleteSomeInformationFromAnAccount" />
+      <item itemvalue="Robot Framework.5_transaction" />
+      <item itemvalue="Robot Framework.6_guest" />
+      <item itemvalue="Robot Framework.webloggin" />
       <item itemvalue="Robot Framework.1_searchContactByFullName" />
+      <item itemvalue="Robot Framework.2_searchContactByFirstName" />
+      <item itemvalue="Robot Framework.3_searchContactByLastName" />
+      <item itemvalue="Robot Framework.4_searchContactByPhoneNumber" />
+      <item itemvalue="Robot Framework.5_searchContactByCCID" />
+      <item itemvalue="Robot Framework.6_advancedSearch" />
       <item itemvalue="Robot Framework.1_verifyContactInformation_FROM_SFCC_createAccount" />
       <item itemvalue="Robot Framework.1_verifyContactInformation_FROM_SFCC_subscribeNewsletter" />
-      <item itemvalue="Robot Framework.1_verifyNewsletterOfferPage" />
-      <item itemvalue="Robot Framework.2_S2EarnLoyaltyPoints" />
-      <item itemvalue="Robot Framework.2_accountCreation" />
-      <item itemvalue="Robot Framework.2_lastInteractionDateUpdate_Newsletter" />
-      <item itemvalue="Robot Framework.2_searchContactByFirstName" />
-      <item itemvalue="Robot Framework.2_verifyAccountCreation" />
       <item itemvalue="Robot Framework.2_verifyContactInformation_FROM_SFCC_createAccount" />
-      <item itemvalue="Robot Framework.3_lastInteractionDateUpdate_Webloggin" />
-      <item itemvalue="Robot Framework.3_searchContactByLastName" />
-      <item itemvalue="Robot Framework.3_updateAnAccount" />
+      <item itemvalue="Robot Framework.1_verifyNewsletterOfferPage" />
+      <item itemvalue="Robot Framework.2_verifyAccountCreation" />
       <item itemvalue="Robot Framework.3_verifyUpdateAnAccount" />
-      <item itemvalue="Robot Framework.4_deleteSomeInformationFromAnAccount" />
-      <item itemvalue="Robot Framework.4_lastInteractionDateUpdate_MakeAPurchaseInSfcc" />
-      <item itemvalue="Robot Framework.4_searchContactByPhoneNumber" />
       <item itemvalue="Robot Framework.4_verifyDeleteSomeInformationFromAnAccount" />
-      <item itemvalue="Robot Framework.5_searchContactByCCID" />
-      <item itemvalue="Robot Framework.5_transaction" />
-      <item itemvalue="Robot Framework.5_transactionsAndCalculate" />
-      <item itemvalue="Robot Framework.6_advancedSearch" />
-      <item itemvalue="Robot Framework.6_guest" />
+      <item itemvalue="Robot Framework.testdatageneration" />
       <item itemvalue="Robot Framework.CREATE_N_SFCC_ACCOUNT" />
       <item itemvalue="Robot Framework.delete_link_csv_files" />
-      <item itemvalue="Robot Framework.testdatageneration" />
-      <item itemvalue="Robot Framework.webloggin" />
+      <item itemvalue="Robot Framework.test_case_1.robot" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -1031,7 +1063,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745850389032</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="version 05/05/25">
+      <option name="closed" value="true" />
+      <created>1746435988008</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1746435988008</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1081,7 +1121,8 @@
     <MESSAGE value="version 03/04/25" />
     <MESSAGE value="version 10/04/25" />
     <MESSAGE value="version 28/04/25" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 28/04/25" />
+    <MESSAGE value="version 05/05/25" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 05/05/25" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

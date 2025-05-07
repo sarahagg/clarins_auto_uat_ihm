@@ -41,6 +41,7 @@ Make Guest Transaction
     ...    ${productList}
     ...    ${expectedpoints}
 
+    ${country} =  Set Test Variable    ${country}
     IF    $playTest == "YES"
     Generate Test Data Create Account
                                         ...    ${email}
@@ -52,7 +53,6 @@ Make Guest Transaction
                                         ...    ${emailOptin}
                                         ...    ${SMSOptin}
                                         ...    ${isLoyaltyMember}
-                                        ...    ${country}
 
     Generate Test Data Transaction
                                              ...    ${address}
@@ -62,7 +62,6 @@ Make Guest Transaction
                                              ...    ${DPDdelivery}
                                              ...    ${inPostPickUp}
                                              ...    ${marketingConsent}
-                                             ...    ${country}
                                              ...    ${productList}
                                              ...    ${expectedpoints}
     Generate Test Data Last Interaction Date      transaction
@@ -71,7 +70,9 @@ Make Guest Transaction
     Add Chosen Product To Cart
     View Cart
     Finalize Order
-    Complete Delivery Form And Pay For Guest
+    Connect As A Guest
+    Complete Delivery Form For Guest User
+    Complete Payment Form
     Verify Transaction success
     Store transaction number
     Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeGuestTransaction  ${country}

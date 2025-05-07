@@ -16,7 +16,6 @@ Complete Update Form
     ${emailOptin}=          Set Variable    ${canonical_form_contact_link_files.get('\${emailOptin}')}
     ${SMSOptin}=            Set Variable    ${canonical_form_contact_link_files.get('\${SMSOptin}')}
     ${isLoyaltyMember}=     Set Variable    ${canonical_form_contact_link_files.get('\${isLoyaltyMember}')}
-    ${country}=             Set Variable    ${canonical_form_contact_link_files.get('\${country}')}
 
     # FILL SALUTATION
     IF   '${country}' not in @{no_salutation_countries}
@@ -57,8 +56,6 @@ Complete Update Form
     Click    ${updateAccountPage_submit_button}
 
 Verify Account Update
-    ${country}=    Set Variable    ${canonical_form_contact_link_files.get('\${country}')}
-
     ${return_status}=   Check If Element Is Visible And Warn If Not    ${myDashboardPage_dashboard_title}
     WHILE    $return_status == 'FAIL'    limit=${number_of_retry_to_wait_an_element}    on_limit=pass
         Log    Waiting dashboard title to appear

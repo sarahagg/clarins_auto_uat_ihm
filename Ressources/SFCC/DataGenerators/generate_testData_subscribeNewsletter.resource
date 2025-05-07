@@ -5,10 +5,10 @@ Resource    ..${/}Common${/}a_import_all_common_SFCC.resource
 
 *** Keywords ***
 Generate Test Data Newsletter
-    [Arguments]    ${email}    ${country}
+    [Arguments]    ${email}
     Import FakerLibrary    ${country}
 
-    ${generated_email}=    Generate Email    ${email}   ${country}
+    ${generated_email}=    Generate Email    ${email}
     ${current_date}=    Get Current Date    result_format=%Y-%m-%d %H:%M:%S
 
     Set To Dictionary    ${canonical_form_contact_link_files}    \${email}                     ${generated_email}

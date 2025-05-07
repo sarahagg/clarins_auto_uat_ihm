@@ -4,20 +4,20 @@ Resource    ..${/}Common${/}a_import_all_common_SFCC.resource
 
 *** Keywords ***
 Generate Email
-    [Arguments]    ${email}     ${country}
+    [Arguments]      ${email}
 
     IF    $email == 'default'    RETURN    ${default_values.email}
 
     IF    $email == 'auto'
-        ${email_uuid}=    Generate Random String    7    [LOWER][NUMBERS]
+        ${email_uuid}=    Generate Random String    7    [LOWER]
+        ${email_id}=      Generate Random String    2    [NUMBERS]
         ${email_firstName}=      Run Keyword    Faker_${TEST_NAME}.First Name
         ${longueur}=    Get Length    ${email_firstName}
         Run Keyword If    ${longueur} > 6    Set Variable    ${email_firstName}=${email_firstName}[0:6]
 
         # Remove special characters
         ${email_firstName}=    Convert To ASCII    ${email_firstName}
-
-        ${randomEmail}=    Set Variable    ${email_firstName}${email_uuid}@qq.com
+        ${randomEmail}=    Set Variable    ${email_firstName}_${email_uuid}_${email_id}@qq.com
         ${randomEmail}=    Evaluate    "${randomEmail}".capitalize()
         RETURN    ${randomEmail}
     END
@@ -28,7 +28,7 @@ Generate Email
 
 
 Generate Salutation
-    [Arguments]    ${salutation}    ${country}
+    [Arguments]    ${salutation}
 
     IF    $salutation == 'default'    RETURN    ${default_values.salutation}
 
@@ -70,7 +70,7 @@ Generate LastName
     RETURN    ${lastName}
 
 Generate PhoneNumber
-    [Arguments]    ${phoneNumber}   ${country}
+    [Arguments]    ${phoneNumber}
 
     IF    $phoneNumber == 'default'    RETURN    ${default_values.phoneNumber}
 
@@ -116,7 +116,7 @@ Generate emailOptin
     RETURN    ${emailOptin}
 
 Generate SMSOptin
-    [Arguments]    ${SMSOptin}    ${country}
+    [Arguments]    ${SMSOptin}
 
     IF   $country in ${sms_optin_countries}
         IF    $SMSOptin == 'auto'

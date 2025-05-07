@@ -16,7 +16,6 @@ Write Data To Link CSV Files
         IF    '${file_exists}[0]' != 'PASS'
             Create CSV       ${format}    ${link_csv_file}
         END
-
         Append row To CSV    ${format}    ${sourceSystem}    ${oneCheckSystem}    ${link_csv_file}    ${testScenario}  ${country}
     END
 
