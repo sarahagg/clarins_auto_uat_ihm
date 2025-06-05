@@ -5,18 +5,24 @@ Resource            ..${/}Common${/}common.resource
 
 *** Keywords ***
 Write Data To Link CSV Files
-    [Arguments]    ${format}    ${sourceSystem}    ${allCheckSystems}    ${testScenario}    ${country}
+    [Arguments]    ${format}=${EMPTY}    ${sourceSystem}=${EMPTY}    ${allCheckSystems}=${EMPTY}    ${testScenario}=${EMPTY}
+
+    IF  ${format}==${EMPTY} AND ${sourceSystem}==${EMPTY} AND ${allCheckSystems}==${EMPTY} AND ${testScenario}==${EMPTY}
+
+        ${format}=              Set Variable    ${canonical_form_csv_file_link_files.get('\${format}')}
+        ${sourceSystem}=        Set Variable    ${canonical_form_csv_file_link_files.get('\${sourceSystem}')}
+        ${allCheckSystems}=     Set Variable    ${canonical_form_csv_file_link_files.get('\${format}')}
+        ${testScenario}=        Set Variable    ${canonical_form_csv_file_link_files.get('\${testScenario}')}
+    END
 
     FOR    ${oneCheckSystem}    IN    @{allCheckSystems}
 
         ${link_csv_file}=    Set Variable    ${path_to_link_csv_file}${/}link_csv_file_${format}_from_${sourceSystem}_to_${oneCheckSystem}_for_${testScenario}.csv
-        #${link_csv_file}=   Set Variable    ${path_to_link_csv_file}${/}link_csv_file_${format}_from_${sourceSystem}_to_${oneCheckSystem}_for_${testScenario}.csv  avec format = contact,lid ou transaction
-
         ${file_exists}=      Run Keyword And Ignore Error    File Should Exist    ${link_csv_file}
         IF    '${file_exists}[0]' != 'PASS'
             Create CSV       ${format}    ${link_csv_file}
         END
-        Append row To CSV    ${format}    ${sourceSystem}    ${oneCheckSystem}    ${link_csv_file}    ${testScenario}  ${country}
+        Append row To CSV    ${format}    ${sourceSystem}    ${oneCheckSystem}    ${link_csv_file}    ${testScenario}
     END
 
 Create CSV
@@ -33,9 +39,8 @@ Create CSV
     Append To File    ${link_csv_file}    ${headers_string}\n
 
 Append row To CSV
-    [Arguments]      ${format}    ${sourceSystem}    ${oneCheckSystem}    ${link_csv_file}   ${testScenario}  ${country}
+    [Arguments]      ${format}    ${sourceSystem}    ${oneCheckSystem}    ${link_csv_file}   ${testScenario}
 
-    #${new_test_name}=    Replace String    ${TEST_NAME}    ${sourceSystem}     ${oneCheckSystem}
     ${new_test_name}=  Set Variable   ${format}_from_${sourceSystem}_to_${oneCheckSystem}_for_${testScenario}_${country}
 
     ${row_strings}=      Create List

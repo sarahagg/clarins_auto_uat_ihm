@@ -35,10 +35,14 @@ Complete Registration Form
 
     # FILL LAST NAME (fugirana) and name (fugirana) for japan
     IF    $country == 'JPN'
-        ${last_name_furigana}=    Run Keyword    Faker_${TEST_NAME}.First Name
-        ${name_furigana}=    Run Keyword    Faker_${TEST_NAME}.Last Name
-        Fill Text    ${createAccountPage_last_name_furigana_input}    ${last_name_furigana}
-        Fill Text    ${createAccountPage_name_furigana_input}    ${name_furigana}
+    ## generate furigana
+        #${last_name_furigana}=    Run Keyword    Faker_${TEST_NAME}.First Name
+        #${name_furigana}=    Run Keyword    Faker_${TEST_NAME}.Last Name
+        #Fill Text    ${createAccountPage_last_name_furigana_input}    ${last_name_furigana}
+        #Fill Text    ${createAccountPage_name_furigana_input}    ${name_furigana}
+    ##use first name and last name as furigana
+        Fill Text    ${createAccountPage_last_name_furigana_input}    ${lastName}
+        Fill Text    ${createAccountPage_name_furigana_input}    ${firstName}
     END
 
     # FILL PASSWORD

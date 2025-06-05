@@ -1,78 +1,77 @@
 *** Settings ***
-Documentation       But du Test
-...                 Vérifier une transaction
 
-Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}a_import_all_common_SFCC.resource
-Library             DataDriver    file=..${/}..${/}Ressources${/}SFCC${/}TestData${/}FROM_SFCC${/}5_makeTransaction.xlsx   sheet_name=Test Cases
+Resource            ${EXECDIR}${/}Ressources${/}SFCC${/}Common${/}a_import_all_common_SFCC.resource
 
-Test Template       S2 Earn Loyalty Points
 Test Setup          Initialize Test Context
-Test Teardown       Close Browser
 
-Force Tags          S2 Earn Loyalty Points
-*** Variables ***
-&{updated}    email=test@example.com    firstName=Alice    lastName=Smith
+Test Teardown       Terminate Test Context
+
 
 *** Test Cases ***
-Default Values If No Data
 
-*** Keywords ***
-S2 Earn Loyalty Points
-    [Arguments]
-    ...    ${playTest}
-    ...    ${productList}
-    ...    ${email}
-    ...    ${salutation}
-    ...    ${firstName}
-    ...    ${lastName}
-    ...    ${password}
-    ...    ${birthDate}
-    ...    ${emailOptin}
-    ...    ${SMSOptin}
-    ...    ${isLoyaltyMember}
-    ...    ${address}
-    ...    ${postalCode}
-    ...    ${city}
-    ...    ${phoneNumber}
-    ...    ${billingAdress}
-    ...    ${DPDdelivery}
-    ...    ${inPostPickUp}
-    ...    ${marketingConsent}
-    ...    ${country}
-    ...    ${allCheckSystems}
-    ...    ${expectedpoints}
+Test Case
 
+    ${playTest}=    Set Variable    YES
 
     IF    $playTest == "YES"
 
-        Generate Test Data connection
-                                        ...    ${email}
-                                        ...    ${country}
-        Generate Test Data Create Account
-                                        ...    ${email}
-                                        ...    ${salutation}
-                                        ...    ${firstName}
-                                        ...    ${lastName}
-                                        ...    ${phoneNumber}
-                                        ...    ${birthDate}
-                                        ...    ${emailOptin}
-                                        ...    ${SMSOptin}
-                                        ...    ${isLoyaltyMember}
-                                        ...    ${country}
-        Generate Test Data Transaction
-                                             ...    ${address}
-                                             ...    ${postalCode}
-                                             ...    ${city}
-                                             ...    ${billingAdress}
-                                             ...    ${DPDdelivery}
-                                             ...    ${inPostPickUp}
-                                             ...    ${marketingConsent}
-                                             ...    ${country}
-                                             ...    ${productList}
-                                             ...    ${expectedpoints}
+        &{update_data}=    Create Dictionary
 
-        Update Test Data    contact  &{updated}
+        ${email}=    Set Variable    testIHM1@qq.com
 
+        ${update_data}[email]=    Set Variable    ${email}
+
+        ${salutation}=    Set Variable    Mr
+
+        ${update_data}[salutation]=    Set Variable    ${salutation}
+
+        ${firstName}=    Set Variable    toto
+
+        ${update_data}[firstName]=    Set Variable    ${firstName}
+
+        ${lastName}=    Set Variable    tata
+
+        ${update_data}[lastName]=    Set Variable    ${lastName}
+
+        ${phoneNumber}=    Set Variable    auto
+
+        ${update_data}[phoneNumber]=    Set Variable    ${phoneNumber}
+
+        ${birthDate}=    Set Variable    auto
+
+        ${update_data}[birthDate]=    Set Variable    ${birthDate}
+
+        ${emailOptin}=    Set Variable    YES
+
+        ${update_data}[emailOptin]=    Set Variable    ${emailOptin}
+
+        ${smsOptin}=    Set Variable    YES
+
+        ${update_data}[smsOptin]=    Set Variable    ${smsOptin}
+
+        ${isLoyaltyMember}=    Set Variable
+
+        ${update_data}[isLoyaltyMember]=    Set Variable    ${isLoyaltyMember}
+
+        ${country}=    Set Variable    ROU
+
+        ${country}=    Set Test Variable    ${country}
+
+        ${update_data}[country]=    Set Variable    ${country}
+
+        Generate Test Data Create Account    ${email}  ${salutation}  ${firstName}  ${lastName}  ${phoneNumber}  ${birthDate}  ${emailOptin}  ${SMSOptin}  ${isLoyaltyMember}  ${country}
+
+        Initialize SFCC Website Context
+
+        Go To Login Page
+
+        Connect As A New SFCC User
+
+        Complete Registration Form
+
+        Verify Account Creation
+
+        Verify Contact Loyalty Status
 
 
     END

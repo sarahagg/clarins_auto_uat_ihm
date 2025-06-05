@@ -47,12 +47,14 @@ Create A New Account
 
             Generate Test Data Last Interaction Date      contactProfileUpdate
 
+
             Initialize SFCC Website Context
             Go To Login Page
             Connect As A New SFCC User
             Complete Registration Form
             Verify Account Creation
 
-            Write Data To Link CSV Files    contact                SFCC    ${allCheckSystems}    createAccount  ${country}
-            Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    createAccount  ${country}
+
+            Write Data To Link CSV Files    contact                SFCC    ${allCheckSystems}    createAccount
+            Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    createAccount
         END

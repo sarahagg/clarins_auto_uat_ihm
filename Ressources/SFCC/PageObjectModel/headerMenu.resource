@@ -42,3 +42,4 @@ Search For A Product
 view Cart
     hover    ${headerMenu_minibag_button}
     Click    ${headerMenu_minibag_button}
+    sleep    5s

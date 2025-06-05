@@ -24,9 +24,6 @@ Generate Email
 
     RETURN    ${email}
 
-
-
-
 Generate Salutation
     [Arguments]    ${salutation}
 

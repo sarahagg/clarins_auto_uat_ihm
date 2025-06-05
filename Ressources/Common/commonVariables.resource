@@ -51,6 +51,11 @@ ${today_format}             %Y_%m_%d
 ...                                 \${lastInteractionDate}=
 ...                                 \${reason}=
 
+&{canonical_form_csv_file_link_files}
+...                                 \${format}=
+...                                 \${sourceSystem}=
+...                                 \${allCheckSystems}=
+...                                 \${testScenario}=
 
 ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 
@@ -93,7 +98,7 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 @{lov_yes_or_no_optin}      yes    no
 @{lov_phoneType}            home (home)    mobile (mobile)    office (office)
 
-@{touch_countries}          ESP    ZAF    CAN    AUS    FRA    IRL    HKG    JPN    SGP    USA    ITA    GBR    CHE    DEU    BEL    LUX    NLD    POL    AUT    PRT    NZL   ARE    SVK    ROU
+@{touch_countries}          ESP    ZAF    CAN    AUS    FRA    IRL    HKG    JPN    SGP    USA    ITA    GBR    CHE    DEU    BEL    LUX    NLD    POL    AUT    PRT    NZL   ARE    SVK    ROU     MYS
 @{non_touch_countries}      CHN    CHL
 @{BNL_regions}              BEL    LUX    NLD
 
@@ -122,6 +127,7 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                         ARE=AE
 ...                         SVK=SK
 ...                         ROU=RO
+...                         MYS=MY
 
 &{full_country}             GBR=United Kingdom
 ...                         FRA=France
@@ -147,6 +153,7 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                         ARE=United Arab Emirates
 ...                         SVK=slovakia
 ...                         ROU=Romania
+...                         MYS=Malaysia
 
 
 
@@ -174,6 +181,7 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                         ARE=ar_SA
 ...                         SVK=sk_SK
 ...                         ROU=ro_RO
+...                         MYS=en_US
 
 
 &{yes_no}                   YES=true
@@ -214,6 +222,7 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                               ARE=9
 ...                               SVK=9
 ...                               ROU=9
+...                               MYS=9
 
 
 &{phone_number_country_code}
@@ -241,3 +250,4 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                               ARE=+971
 ...                               SVK=421
 ...                               ROU=+40
+...                               MYS=+60

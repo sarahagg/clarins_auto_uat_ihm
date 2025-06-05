@@ -42,6 +42,7 @@ Make Guest Transaction
     ...    ${expectedpoints}
 
     ${country} =  Set Test Variable    ${country}
+
     IF    $playTest == "YES"
     Generate Test Data Create Account
                                         ...    ${email}
@@ -75,8 +76,8 @@ Make Guest Transaction
     Complete Payment Form
     Verify Transaction success
     Store transaction number
-    Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeGuestTransaction  ${country}
-    Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    makeGuestTransaction  ${country}
+    Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeGuestTransaction
+    Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    makeGuestTransaction
     sleep  3s
 
     END

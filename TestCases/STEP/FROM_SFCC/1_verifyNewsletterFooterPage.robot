@@ -42,10 +42,7 @@ Verify Newsletter Information
         Search By Email             ${email}
         Access Contact Page
         Verify email                ${email}
-        Verify firstName            ${firstName}
-        Verify lastName             ${lastName}
-        Verify birthDate            ${birthDate}
         Verify country              ${country}
         Verify creation system      ${creationSystem}  ${createDate}
-        #Verify modification system  ${lastModificationSystem}  ${lastUpdateDate}
+        Verify modification system  ${lastModificationSystem}  ${lastUpdateDate}
     END

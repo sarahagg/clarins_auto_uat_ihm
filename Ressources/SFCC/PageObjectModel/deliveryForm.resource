@@ -50,16 +50,22 @@ Common Delivery Infos
             Fill Text    ${deliveryForm_are_district_input}         al oulaya
          END
 
-         IF   $country in @{@{city_dropdown_countries}}
+         IF   $country in @{city_dropdown_countries}
             Click    ${deliveryForm_are_city_select}
             Fill Text    ${deliveryForm_are_city_input}   ${city}
             Click    ${deliveryForm_are_city_choice.replace('$CITYVALUE$', '${city.upper()}')}
          END
 
-         IF  $country in @{@{couty_select_countries}}
+         IF  $country in @{couty_select_countries}
             Click    ${deliveryForm_rou_county_select}
             Click    ${deliveryForm_rou_county_choice_cluj}
          END
+
+         IF  $country in @{state_countries}
+            Click    ${deliveryForm_state_select}
+            Click    ${deliveryForm_state_choice}
+         END
+
 Complete Payment Form
     IF    $country in ${credit_card_cybersource_countries}
         ${card_type}=   Set Variable    Cybersource

@@ -32,6 +32,7 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         ARE=https://stg-eu.npr.clarins.com/clarinsare/
 ...                         SVK=https://sk.npr.clarins.com/
 ...                         ROU=https://ro.npr.clarins.com/
+...                         MYS=https://stg-ap.npr.clarins.com/clarinsmy/
 
 
 &{account_dashboard_text}
@@ -59,6 +60,7 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         ARE=My dashboard
 ...                         SVK=Môj prístrojový panel
 ...                         ROU=Tabloul meu de bord
+...                         MYS=My dashboard
 
 
 &{transaction_order_summary_text}
@@ -86,6 +88,7 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         ARE=Thank you for your order
 ...                         SVK=
 ...                         ROU=
+...                         MYS=Thank you for your order
 
 &{account_dashboard_profile_text}
 ...                         GBR=My profile
@@ -112,6 +115,8 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         ARE=My profile
 ...                         SVK=Úpravy
 ...                         ROU=Editați profilul
+...                         MYS=My profile
+
 
 &{newsletter_text}          GBR=THANK YOU FOR SUBSCRIBING. PLEASE NOTE THAT YOU WILL NOT RECEIVE A WELCOME EMAIL IF YOU ARE ALREADY SUBSCRIBED TO CLARINS NEWSLETTERS.
 ...                         FRA=MERCI POUR VOTRE INSCRIPTION !
@@ -124,7 +129,7 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         POL=DZIĘKUJEMY ZA REJESTRACJĘ!
 ...                         AUT=VIELEN DANK FÜR IHRE ANMELDUNG!
 ...                         PRT=AGRADECEMOS O SEU REGISTO!
-...                         ESP=GRACIAS POR SUSCRIBIRSE!
+...                         ESP=¡GRACIAS POR REGISTRARTE!
 ...                         ZAF=THANK YOU FOR SUBSCRIBING!
 ...                         CAN=THANK YOU FOR SUBSCRIBING!
 ...                         AUS=THANK YOU FOR SUBSCRIBING!
@@ -138,6 +143,8 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         ARE=THANK YOU FOR SUBSCRIBING!
 ...                         SVK=
 ...                         ROU=
+...                         MYS=THANK YOU FOR SUBSCRIBING!
+
 
 # SPECIFICITIES BY COUNTRY
 @{welcome_offer_countries}                       TBD
@@ -145,15 +152,16 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 @{simplified_salutations_countries}              BEL    LUX    NLD    POL   PRT    AUT    DEU
 @{transaction_gift_countries}                    AUT
 @{no_salutation_countries}                       USA    CAN    AUS    JPN   NZL
-@{sms_optin_countries}                           POL    AUT    PRT    FRA   AUS    SGP    HKG    NZL    SVK   ROU
+@{sms_optin_countries}                           POL    AUT    PRT    FRA   AUS    SGP    HKG    NZL    SVK   ROU   MYS
 @{whatsapp_optin_countries}                      FRA    SGP    HKG
 @{agree_to_terms_and_condition_countries}        USA    AUT    CAN    AUS   SGP    DEU    NZL    SVK    ROU
 @{credit_card_cybersource_countries}             USA    CAN    GBR    POL   ZAF    JPN    AUS    SGP    HKG  MYS  MEX  NZL  ARE  SAU  KWT  QAT   ROU   SVK
 @{credit_card_adyen_countries}                   AUT    BEL    FIN    PRT   IDN    ITA    IRL    CHE    FRA  DEU  ESP  SWE  DNK  NOR  PRT  IDN
-@{newsletterForm_privacy_policy_countries}       ITA    AUT    PRT    NZL
-@{no_cookies_countries}                          NZL
+@{newsletterForm_privacy_policy_countries}       ITA    AUT    PRT    NZL   ESP
+@{no_cookies_countries}                          NZL    MYS    JPN
 @{no_postal_code_counties}                       ARE
-@{no_city_input_countries}                          ARE
+@{no_city_input_countries}                       ARE
 @{city_dropdown_countries}                       ARE
 @{district_countries}                            ARE
 @{couty_select_countries}                        ROU
+@{state_countries}                               MYS
