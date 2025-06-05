@@ -52,7 +52,6 @@ S2 Earn Loyalty Points
                                         ...    ${emailOptin}
                                         ...    ${SMSOptin}
                                         ...    ${isLoyaltyMember}
-                                        ...    ${country}
 
 
         Initialize SFCC Website Context

@@ -76,8 +76,8 @@ Make Transaction
         Complete Payment Form
         Verify Transaction success
         Store transaction number
-        Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeTransaction  ${country}
-        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    makeTransaction  ${country}
+        Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeTransaction
+        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    makeTransaction
 
         sleep  2s
 

@@ -23,24 +23,18 @@ Subscribe To The Newsletter
     [Arguments]
         ...    ${playTest}
         ...    ${email}
-        ...    ${firstName}
-        ...    ${lastName}
-        ...    ${birthDate}
         ...    ${country}
         ...    ${allCheckSystems}
 
     ${country} =  Set Test Variable    ${country}
 
     IF    $playTest == "YES"
-        Generate Test Data Newsletter With Name
+        Generate Test Data Newsletter
                                         ...    ${email}
-                                        ...    ${firstName}
-                                        ...    ${lastName}
-                                        ...    ${birthDate}
         Generate Test Data Last Interaction Date      contactProfileUpdate
 
         Initialize SFCC Website Context
-        Access And Complete Newsletter Offer Page
+        Access And Complete Newsletter Footer Form
         Verify Newsletter Subscription
 
         Write Data To Link CSV Files    contact               SFCC    ${allCheckSystems}    subscribeNewsletter

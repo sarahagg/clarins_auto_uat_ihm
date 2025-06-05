@@ -52,9 +52,10 @@ Update SFCC Account
         Connect As An Existing SFCC User
         Go To My Profile
         Complete Update Form
+        sleep  5s
         Verify Account Update
 
-        Write Data To Link CSV Files    contact                SFCC    ${allCheckSystems}    updateAccount  ${country}
-        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    updateAccount  ${country}
+        Write Data To Link CSV Files    contact                SFCC    ${allCheckSystems}    updateAccount
+        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    updateAccount
         sleep  3s
     END

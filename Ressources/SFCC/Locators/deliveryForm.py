@@ -15,8 +15,11 @@ deliveryForm_are_city_select="xpath=//i-select[@class='i-dropdown floating-label
 deliveryForm_are_city_input="xpath=//input[@class='choices__input choices__input--cloned']"
 deliveryForm_are_city_choice="xpath=//div[@id='dwfrm_checkout_shipping_address_citySelect_city_$CITYVALUE$']"
 #ROU
-deliveryForm_rou_county_select = "xpath=//*[@name='dwfrm_checkout_shipping_address_provinces_province']"
+deliveryForm_rou_county_select = "xpath=//i-select[@data-auto-id='province']"
 deliveryForm_rou_county_choice_cluj = "xpath=//div[@class='choices__list']/div[@data-value='Cluj']"
+#MYS
+deliveryForm_state_select = "xpath=//i-select[@class='i-dropdown floating-label flex-form-item flex-form-item__half display-inline-block']"
+deliveryForm_state_choice = "xpath=//div[@class='choices__item choices__item--choice choices__item--selectable' and @data-id='2']"
 
 
 deliveryForm_payment_credit_card_button= "xpath=//*[@id='dwfrm_checkout_billing_payment_selectedPaymentMethodID-CREDIT_CARD']"
