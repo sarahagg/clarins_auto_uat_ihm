@@ -81,8 +81,11 @@ Generate PhoneNumber
             ${randomPhoneNumber}=    Set Variable    ${randomPhoneNumber}${additionalDigits[:10 - ${length}]}
             ${length}=    Get Length    ${randomPhoneNumber}
         END
-        ${randomPhoneNumber}=   set variable  ${randomPhoneNumber[0:${phone_number_size_by_country.${country}}][::-1]}
-
+            IF    $country == 'TWN'
+                   ${randomPhoneNumber}=   set variable  09${randomPhoneNumber[0:${phone_number_size_by_country.${country}}][::-1]}
+            ELSE
+                  ${randomPhoneNumber}=   set variable  ${randomPhoneNumber[0:${phone_number_size_by_country.${country}}][::-1]}
+            END
         RETURN    ${randomPhoneNumber}
     END
 

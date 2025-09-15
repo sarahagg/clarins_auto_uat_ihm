@@ -10,9 +10,9 @@ Resource    myDashboardPage.resource
 Resource    newsletterForm.resource
 Resource    orderSummaryPage.resource
 Resource    popupElement.resource
+Resource    rewardPage.resource
 Resource    searchResultPage.resource
 Resource    shoppingBasketPage.resource
 Resource    updateAccountPage.resource
-
 
 

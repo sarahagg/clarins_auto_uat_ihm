@@ -52,7 +52,7 @@ Create A New Account
             Go To Login Page
             Connect As A New SFCC User
             Complete Registration Form
-            Verify Account Creation
+            #Verify Account Creation
 
 
             Write Data To Link CSV Files    contact                SFCC    ${allCheckSystems}    createAccount

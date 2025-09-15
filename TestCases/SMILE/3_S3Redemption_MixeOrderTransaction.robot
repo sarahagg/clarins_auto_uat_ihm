@@ -56,7 +56,7 @@ S2 Earn Loyalty Points
 
         Initialize SFCC Website Context
         Go To Login Page
-        Choose Rewards
+
 
 
 

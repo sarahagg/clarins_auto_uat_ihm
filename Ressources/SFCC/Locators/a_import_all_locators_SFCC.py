@@ -7,6 +7,7 @@ from myDashboardPage import *
 from newsletterForm import *
 from orderSummaryPage import *
 from popupElement import *
+from rewardPage import *
 from searchResultPage import *
 from shoppingBasketPage import *
 from updateAccountPage import *

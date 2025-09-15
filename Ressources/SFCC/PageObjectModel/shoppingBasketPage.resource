@@ -8,6 +8,10 @@ Finalize Order
     Wait For Elements State     ${shoppingBasketPage_finalize_your_order_button}   visible
     Click    ${shoppingBasketPage_finalize_your_order_button}
     sleep  1S
+    ${return_status}=        Check If Element Is Visible And Warn If Not    ${shoppingBasketPage_log_in}
+    IF    $return_status == 'PASS'
+           Click        ${shoppingBasketPage_log_in}
+    END
 
 Click Calculate And See Points
     Click    ${orderSummaryPage_calculate}

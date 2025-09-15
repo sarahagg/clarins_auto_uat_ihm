@@ -8,6 +8,7 @@ Library    RPA.RobotLogListener
 Complete Delivery Form
     ${return_status}=        Check If Element Is Visible And Warn If Not    ${deliveryForm_adress_input}
     IF    $return_status == 'PASS'
+          Reload
           Common Delivery Infos
     END
     Click Save Delivery Info
@@ -32,6 +33,7 @@ Common Delivery Infos
     ${DPDdelivery} =         Set Variable    ${canonical_form_transaction_link_files.get('\${DPDdelivery}')}
     ${inPostPickUp} =        Set Variable    ${canonical_form_transaction_link_files.get('\${inPostPickUp}')}
     ${marketingConsent} =    Set Variable    ${canonical_form_transaction_link_files.get('\${marketingConsent}')}
+
          IF  $country not in @{no_salutation_countries}
             Click        ${deliveryForm_salutation_option}
          END
@@ -47,24 +49,37 @@ Common Delivery Infos
          END
 
          IF  $country in @{district_countries}
-            Fill Text    ${deliveryForm_are_district_input}         al oulaya
+            Fill Text    ${deliveryForm_are_district_input}         عسير
          END
 
          IF   $country in @{city_dropdown_countries}
-            Click    ${deliveryForm_are_city_select}
-            Fill Text    ${deliveryForm_are_city_input}   ${city}
-            Click    ${deliveryForm_are_city_choice.replace('$CITYVALUE$', '${city.upper()}')}
+
+            IF     $country == 'TWN'
+                Click    ${deliveryForm_twn_city_select}
+                Fill Text    ${deliveryForm_twn_city_input}   ${city}
+                Click    ${deliveryForm_twn_city_choice.replace('$CITYVALUE$', '${city}')}
+            ELSE
+                Click    ${deliveryForm_are_city_select}
+                Fill Text    ${deliveryForm_are_city_input}   ${city}
+                sleep  3s
+                Click    ${deliveryForm_are_city_choice.replace('$CITYVALUE$', '${city.upper()}')}
+            END
+
+         END
+        IF  $country in @{district_select_countries}
+            Click    ${deliveryForm_twn_district_select}
+            Click    ${deliveryForm_twn_district_choice}
          END
 
-         IF  $country in @{couty_select_countries}
+        IF  $country in @{couty_select_countries}
             Click    ${deliveryForm_rou_county_select}
             Click    ${deliveryForm_rou_county_choice_cluj}
-         END
+        END
 
-         IF  $country in @{state_countries}
+        IF  $country in @{state_countries}
             Click    ${deliveryForm_state_select}
             Click    ${deliveryForm_state_choice}
-         END
+        END
 
 Complete Payment Form
     IF    $country in ${credit_card_cybersource_countries}
@@ -80,6 +95,36 @@ Complete Payment Form
     Fill Text    ${deliveryForm_payment_name_on_card_input}    ${credit_card_${card_type}_VISA_infos.nameOnCard}
     Fill Text    ${deliveryForm_payment_card_expiration_date_input}    ${credit_card_${card_type}_VISA_infos.expirationDate}
     Fill Text    ${deliveryForm_payment_cvn_input}    ${credit_card_${card_type}_VISA_infos.cvv}
+
+    #twn invoice
+    IF   $country in @{payment_invoice_countries}
+         Click        ${deliveryForm_invoice_type_select}
+         Click        ${deliveryForm_invoice_type_choice}
+         #Click        ${deliveryForm_invoice_donor_select}
+         #Click        ${deliveryForm_invoice_donor_choice}
+    END
+
+    Click                    ${deliveryForm_payment_accept_general_terms_and_conditions_button}
+    Click                    ${deliveryForm_payment_pay_button}
+    Wait For Elements State  ${deliveryForm_payment_thanks_for_order_title}  visible
+    Log                      successful transaction
+
+Complete Reward Payment Form
+    ${card_type}=   Set Variable    Reward
+
+    Click        ${deliveryForm_payment_credit_card_button}
+    Fill Text    ${deliveryForm_payment_card_number_input}    ${credit_card_${card_type}_VISA_infos.cardNumber}
+    Fill Text    ${deliveryForm_payment_name_on_card_input}    ${credit_card_${card_type}_VISA_infos.nameOnCard}
+    Fill Text    ${deliveryForm_payment_card_expiration_date_input}    ${credit_card_${card_type}_VISA_infos.expirationDate}
+    Fill Text    ${deliveryForm_payment_cvn_input}    ${credit_card_${card_type}_VISA_infos.cvv}
+
+    #twn invoice
+    IF   $country in @{payment_invoice_countries}
+         Click        ${deliveryForm_invoice_type_select}
+         Click        ${deliveryForm_invoice_type_choice}
+         #Click        ${deliveryForm_invoice_donor_select}
+         #Click        ${deliveryForm_invoice_donor_choice}
+    END
 
     Click                    ${deliveryForm_payment_accept_general_terms_and_conditions_button}
     Click                    ${deliveryForm_payment_pay_button}

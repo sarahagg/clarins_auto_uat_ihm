@@ -42,7 +42,7 @@ Complete Update Form
     END
 
     # FILL BIRTHDATE
-    IF    '${birthDate}' != '${EMPTY}'
+    IF    '${birthDate}' != '${EMPTY}' and $country != 'TWN'
         Fill Text    ${updateAccountPage_birthday_input}    ${birthDate}
         Wait For Elements State    ${updateAccountPage_birthday_date_invalid_message}    hidden
     END

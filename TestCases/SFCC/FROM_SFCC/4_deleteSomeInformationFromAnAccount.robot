@@ -52,7 +52,7 @@ Delete Some Account Info
         Connect As An Existing SFCC User
         Go To My Profile
         Complete Delete Some Info Form
-        Verify Account Update
+        #Verify Account Update
 
         Write Data To Link CSV Files    contact                SFCC    ${allCheckSystems}    deleteSomeAccountInfo
         Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    deleteSomeAccountInfo

@@ -41,8 +41,5 @@ Verify my points recap in SFCC
     # missing the display part in the website cuz it waits for the pending period to be over
     Verify my points calculate     ${expectedpoints}    ${currentPointsSFCCRecap}
 
-Choose Rewards
-    Hover     ${headerMenu_login_button}
-    Wait For Elements State    ${headerMenu_myAccount_popup_menu}    visible
-    click  ${headerMenu_my_rewards_button}
+
 

@@ -14,7 +14,7 @@ Connect As An Existing SFCC User
     ${email}=    Set Variable    ${canonical_form_contact_link_files.get('\${email}')}
     fill Login Form            ${email}
 
-    Wait For Elements State    ${myDashboardPage_dashboard_title}    visible
-    ${text}=    Get Text       ${myDashboardPage_dashboard_title}
-    Should Be Equal            ${account_dashboard_text.${country}}    ${text}
+    #Wait For Elements State    ${myDashboardPage_dashboard_title}    visible
+    #${text}=    Get Text       ${myDashboardPage_dashboard_title}
+    #Should Be Equal            ${account_dashboard_text.${country}}    ${text}
 

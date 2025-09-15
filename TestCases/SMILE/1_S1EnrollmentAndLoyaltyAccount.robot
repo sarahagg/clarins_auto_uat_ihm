@@ -3,7 +3,7 @@ Documentation       But du Test
 ...                 Vérifier une transaction
 
 Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}a_import_all_common_SFCC.resource
-Library             DataDriver    file=..${/}..${/}Ressources${/}SFCC${/}TestData${/}FROM_SFCC${/}5_makeTransaction.xlsx   sheet_name=Test Cases
+Library             DataDriver    file=..${/}..${/}Ressources${/}SFCC${/}TestData${/}FROM_SFCC${/}2_createAccount.xlsx   sheet_name=Test Cases
 
 Test Template       S1 Enrollment and Loyalty Account
 Test Setup          Initialize Test Context
@@ -18,28 +18,18 @@ Default Values If No Data
 *** Keywords ***
 S1 Enrollment and Loyalty Account
     [Arguments]
-    ...    ${playTest}
-    ...    ${productList}
+      ...    ${playTest}
     ...    ${email}
     ...    ${salutation}
     ...    ${firstName}
     ...    ${lastName}
-    ...    ${password}
+    ...    ${phoneNumber}
     ...    ${birthDate}
     ...    ${emailOptin}
     ...    ${SMSOptin}
     ...    ${isLoyaltyMember}
-    ...    ${address}
-    ...    ${postalCode}
-    ...    ${city}
-    ...    ${phoneNumber}
-    ...    ${billingAdress}
-    ...    ${DPDdelivery}
-    ...    ${inPostPickUp}
-    ...    ${marketingConsent}
     ...    ${country}
     ...    ${allCheckSystems}
-    ...    ${expectedpoints}
 
     ${country} =  Set Test Variable    ${country}
 
@@ -55,21 +45,14 @@ S1 Enrollment and Loyalty Account
                                         ...    ${SMSOptin}
                                         ...    ${isLoyaltyMember}
 
-        Generate Test Data Transaction
-                                             ...    ${address}
-                                             ...    ${postalCode}
-                                             ...    ${city}
-                                             ...    ${billingAdress}
-                                             ...    ${DPDdelivery}
-                                             ...    ${inPostPickUp}
-                                             ...    ${marketingConsent}
-                                             ...    ${productList}
-                                             ...    ${expectedpoints}
-        Generate Test Data Last Interaction Date      transaction
+
+        Generate Test Data Last Interaction Date      contactProfileUpdate
         Initialize SFCC Website Context
         Go To Login Page
         Connect As A New SFCC User
         Complete Registration Form
+        Write Data To Link CSV Files    contact                SFCC    ${allCheckSystems}    createAccount
+
         Verify Account Creation
         Verify Contact Loyalty Status
 

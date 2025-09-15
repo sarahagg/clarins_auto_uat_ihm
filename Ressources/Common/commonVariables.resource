@@ -80,6 +80,11 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                         expirationDate=03/30
 ...                         cvv=737
 
+&{credit_card_Reward_VISA_infos}
+...                         cardNumber=5555555555554444
+...                         nameOnCard=TEST
+...                         expirationDate=01/28
+...                         cvv=123
 @{lov_OptinChannel}         captainWallet (captainWallet)
 ...                         email (email)
 ...                         phoneHome (phoneHome)
@@ -98,7 +103,7 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 @{lov_yes_or_no_optin}      yes    no
 @{lov_phoneType}            home (home)    mobile (mobile)    office (office)
 
-@{touch_countries}          ESP    ZAF    CAN    AUS    FRA    IRL    HKG    JPN    SGP    USA    ITA    GBR    CHE    DEU    BEL    LUX    NLD    POL    AUT    PRT    NZL   ARE    SVK    ROU     MYS
+@{touch_countries}          ESP    ZAF    CAN    AUS    FRA    IRL    HKG    JPN    SGP    USA    ITA    GBR    CHE    DEU    BEL    LUX    NLD    POL    AUT    PRT    NZL   ARE    SVK    ROU    MYS   TWN  SAU
 @{non_touch_countries}      CHN    CHL
 @{BNL_regions}              BEL    LUX    NLD
 
@@ -128,6 +133,8 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                         SVK=SK
 ...                         ROU=RO
 ...                         MYS=MY
+...                         TWN=TW
+...                         SAU=SA
 
 &{full_country}             GBR=United Kingdom
 ...                         FRA=France
@@ -154,6 +161,8 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                         SVK=slovakia
 ...                         ROU=Romania
 ...                         MYS=Malaysia
+...                         TWN=Taiwan, Province of China
+...                         SAU=Saudi Arabia
 
 
 
@@ -182,6 +191,8 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                         SVK=sk_SK
 ...                         ROU=ro_RO
 ...                         MYS=en_US
+...                         TWN=zh_TW
+...                         SAU=ar_SA
 
 
 &{yes_no}                   YES=true
@@ -202,7 +213,7 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                               POL=9
 ...                               AUT=10
 ...                               PRT=9
-...                               FRA=10
+...                               FRA=9
 ...                               BEL=9
 ...                               LUX=9
 ...                               NLD=9
@@ -223,6 +234,8 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                               SVK=9
 ...                               ROU=9
 ...                               MYS=9
+...                               TWN=8
+...                               SAU=9
 
 
 &{phone_number_country_code}
@@ -251,3 +264,5 @@ ${path_to_link_csv_file}    ${EXECDIR}${/}Ressources${/}LINK${/}LinkFiles
 ...                               SVK=421
 ...                               ROU=+40
 ...                               MYS=+60
+...                               TWN=+886
+...                               SAU=+966

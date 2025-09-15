@@ -2,8 +2,8 @@
 Documentation       But du Test
 ...                 Vérifier une transaction
 
-Resource            ..${/}..${/}..${/}Ressources${/}SFCC${/}Common${/}a_import_all_common_SFCC.resource
-Library             DataDriver    file=..${/}..${/}..${/}Ressources${/}SFCC${/}TestData${/}FROM_SFCC${/}5_makeTransaction.xlsx   sheet_name=Test Cases
+Resource            ..${/}..${/}Ressources${/}SFCC${/}Common${/}a_import_all_common_SFCC.resource
+Library             DataDriver    file=..${/}..${/}Ressources${/}SFCC${/}TestData${/}FROM_SFCC${/}5_makeTransaction.xlsx   sheet_name=Test Cases
 
 Test Template       Make Transaction
 Test Setup          Initialize Test Context
@@ -66,18 +66,17 @@ Make Transaction
         Generate Test Data Last Interaction Date      transaction
 
         Initialize SFCC Website Context
+        Go To Login Page
+        Connect As An Existing SFCC User
+        Go To Reward Page
+        Choose A Reward
         Search For A Product
         Wait And Close Transaction Gift Popup
         View Cart
         Finalize Order
-        Connect As A New SFCC User
-        Complete Registration Form
-        Write Data To Link CSV Files    contact                SFCC    ${allCheckSystems}    createAccount
-        #Connect As An Existing SFCC User
         Complete Delivery Form
-        Complete Payment Form
+        Complete Reward Payment Form
         Verify Transaction success
-        #Store transaction number
         Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeTransaction
         Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    makeTransaction
 
