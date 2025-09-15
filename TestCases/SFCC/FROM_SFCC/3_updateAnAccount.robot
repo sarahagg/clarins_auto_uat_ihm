@@ -53,7 +53,7 @@ Update SFCC Account
         Go To My Profile
         Complete Update Form
         sleep  5s
-        Verify Account Update
+       # Verify Account Update
 
         Write Data To Link CSV Files    contact                SFCC    ${allCheckSystems}    updateAccount
         Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    updateAccount

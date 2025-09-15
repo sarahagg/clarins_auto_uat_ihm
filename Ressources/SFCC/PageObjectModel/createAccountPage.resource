@@ -65,7 +65,7 @@ Complete Registration Form
     END
 
     # CHOOSE THE COUNTRY IF THE USER IS FROM THE BNL
-    IF    $country == 'BEL' or $country == 'LUX' or $country == 'NLD'
+    IF    '${country}' in @{bnl_countries}
         Click    ${createAccountPage_region_select}
         Click    ${createAccountPage_region_option.replace('$COUNTRY_ALPHA2$', '${translated_countries_to_alpha2.${country}}')}
     END

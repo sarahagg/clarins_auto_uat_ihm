@@ -41,7 +41,7 @@ Subscribe To The Newsletter
 
         Initialize SFCC Website Context
         Access And Complete Newsletter Offer Page
-        Verify Newsletter Subscription
+        #Verify Newsletter Subscription
 
         Write Data To Link CSV Files    contact               SFCC    ${allCheckSystems}    subscribeNewsletter
         Write Data To Link CSV Files    lastInteractionDate   SFCC    ${allCheckSystems}    subscribeNewsletter

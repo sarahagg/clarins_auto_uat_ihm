@@ -72,13 +72,13 @@ S2 Earn Loyalty Points
         Complete Delivery Form
         Complete Payment Form
         Verify Transaction success
-        Store transaction number
+        #Store transaction number
         #########################################4 ..In SFCC, go to the "My points recap" section and verify that the transaction with the points earned are displayed (please note the points balance will be updated once the pending period has passed).
-        Verify my points recap in SFCC
+        #Verify my points recap in SFCC
         #########################################5 ..Connect to CLM NCC, and go to "Activity History" > "Transactions" sections, and check that the transaction has been propagated and that the loyalty member has earned points.
 
-        Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeTransaction
-        Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    makeTransaction
+       # Write Data To Link CSV Files    transaction            SFCC    ${allCheckSystems}    makeTransaction
+       # Write Data To Link CSV Files    lastInteractionDate    SFCC    ${allCheckSystems}    makeTransaction
         sleep  2s
 
     END

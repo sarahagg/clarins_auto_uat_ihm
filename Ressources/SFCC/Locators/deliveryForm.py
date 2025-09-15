@@ -12,15 +12,28 @@ deliveryForm_save_button = "xpath=//*[@name='dwfrm_checkout_shipping_save']"
 #are
 deliveryForm_are_district_input="xpath=//input[@name='dwfrm_checkout_shipping_address_district']"
 deliveryForm_are_city_select="xpath=//i-select[@class='i-dropdown floating-label flex-form-item flex-form-item__half display-inline-block']"
+deliveryForm_twn_city_select="xpath=//*[@class='flex-form-item flex-form-item__half grid-wrapper-js']"
 deliveryForm_are_city_input="xpath=//input[@class='choices__input choices__input--cloned']"
-deliveryForm_are_city_choice="xpath=//div[@id='dwfrm_checkout_shipping_address_citySelect_city_$CITYVALUE$']"
+deliveryForm_are_city_choice="xpath=//div[@data-value='$CITYVALUE$']"
+
+
+#TWN
+deliveryForm_twn_city_select="xpath=//*[@connected-address-relation='parent']"
+deliveryForm_twn_city_input="xpath=//div[@class='choices__list choices__list--dropdown is-active']/input[@class='choices__input choices__input--cloned']"
+deliveryForm_twn_city_choice="xpath=//*[starts-with(@id, 'dwfrm_checkout_shipping_address_city_$CITYVALUE$')]"
+deliveryForm_twn_district_input="xpath=//input[@name='dwfrm_checkout_shipping_address_district']"
+deliveryForm_twn_district_select="xpath=//*[@connected-address-relation='child']"
+deliveryForm_twn_district_choice="xpath=//*[starts-with(@id, 'dwfrm_checkout_shipping_address_district_中正區')]"
+deliveryForm_invoice_type_select ="xpath=//select[starts-with(@id, 'invoiceOptions')]/parent::div"
+deliveryForm_invoice_type_choice ="xpath=//*[starts-with(@id, 'dwfrm_checkout_billing_invoicesummary_invoiceOptions_membership-number')]"
+#deliveryForm_invoice_donor_select ="xpath=//select[starts-with(@id, 'donationCodeOptions')]/parent::div"
+#deliveryForm_invoice_donor_choice ="xpath=//*[starts-with(@id, 'dwfrm_checkout_billing_invoicesummary_donationCodeOptions')]"
 #ROU
 deliveryForm_rou_county_select = "xpath=//i-select[@data-auto-id='province']"
 deliveryForm_rou_county_choice_cluj = "xpath=//div[@class='choices__list']/div[@data-value='Cluj']"
 #MYS
 deliveryForm_state_select = "xpath=//i-select[@class='i-dropdown floating-label flex-form-item flex-form-item__half display-inline-block']"
 deliveryForm_state_choice = "xpath=//div[@class='choices__item choices__item--choice choices__item--selectable' and @data-id='2']"
-
 
 deliveryForm_payment_credit_card_button= "xpath=//*[@id='dwfrm_checkout_billing_payment_selectedPaymentMethodID-CREDIT_CARD']"
 deliveryForm_payment_card_number_input= "xpath=//*[@name='dwfrm_checkout_billing_payment_creditcard_number']"
@@ -30,3 +43,4 @@ deliveryForm_payment_cvn_input= "xpath=//*[@name='dwfrm_checkout_billing_payment
 deliveryForm_payment_accept_general_terms_and_conditions_button= "xpath=//i-payment-consent-block[@class='i-payment-consent-block full-width hide-mobile grid']//*[starts-with(@id, 'termsandconditions')]"
 deliveryForm_payment_pay_button= "xpath=//i-billing//*[@name='dwfrm_checkout_billing_paymentconsent_save']"
 deliveryForm_payment_thanks_for_order_title ="xpath=//h1[@class='confirmation__heading mt-10 mb-20']"
+

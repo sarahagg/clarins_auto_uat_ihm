@@ -33,6 +33,8 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         SVK=https://sk.npr.clarins.com/
 ...                         ROU=https://ro.npr.clarins.com/
 ...                         MYS=https://stg-ap.npr.clarins.com/clarinsmy/
+...                         TWN=https://stg-ap.npr.clarins.com/clarinstw/
+...                         SAU=https://stg-eu.npr.clarins.com/clarinssa/
 
 
 &{account_dashboard_text}
@@ -61,6 +63,8 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         SVK=Môj prístrojový panel
 ...                         ROU=Tabloul meu de bord
 ...                         MYS=My dashboard
+...                         TWN=我的帳戶
+...                         SAU=
 
 
 &{transaction_order_summary_text}
@@ -89,6 +93,8 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         SVK=
 ...                         ROU=
 ...                         MYS=Thank you for your order
+...                         TWN=感謝您的訂購
+...                         SAU=
 
 &{account_dashboard_profile_text}
 ...                         GBR=My profile
@@ -115,8 +121,9 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         ARE=My profile
 ...                         SVK=Úpravy
 ...                         ROU=Editați profilul
-...                         MYS=My profile
-
+...                         MYS=Edit profile
+...                         TWN=個人檔案
+...                         SAU=لوحة ملف التعريف الخاص بي
 
 &{newsletter_text}          GBR=THANK YOU FOR SUBSCRIBING. PLEASE NOTE THAT YOU WILL NOT RECEIVE A WELCOME EMAIL IF YOU ARE ALREADY SUBSCRIBED TO CLARINS NEWSLETTERS.
 ...                         FRA=MERCI POUR VOTRE INSCRIPTION !
@@ -144,24 +151,29 @@ ${email_regex}    (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 ...                         SVK=
 ...                         ROU=
 ...                         MYS=THANK YOU FOR SUBSCRIBING!
+...                         TWN=感謝您的訂閱！
+...                         SAU=شكرًا للاشتراك!
 
 
 # SPECIFICITIES BY COUNTRY
 @{welcome_offer_countries}                       TBD
 @{push_ad_up_banner_countries}                   POL
 @{simplified_salutations_countries}              BEL    LUX    NLD    POL   PRT    AUT    DEU
-@{transaction_gift_countries}                    AUT
-@{no_salutation_countries}                       USA    CAN    AUS    JPN   NZL
-@{sms_optin_countries}                           POL    AUT    PRT    FRA   AUS    SGP    HKG    NZL    SVK   ROU   MYS
-@{whatsapp_optin_countries}                      FRA    SGP    HKG
-@{agree_to_terms_and_condition_countries}        USA    AUT    CAN    AUS   SGP    DEU    NZL    SVK    ROU
+@{transaction_gift_countries}                    AUT    TWN    SAU
+@{no_salutation_countries}                       USA    CAN    AUS    JPN   NZL    TWN
+@{sms_optin_countries}                           POL    AUT    PRT    FRA   AUS    SGP    HKG    NZL    SVK   ROU   MYS  TWN
+@{whatsapp_optin_countries}                      FRA    SGP    HKG    SAU
+@{agree_to_terms_and_condition_countries}        USA    AUT    CAN    AUS   SGP    DEU    NZL    SVK    ROU  TWN
 @{credit_card_cybersource_countries}             USA    CAN    GBR    POL   ZAF    JPN    AUS    SGP    HKG  MYS  MEX  NZL  ARE  SAU  KWT  QAT   ROU   SVK
 @{credit_card_adyen_countries}                   AUT    BEL    FIN    PRT   IDN    ITA    IRL    CHE    FRA  DEU  ESP  SWE  DNK  NOR  PRT  IDN
-@{newsletterForm_privacy_policy_countries}       ITA    AUT    PRT    NZL   ESP
-@{no_cookies_countries}                          NZL    MYS    JPN
-@{no_postal_code_counties}                       ARE
-@{no_city_input_countries}                       ARE
-@{city_dropdown_countries}                       ARE
+@{newsletterForm_privacy_policy_countries}       ITA    AUT    PRT    NZL   ESP    SAU
+@{no_cookies_countries}                          NZL    MYS    JPN    TWN   USA    CAN
+@{no_postal_code_counties}                       ARE    TWN    SAU
+@{no_city_input_countries}                       ARE    TWN    SAU
+@{city_dropdown_countries}                       ARE    TWN    SAU
 @{district_countries}                            ARE
 @{couty_select_countries}                        ROU
 @{state_countries}                               MYS
+@{bnl_countries}                                 LUX    BEL    NLD
+@{district_select_countries}                     TWN
+@{payment_invoice_countries}                     TWN

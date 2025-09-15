@@ -7,13 +7,19 @@ Resource            ..${/}Common${/}common.resource
 Write Data To Link CSV Files
     [Arguments]    ${format}=${EMPTY}    ${sourceSystem}=${EMPTY}    ${allCheckSystems}=${EMPTY}    ${testScenario}=${EMPTY}
 
-    IF  ${format}==${EMPTY} AND ${sourceSystem}==${EMPTY} AND ${allCheckSystems}==${EMPTY} AND ${testScenario}==${EMPTY}
-
-        ${format}=              Set Variable    ${canonical_form_csv_file_link_files.get('\${format}')}
-        ${sourceSystem}=        Set Variable    ${canonical_form_csv_file_link_files.get('\${sourceSystem}')}
-        ${allCheckSystems}=     Set Variable    ${canonical_form_csv_file_link_files.get('\${format}')}
-        ${testScenario}=        Set Variable    ${canonical_form_csv_file_link_files.get('\${testScenario}')}
+    IF    '$format' == '' and '$sourceSystem' == '' and '$allCheckSystems' == '' and '$testScenario' == ''
+    ${format}=           Set Variable    ${canonical_form_csv_file_link_files['${format}']}
+    ${sourceSystem}=     Set Variable    ${canonical_form_csv_file_link_files['${sourceSystem}']}
+    ${allCheckSystems}=  Set Variable    ${canonical_form_csv_file_link_files['${allCheckSystems}']}
+    ${testScenario}=     Set Variable    ${canonical_form_csv_file_link_files['${testScenario}']}
     END
+    #IF  ${format}==${EMPTY}  AND  ${sourceSystem}==${EMPTY}  AND  ${allCheckSystems}==${EMPTY}  AND  ${testScenario}==${EMPTY}
+    #
+    #  ${format}=              Set Variable    ${canonical_form_csv_file_link_files.get('\${format}')}
+    #  ${sourceSystem}=        Set Variable    ${canonical_form_csv_file_link_files.get('\${sourceSystem}')}
+    #  ${allCheckSystems}=     Set Variable    ${canonical_form_csv_file_link_files.get('\${format}')}
+    #  ${testScenario}=        Set Variable    ${canonical_form_csv_file_link_files.get('\${testScenario}')}
+    #END
 
     FOR    ${oneCheckSystem}    IN    @{allCheckSystems}
 
